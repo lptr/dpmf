@@ -1,5 +1,5 @@
-@rem $Id: build.cmd,v 1.8 2001/04/27 12:51:48 lptr Exp $
-@rem $Date: 2001/04/27 12:51:48 $
+@rem $Id: build.cmd,v 1.9 2001/05/08 20:36:54 lptr Exp $
+@rem $Date: 2001/05/08 20:36:54 $
 @rem $Author: lptr $
 
 @echo off

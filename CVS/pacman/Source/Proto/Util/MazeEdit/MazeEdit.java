@@ -1,5 +1,5 @@
-// $Id: MazeEdit.java,v 1.9 2001/04/27 15:19:34 vava Exp $
-// $Date: 2001/04/27 15:19:34 $
+// $Id: MazeEdit.java,v 1.10 2001/05/15 09:16:50 vava Exp $
+// $Date: 2001/05/15 09:16:50 $
 // $Author: vava $
 
 package Util.MazeEdit;
@@ -161,8 +161,32 @@ class myList {
  */
 class ImageLoader {
 	static String imagePath = "images/";
+
+	static Image loadPrgImage(String str) { 
+		return loadImage(imagePath + str);
+	}
+			
+	static void init(Component c) {
+		MT = new MediaTracker(c);
+	}
+
+	static MediaTracker MT;
+	
 	static Image loadImage(String str) { 
-		return Toolkit.getDefaultToolkit().getImage(imagePath + str);
+		Image temp = Toolkit.getDefaultToolkit().getImage(str);
+		if (temp == null)
+			return null;
+		MT.addImage(temp,0);
+		return temp;
+	}
+
+	static void load() {
+		try {
+			MT.waitForID(0);
+		} catch (InterruptedException e) {
+			System.err.println("ERROR: loading pictures");
+			System.exit(-1);
+		}
 	}
 }
 
@@ -391,8 +415,8 @@ class mazeCanvas extends Canvas implements MouseListener {
 
 //	private int X = 400; // nézet mérete
 //	private int Y = 400; // nézet mérete
-	private int fieldX=40; // mezõ X méret
-	private int fieldY=40; // mezõ Y méret
+	public final static int fieldX=24; // mezõ X méret
+	public final static int fieldY=24; // mezõ Y méret
 	int selX = 0; // az aktuálisan kiválasztott mezõ X koordinátája
 	int selY = 0; // az aktuálisan kiválasztott mezõ Y koordinátája
 
@@ -402,7 +426,7 @@ class mazeCanvas extends Canvas implements MouseListener {
 	mazeCanvas(MazeEdit parent) {
 		prg = parent;
 //		setSize(X, Y);
-		setSize(prg.maze.getSizeX()*40, prg.maze.getSizeY()*40);
+		setSize(prg.maze.getSizeX()*fieldX, prg.maze.getSizeY()*fieldY);
 		addMouseListener(this);
 //		addKeyListener(this);
 // initialize autocomplete		
@@ -416,11 +440,11 @@ class mazeCanvas extends Canvas implements MouseListener {
 	 * egy mezõelem kirajzolása megadott rajzlapra, megadott helyre.
 	 */
 	private void drawField(Graphics g, int x, int y, FieldItem f) {
-		if (f.isBlocked())
-			g.setColor(Color.gray);
-		else
+//		if (f.isBlocked())
+//			g.setColor(Color.gray);
+//		else
 			g.setColor(Color.white);
-		g.fillRect(fieldX*x, fieldY*y, fieldX, fieldY);
+//		g.fillRect(fieldX*x, fieldY*y, fieldX, fieldY);
 		g.setColor(Color.gray);
 		g.drawRect(fieldX*x, fieldY*y, fieldX-1, fieldY-1);
 		g.setColor(Color.black);
@@ -481,6 +505,12 @@ class mazeCanvas extends Canvas implements MouseListener {
 		int y0 = (int)(prg.scroller.getScrollPosition().getY()/fieldY);
 		BufferedImage img = (BufferedImage)createImage(xw*fieldX, yh*fieldY);
 		Graphics g2 = img.createGraphics();
+		if (prg.backimage!=null) {
+			g2.drawImage(prg.backimage,0,0,this);
+		}
+		g2.drawLine(0,0,50,20);
+		g2.drawLine(0,0,20,50);
+
 		// mezõelemek rajzolása
 		for (int y=0; y<sizeY-y0 && y<yh; y++)
 			for (int x=0; x<sizeX-x0 && x<xw; x++)
@@ -828,16 +858,16 @@ class submenuCanvas extends Canvas implements MouseMotionListener, MouseListener
 		setSize(X, Y);
 		addMouseListener(this);
 		addMouseMotionListener(this);
-		iMAGE_MENU = ImageLoader.loadImage("Menu.jpg");
-		iMAGE_SIZE = ImageLoader.loadImage("Size.jpg");
-		iMAGE_TIME = ImageLoader.loadImage("Time.jpg");
-		iMAGE_PROBAB = ImageLoader.loadImage("Probab.jpg");
-		iMAGE_BPLACE = ImageLoader.loadImage("Bplace.jpg");
-		iMAGE_CRYSTAL = ImageLoader.loadImage("Crystal.jpg");
-		iMAGE_MONSTER = ImageLoader.loadImage("Monster.jpg");
-		iMAGE_WALL = ImageLoader.loadImage("Wall.jpg");
-		iMAGE_WALLSEL = ImageLoader.loadImage("WallSel.jpg");
-		iMAGE_PACMAN = ImageLoader.loadImage("icon3.jpg");
+		iMAGE_MENU = ImageLoader.loadPrgImage("Menu.jpg");
+		iMAGE_SIZE = ImageLoader.loadPrgImage("Size.jpg");
+		iMAGE_TIME = ImageLoader.loadPrgImage("Time.jpg");
+		iMAGE_PROBAB = ImageLoader.loadPrgImage("Probab.jpg");
+		iMAGE_BPLACE = ImageLoader.loadPrgImage("Bplace.jpg");
+		iMAGE_CRYSTAL = ImageLoader.loadPrgImage("Crystal.jpg");
+		iMAGE_MONSTER = ImageLoader.loadPrgImage("Monster.jpg");
+		iMAGE_WALL = ImageLoader.loadPrgImage("Wall.jpg");
+		iMAGE_WALLSEL = ImageLoader.loadPrgImage("WallSel.jpg");
+		iMAGE_PACMAN = ImageLoader.loadPrgImage("icon3.jpg");
 //		addKeyListener(this);
 // initialize autocomplete		
 	}
@@ -1307,11 +1337,13 @@ class MazeEdit extends Object {
 	int drawMode = DRAW_MODE_SET; // rajzolási mód
 	int drawShape = DRAW_SHAPE_NORMAL; // rajzolás típusa
 
+	static public Image backimage;
+
 	/**
 	 * A nézetek frissítéséért felelõs. Nem a legszebb megoldás, mind a 3 nézet frissítése jópár esetben felesleges...
 	 */
 	void refresh() {
-		MazeCanvas.setSize(maze.getSizeX()*40, maze.getSizeY()*40);
+		MazeCanvas.setSize(maze.getSizeX()*MazeCanvas.fieldX, maze.getSizeY()*MazeCanvas.fieldY);
 		frame.pack();
 //		MenuCanvas.revalidate();
 		MenuCanvas.repaint();
@@ -1348,8 +1380,9 @@ class MazeEdit extends Object {
 
 	private void initView() {
 		frame = (Frame)(new Frame("Maze Editor"));
+		ImageLoader.init(frame);
 		frame.setLayout(new BorderLayout());
-		frame.setIconImage(ImageLoader.loadImage("icon2.jpg")); // betöltjük a progi ikonját
+		frame.setIconImage(ImageLoader.loadPrgImage("icon2.jpg")); // betöltjük a progi ikonját
 
 		Panel panel = new Panel();
 		panel.setLayout(new BorderLayout());
@@ -1374,7 +1407,15 @@ class MazeEdit extends Object {
 
 	}	
 	public static void main(String[] args) {
+		System.out.println("Arguments:");
+		for(int i = 0; i <args.length; i++)
+			System.out.println("  (" + i + ") - '"+args[i]+"'");
 		MazeEdit e = new MazeEdit();
+		if (args.length>=1)	{
+			backimage = ImageLoader.loadImage(args[0]);
+		}	
+		System.out.println("Loading pictures, please wait!");
+		ImageLoader.load();
 		System.out.println("Hello World!");
 	}
 }

@@ -9,7 +9,7 @@
 <value>"121"</value>
 </productversion>
 </versioninfo>
-<activeproject>"PacMan\PacMan.kpx"</activeproject>
+<activeproject>"..\Release\PacMan\PacMan.kpx"</activeproject>
 <items>
 <root name="Proto Projects">
 <projectfolder>
@@ -31,6 +31,14 @@
 <projectfolder>
 <name>"Outputter"</name>
 <relativepath>"Outputter\Outputter.kpx"</relativepath>
+<scmstatus id="0">
+<userstring>""</userstring>
+<userinteger>"0"</userinteger>
+</scmstatus>
+</projectfolder>
+<projectfolder>
+<name>"PacMan"</name>
+<relativepath>"..\Release\PacMan\PacMan.kpx"</relativepath>
 <scmstatus id="0">
 <userstring>""</userstring>
 <userinteger>"0"</userinteger>

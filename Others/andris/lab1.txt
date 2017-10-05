@@ -1,0 +1,14 @@
+Init
+10
+10
+jbbbbbbbbd
+igkkkkkkmc
+ifgkkkkmfc
+iffgkkmffc
+ifffaafffc
+ifffaafffc
+iffdkkjffc
+ifdkkkkjfc
+idkkkkkkjc
+meeeeeeeeg
+End

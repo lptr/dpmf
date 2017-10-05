@@ -1,5 +1,5 @@
-// $Id: MazeItem.java,v 1.20 2001/04/27 13:41:41 lptr Exp $
-// $Date: 2001/04/27 13:41:41 $
+// $Id: MazeItem.java,v 1.22 2001/05/08 20:54:16 lptr Exp $
+// $Date: 2001/05/08 20:54:16 $
 // $Author: lptr $
 
 package PacMan;
@@ -340,8 +340,10 @@ class PacMan extends ActiveMazeItem {
 	 * Lerak egy bombát, ha még nem volt ott bomba.
 	 */
 	public void PutBomb() {
-		if (bombs > 0)
+		if (bombs > 0) {
 			SetBombPutState(true);
+			bombs--;
+		}
 	}
 
 	/**
@@ -422,7 +424,7 @@ abstract class Monster extends ActiveMazeItem {
 	 */
 	public void Reborn() {
 		Activate();
-		pos = currentMaze.GetRebornPlace();
+		pos = new Coordinates (currentMaze.GetRebornPlace());
 		timeToDecide = 0;
 		currentMaze.Output("event monster " + mazeItemNumber + " born " + pos);
 	}

@@ -59,8 +59,8 @@
 <file>
 <dirty>"0"</dirty>
 <relativepath>"Game.java"</relativepath>
-<editor open="1">
-<selection start="9103" end="9103">
+<editor open="0">
+<selection start="0" end="0">
 </selection>
 <window x="345695" y="346195" width="0" height="0">
 </window>
@@ -101,8 +101,8 @@
 <file>
 <dirty>"0"</dirty>
 <relativepath>"Maze.java"</relativepath>
-<editor open="1">
-<selection start="2304" end="2304">
+<editor open="0">
+<selection start="0" end="0">
 </selection>
 <window x="161556" y="162177" width="0" height="0">
 </window>
@@ -121,7 +121,7 @@
 <window x="102710952" y="102711032" width="0" height="0">
 </window>
 </editor>
-<scmstatus id="0">
+<scmstatus id="2">
 <userstring>""</userstring>
 <userinteger>"0"</userinteger>
 </scmstatus>
