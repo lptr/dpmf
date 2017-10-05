@@ -1,0 +1,39 @@
+// $Id: datafiledef.txt,v 1.4 2001/04/01 23:58:55 lptr Exp $
+// $Date: 2001/04/01 23:58:55 $
+// $Author: lptr $
+
+/* comment */
+// one line comment
+
+time <seconds>
+size <width> <height>
+fields <urdl> ...
+  /**
+    u, r, d, l: 0 vagy 1, attól függõen, hogy van-e a mezõnek
+    fent, jobbra, lent vagy balra fala. pl. 0101 ket párhuzamos fal függõlegesen
+  **/
+
+pacman <x> <y> <speed>
+  /**
+    pacman az x,y ponton, <speed> sebességgel.
+  **/
+
+monster [clever|dumb] <x> <y> [up|right|down|left] <speed>
+  /**
+    okos|buta szörny az x,y ponton, fel|jobbra|le|balra néz, sebessége <speed>
+  **/
+
+birthplace <x> <y>
+  /**
+    a szörnyek az x,y ponton születnek újra
+  **/
+
+crystal <x> <y>
+  /**
+    kristály az x,y ponton
+  **/
+
+probability <value>
+  /**
+    annak a valószínûsége, hogy egy adott körben bónusz jelenik meg.
+  **/

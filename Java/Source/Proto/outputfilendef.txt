@@ -1,0 +1,9 @@
+.load <filename>
+.game <score> <lives>
+.maze <time>
+.pacman <objnum> <x> <y> <direction> <bombs>
+.monster <objnum> [clever|dumb] <x> <y> <direction>
+.bomb <objnum> <x> <y> [active|inactive] <timetolive>
+.bonus <objnum> <x> <y> [bomb|score|time] <timetolive> <value>
+.crystal <objnum> <x> <y>
+.step

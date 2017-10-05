@@ -1,0 +1,152 @@
+// $Id: inputfiledef.txt,v 1.7 2001/04/02 02:00:11 lptr Exp $
+// $Date: 2001/04/02 02:00:11 $
+// $Author: lptr $
+
+/* comment */
+// one line comment
+
+/**
+  a paraméterek megadásánál használható a * wildcard. ilyenkor az a 
+  pareméter nem módosul, vagy (pl. bónusz elhelyezésénél) a rendszer
+  által meghatározott.
+**/
+
+
+/** menüpontok **/
+/****************/
+
+  /**
+    a menüvezérlõ parancsok értelemszerûen csak a menüben
+    érhetõek el, ha a program más részében kapunk ilyen üzenetet,
+    célszerû megjegyezni, hogy warning most nem a menüben vagyunk.
+  **/
+
+
+/startgame <dirname>
+  /**
+    elindítja a játékot, a pályákat a <>
+  **/
+
+/highscore
+  /**
+    kilistázza a highscore táblát, csak a fõmenüben hajtható végre
+  **/
+
+/exit
+  /**
+    kilép a játékból
+  **/
+
+/** highscore **/
+/***************/
+
+/exithighscore
+
+/** a tényleges játék **/
+/***********************/
+
+/nextlevel
+  /**
+    innen a következõ pályára vonatkoznak a parancsok.
+  **/
+
+/step
+  /**
+    léptet egy kört. ez után hajtódnak végre a kiadott parancsok
+    (kivéve az információkérést.)
+  **/
+
+/exitgame <name>
+  /**
+    kilép a játékból, a játékos nevét <name>-re állítja,
+    visszalép a highscore táblába
+  **/
+ 
+/setdirection [up|right|down|left]
+/putbomb
+  /**
+    pacman irányítása
+  **/
+
+/** innen kezdve a tesztelést megkönnyítõ, parancsok következnek **/
+/******************************************************************/
+
+/remark <name>
+  /**
+    megjegyzés. a kimeneten /* name */  formában. a szinkronizálásban segít
+  **/
+
+/info [all|pacman|monster|bomb|crystal|bonus]
+  /**
+    all: all below
+    pacman: pozíció, irány, objnum
+    monster: pozíció, irány, objnum
+    bomb: pozíció, élettartam, objnum
+    bonus: pozíció, élettartam, tartalom, objnum
+    crystal: pozíció, objnum
+  **/
+
+/show [maze|info] 
+  /**
+    maze: szöveges labirintus megjelenítés
+    info: score, lives, bombs, time kiírása
+  **/
+
+/hack load <filename>
+  /**
+    betölt egy pályát, ha a pálya befejezõdött, kilép
+  **/
+
+/hack score <score>
+/hack lives <lives>
+/hack time <time>
+  /**
+    általános hackelés
+  **/
+
+/hack pacman kill
+/hack pacman set <x> <y> <direction> <bombs>
+  /**
+    pacman buzerálása
+  **/
+
+/hack monster create [clever|dumb] <x> <y> <direction>
+/hack monster <objnum> [kill|reborn|remove]
+/hack monster <objnum> set <x> <y> <direction>
+/hack monster <objnum> [auto|manual]
+/hack monster <objnum> <direction>
+  /**
+    monster átszabása
+  **/
+
+/hack bomb create <x> <y> <timetolive>
+/hack bomb <objnum> remove
+/hack bomb <objnum> set <x> <y> <timetolive>
+/hack bomb <objnum> [activate|deactivate]
+  /**
+    bombával kapcsolatos hack-ek
+  **/
+
+/hack bonus [auto|manual]
+  /**
+    bonus elhelyezése automatikus vagy manuális
+  **/
+/hack bonus create [time|score|bomb] <x> <y> <timetolive> <value>
+/hack bonus <objnum> remove 
+/hack bonus <objnum> set <x> <y> <time> <value>
+  /**
+    bonus izélgetése
+  **/
+
+/hack crystal create <x> <y>
+/hack crystal <objnum> remove
+  /**
+    kristály bizergálása
+  **/
+
+/hack wall [on|off] <fx> <fy> [up|right|down|left] [single|both]
+  /**
+    az (<fx>,<fy>) mezõ adott falát bekapcsolja/kikapcsolja.
+    a single csak az adott mezõ falát állítja, a both mindkét
+    oldalról beállítja a falat.
+  **/

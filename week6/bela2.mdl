@@ -16,7 +16,7 @@
 	pageOverlap 	0.250000
 	clipIconLabels 	TRUE
 	autoResize 	TRUE
-	snapToGrid 	TRUE
+	snapToGrid 	FALSE
 	gridX      	16
 	gridY      	16
 	defaultFont 	(object Font
@@ -4610,7 +4610,7 @@
 		is_loaded  	FALSE
 		file_name  	"$FRAMEWORK_PATH\\shared components\\javax12.cat"
 		quid       	"3784E515038D")
-	    (object Class_Category "Program"
+	    (object Class_Category "PacMan"
 		quid       	"3AAE3B4D01C5"
 		exportControl 	"Public"
 		logical_models 	(list unit_reference_list
@@ -4633,7 +4633,10 @@
 				type       	"Game")
 			    (object ClassAttribute "theHighscore"
 				quid       	"3AAE3BBC00FA"
-				type       	"Highscore")))
+				type       	"Highscore"))
+			module     	"Component View::PacMan::Main_program"
+			quidu      	"3ABE94CB0290"
+			language   	"Java")
 		    (object Class "Highscore"
 			quid       	"3AAE3C2101C5"
 			superclasses 	(list inheritance_relationship_list
@@ -4678,7 +4681,10 @@
 				type       	"String")
 			    (object ClassAttribute "Scores[]"
 				quid       	"3AB50533001F"
-				type       	"long")))
+				type       	"long"))
+			module     	"Component View::PacMan::Highscore"
+			quidu      	"3ABE94CB00EA"
+			language   	"Java")
 		    (object Class "Game"
 			quid       	"3AAE3CAF00EA"
 			superclasses 	(list inheritance_relationship_list
@@ -4731,7 +4737,10 @@
 				type       	"int")
 			    (object ClassAttribute "paused"
 				quid       	"3AB53A6400DA"
-				type       	"boolean")))
+				type       	"boolean"))
+			module     	"Component View::PacMan::Game"
+			quidu      	"3ABE94CC006D"
+			language   	"Java")
 		    (object Class "Maze"
 			quid       	"3AAE3D11000F"
 			operations 	(list Operations
@@ -4755,13 +4764,18 @@
 				concurrency 	"Sequential"
 				opExportControl 	"Public"
 				uid        	0)
+			    (object Operation "IncreaseBombs"
+				quid       	"3AB53DDB0109"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "IncreaseScore"
+				quid       	"3ABD56FB01C5"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
 			    (object Operation "IncreaseTime"
 				quid       	"3AB4B79C0186"
-				concurrency 	"Sequential"
-				opExportControl 	"Private"
-				uid        	0)
-			    (object Operation "IncreaseBomb"
-				quid       	"3AB53DDB0109"
 				concurrency 	"Sequential"
 				opExportControl 	"Public"
 				uid        	0)
@@ -4799,13 +4813,16 @@
 				type       	"Game")
 			    (object ClassAttribute "time"
 				quid       	"3AB2BCC300DC"
-				type       	"long")))
+				type       	"long"))
+			module     	"Component View::PacMan::Maze"
+			quidu      	"3ABE94CB037A"
+			language   	"Java")
 		    (object Class "ItemX"
 			quid       	"3AAE8F1503D8"
 			superclasses 	(list inheritance_relationship_list
 			    (object Inheritance_Relationship
 				quid       	"3AAE9FC00213"
-				supplier   	"Logical View::Program::PacMan"
+				supplier   	"Logical View::PacMan::PacMan"
 				quidu      	"3AAE9F7D031C"))
 			operations 	(list Operations
 			    (object Operation "Item"
@@ -4845,63 +4862,6 @@
 			    (object ClassAttribute "score"
 				quid       	"3AAE94820148"
 				type       	"long")))
-		    (object Class "PacMan"
-			quid       	"3AAE9F7D031C"
-			superclasses 	(list inheritance_relationship_list
-			    (object Inheritance_Relationship
-				quid       	"3AAEA030005D"
-				supplier   	"Logical View::Program::Maze"
-				quidu      	"3AAE3D11000F")
-			    (object Inheritance_Relationship
-				quid       	"3AAEA1650280"
-				supplier   	"Logical View::Program::ScoreListItem"
-				quidu      	"3AAE9455030D")
-			    (object Inheritance_Relationship
-				quid       	"3AAEA170005D"
-				supplier   	"Logical View::Program::Game"
-				quidu      	"3AAE3CAF00EA")
-			    (object Inheritance_Relationship
-				quid       	"3AAEA1BE0119"
-				supplier   	"Logical View::Program::MazeItem"
-				quidu      	"3AAEA19A0000")
-			    (object Inheritance_Relationship
-				quid       	"3AB4A83C0261"
-				supplier   	"Logical View::Program::ActiveMazeItem"
-				quidu      	"3AB4A80D0251"))
-			realized_interfaces 	(list realize_rel_list
-			    (object Realize_Relationship
-				quid       	"3AAEA006038A"
-				supplier   	"Logical View::Program::ItemX"
-				quidu      	"3AAE8F1503D8"))
-			operations 	(list Operations
-			    (object Operation "PacMan"
-				quid       	"3AB2BEBC0172"
-				concurrency 	"Sequential"
-				opExportControl 	"Public"
-				uid        	0)
-			    (object Operation "SetBombPutState"
-				quid       	"3AB2E8F80116"
-				result     	"Boolean"
-				concurrency 	"Sequential"
-				opExportControl 	"Public"
-				uid        	0)
-			    (object Operation "GetBombPutState"
-				quid       	"3AB6764603B9"
-				concurrency 	"Sequential"
-				opExportControl 	"Public"
-				uid        	0)
-			    (object Operation "IncreaseBombs"
-				quid       	"3AB67C14037A"
-				concurrency 	"Sequential"
-				opExportControl 	"Public"
-				uid        	0))
-			class_attributes 	(list class_attribute_list
-			    (object ClassAttribute "putbomb"
-				quid       	"3AB2E56A03B7"
-				type       	"boolean")
-			    (object ClassAttribute "bombs"
-				quid       	"3AB53D7E033C"
-				type       	"int")))
 		    (object Class "MazeItem"
 			quid       	"3AAEA19A0000"
 			operations 	(list Operations
@@ -4943,17 +4903,20 @@
 			    (object ClassAttribute "pos"
 				quid       	"3AB4BFA50251"
 				type       	"Coordinates"
-				exportControl 	"Protected")))
+				exportControl 	"Protected"))
+			module     	"Component View::PacMan::MazeItem"
+			quidu      	"3ABE94CB0196"
+			language   	"Java")
 		    (object Class "Monster"
 			quid       	"3AAEA25A02DE"
 			superclasses 	(list inheritance_relationship_list
 			    (object Inheritance_Relationship
 				quid       	"3AAEA2680186"
-				supplier   	"Logical View::Program::MazeItem"
+				supplier   	"Logical View::PacMan::MazeItem"
 				quidu      	"3AAEA19A0000")
 			    (object Inheritance_Relationship
 				quid       	"3AB4A840030D"
-				supplier   	"Logical View::Program::ActiveMazeItem"
+				supplier   	"Logical View::PacMan::ActiveMazeItem"
 				quidu      	"3AB4A80D0251"))
 			operations 	(list Operations
 			    (object Operation "Monster"
@@ -4975,52 +4938,69 @@
 			    (object ClassAttribute "active"
 				quid       	"3AAEC41102FD"
 				type       	"boolean"
-				exportControl 	"Protected")))
+				exportControl 	"Protected"))
+			module     	"Component View::PacMan::Monster"
+			quidu      	"3ABE94CA029F"
+			language   	"Java")
 		    (object Class "DumbMonster"
 			quid       	"3AAEA8690128"
 			superclasses 	(list inheritance_relationship_list
 			    (object Inheritance_Relationship
 				quid       	"3AAEA8790232"
-				supplier   	"Logical View::Program::Monster"
+				supplier   	"Logical View::PacMan::Monster"
 				quidu      	"3AAEA25A02DE"))
 			operations 	(list Operations
 			    (object Operation "DumbMonster"
 				quid       	"3AB4FD8003D8"
 				concurrency 	"Sequential"
 				opExportControl 	"Public"
-				uid        	0)))
+				uid        	0))
+			module     	"Component View::PacMan::DumbMonster"
+			quidu      	"3ABE94C902BF"
+			language   	"Java")
 		    (object Class "CleverMonster"
 			quid       	"3AAEA87C00AB"
 			superclasses 	(list inheritance_relationship_list
 			    (object Inheritance_Relationship
 				quid       	"3AAEA88802FD"
-				supplier   	"Logical View::Program::Monster"
+				supplier   	"Logical View::PacMan::Monster"
 				quidu      	"3AAEA25A02DE"))
 			operations 	(list Operations
 			    (object Operation "CleverMonster"
 				quid       	"3AB4FDAA032C"
 				concurrency 	"Sequential"
 				opExportControl 	"Public"
-				uid        	0)))
+				uid        	0))
+			module     	"Component View::PacMan::CleverMonster"
+			quidu      	"3ABE94C9032C"
+			language   	"Java")
 		    (object Class "Bonus"
 			quid       	"3AAEABA900BB"
 			superclasses 	(list inheritance_relationship_list
 			    (object Inheritance_Relationship
 				quid       	"3AAEB6450148"
-				supplier   	"Logical View::Program::TimedMazeItem"
+				supplier   	"Logical View::PacMan::TimedMazeItem"
 				quidu      	"3AB4B5DA0109"))
 			operations 	(list Operations
 			    (object Operation "Bonus"
 				quid       	"3AB2BE2E02C6"
 				concurrency 	"Sequential"
 				opExportControl 	"Public"
-				uid        	0)))
+				uid        	0)
+			    (object Operation "PickUp"
+				quid       	"3ABD56DD009C"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0))
+			module     	"Component View::PacMan::Bonus"
+			quidu      	"3ABE94C903A9"
+			language   	"Java")
 		    (object Class "Bomb"
 			quid       	"3AAEB61101C5"
 			superclasses 	(list inheritance_relationship_list
 			    (object Inheritance_Relationship
 				quid       	"3AAEB64703C8"
-				supplier   	"Logical View::Program::TimedMazeItem"
+				supplier   	"Logical View::PacMan::TimedMazeItem"
 				quidu      	"3AB4B5DA0109"))
 			operations 	(list Operations
 			    (object Operation "Bomb"
@@ -5041,77 +5021,86 @@
 			class_attributes 	(list class_attribute_list
 			    (object ClassAttribute "active"
 				quid       	"3AB2BB8B0348"
-				type       	"boolean")))
+				type       	"boolean"))
+			module     	"Component View::PacMan::Bomb"
+			quidu      	"3ABE94CA003E"
+			language   	"Java")
 		    (object Class "Crystal"
 			quid       	"3AAEB6370109"
 			superclasses 	(list inheritance_relationship_list
 			    (object Inheritance_Relationship
 				quid       	"3AAEB64A01B5"
-				supplier   	"Logical View::Program::MazeItem"
+				supplier   	"Logical View::PacMan::MazeItem"
 				quidu      	"3AAEA19A0000"))
 			operations 	(list Operations
 			    (object Operation "Crystal"
 				quid       	"3AB4FD3702FD"
 				concurrency 	"Sequential"
 				opExportControl 	"Public"
-				uid        	0)))
+				uid        	0))
+			module     	"Component View::PacMan::Crystal"
+			quidu      	"3ABE94CA00AB"
+			language   	"Java")
 		    (object Class "ScoreBonus"
 			quid       	"3AAEB66301A5"
 			superclasses 	(list inheritance_relationship_list
 			    (object Inheritance_Relationship
 				quid       	"3AAEB68902AF"
-				supplier   	"Logical View::Program::Bonus"
+				supplier   	"Logical View::PacMan::Bonus"
 				quidu      	"3AAEABA900BB"))
 			operations 	(list Operations
 			    (object Operation "ScoreBonus"
 				quid       	"3AB2BE5C00BE"
 				concurrency 	"Sequential"
 				opExportControl 	"Public"
-				uid        	0)
-			    (object Operation "getScore"
-				quid       	"3AB4FD20037A"
-				concurrency 	"Sequential"
-				opExportControl 	"Public"
 				uid        	0))
 			class_attributes 	(list class_attribute_list
 			    (object ClassAttribute "score"
 				quid       	"3AB2B9E70302"
-				type       	"long")))
+				type       	"long"))
+			module     	"Component View::PacMan::ScoreBonus"
+			quidu      	"3ABE94CA0128"
+			language   	"Java")
 		    (object Class "TimeBonus"
 			quid       	"3AAEB67001B5"
 			superclasses 	(list inheritance_relationship_list
 			    (object Inheritance_Relationship
 				quid       	"3AAEB68C00BB"
-				supplier   	"Logical View::Program::Bonus"
+				supplier   	"Logical View::PacMan::Bonus"
 				quidu      	"3AAEABA900BB"))
 			operations 	(list Operations
 			    (object Operation "TimeBonus"
 				quid       	"3AB2BE670078"
 				concurrency 	"Sequential"
 				opExportControl 	"Public"
-				uid        	0)
-			    (object Operation "getTime"
-				quid       	"3AB4FD300157"
-				concurrency 	"Sequential"
-				opExportControl 	"Public"
 				uid        	0))
 			class_attributes 	(list class_attribute_list
 			    (object ClassAttribute "time"
 				quid       	"3AB2BAA1035C"
-				type       	"long")))
+				type       	"long"))
+			module     	"Component View::PacMan::TimeBonus"
+			quidu      	"3ABE94CA01A5"
+			language   	"Java")
 		    (object Class "BombBonus"
 			quid       	"3AAEB67C0203"
 			superclasses 	(list inheritance_relationship_list
 			    (object Inheritance_Relationship
 				quid       	"3AAEB68E030D"
-				supplier   	"Logical View::Program::Bonus"
+				supplier   	"Logical View::PacMan::Bonus"
 				quidu      	"3AAEABA900BB"))
 			operations 	(list Operations
 			    (object Operation "BombBonus"
 				quid       	"3AB4FD630109"
 				concurrency 	"Sequential"
 				opExportControl 	"Public"
-				uid        	0)))
+				uid        	0))
+			class_attributes 	(list class_attribute_list
+			    (object ClassAttribute "bombs"
+				quid       	"3ABD5769008C"
+				type       	"int"))
+			module     	"Component View::PacMan::BombBonus"
+			quidu      	"3ABE94CA0222"
+			language   	"Java")
 		    (object Class "FieldItem"
 			quid       	"3AB2C17A0398"
 			operations 	(list Operations
@@ -5124,20 +5113,22 @@
 			    (object ClassAttribute "walls"
 				quid       	"3AB4C0060280"
 				type       	"boolean[]"))
+			module     	"Component View::PacMan::FieldItem"
+			quidu      	"3ABE94CB0222"
 			language   	"Java")
 		    (object Class "LifeBonus"
 			quid       	"3AB2AF2C0242"
 			superclasses 	(list inheritance_relationship_list
 			    (object Inheritance_Relationship
 				quid       	"3AB2AF420370"
-				supplier   	"Logical View::Program::Bonus"
+				supplier   	"Logical View::PacMan::Bonus"
 				quidu      	"3AAEABA900BB")))
 		    (object Class "ActiveMazeItem"
 			quid       	"3AB4A80D0251"
 			superclasses 	(list inheritance_relationship_list
 			    (object Inheritance_Relationship
 				quid       	"3AB4A842032C"
-				supplier   	"Logical View::Program::MazeItem"
+				supplier   	"Logical View::PacMan::MazeItem"
 				quidu      	"3AAEA19A0000"))
 			class_attributes 	(list class_attribute_list
 			    (object ClassAttribute "direction"
@@ -5147,7 +5138,10 @@
 			    (object ClassAttribute "speed"
 				quid       	"3AB4A82E001F"
 				type       	"double"
-				exportControl 	"Protected")))
+				exportControl 	"Protected"))
+			module     	"Component View::PacMan::ActiveMazeItem"
+			quidu      	"3ABE94CA030D"
+			language   	"Java")
 		    (object Class "PassiveMazeItem"
 			quid       	"3AB4B5C30271")
 		    (object Class "TimedMazeItem"
@@ -5155,7 +5149,7 @@
 			superclasses 	(list inheritance_relationship_list
 			    (object Inheritance_Relationship
 				quid       	"3AB4B604006D"
-				supplier   	"Logical View::Program::MazeItem"
+				supplier   	"Logical View::PacMan::MazeItem"
 				quidu      	"3AAEA19A0000"))
 			operations 	(list Operations
 			    (object Operation "GetTimeToLive"
@@ -5166,7 +5160,10 @@
 			class_attributes 	(list class_attribute_list
 			    (object ClassAttribute "timeToLive"
 				quid       	"3AB4B5E90280"
-				type       	"long")))
+				type       	"long"))
+			module     	"Component View::PacMan::TimedMazeItem"
+			quidu      	"3ABE94CA038A"
+			language   	"Java")
 		    (object Class "Coordinates"
 			quid       	"3AB4BF73007D"
 			class_attributes 	(list class_attribute_list
@@ -5177,18 +5174,117 @@
 			    (object ClassAttribute "y"
 				quid       	"3AB4BF890232"
 				type       	"long"
-				exportControl 	"Public")))
+				exportControl 	"Public"))
+			module     	"Component View::PacMan::Coordinates"
+			quidu      	"3ABE94CB001F"
+			language   	"Java")
+		    (object Class "PacMan"
+			quid       	"3AAE9F7D031C"
+			documentation 	
+|A játékos által vezérelt PacMan-t megvalósító osztály. Képes {@link Bomb bombát} lerakni,
+|{@link Bonus bónuszokat} és {@link Crystal kristályokat} felvenni.
+			
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				quid       	"3ABE944801D5"
+				supplier   	"Logical View::PacMan::ActiveMazeItem"
+				quidu      	"3AB4A80D0251"))
+			operations 	(list Operations
+			    (object Operation "PacMan"
+				quid       	"3ABE944801D8"
+				documentation 	
+|Hozzárendeli a PacMan-t a pályához, és elhelyezi a pályán.
+|Arguments:
+|       _currentMaze - A PacMan-hez rendelendõ Maze objektum.
+|       _pos - A PacMan pozíciója.
+				
+				parameters 	(list Parameters
+				    (object Parameter "_currentMaze"
+					type       	"Maze")
+				    (object Parameter "_pos"
+					type       	"Coordinates"))
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "SetBombPutState"
+				attributes 	(list Attribute_Set)
+				quid       	"3ABE944801E6"
+				documentation 	
+|A {@link #putbomb} változó beállítása (bomba lerakása).
+|Arguments:
+|       state - A beállítandó állapot
+				
+				parameters 	(list Parameters
+				    (object Parameter "state"
+					type       	"boolean"))
+				result     	"void"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "GetBombPutState"
+				attributes 	(list Attribute_Set)
+				quid       	"3ABE944801E8"
+				documentation 	
+|A {@link #putbomb} változó lekérdezése (rak-e le bombát ide a PacMan).
+|Return: 
+|       A {@link #putbomb} értéke.
+				
+				result     	"boolean"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "Act"
+				attributes 	(list Attribute_Set)
+				quid       	"3ABE944801F4"
+				documentation 	
+|Lehetõséget ad a PacMannek, hogy az életciklusát folytassa.
+|Return: 
+|       False értékkel tér vissza, ha elpusztult.
+				
+				result     	"boolean"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "IncreaseBombs"
+				attributes 	(list Attribute_Set)
+				quid       	"3ABE944801F5"
+				documentation 	
+|A bombák számának növelése.
+|Arguments:
+|       value - Mennyivel növeljük a bombák számát.
+				
+				parameters 	(list Parameters
+				    (object Parameter "value"
+					type       	"int"))
+				result     	"void"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0))
+			class_attributes 	(list class_attribute_list
+			    (object ClassAttribute "putbomb"
+				attributes 	(list Attribute_Set)
+				quid       	"3ABE944801D6"
+				documentation 	"Rakott-e le bombát az aktuális mezõre a PacMan."
+				type       	"boolean")
+			    (object ClassAttribute "bombs"
+				attributes 	(list Attribute_Set)
+				quid       	"3ABE944801D7"
+				documentation 	"A PacMan-nél levõ bombák száma."
+				type       	"int"))
+			module     	"Component View::PacMan::PacMan"
+			quidu      	"3ABE94C90272"
+			language   	"Java")
 		    (object Association "$UNNAMED$99"
 			quid       	"3AAE3C35038A"
 			roles      	(list role_list
 			    (object Role "$UNNAMED$100"
 				quid       	"3AAE3C360167"
-				supplier   	"Logical View::Program::Highscore"
+				supplier   	"Logical View::PacMan::Highscore"
 				quidu      	"3AAE3C2101C5"
 				is_navigable 	TRUE)
 			    (object Role "$UNNAMED$101"
 				quid       	"3AAE3C360177"
-				supplier   	"Logical View::Program::Main_program"
+				supplier   	"Logical View::PacMan::Main_program"
 				quidu      	"3AAE3B730290"
 				is_navigable 	TRUE
 				is_aggregate 	TRUE)))
@@ -5197,12 +5293,12 @@
 			roles      	(list role_list
 			    (object Role "$UNNAMED$103"
 				quid       	"3AAE3D030000"
-				supplier   	"Logical View::Program::Game"
+				supplier   	"Logical View::PacMan::Game"
 				quidu      	"3AAE3CAF00EA"
 				is_navigable 	TRUE)
 			    (object Role "$UNNAMED$104"
 				quid       	"3AAE3D030001"
-				supplier   	"Logical View::Program::Main_program"
+				supplier   	"Logical View::PacMan::Main_program"
 				quidu      	"3AAE3B730290"
 				is_navigable 	TRUE
 				is_aggregate 	TRUE)))
@@ -5211,12 +5307,12 @@
 			roles      	(list role_list
 			    (object Role "$UNNAMED$106"
 				quid       	"3AAE3F08004E"
-				supplier   	"Logical View::Program::Maze"
+				supplier   	"Logical View::PacMan::Maze"
 				quidu      	"3AAE3D11000F"
 				is_navigable 	TRUE)
 			    (object Role "$UNNAMED$107"
 				quid       	"3AAE3F08005D"
-				supplier   	"Logical View::Program::Game"
+				supplier   	"Logical View::PacMan::Game"
 				quidu      	"3AAE3CAF00EA"
 				is_navigable 	TRUE
 				is_aggregate 	TRUE)))
@@ -5225,12 +5321,12 @@
 			roles      	(list role_list
 			    (object Role "$UNNAMED$109"
 				quid       	"3AAE946D01F4"
-				supplier   	"Logical View::Program::ScoreListItem"
+				supplier   	"Logical View::PacMan::ScoreListItem"
 				quidu      	"3AAE9455030D"
 				is_navigable 	TRUE)
 			    (object Role "$UNNAMED$110"
 				quid       	"3AAE946D0222"
-				supplier   	"Logical View::Program::Highscore"
+				supplier   	"Logical View::PacMan::Highscore"
 				quidu      	"3AAE3C2101C5"
 				is_navigable 	TRUE
 				is_aggregate 	TRUE)))
@@ -5239,12 +5335,12 @@
 			roles      	(list role_list
 			    (object Role "$UNNAMED$112"
 				quid       	"3AAEA217034B"
-				supplier   	"Logical View::Program::MazeItem"
+				supplier   	"Logical View::PacMan::MazeItem"
 				quidu      	"3AAEA19A0000"
 				is_navigable 	TRUE)
 			    (object Role "$UNNAMED$113"
 				quid       	"3AAEA217035B"
-				supplier   	"Logical View::Program::Maze"
+				supplier   	"Logical View::PacMan::Maze"
 				quidu      	"3AAE3D11000F"
 				is_navigable 	TRUE
 				is_aggregate 	TRUE)))
@@ -5253,12 +5349,12 @@
 			roles      	(list role_list
 			    (object Role "$UNNAMED$115"
 				quid       	"3AAEA2DA0399"
-				supplier   	"Logical View::Program::Highscore"
+				supplier   	"Logical View::PacMan::Highscore"
 				quidu      	"3AAE3C2101C5"
 				is_navigable 	TRUE)
 			    (object Role "$UNNAMED$116"
 				quid       	"3AAEA2DA03C8"
-				supplier   	"Logical View::Program::Main_program"
+				supplier   	"Logical View::PacMan::Main_program"
 				quidu      	"3AAE3B730290"
 				is_navigable 	TRUE
 				is_aggregate 	TRUE)))
@@ -5267,12 +5363,12 @@
 			roles      	(list role_list
 			    (object Role "$UNNAMED$118"
 				quid       	"3AAEA2DD0203"
-				supplier   	"Logical View::Program::Main_program"
+				supplier   	"Logical View::PacMan::Main_program"
 				quidu      	"3AAE3B730290"
 				is_navigable 	TRUE)
 			    (object Role "$UNNAMED$119"
 				quid       	"3AAEA2DD0222"
-				supplier   	"Logical View::Program::Game"
+				supplier   	"Logical View::PacMan::Game"
 				quidu      	"3AAE3CAF00EA"
 				is_navigable 	TRUE
 				is_aggregate 	TRUE)))
@@ -5281,12 +5377,12 @@
 			roles      	(list role_list
 			    (object Role "$UNNAMED$121"
 				quid       	"3AAEA2E20157"
-				supplier   	"Logical View::Program::Game"
+				supplier   	"Logical View::PacMan::Game"
 				quidu      	"3AAE3CAF00EA"
 				is_navigable 	TRUE)
 			    (object Role "$UNNAMED$122"
 				quid       	"3AAEA2E20177"
-				supplier   	"Logical View::Program::Main_program"
+				supplier   	"Logical View::PacMan::Main_program"
 				quidu      	"3AAE3B730290"
 				is_navigable 	TRUE
 				is_aggregate 	TRUE)))
@@ -5295,12 +5391,12 @@
 			roles      	(list role_list
 			    (object Role "$UNNAMED$124"
 				quid       	"3AAEA2E4032C"
-				supplier   	"Logical View::Program::Maze"
+				supplier   	"Logical View::PacMan::Maze"
 				quidu      	"3AAE3D11000F"
 				is_navigable 	TRUE)
 			    (object Role "$UNNAMED$125"
 				quid       	"3AAEA2E4034B"
-				supplier   	"Logical View::Program::Game"
+				supplier   	"Logical View::PacMan::Game"
 				quidu      	"3AAE3CAF00EA"
 				is_navigable 	TRUE
 				is_aggregate 	TRUE)))
@@ -5309,12 +5405,12 @@
 			roles      	(list role_list
 			    (object Role "$UNNAMED$127"
 				quid       	"3AAEA2E700DA"
-				supplier   	"Logical View::Program::MazeItem"
+				supplier   	"Logical View::PacMan::MazeItem"
 				quidu      	"3AAEA19A0000"
 				is_navigable 	TRUE)
 			    (object Role "$UNNAMED$128"
 				quid       	"3AAEA2E700FA"
-				supplier   	"Logical View::Program::Maze"
+				supplier   	"Logical View::PacMan::Maze"
 				quidu      	"3AAE3D11000F"
 				is_navigable 	TRUE
 				is_aggregate 	TRUE)))
@@ -5323,12 +5419,12 @@
 			roles      	(list role_list
 			    (object Role "$UNNAMED$130"
 				quid       	"3AAEC0710196"
-				supplier   	"Logical View::Program::Maze"
+				supplier   	"Logical View::PacMan::Maze"
 				quidu      	"3AAE3D11000F"
 				is_navigable 	TRUE)
 			    (object Role "$UNNAMED$131"
 				quid       	"3AAEC07101A5"
-				supplier   	"Logical View::Program::MazeItem"
+				supplier   	"Logical View::PacMan::MazeItem"
 				quidu      	"3AAEA19A0000"
 				is_navigable 	TRUE
 				is_aggregate 	TRUE)))
@@ -5337,12 +5433,12 @@
 			roles      	(list role_list
 			    (object Role "$UNNAMED$133"
 				quid       	"3AAEC07502DE"
-				supplier   	"Logical View::Program::MazeItem"
+				supplier   	"Logical View::PacMan::MazeItem"
 				quidu      	"3AAEA19A0000"
 				is_navigable 	TRUE)
 			    (object Role "$UNNAMED$134"
 				quid       	"3AAEC07502EE"
-				supplier   	"Logical View::Program::Maze"
+				supplier   	"Logical View::PacMan::Maze"
 				quidu      	"3AAE3D11000F"
 				is_navigable 	TRUE
 				is_aggregate 	TRUE)))
@@ -5351,13 +5447,13 @@
 			roles      	(list role_list
 			    (object Role "$UNNAMED$136"
 				quid       	"3AB2C1E501A4"
-				supplier   	"Logical View::Program::FieldItem"
+				supplier   	"Logical View::PacMan::FieldItem"
 				quidu      	"3AB2C17A0398"
 				client_cardinality 	(value cardinality "0..n")
 				is_navigable 	TRUE)
 			    (object Role "$UNNAMED$137"
 				quid       	"3AB2C1E501A5"
-				supplier   	"Logical View::Program::Maze"
+				supplier   	"Logical View::PacMan::Maze"
 				quidu      	"3AAE3D11000F"
 				is_navigable 	TRUE
 				is_aggregate 	TRUE)))
@@ -5366,7 +5462,7 @@
 			roles      	(list role_list
 			    (object Role "$UNNAMED$139"
 				quid       	"3AB4AF9301B5"
-				supplier   	"Logical View::Program::Game"
+				supplier   	"Logical View::PacMan::Game"
 				quidu      	"3AAE3CAF00EA"
 				is_navigable 	TRUE)
 			    (object Role "$UNNAMED$140"
@@ -5385,7 +5481,7 @@
 				is_navigable 	TRUE)
 			    (object Role "$UNNAMED$143"
 				quid       	"3AB4AF960399"
-				supplier   	"Logical View::Program::Game"
+				supplier   	"Logical View::PacMan::Game"
 				quidu      	"3AAE3CAF00EA"
 				is_navigable 	TRUE
 				is_aggregate 	TRUE)))
@@ -5399,7 +5495,7 @@
 				is_navigable 	TRUE)
 			    (object Role "$UNNAMED$146"
 				quid       	"3AB4FFF60196"
-				supplier   	"Logical View::Program::Game"
+				supplier   	"Logical View::PacMan::Game"
 				quidu      	"3AAE3CAF00EA"
 				is_navigable 	TRUE
 				is_aggregate 	TRUE)))
@@ -5413,7 +5509,7 @@
 				is_navigable 	TRUE)
 			    (object Role "$UNNAMED$149"
 				quid       	"3AB504C6030D"
-				supplier   	"Logical View::Program::Highscore"
+				supplier   	"Logical View::PacMan::Highscore"
 				quidu      	"3AAE3C2101C5"
 				is_navigable 	TRUE
 				is_aggregate 	TRUE)))
@@ -5797,16 +5893,16 @@ aktor"
 			max_height 	28350
 			max_width  	21600
 			origin_x   	0
-			origin_y   	3225
+			origin_y   	3516
 			items      	(list diagram_item_list
-			    (object ClassView "Class" "Logical View::Program::PacMan" @288
+			    (object ClassView "Class" "Logical View::PacMan::PacMan" @288
 				ShowCompartmentStereotypes 	TRUE
 				IncludeAttribute 	TRUE
 				IncludeOperation 	TRUE
 				location   	(496, 4192)
 				label      	(object ItemLabel
 				    Parent_View 	@288
-				    location   	(292, 3986)
+				    location   	(292, 3961)
 				    fill_color 	13434879
 				    nlines     	1
 				    max_width  	408
@@ -5818,17 +5914,17 @@ aktor"
 				quidu      	"3AAE9F7D031C"
 				compartment 	(object Compartment
 				    Parent_View 	@288
-				    location   	(292, 4047)
+				    location   	(292, 4022)
 				    icon_style 	"Icon"
 				    fill_color 	13434879
 				    anchor     	2
-				    nlines     	7
+				    nlines     	8
 				    max_width  	406)
 				width      	426
-				height     	436
+				height     	486
 				annotation 	8
 				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Program::DumbMonster" @289
+			    (object ClassView "Class" "Logical View::PacMan::DumbMonster" @289
 				ShowCompartmentStereotypes 	TRUE
 				IncludeAttribute 	TRUE
 				IncludeOperation 	TRUE
@@ -5847,17 +5943,17 @@ aktor"
 				quidu      	"3AAEA8690128"
 				compartment 	(object Compartment
 				    Parent_View 	@289
-				    location   	(891, 4601)
+				    location   	(891, 4604)
 				    icon_style 	"Icon"
 				    fill_color 	16777215
 				    anchor     	2
 				    nlines     	2
-				    max_width  	337)
+				    max_width  	328)
 				width      	348
 				height     	186
 				annotation 	8
 				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Program::CleverMonster" @290
+			    (object ClassView "Class" "Logical View::PacMan::CleverMonster" @290
 				ShowCompartmentStereotypes 	TRUE
 				IncludeAttribute 	TRUE
 				IncludeOperation 	TRUE
@@ -5876,27 +5972,27 @@ aktor"
 				quidu      	"3AAEA87C00AB"
 				compartment 	(object Compartment
 				    Parent_View 	@290
-				    location   	(1273, 4601)
+				    location   	(1273, 4604)
 				    icon_style 	"Icon"
 				    fill_color 	16777215
 				    anchor     	2
 				    nlines     	2
-				    max_width  	340)
+				    max_width  	331)
 				width      	352
 				height     	186
 				annotation 	8
 				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Program::Bonus" @291
+			    (object ClassView "Class" "Logical View::PacMan::Bonus" @291
 				ShowCompartmentStereotypes 	TRUE
 				IncludeAttribute 	TRUE
 				IncludeOperation 	TRUE
 				location   	(2944, 4048)
 				label      	(object ItemLabel
 				    Parent_View 	@291
-				    location   	(2847, 3967)
+				    location   	(2840, 3942)
 				    fill_color 	13434879
 				    nlines     	1
-				    max_width  	194
+				    max_width  	208
 				    justify    	0
 				    label      	"Bonus")
 				icon_style 	"Icon"
@@ -5905,17 +6001,17 @@ aktor"
 				quidu      	"3AAEABA900BB"
 				compartment 	(object Compartment
 				    Parent_View 	@291
-				    location   	(2847, 4025)
+				    location   	(2840, 4003)
 				    icon_style 	"Icon"
 				    fill_color 	16777215
 				    anchor     	2
-				    nlines     	2
-				    max_width  	200)
-				width      	212
-				height     	186
+				    nlines     	3
+				    max_width  	206)
+				width      	226
+				height     	236
 				annotation 	8
 				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Program::Bomb" @292
+			    (object ClassView "Class" "Logical View::PacMan::Bomb" @292
 				ShowCompartmentStereotypes 	TRUE
 				IncludeAttribute 	TRUE
 				IncludeOperation 	TRUE
@@ -5934,53 +6030,44 @@ aktor"
 				quidu      	"3AAEB61101C5"
 				compartment 	(object Compartment
 				    Parent_View 	@292
-				    location   	(2041, 4014)
+				    location   	(2041, 4017)
 				    icon_style 	"Icon"
 				    fill_color 	16777215
 				    anchor     	2
 				    nlines     	5
-				    max_width  	340)
+				    max_width  	331)
 				width      	352
 				height     	336
 				annotation 	8
 				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Program::Crystal" @293
+			    (object ClassView "Class" "Logical View::PacMan::Crystal" @293
 				ShowCompartmentStereotypes 	TRUE
 				IncludeAttribute 	TRUE
 				IncludeOperation 	TRUE
 				location   	(3296, 4000)
 				label      	(object ItemLabel
 				    Parent_View 	@293
-				    location   	(3193, 3919)
+				    location   	(3215, 3948)
 				    fill_color 	13434879
 				    nlines     	1
-				    max_width  	206
+				    max_width  	162
 				    justify    	0
 				    label      	"Crystal")
 				icon_style 	"Icon"
 				line_color 	3342489
 				fill_color 	13434879
 				quidu      	"3AAEB6370109"
-				compartment 	(object Compartment
-				    Parent_View 	@293
-				    location   	(3193, 3977)
-				    icon_style 	"Icon"
-				    fill_color 	16777215
-				    anchor     	2
-				    nlines     	2
-				    max_width  	212)
-				width      	224
-				height     	186
+				height     	128
 				annotation 	8
 				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Program::ScoreBonus" @294
+			    (object ClassView "Class" "Logical View::PacMan::ScoreBonus" @294
 				ShowCompartmentStereotypes 	TRUE
 				IncludeAttribute 	TRUE
 				IncludeOperation 	TRUE
-				location   	(2576, 4608)
+				location   	(2576, 4576)
 				label      	(object ItemLabel
 				    Parent_View 	@294
-				    location   	(2426, 4477)
+				    location   	(2426, 4470)
 				    fill_color 	13434879
 				    nlines     	1
 				    max_width  	300
@@ -5992,53 +6079,45 @@ aktor"
 				quidu      	"3AAEB66301A5"
 				compartment 	(object Compartment
 				    Parent_View 	@294
-				    location   	(2426, 4535)
+				    location   	(2426, 4531)
 				    icon_style 	"Icon"
 				    fill_color 	16777215
 				    anchor     	2
-				    nlines     	4
-				    max_width  	306)
+				    nlines     	3
+				    max_width  	297)
 				width      	318
-				height     	286
+				height     	236
 				annotation 	8
 				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Program::TimeBonus" @295
+			    (object ClassView "Class" "Logical View::PacMan::TimeBonus" @295
 				ShowCompartmentStereotypes 	TRUE
 				IncludeAttribute 	TRUE
 				IncludeOperation 	TRUE
-				location   	(3312, 4592)
+				location   	(3312, 4576)
 				label      	(object ItemLabel
 				    Parent_View 	@295
-				    location   	(3172, 4461)
+				    location   	(3195, 4524)
 				    fill_color 	13434879
 				    nlines     	1
-				    max_width  	280
+				    max_width  	234
 				    justify    	0
 				    label      	"TimeBonus")
 				icon_style 	"Icon"
 				line_color 	3342489
 				fill_color 	13434879
 				quidu      	"3AAEB67001B5"
-				compartment 	(object Compartment
-				    Parent_View 	@295
-				    location   	(3172, 4519)
-				    icon_style 	"Icon"
-				    fill_color 	16777215
-				    anchor     	2
-				    nlines     	4
-				    max_width  	287)
-				width      	298
-				height     	286
+				width      	252
+				height     	128
 				annotation 	8
 				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Program::BombBonus" @296
+			    (object ClassView "Class" "Logical View::PacMan::BombBonus" @296
 				ShowCompartmentStereotypes 	TRUE
 				IncludeAttribute 	TRUE
 				IncludeOperation 	TRUE
-				location   	(2944, 4544)
+				location   	(2944, 4576)
 				label      	(object ItemLabel
 				    Parent_View 	@296
-				    location   	(2794, 4463)
+				    location   	(2794, 4470)
 				    fill_color 	13434879
 				    nlines     	1
 				    max_width  	300
@@ -6050,14 +6129,14 @@ aktor"
 				quidu      	"3AAEB67C0203"
 				compartment 	(object Compartment
 				    Parent_View 	@296
-				    location   	(2794, 4521)
+				    location   	(2794, 4531)
 				    icon_style 	"Icon"
 				    fill_color 	16777215
 				    anchor     	2
-				    nlines     	2
-				    max_width  	306)
+				    nlines     	3
+				    max_width  	297)
 				width      	318
-				height     	186
+				height     	236
 				annotation 	8
 				autoResize 	TRUE)
 			    (object InheritView "" @297
@@ -6074,7 +6153,7 @@ aktor"
 				client     	@295
 				supplier   	@291
 				line_style 	0)
-			    (object ClassView "Class" "Logical View::Program::Monster" @299
+			    (object ClassView "Class" "Logical View::PacMan::Monster" @299
 				ShowCompartmentStereotypes 	TRUE
 				IncludeAttribute 	TRUE
 				IncludeOperation 	TRUE
@@ -6093,12 +6172,12 @@ aktor"
 				quidu      	"3AAEA25A02DE"
 				compartment 	(object Compartment
 				    Parent_View 	@299
-				    location   	(1113, 4094)
+				    location   	(1113, 4097)
 				    icon_style 	"Icon"
 				    fill_color 	16777215
 				    anchor     	2
 				    nlines     	5
-				    max_width  	340)
+				    max_width  	331)
 				width      	352
 				height     	336
 				annotation 	8
@@ -6124,7 +6203,7 @@ aktor"
 				client     	@296
 				supplier   	@291
 				line_style 	0)
-			    (object ClassView "Class" "Logical View::Program::ActiveMazeItem" @303
+			    (object ClassView "Class" "Logical View::PacMan::ActiveMazeItem" @303
 				ShowCompartmentStereotypes 	TRUE
 				IncludeAttribute 	TRUE
 				IncludeOperation 	TRUE
@@ -6143,12 +6222,12 @@ aktor"
 				quidu      	"3AB4A80D0251"
 				compartment 	(object Compartment
 				    Parent_View 	@303
-				    location   	(840, 3520)
+				    location   	(840, 3523)
 				    icon_style 	"Icon"
 				    fill_color 	13434879
 				    anchor     	2
 				    nlines     	3
-				    max_width  	325)
+				    max_width  	316)
 				width      	354
 				height     	236
 				annotation 	8
@@ -6156,7 +6235,7 @@ aktor"
 			    (object InheritView "" @304
 				stereotype 	TRUE
 				line_color 	3342489
-				quidu      	"3AB4A83C0261"
+				quidu      	"3ABE944801D5"
 				client     	@288
 				supplier   	@303
 				line_style 	0)
@@ -6167,7 +6246,7 @@ aktor"
 				client     	@299
 				supplier   	@303
 				line_style 	0)
-			    (object ClassView "Class" "Logical View::Program::TimedMazeItem" @306
+			    (object ClassView "Class" "Logical View::PacMan::TimedMazeItem" @306
 				ShowCompartmentStereotypes 	TRUE
 				IncludeAttribute 	TRUE
 				IncludeOperation 	TRUE
@@ -6186,12 +6265,12 @@ aktor"
 				quidu      	"3AB4B5DA0109"
 				compartment 	(object Compartment
 				    Parent_View 	@306
-				    location   	(1838, 3616)
+				    location   	(1838, 3619)
 				    icon_style 	"Icon"
 				    fill_color 	13434879
 				    anchor     	2
 				    nlines     	3
-				    max_width  	362)
+				    max_width  	353)
 				width      	374
 				height     	236
 				annotation 	8
@@ -6210,7 +6289,7 @@ aktor"
 				client     	@291
 				supplier   	@306
 				line_style 	0)
-			    (object ClassView "Class" "Logical View::Program::Coordinates" @309
+			    (object ClassView "Class" "Logical View::PacMan::Coordinates" @309
 				ShowCompartmentStereotypes 	TRUE
 				IncludeAttribute 	TRUE
 				IncludeOperation 	TRUE
@@ -6227,125 +6306,25 @@ aktor"
 				line_color 	3342489
 				fill_color 	13434879
 				quidu      	"3AB4BF73007D"
+				compartment 	(object Compartment
+				    Parent_View 	@309
+				    location   	(654, 771)
+				    icon_style 	"Icon"
+				    fill_color 	16777215
+				    anchor     	2
+				    nlines     	3
+				    max_width  	184)
 				width      	278
 				height     	236
 				annotation 	8
 				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Program::Highscore" @310
-				ShowCompartmentStereotypes 	TRUE
-				IncludeAttribute 	TRUE
-				IncludeOperation 	TRUE
-				location   	(848, 2016)
-				label      	(object ItemLabel
-				    Parent_View 	@310
-				    location   	(673, 1760)
-				    fill_color 	13434879
-				    nlines     	1
-				    max_width  	350
-				    justify    	0
-				    label      	"Highscore")
-				icon_style 	"Icon"
-				line_color 	3342489
-				fill_color 	13434879
-				quidu      	"3AAE3C2101C5"
-				compartment 	(object Compartment
-				    Parent_View 	@310
-				    location   	(673, 1818)
-				    icon_style 	"Icon"
-				    fill_color 	13434879
-				    anchor     	2
-				    nlines     	9
-				    max_width  	356)
-				width      	368
-				height     	536
-				annotation 	8
-				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Program::MazeItem" @311
-				ShowCompartmentStereotypes 	TRUE
-				IncludeAttribute 	TRUE
-				IncludeOperation 	TRUE
-				location   	(1712, 3136)
-				label      	(object ItemLabel
-				    Parent_View 	@311
-				    location   	(1504, 2880)
-				    fill_color 	13434879
-				    nlines     	1
-				    max_width  	416
-				    justify    	0
-				    label      	"MazeItem")
-				icon_style 	"Icon"
-				line_color 	3342489
-				fill_color 	13434879
-				quidu      	"3AAEA19A0000"
-				compartment 	(object Compartment
-				    Parent_View 	@311
-				    location   	(1504, 2938)
-				    icon_style 	"Icon"
-				    fill_color 	13434879
-				    anchor     	2
-				    nlines     	9
-				    max_width  	421)
-				width      	434
-				height     	536
-				annotation 	8
-				autoResize 	TRUE)
-			    (object InheritView "" @312
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"3AAEB64A01B5"
-				client     	@293
-				supplier   	@311
-				line_style 	0)
-			    (object InheritView "" @313
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"3AB4A842032C"
-				client     	@303
-				supplier   	@311
-				line_style 	0)
-			    (object InheritView "" @314
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"3AB4B604006D"
-				client     	@306
-				supplier   	@311
-				line_style 	0)
-			    (object ClassView "Class" "Logical View::Program::FieldItem" @315
-				ShowCompartmentStereotypes 	TRUE
-				IncludeAttribute 	TRUE
-				IncludeOperation 	TRUE
-				location   	(2496, 2576)
-				label      	(object ItemLabel
-				    Parent_View 	@315
-				    location   	(2323, 2470)
-				    fill_color 	13434879
-				    nlines     	1
-				    max_width  	346
-				    justify    	0
-				    label      	"FieldItem")
-				icon_style 	"Icon"
-				line_color 	3342489
-				fill_color 	13434879
-				quidu      	"3AB2C17A0398"
-				compartment 	(object Compartment
-				    Parent_View 	@315
-				    location   	(2323, 2528)
-				    icon_style 	"Icon"
-				    fill_color 	13434879
-				    anchor     	2
-				    nlines     	3
-				    max_width  	353)
-				width      	364
-				height     	236
-				annotation 	8
-				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::java::awt::Canvas" @316
+			    (object ClassView "Class" "Logical View::java::awt::Canvas" @310
 				ShowCompartmentStereotypes 	TRUE
 				IncludeAttribute 	TRUE
 				IncludeOperation 	TRUE
 				location   	(1712, 576)
 				label      	(object ItemLabel
-				    Parent_View 	@316
+				    Parent_View 	@310
 				    location   	(1433, 347)
 				    fill_color 	13434879
 				    nlines     	1
@@ -6357,7 +6336,7 @@ aktor"
 				fill_color 	13434879
 				quidu      	"3784E6420162"
 				compartment 	(object Compartment
-				    Parent_View 	@316
+				    Parent_View 	@310
 				    location   	(1433, 452)
 				    icon_style 	"Icon"
 				    fill_color 	13434879
@@ -6368,7 +6347,115 @@ aktor"
 				height     	482
 				annotation 	8
 				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Program::Main_program" @317
+			    (object ClassView "Class" "Logical View::PacMan::Highscore" @311
+				ShowCompartmentStereotypes 	TRUE
+				IncludeAttribute 	TRUE
+				IncludeOperation 	TRUE
+				location   	(848, 2016)
+				label      	(object ItemLabel
+				    Parent_View 	@311
+				    location   	(673, 1760)
+				    fill_color 	13434879
+				    nlines     	1
+				    max_width  	350
+				    justify    	0
+				    label      	"Highscore")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"3AAE3C2101C5"
+				compartment 	(object Compartment
+				    Parent_View 	@311
+				    location   	(673, 1821)
+				    icon_style 	"Icon"
+				    fill_color 	13434879
+				    anchor     	2
+				    nlines     	9
+				    max_width  	347)
+				width      	368
+				height     	536
+				annotation 	8
+				autoResize 	TRUE)
+			    (object ClassView "Class" "Logical View::PacMan::MazeItem" @312
+				ShowCompartmentStereotypes 	TRUE
+				IncludeAttribute 	TRUE
+				IncludeOperation 	TRUE
+				location   	(1712, 3136)
+				label      	(object ItemLabel
+				    Parent_View 	@312
+				    location   	(1504, 2880)
+				    fill_color 	13434879
+				    nlines     	1
+				    max_width  	416
+				    justify    	0
+				    label      	"MazeItem")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"3AAEA19A0000"
+				compartment 	(object Compartment
+				    Parent_View 	@312
+				    location   	(1504, 2941)
+				    icon_style 	"Icon"
+				    fill_color 	13434879
+				    anchor     	2
+				    nlines     	9
+				    max_width  	413)
+				width      	434
+				height     	536
+				annotation 	8
+				autoResize 	TRUE)
+			    (object InheritView "" @313
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"3AAEB64A01B5"
+				client     	@293
+				supplier   	@312
+				line_style 	0)
+			    (object InheritView "" @314
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"3AB4A842032C"
+				client     	@303
+				supplier   	@312
+				line_style 	0)
+			    (object InheritView "" @315
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"3AB4B604006D"
+				client     	@306
+				supplier   	@312
+				line_style 	0)
+			    (object ClassView "Class" "Logical View::PacMan::FieldItem" @316
+				ShowCompartmentStereotypes 	TRUE
+				IncludeAttribute 	TRUE
+				IncludeOperation 	TRUE
+				location   	(2496, 2576)
+				label      	(object ItemLabel
+				    Parent_View 	@316
+				    location   	(2323, 2470)
+				    fill_color 	13434879
+				    nlines     	1
+				    max_width  	346
+				    justify    	0
+				    label      	"FieldItem")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"3AB2C17A0398"
+				compartment 	(object Compartment
+				    Parent_View 	@316
+				    location   	(2323, 2531)
+				    icon_style 	"Icon"
+				    fill_color 	13434879
+				    anchor     	2
+				    nlines     	3
+				    max_width  	344)
+				width      	364
+				height     	236
+				annotation 	8
+				autoResize 	TRUE)
+			    (object ClassView "Class" "Logical View::PacMan::Main_program" @317
 				ShowCompartmentStereotypes 	TRUE
 				IncludeAttribute 	TRUE
 				IncludeOperation 	TRUE
@@ -6387,12 +6474,12 @@ aktor"
 				quidu      	"3AAE3B730290"
 				compartment 	(object Compartment
 				    Parent_View 	@317
-				    location   	(594, 1198)
+				    location   	(594, 1201)
 				    icon_style 	"Icon"
 				    fill_color 	13434879
 				    anchor     	2
 				    nlines     	5
-				    max_width  	515)
+				    max_width  	506)
 				width      	526
 				height     	336
 				annotation 	8
@@ -6410,7 +6497,7 @@ aktor"
 					line_color 	3342489
 					quidu      	"3AAEA2DA0399"
 					client     	@318
-					supplier   	@310
+					supplier   	@311
 					line_style 	0)
 				    (object RoleView "$UNNAMED$116" @320
 					Parent_View 	@318
@@ -6421,14 +6508,14 @@ aktor"
 					client     	@318
 					supplier   	@317
 					line_style 	0)))
-			    (object ClassView "Class" "Logical View::Program::Maze" @321
+			    (object ClassView "Class" "Logical View::PacMan::Maze" @321
 				ShowCompartmentStereotypes 	TRUE
 				IncludeAttribute 	TRUE
 				IncludeOperation 	TRUE
-				location   	(1712, 2240)
+				location   	(1712, 2224)
 				label      	(object ItemLabel
 				    Parent_View 	@321
-				    location   	(1487, 1784)
+				    location   	(1487, 1743)
 				    fill_color 	13434879
 				    nlines     	1
 				    max_width  	450
@@ -6440,34 +6527,34 @@ aktor"
 				quidu      	"3AAE3D11000F"
 				compartment 	(object Compartment
 				    Parent_View 	@321
-				    location   	(1487, 1842)
+				    location   	(1487, 1804)
 				    icon_style 	"Icon"
 				    fill_color 	13434879
 				    anchor     	2
-				    nlines     	17
-				    max_width  	456)
+				    nlines     	18
+				    max_width  	447)
 				width      	468
-				height     	936
+				height     	986
 				annotation 	8
 				autoResize 	TRUE)
 			    (object AssociationViewNew "$UNNAMED$132" @322
-				location   	(1712, 2787)
+				location   	(1712, 2792)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"3AAEC0750157"
 				roleview_list 	(list RoleViews
 				    (object RoleView "$UNNAMED$133" @323
 					Parent_View 	@322
-					location   	(624, 1747)
+					location   	(624, 1752)
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"3AAEC07502DE"
 					client     	@322
-					supplier   	@311
+					supplier   	@312
 					line_style 	0)
 				    (object RoleView "$UNNAMED$134" @324
 					Parent_View 	@322
-					location   	(624, 1747)
+					location   	(624, 1752)
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"3AAEC07502EE"
@@ -6475,23 +6562,23 @@ aktor"
 					supplier   	@321
 					line_style 	0)))
 			    (object AssociationViewNew "$UNNAMED$135" @325
-				location   	(2129, 2418)
+				location   	(2129, 2410)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"3AB2C1E303AC"
 				roleview_list 	(list RoleViews
 				    (object RoleView "$UNNAMED$136" @326
 					Parent_View 	@325
-					location   	(881, 1378)
+					location   	(881, 1370)
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"3AB2C1E501A4"
 					client     	@325
-					supplier   	@315
+					supplier   	@316
 					line_style 	0
 					label      	(object SegLabel @327
 					    Parent_View 	@326
-					    location   	(2273, 2539)
+					    location   	(2274, 2534)
 					    anchor     	2
 					    anchor_loc 	1
 					    nlines     	1
@@ -6503,14 +6590,14 @@ aktor"
 					    orientation 	1))
 				    (object RoleView "$UNNAMED$137" @328
 					Parent_View 	@325
-					location   	(881, 1378)
+					location   	(881, 1370)
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"3AB2C1E501A5"
 					client     	@325
 					supplier   	@321
 					line_style 	0)))
-			    (object ClassView "Class" "Logical View::Program::Game" @329
+			    (object ClassView "Class" "Logical View::PacMan::Game" @329
 				ShowCompartmentStereotypes 	TRUE
 				IncludeAttribute 	TRUE
 				IncludeOperation 	TRUE
@@ -6529,12 +6616,12 @@ aktor"
 				quidu      	"3AAE3CAF00EA"
 				compartment 	(object Compartment
 				    Parent_View 	@329
-				    location   	(1504, 1048)
+				    location   	(1504, 1051)
 				    icon_style 	"Icon"
 				    fill_color 	13434879
 				    anchor     	2
 				    nlines     	11
-				    max_width  	421)
+				    max_width  	413)
 				width      	434
 				height     	636
 				annotation 	8
@@ -6564,14 +6651,14 @@ aktor"
 					supplier   	@317
 					line_style 	0)))
 			    (object AssociationViewNew "$UNNAMED$123" @333
-				location   	(1712, 1692)
+				location   	(1712, 1672)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"3AAEA2E400EA"
 				roleview_list 	(list RoleViews
 				    (object RoleView "$UNNAMED$124" @334
 					Parent_View 	@333
-					location   	(624, 1372)
+					location   	(624, 1352)
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"3AAEA2E4032C"
@@ -6580,7 +6667,7 @@ aktor"
 					line_style 	0)
 				    (object RoleView "$UNNAMED$125" @335
 					Parent_View 	@333
-					location   	(624, 1372)
+					location   	(624, 1352)
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"3AAEA2E4034B"
@@ -6591,8 +6678,8 @@ aktor"
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"3AB504CB01C5"
-				client     	@310
-				supplier   	@316
+				client     	@311
+				supplier   	@310
 				vertices   	(list Points
 				    (663, 2016)
 				    (288, 2016)
@@ -6604,7 +6691,7 @@ aktor"
 				line_color 	3342489
 				quidu      	"3AB48EE20271"
 				client     	@329
-				supplier   	@316
+				supplier   	@310
 				line_style 	0)))
 		    (object InteractionDiagram "Seq(Init)"
 			mechanism_ref 	@284
@@ -10352,7 +10439,7 @@ aktor" @394
 			quidu      	"3786349801E5"
 			width      	300
 			height     	180)
-		    (object CategoryView "Logical View::Program" @595
+		    (object CategoryView "Logical View::PacMan" @595
 			location   	(576, 960)
 			label      	(object ItemLabel
 			    Parent_View 	@595
@@ -10361,7 +10448,7 @@ aktor" @394
 			    nlines     	2
 			    max_width  	288
 			    justify    	0
-			    label      	"Program")
+			    label      	"PacMan")
 			icon_style 	"Icon"
 			line_color 	3342489
 			fill_color 	13434879
@@ -10525,6 +10612,86 @@ aktor" @394
 					language   	"Java"))
 				physical_presentations 	(list unit_reference_list)))
 			physical_presentations 	(list unit_reference_list)))
+		physical_presentations 	(list unit_reference_list))
+	    (object SubSystem "PacMan"
+		quid       	"3ABE94C90271"
+		physical_models 	(list unit_reference_list
+		    (object module "PacMan" "NotAModuleType" "NotAModulePart"
+			quid       	"3ABE94C90272"
+			stereotype 	""
+			language   	"Java")
+		    (object module "DumbMonster" "NotAModuleType" "NotAModulePart"
+			quid       	"3ABE94C902BF"
+			stereotype 	""
+			language   	"Java")
+		    (object module "CleverMonster" "NotAModuleType" "NotAModulePart"
+			quid       	"3ABE94C9032C"
+			stereotype 	""
+			language   	"Java")
+		    (object module "Bonus" "NotAModuleType" "NotAModulePart"
+			quid       	"3ABE94C903A9"
+			stereotype 	""
+			language   	"Java")
+		    (object module "Bomb" "NotAModuleType" "NotAModulePart"
+			quid       	"3ABE94CA003E"
+			stereotype 	""
+			language   	"Java")
+		    (object module "Crystal" "NotAModuleType" "NotAModulePart"
+			quid       	"3ABE94CA00AB"
+			stereotype 	""
+			language   	"Java")
+		    (object module "ScoreBonus" "NotAModuleType" "NotAModulePart"
+			quid       	"3ABE94CA0128"
+			stereotype 	""
+			language   	"Java")
+		    (object module "TimeBonus" "NotAModuleType" "NotAModulePart"
+			quid       	"3ABE94CA01A5"
+			stereotype 	""
+			language   	"Java")
+		    (object module "BombBonus" "NotAModuleType" "NotAModulePart"
+			quid       	"3ABE94CA0222"
+			stereotype 	""
+			language   	"Java")
+		    (object module "Monster" "NotAModuleType" "NotAModulePart"
+			quid       	"3ABE94CA029F"
+			stereotype 	""
+			language   	"Java")
+		    (object module "ActiveMazeItem" "NotAModuleType" "NotAModulePart"
+			quid       	"3ABE94CA030D"
+			stereotype 	""
+			language   	"Java")
+		    (object module "TimedMazeItem" "NotAModuleType" "NotAModulePart"
+			quid       	"3ABE94CA038A"
+			stereotype 	""
+			language   	"Java")
+		    (object module "Coordinates" "NotAModuleType" "NotAModulePart"
+			quid       	"3ABE94CB001F"
+			stereotype 	""
+			language   	"Java")
+		    (object module "Highscore" "NotAModuleType" "NotAModulePart"
+			quid       	"3ABE94CB00EA"
+			stereotype 	""
+			language   	"Java")
+		    (object module "MazeItem" "NotAModuleType" "NotAModulePart"
+			quid       	"3ABE94CB0196"
+			stereotype 	""
+			language   	"Java")
+		    (object module "FieldItem" "NotAModuleType" "NotAModulePart"
+			quid       	"3ABE94CB0222"
+			stereotype 	""
+			language   	"Java")
+		    (object module "Main_program" "NotAModuleType" "NotAModulePart"
+			quid       	"3ABE94CB0290"
+			stereotype 	""
+			language   	"Java")
+		    (object module "Maze" "NotAModuleType" "NotAModulePart"
+			quid       	"3ABE94CB037A"
+			stereotype 	""
+			language   	"Java")
+		    (object module "Game" "NotAModuleType" "NotAModulePart"
+			quid       	"3ABE94CC006D"
+			stereotype 	""
+			language   	"Java"))
 		physical_presentations 	(list unit_reference_list)))
 	physical_presentations 	(list unit_reference_list
 	    (object Module_Diagram "Main"

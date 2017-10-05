@@ -1,0 +1,62 @@
+// $Id: outputfiledef.txt,v 1.2 2001/04/02 01:37:23 lptr Exp $
+// $Date: 2001/04/02 01:37:23 $
+// $Author: lptr $
+
+/* comment */
+// one line comment
+
+showmenu
+  /**
+    megjeleníti a játék fõmenüjét.
+  **/
+
+highscore <name> <score>
+  /**
+    a highscorelista elemeinek felsorolása. - ilyenkor a highscore
+    listában vagyunk...
+  **/
+
+load <filename>
+  /**
+    pálya betöltése <filename>-bõl.
+  **/
+
+game <score> <lives>
+maze <time>
+  /**
+    a game és a maze objektumok által tárolt információk dumpolása
+  **/
+
+pacman <objnum> <x> <y> <direction> <bombs>
+monster <objnum> [clever|dumb] <x> <y> <direction>
+  /**
+    az aktív pályaelemek adatai
+  **/
+
+bomb <objnum> <x> <y> [active|inactive] <timetolive>
+bonus <objnum> <x> <y> [bomb|score|time] <timetolive> <value>
+crystal <objnum> <x> <y>
+  /**
+    a passzív pályaelemek adatai
+  **/
+
+step
+  /**
+    eddig tart egy lépés
+  **/
+
+warning <message>
+  /**
+    figyelmeztetés nem végzetes hibára
+  **/
+
+error <message>
+  /**
+    végzetes hiba
+  **/
+
+/* asdf */
+  /**
+    ilyen sorok keletkeznek az inputfile "/remark asdf" parancsa hatására
+  **/
+ 

@@ -1,0 +1,66 @@
+## comment ##
+
+/load <filename>
+  ##
+    ez a legelsõ parancs, betölti a pályát.
+  ##
+
+/nexttestcase <filename>
+  ##
+    ha a pacman teljesítette a pályát, a következõ tesztesetet
+    ebbõl a file-ból kell beolvasni.
+    ha nincs megadva, vagy másképp ért véget a szimuláció,
+    a program kilép.
+  ##
+
+/step
+
+/setdirection [up|right|down|left]
+/putbomb
+/placebonus [auto|manual]
+/placebonus [time|score|bomb] <x-coord> <y-coord> <timetolive> <value>
+
+/info [all|pacman|monsters|bombs|crystals|bonuses]
+  ##
+    all: all below
+    pacman: pozíció, irány
+    monster: pozíció, irány
+    bomb: pozíció, élettartam
+    bonus: pozíció, élettartam, tartalom
+    crystal: pozíció
+  ##
+
+/show [maze|info] 
+  ##
+    maze: szöveges labirintus megjelenítés
+    info: score, lives, bombs, time kiírása
+  ##
+
+/hack score <score>
+/hack lives <lives>
+/hack time <time>
+
+/hack pacman kill
+/hack pacman set <x> <y> <direction> <bombs>
+
+/hack monster create [clever|dumb] <x> <y> <direction>
+/hack monster <objnum> [kill|reborn]
+/hack monster <objnum> set <x> <y> <direction>
+
+/hack bomb <objnum> create <x> <y> <timetolive>
+/hack bomb <objnum> remove
+/hack bomb <objnum> set <x> <y> <timetolive>
+/hack bomb <objnum> [activate|deactivate]
+
+/hack bonus <objnum> remove
+/hack bonus <objnum> set <x> <y> <time> <value>
+
+/hack crystal create <x> <y>
+/hack crystal <objnum> remove
+
+/hack wall [on|off] <fx> <fy> [up|right|down|left] [single|both]
+  ##
+    az (<fx>,<fy>) mezõ adott falát bekapcsolja/kikapcsolja.
+    a single csak az adott mezõ falát állítja, a both mindkét
+    oldalról beállítja a falat.
+  ##

@@ -9,12 +9,28 @@
 <value>"121"</value>
 </productversion>
 </versioninfo>
-<activeproject>"Skeleton\Skeleton.kpx"</activeproject>
+<activeproject>""</activeproject>
 <items>
 <root name="PacMan Projects">
 <projectfolder>
 <name>"Skeleton"</name>
+<relativepath>"Source\Skeleton\Skeleton.kpx"</relativepath>
+<scmstatus id="0">
+<userstring>""</userstring>
+<userinteger>"0"</userinteger>
+</scmstatus>
+</projectfolder>
+<projectfolder>
+<name>"Skeleton"</name>
 <relativepath>"Skeleton\Skeleton.kpx"</relativepath>
+<scmstatus id="0">
+<userstring>""</userstring>
+<userinteger>"0"</userinteger>
+</scmstatus>
+</projectfolder>
+<projectfolder>
+<name>"test"</name>
+<relativepath>"Test\test.kpx"</relativepath>
 <scmstatus id="0">
 <userstring>""</userstring>
 <userinteger>"0"</userinteger>
