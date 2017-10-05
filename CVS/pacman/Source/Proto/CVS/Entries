@@ -1,2 +1,17 @@
-D/Parser////
-D/Seged////
+D/Inputter////
+D/Outputter////
+D/PacMan////
+D/Util////
+/docit.cmd/1.5/Fri Apr 27 03:15:43 2001//
+/makeedit.cmd/1.2/Fri Apr 27 03:15:43 2001//
+/makeinp.cmd/1.4/Fri Apr 27 03:15:43 2001//
+/makeout.cmd/1.4/Fri Apr 27 03:15:43 2001//
+/p.cmd/1.2/Fri Apr 27 03:15:43 2001//
+/pack.cmd/1.4/Fri Apr 27 03:15:43 2001//
+/pr.cmd/1.2/Fri Apr 27 03:15:43 2001//
+/run.cmd/1.2/Fri Apr 27 03:15:43 2001//
+/runall.cmd/1.3/Fri Apr 27 03:15:43 2001//
+/build.cmd/1.8/Fri Apr 27 12:51:48 2001//
+/cleanup.cmd/1.1/Fri Apr 27 12:52:52 2001//
+/makepacman.cmd/1.3/Fri Apr 27 13:42:41 2001//
+/Proto.kwx/1.3/Fri Apr 27 21:00:02 2001//

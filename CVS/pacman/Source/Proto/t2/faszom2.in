@@ -1,0 +1,17 @@
+/* komment */
+/startgame t2
+/step
+/setdirection up
+/step
+/step
+/step
+/step
+/step
+/step
+/step
+/step
+/step
+/step
+/step
+/exitgame faszom
+/exit

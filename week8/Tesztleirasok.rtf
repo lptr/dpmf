@@ -1,0 +1,527 @@
+{\rtf1\ansi\ansicpg1250\deff0\deflang1038{\fonttbl{\f0\fswiss\fcharset238{\*\fname Arial;}Arial CE;}{\f1\fswiss\fcharset0 Arial;}{\f2\froman\fprq1\fcharset238 Courier;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\qc\cf1\b\f0\fs28 Teszt forgat\'f3k\'f6nyvek\fs24\par
+\pard\b0\fs20\par
+Az al\'e1bb ismertetett teszt forgat\'f3k\'f6nyvek a program \'f6sszes r\'e9sz\'e9t, minden rutinj\'e1t tesztelik, \'edgy seg\'edts\'e9g\'fckkel vizsg\'e1lhat\'f3 az eg\'e9sz program helyes m\'fbk\'f6d\'e9se.\b\fs24\par
+\par
+Men\'fcrendszer \'e9s high-score t\'e1bla megjelen\'edt\'e9s/friss\'edt\'e9s tesztel\'e9se\par
+\lang1033\b0\f1\fs20\par
+\lang1038\f0 Ez a teszt forgat\'f3k\'f6nyv arra szolg\'e1l, hogy a program keret\'e9t ad\'f3 men\'fcrendszert, \'e9s a high-score t\'e1bla kezel\'e9s\'e9t tesztelj\'fck. Itt m\'e9g nem sz\'e1m\'edt, hogy egy j\'e1t\'e9kon bel\'fcl hogy mozognak, jelennek meg vagy t\'fbnnek el az elemek, egyed\'fcl a program k\'fcls\'f5 v\'e1za az \'e9rdekes a tesztel\'e9s szempontj\'e1b\'f3l. A teszt eredm\'e9nyeit a kimeneti file vizsg\'e1lat\'e1val ellen\'f5rizhetj\'fck, ennek tartalmaznia kell a helyesen kit\'f6lt\'f6tt \'e9s m\'f3dos\'edtott high-score t\'e1bl\'e1kat minden r\'e9szteszt ut\'e1n.\par
+Megjegyz\'e9s: az al\'e1bbiakban j\'e1t\'e9kk\'e9nt egy j\'e1t\'e9kmenetre hivatkozunk (az els\'f5 p\'e1lyabet\'f6lt\'e9st\'f5l kezdve az utols\'f3 \'e9let elveszt\'e9se, vagy egy\'e9b ok miatt t\'f6rt\'e9n\'f5 kil\'e9p\'e9sig), m\'edg programnak h\'edvjuk az eg\'e9sz Pac-Man j\'e1t\'e9kprogramot.\par
+\par
+A men\'fc tesztel\'e9se abb\'f3l \'e1ll, hogy egym\'e1s ut\'e1n kiv\'e1lasztjuk az \'f6sszes rendelkez\'e9sre \'e1ll\'f3 men\'fcpontot (ezek: J\'e1t\'e9k ind\'edt\'e1sa, High-score t\'e1bla megtekint\'e9se, Kil\'e9p\'e9s a programb\'f3l.) A j\'e1t\'e9k ind\'edt\'e1sa ut\'e1n egyed\'fcl egy p\'e1lyabet\'f6lt\'e9st \'e9s egy eredm\'e9ny (score) be\'e1ll\'edt\'e1st v\'e9gz\'fcnk el. Ez ut\'f3bbi a highscore tesztel\'e9s\'e9hez sz\'fcks\'e9ges, hiszen ha elegend\'f5en nagy az eredm\'e9ny \'e9rt\'e9ke (a mindenkori legjobb 10 k\'f6z\'f6tt van), akkor ezt a j\'e1t\'e9kb\'f3l val\'f3 kil\'e9p\'e9skor a programnak automatikusan fel kell jegyeznie a high-score t\'e1bl\'e1ba. R\'f6gt\'f6n le is tesztelj\'fck, hogy rendesen f\'f6l is lett-e jegyezve az eredm\'e9ny, m\'e9gpedig a /highscore h\'edv\'e1ssal (ami a \i High-score t\'e1bla megtekint\'e9se\i0  men\'fcponttal egyen\'e9rt\'e9k\'fb).  A k\'e9tszeres h\'edv\'e1s csak biztons\'e1gi teszt. Miut\'e1n letesztelt\'fck a highscore t\'e1bl\'e1t egy nagy eredm\'e9nnyel, egy kicsivel (ezt elvileg nem kell hozz\'e1adnia, ha m\'e1r van 10 el\'e9g nagy eredm\'e9ny), \'e9s egy m\'e9g nagyobbal, kil\'e9p\'fcnk a programb\'f3l a /exit utas\'edt\'e1ssal (minden tesztnek ezzel kell v\'e9get\'e9rnie). A legv\'e9g\'e9n tal\'e1lhat\'f3 commentnek m\'e1r nem szabad a kimenetre kiker\'fclnie, hiszen itt m\'e1r v\'e9get\'e9rt a program.\par
+\f2\par
+\par
+// Menurendszer es high-score tabla megjelenites/frissites tesztelese\par
+\par
+\par
+// Dupla teszt a highscore lekerdezesere\par
+/highscore\par
+/exithighscore\par
+\par
+/highscore\par
+/exithighscore\par
+\par
+\par
+\par
+// TESZT 1 (nagy highscore)\par
+/startgame\par
+/hack load level1\par
+/hack score 999999     // Nagy highscore beallitasa\par
+/exitgame Highscoretesztelo_Jenoke_aki_nem_Sandor\par
+\par
+// Highscore lekerdezese, hogy a modositasokat ellenorizzuk\par
+/highscore\par
+/exithighscore\par
+\par
+/highscore\par
+/exithighscore\par
+\par
+\par
+\par
+// TESZT 2 (kis eredmeny, nem highscore)\par
+/startgame\par
+/hack load level1\par
+/hack score 5    // Meg nagyobb highscore beallitasa\par
+/exitgame Jo_Egy_Bena_Vagyok_Csak_5_Pontom_Van\par
+\par
+// Highscore lekerdezese, hogy a modositasokat ellenorizzuk\par
+/highscore\par
+/exithighscore\par
+\par
+/highscore\par
+/exithighscore\par
+\par
+\par
+\par
+// TESZT 3 (meg nagyobb highscore)\par
+/startgame\par
+/hack load level1\par
+/hack score 1000000    // Meg nagyobb highscore beallitasa\par
+/exitgame Highscoretesztelo_Sandorka_aki_nem_Jeno\par
+\par
+// Highscore lekerdezese, hogy a modositasokat ellenorizzuk\par
+/highscore\par
+/exithighscore\par
+\par
+/highscore\par
+/exithighscore\par
+\par
+/exit\par
+/remark Itt m\'e1r v\'e9ge a programnak, teh\'e1t ennek nem szabad megjelennie a kimeneten...\par
+\par
+\f0\par
+\b\fs24\'c1ltal\'e1nos j\'e1t\'e9k teszt\par
+\lang1033\b0\f1\fs20\par
+\lang1038\f0 Ennek a tesztnek a c\'e9lja, hogy egy j\'e1t\'e9k inicializ\'e1l\'e1s\'e1t helyesen v\'e9gzi-e el a program. Ez tartalmazza egy p\'e1lya bet\'f6lt\'e9s\'e9t, a labirintus \'e9s k\'fcl\'f6nb\'f6z\'f5 inform\'e1ci\'f3k megjelen\'edt\'e9s\'e9t, a PacMan v\'e1ltoz\'f3inak (\'e9letek stb.) helyes be\'e1ll\'edt\'e1s\'e1t, p\'e1lyaobjektumok elhelyez\'e9s\'e9t (hiszen a fileb\'f3l bet\'f6lt\'f6tt p\'e1lya csak a falak helyzet\'e9t \'e9s a sz\'f6rnyek \'fajj\'e1sz\'fclet\'e9s\'e9nek hely\'e9t tartalmazza), \'e9s bomb\'e1k elhelyez\'e9s\'e9t valamint aktiv\'e1l\'e1s\'e1t. Ez a forgat\'f3k\'f6nyv az \'e1ltal\'e1nos j\'e1t\'e9kmotort teszteli a sz\'f6rnyek \'e9s a PacMan mozgat\'e1sa \'e9s \'fctk\'f6z\'e9sdetekt\'e1l\'e1sok n\'e9lk\'fcl. A l\'e9nyeg, hogy egy p\'e1ly\'e1t helyesen tudjunk fel\'e9p\'edteni \'e9s megjelen\'edteni. A /show maze parancs kimeneteit kell megn\'e9zni, hogy l\'e1ssuk, helyesen lettek-e lerakva az objektumok.\par
+\f2\par
+\par
+// Egy jatek elinditasanak (palyabetoltes es objektumok helyes letrehozasa),\par
+// es az abbol valo kilepesnek a tesztelese\par
+\par
+/startgame\par
+/hack load level1.dat\par
+\par
+/show maze\par
+/info all\par
+\par
+/hack score 666\par
+/hack lives 42\par
+/hack time 69\par
+\par
+/hack bonus manual\par
+/hack bonus time 10 10 5 70\par
+/hack bonus time 10 20 8 40\par
+/hack bonus time 10 30 3 90\par
+/hack bonus score 20 10 4 5\par
+/hack bonus score 20 20 9 9\par
+/hack bonus score 20 30 6 14\par
+/hack bonus bomb 30 10 5\par
+/hack bonus bomb 30 20 8\par
+/hack bonus bomb 30 30 1\par
+\par
+/hack bonus 4 set 15 12 7 10\par
+\par
+/hack crystal create 14 32\par
+/hack crystal create 21 12\par
+\par
+/show maze\par
+/info all\par
+\par
+/hack bomb create 50 40 10\par
+/hack bomb create 50 30 10\par
+\par
+/hack bomb 0 activate\par
+\par
+/step\par
+/step\par
+\par
+/hack bomb 1 set 60 70 15\par
+/hack bomb 1 activate\par
+\par
+/step 5\par
+\par
+/hack score 0\par
+\par
+/show maze\par
+/show info\par
+\par
+/exitgame Sandor\par
+\par
+/exit\par
+\par
+\b\f0\fs24 P\'e1lyav\'e1lt\'e1s teszt\par
+\lang1033\b0\f1\fs20\par
+\lang1038\f0 Ez a teszt a p\'e1ly\'e1k k\'f6z\'f6tti v\'e1lt\'e1sokat vizsg\'e1lja, teh\'e1t a p\'e1lyabet\'f6lt\'f5 \'e9s -t\'e1rol\'f3 met\'f3dusokat teszteli. Egyed\'fcl az a c\'e9lja, hogy a k\'fcl\'f6nb\'f6z\'f5 p\'e1ly\'e1k k\'f6zti v\'e1lt\'e1s sikeresen t\'f6rt\'e9nik-e meg, \'e9s hogy a v\'e1ltoz\'f3k \'e9s objektumok hogyan v\'e1ltoznak a p\'e1ly\'e1k k\'f6zti v\'e1lt\'e1sokkor. A helyes m\'fbk\'f6d\'e9st a p\'e1lya-adatfileok \'e9s a kimeneten megjelen\'f5 /show maze utas\'edt\'e1sok eredm\'e9ny\'e9nek \'f6sszehasonl\'edt\'e1s\'e1val tesztelhetj\'fck. Tesztelj\'fck mind a "term\'e9szetes" p\'e1lyav\'e1lt\'e1st (teh\'e1t amikor minden krist\'e1ly elt\'fbnik a p\'e1ly\'e1r\'f3l, \'e9s ez\'e9rt l\'e9p\'fcnk a k\'f6vetkez\'f5re), mint az "er\'f5szakosat", ez ut\'f3bbi alatt a j\'e1t\'e9kmenet k\'f6zben b\'e1rmikor t\'f6rt\'e9n\'f5 \'faj p\'e1ly\'e1ra l\'e9p\'e9st \'e9rtj\'fck (ilyen val\'f3sz\'edn\'fb nem t\'f6rt\'e9nik majd a val\'f3di j\'e1t\'e9k k\'f6zben, de a programnak helyesen kell m\'fbk\'f6dnie ilyen helyzetben is.)\par
+\f2\par
+// Uj palyak betoltesenek tesztelese.\par
+\par
+/startgame\par
+/hack load level1\par
+\par
+/show maze\par
+/info all\par
+/step 3\par
+/show maze\par
+/info all\par
+\par
+// Osszes kristaly eltuntetese - ilyenkor a jateknak automatikusan palyat\par
+// kell valtania\par
+/hack crystal * remove\par
+/step\par
+/nextlevel\par
+/show maze\par
+/info all\par
+\par
+/step 3\par
+/show maze\par
+/info all\par
+\par
+// Eroszakos palyabetoltes a palyatoltes tesztelesere\par
+/hack load palya2\par
+/show maze\par
+/info all\par
+\par
+/exitgame\par
+/exit\par
+\par
+\b\f0\fs24 Sz\'f6rnyek mozgat\'e1s\'e1nak tesztel\'e9se\par
+\lang1033\b0\f1\fs20\par
+\lang1038\f0 Itt az els\'f5dleges hangs\'faly a k\'fcl\'f6nb\'f6z\'f5 sz\'f6rnyek mozgat\'e1s\'e1n van, term\'e9szetesen a PacMan hely\'e9nek \'e9s mozg\'e1s\'e1nak f\'fcggv\'e9ny\'e9ben. A m\'fbk\'f6d\'e9s helyess\'e9ge a /show maze utas\'edt\'e1sok kimeneteinek vizsg\'e1lat\'e1val v\'e9gezhet\'f5, hiszen ezeken l\'e1tszik, hogy melyik sz\'f6rny \'e9ppen hol van, \'e9s helyes ir\'e1nyba halad-e vajon.\par
+\par
+A teszt menete: t\'f6bb okos \'e9s t\'f6bb buta sz\'f6rnyet helyez\'fcnk el a p\'e1ly\'e1n, majd a PacMan \'e1ll\'f3 helyzet\'e9ben vizsg\'e1ljuk ezek mozg\'e1s\'e1t. Az okos sz\'f6rnyeknek az \'fatkeres\'f5 algoritmus seg\'edts\'e9g\'e9vel nagyj\'e1b\'f3l a PacMan fel\'e9 kell haladniuk, a but\'e1knak meg teljesen v\'e9letlenszer\'fben kell bolyonganiuk. Miut\'e1n ez a teszt megvolt, a sz\'f6rnyeket \'e1thelyezz\'fck, hogy j\'f3l \'f6sszezavarjuk \'f5ket, majd adunk a PacMannek egy ir\'e1nyt, amerre \'f5 elindul, a sz\'f6rnyek pedig az fent le\'edrtak szerint mozognak tov\'e1bbra is, azzal a k\'fcl\'f6nbs\'e9ggel, hogy az okosaknak PacMan helyv\'e1ltoztat\'e1sait is figyelembe kell venni\'fck. V\'e9g\'fcl egy er\'f5szakos p\'e1lyabet\'f6lt\'e9ssel ellen\'f5rizz\'fck, hogy \'faj p\'e1ly\'e1ra l\'e9p\'e9skor a helyes m\'fbk\'f6d\'e9snek megfelel\'f5en elt\'fbnnek-e a sz\'f6rnyek a p\'e1ly\'e1r\'f3l.\par
+\f2\par
+// Szornyek mozgatasanak tesztelese\par
+\par
+/startgame\par
+/hack load level1\par
+\par
+/hack pacman set 10 10 0 none\par
+/hack lives 25\par
+/info monster\par
+\par
+/remark Elso teszt: a PacMan all, a szornyek mozognak...\par
+\par
+/remark Szornyek krealasa\par
+/hack monster create dumb 20 20 left       // 0.\par
+/hack monster create dumb 35 40 up         // 1.\par
+/hack monster create clever 62 17 right    // 2.\par
+/hack monster create clever 52 52 down     // 3.\par
+\par
+/show maze\par
+/step 5\par
+/show maze\par
+/step 5\par
+/show maze\par
+/step 5\par
+/show maze\par
+/step 5\par
+/show maze\par
+/step 5\par
+/show maze\par
+/step 5\par
+/show maze\par
+/step 5\par
+/show maze\par
+/step 5\par
+/show maze\par
+/step 5\par
+/show maze\par
+/step 5\par
+/show maze\par
+/step\par
+\par
+\par
+\par
+/remark Masodik teszt: a PacMan es a szornyek mozognak...\par
+\par
+/remark Par szornyet atirunk...\par
+/hack monster 0 set 71 24\par
+/hack monster 2 set 41 26\par
+/hack monster 1 up\par
+/hack monster 3 kill\par
+\par
+/setdirection right\par
+\par
+/show maze\par
+/show info\par
+\par
+/step 5\par
+/hack monster 3 reborn\par
+\par
+// Sok step, hogy a monsterek mozoghassanak es/vagy utkozhessenek a PacmMan-nel\par
+/show maze\par
+/step 5\par
+/show maze\par
+/step 5\par
+/show maze\par
+/step 5\par
+/show maze\par
+/step 5\par
+/show maze\par
+/step 5\par
+/show maze\par
+/step 5\par
+/show maze\par
+/step 5\par
+/show maze\par
+/step 5\par
+/show maze\par
+/step 5\par
+/show maze\par
+/step 5\par
+/show maze\par
+/step\par
+\par
+// Vizsgalat a PacMan mozgasa kozben:\par
+/setdirection left\par
+/step 5\par
+/setdirection up\par
+/step 9\par
+/setdirection right\par
+\par
+/show maze\par
+/show info\par
+\par
+//A szornyek eltunnek-e, ha uj palyara lepunk?\par
+/hack load level2\par
+/nextlevel\par
+\par
+/show maze\par
+/show info\par
+\par
+\b\f0\fs24 Pac-Man hal\'e1l\'e1nak tesztel\'e9se\par
+\b0\fs20\par
+Ez a forgat\'f3k\'f6nyv a Pac-Man haland\'f3s\'e1g\'e1r\'f3l, azaz hal\'e1lm\'f3djair\'f3l sz\'f3l. A program \'e1ltal\'e1nos mozgat\'f3motorj\'e1t tesztelj\'fck, bele\'e9rtve az \'fctk\'f6z\'e9sdetekt\'e1l\'f3 r\'e9szt is. A PacMan n\'e9gyf\'e9lek\'e9ppen halhat meg: er\'f5szakosan (/hack pacman kill), sz\'f6rnnyel val\'f3 tal\'e1lkoz\'e1skor, aktiviz\'e1lt bomb\'e1val val\'f3 tal\'e1lkoz\'e1skor, illetve az id\'f5 letel\'e9sekor. Ezeket a teszteket sorban elv\'e9gezz\'fck, mindegyik ut\'e1n ki\'edratva a sz\'fcks\'e9ges inform\'e1ci\'f3kat, ahol az egyik fontos vizsg\'e1land\'f3 param\'e9ter a PacMan \'e9leteinek sz\'e1ma (ennek mindegyik teszt ut\'e1n cs\'f6kkennie kell eggyel). Mivel 3 \'e9letet adunk a PacMannak az elej\'e9n, \'e9s 4 teszt van, a v\'e9g\'e9n elfogy az \'e9letek sz\'e1ma, \'e9s \'edgy a programnak ki kell l\'e9pnie a j\'e1t\'e9kb\'f3l, vissza a f\'f5men\'fcbe.\par
+\f2\par
+\lang1033 // Pacman halalanak tesztelese\par
+\par
+/startgame\par
+/hack load level1\par
+/info all\par
+/show maze\par
+\par
+/remark Eroszakos megolese a PacMan-nek (elveszik 1 elet)\par
+/hack lives 3\par
+/hack pacman kill\par
+/step\par
+/info all\par
+\par
+/remark Monsterrel valo talalkozas tesztelese (elveszik 1 elet)\par
+/hack monster create dumb 10 10 up\par
+/hack pacman set 10 10 up 0\par
+/step 2\par
+/info all\par
+\par
+/remark Bombaval valo talalkozas tesztelese (elveszik 1 elet)\par
+/hack bomb create 10 10 10\par
+/hack pacman set 10 10 up 0\par
+/step 2\par
+/info all\par
+\par
+/remark Ido letelesenek tesztelese (elveszik 1 elet)\par
+/remark A harmadik iteracio utan letelik az ido, es elveszik egy elet. \par
+/remark Mivel tobb elet nincs, ki kell lepnie a programnak a jatekbol.\par
+/hack time 3\par
+/step 5\par
+/info all\par
+\par
+/exitgame\par
+/exit\par
+\lang1038\par
+\b\f0\fs24\'dctk\'f6z\'e9sek tesztel\'e9se\par
+\b0\fs20\par
+A j\'e1t\'e9kmotor legfontosabb r\'e9sz\'e9nek, az \'fctk\'f6z\'e9sdetekt\'e1l\'f3nak a tesztel\'e9se. Tesztelj\'fck az \'f6sszes fontos \'fctk\'f6z\'e9skombin\'e1ci\'f3t (kiv\'e9ve a fallal val\'f3 \'fctk\'f6z\'e9seket, ezek egy m\'e1sik forgat\'f3k\'f6nyvben vannak). A m\'f3dszer: lerakunk minden t\'edpus\'fa objektumb\'f3l egyet, a v\'e9g\'e9re pedig egy bomb\'e1t. El\'f5sz\'f6r egy sz\'f6rnyet enged\'fcnk v\'e9gig a soron - ennek nem szabad k\'f6lcs\'f6nhat\'e1sba l\'e9pni vel\'fck, a v\'e9g\'e9n viszont meg kell halnia a bomb\'e1n\'e1l. Ut\'e1na \'fajragener\'e1ljuk a bomb\'e1t, \'e9s egy PacMant enged\'fcnk v\'e9gig - ennek fel kell vennie a b\'f3nuszokat \'e9s krist\'e1lyokat, majd meghalni a bomb\'e1n\'e1l. V\'e9g\'fcl egy bomba vs inakt\'edv p\'e1lyaelem tesztet v\'e9gz\'fcnk (a gonosz PacMan r\'e1rak egy bomb\'e1t egy b\'f3nuszra amit m\'e1r nem tud felvenni, mert t\'fal sok van n\'e1la.)\par
+\f2\par
+\par
+// Utkozesek tesztelese.\par
+// Monster vs inaktiv palyaelemek, pacman vs inaktiv, monster vs monster, bomba vs inaktiv\par
+\par
+/startgame\par
+/show maze\par
+\par
+/remark Lerakunk par objektumot...\par
+/hack bonus manual\par
+/hack bonus create time 10 10 60 10\par
+/hack bonus create score 11 10 60 5\par
+/hack bonus create bomb 12 10 60 1\par
+\par
+/hack crystal create 13 10\par
+/hack crystal create 14 10\par
+\par
+/hack bomb create 16 10 150\par
+\par
+\par
+/hack monster create dumb 10 8 down\par
+/hack monster 0 manual\par
+\par
+\par
+/remark Steppelunk parat, mindegyik utan kell info, hogy kovetni tudjuk a dolgok alakulasat\par
+/remark Eloszor egy szornyet engedunk vegig az objektumokon, aminek ugy kell atjutnia rajtuk, hogy egyiket sem \par
+/remark veszi fel/semmisiti meg stb., a bombanal viszont meghal.\par
+\par
+/stepinfo 30\par
+\par
+\par
+/hack bomb create 16 10 150\par
+\par
+/hack pacman set 10 8 down\par
+\par
+/show maze\par
+\par
+/remark Steppelunk parat, mindegyik utan kell info, hogy kovetni tudjuk a dolgok alakulasat\par
+/remark Most jon a pacman... neki mindegyik elemmel interaktivitasba kell kerulnie (a valtozasokat kovethetjuk az infok alakulasan), vegul a bombanal meghal.\par
+\par
+/stepinfo 30\par
+\par
+/remark 2 monster utkoztetese, at kell haladniuk egymason mindenfele interakcio nelkul\par
+/hack monster create dumb 20 8 down\par
+/hack monster create dumb 20 9 up\par
+/hack monster 1 manual\par
+/hack monster 2 manual\par
+\par
+/stepinfo 30\par
+\par
+/show maze\par
+\par
+/remark Bomba utkozese inaktiv palyaelemmel\par
+/hack pacman bombs 5\par
+/remark Lerakunk egy bombabonuszt\par
+/hack bonus create bomb 10 10 60 1\par
+/remark Ugyanoda a pacmant, de mar nem tudja felvenni, mert max. szamu bomba van nala\par
+/hack pacman set 10 10 down\par
+/remark Gonosz modon lerakunk ide egy bombat (ra a bonusra)\par
+/putbomb\par
+\par
+/show maze\par
+/info all\par
+\par
+/step\par
+/step\par
+\par
+/show maze\par
+/info all\par
+\par
+/exitgame\par
+/exit\par
+\par
+\par
+\b\f0\fs24 Falakkal val\'f3 \'fctk\'f6z\'e9sek tesztel\'e9se\par
+\b0\fs20\par
+Az \'fctk\'f6z\'e9sdetekt\'e1l\'f3 m\'e1sik r\'e9sz\'e9nek, a fal\'fctk\'f6z\'e9sek kezel\'f5j\'e9nek a tesztel\'e9se. Bet\'f6lt\'fcnk egy nagyj\'e1b\'f3l \'fcres (faln\'e9lk\'fcli) p\'e1ly\'e1t, erre lerakunk p\'e1r falat, \'e9s a PacMan-t \'e9s egy sz\'f6rnyet nekienged\'fcnk. Tesztelj\'fck a dupla \'e9s szimpla falakat is (szimpla vagy f\'e9lig\'e1tereszt\'f5 fal: csak egyik ir\'e1nyban \'e1tj\'e1rhat\'f3).\par
+\f2\par
+// Falakkal valo utkozesek tesztelese\par
+\par
+/remark Falnelkuli palya beoltese\par
+/startgame\par
+/hack load clearlevel\par
+/show maze\par
+\par
+\par
+// Pacman megy folfele es nekimegy falnak\par
+/hack wall on 10 9 up both\par
+/hack pacman set 10 10 up\par
+/step 30\par
+/info all\par
+\par
+// Pacman megy folfele es nekimegy falnak\par
+/hack wall on 10 9 up single\par
+/hack pacman set 10 10 up\par
+/step 30\par
+/info all\par
+\par
+// Pacman megy folfele es atmegy a feligatereszto falon\par
+/hack wall on 10 9 up single\par
+/hack pacman set 10 7 down\par
+/step 60\par
+/info all\par
+\par
+/hack wall on 20 9 up both\par
+/hack monster create dumb 20 10 up\par
+/hack monster 0 manual\par
+/step 30\par
+/info all\par
+\par
+/hack wall on 20 9 up single\par
+/hack monster 0 set 20 10 up\par
+/step 30\par
+/info all\par
+\par
+/hack wall on 20 9 up single\par
+/hack monster 0 set 20 7 down\par
+/step 60\par
+/info all\par
+\par
+/hack wall on 30 10 left both\par
+/hack wall on 30 10 up both\par
+/hack wall on 30 10 right both\par
+/hack wall on 30 10 down both\par
+\par
+/info all\par
+\par
+/hack pacman set 30 10 up\par
+/step 5\par
+/hack pacman set 30 10 down\par
+/step 5\par
+/hack pacman set 30 10 left\par
+/step 5\par
+/hack pacman set 30 10 right\par
+/step 5\par
+\par
+/info all\par
+\par
+/exitgame\par
+/exit\par
+\par
+\b\f0\fs24 Bomba lerak\'e1s\'e1nak tesztel\'e9se\par
+\b0\fs20\par
+Ez a forgat\'f3k\'f6nyv a bomb\'e1k lerak\'e1s\'e1t teszteli. N\'e9gy dolgot tesztel:\par
+1) Bomba lerak\'e1sa \'fcres helyre\par
+2) Bomba lerak\'e1sa m\'e1sik bomb\'e1ra\par
+3) Bomb\'e1r\'f3l lel\'e9p\'e9s => aktiv\'e1l\'f3d\'e1s tesztel\'e9se.\par
+4) Bomba lerak\'e1s\'e1ra tett k\'eds\'e9rlet, ha nincs a PacMann\'e9l bomba.\par
+Az eredm\'e9nyek egyszer\'fben k\'f6vethet\'f5ek a kimeneti file-ban, hiszen minden fontos akci\'f3 ut\'e1n ki\'edratjuk a bomb\'e1kr\'f3l sz\'f3l\'f3 inform\'e1ci\'f3kat (/info bomb).\par
+\f2\par
+// Bomba lerakasanak tesztelese\par
+\par
+/startgame\par
+/hack load level1\par
+/show maze\par
+\par
+/remark Bomba lerakasa\par
+/hack pacman set 10 10 up 3\par
+/step\par
+/info bomb\par
+\par
+/remark Most rakjuk le...\par
+/putbomb\par
+/showmap\par
+/step\par
+/info pacman\par
+/info bomb\par
+\par
+/remark Meg egyet probalunk ugyanoda, de nem fog menni...\par
+/putbomb\par
+/showmap\par
+/step\par
+/info pacman\par
+/info bomb\par
+\par
+/remark Lepkedunk, hogy az aktivalodast teszteljuk\par
+/step \par
+/info bomb\par
+/step \par
+/info bomb\par
+/step \par
+/info bomb\par
+/step \par
+/info bomb\par
+/step \par
+/info bomb\par
+/step \par
+/info bomb\par
+/step \par
+/info bomb\par
+/step \par
+/info bomb\par
+/step \par
+/info bomb\par
+/step \par
+/info bomb\par
+\par
+/remark 0-ra allitjuk a bombak szamat es megprobalunk lerakni egyet\par
+/hack pacman set 10 20 up 0\par
+/putbomb\par
+/info bomb\par
+/step\par
+/showmap\par
+\par
+/step 100\par
+\par
+/info all\par
+\par
+/exitgame\par
+/exit\par
+\par
+}
+ 

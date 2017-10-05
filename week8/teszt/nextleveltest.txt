@@ -1,0 +1,25 @@
+// Uj palyak betoltesenek tesztelese.
+
+/startgame
+/hack load level1
+
+/show maze
+/step 3
+/show maze
+
+// Osszes kristaly eltuntetese - ilyenkor a jateknak automatikusan palyat
+// kell valtania
+/hack crystal * remove
+/step
+/nextlevel
+/show maze
+
+/step 3
+/show maze
+
+// Eroszakos palyabetoltes a palyatoltes tesztelesere
+/hack load palya2
+/show maze
+
+/exitgame
+/exit

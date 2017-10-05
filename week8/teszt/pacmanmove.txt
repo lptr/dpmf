@@ -1,0 +1,62 @@
+// Falakkal valo utkozesek tesztelese
+
+/remark Falnelkuli palya beoltese
+/startgame
+/hack load clearlevel
+/show maze
+
+
+// Pacman megy folfele es nekimegy falnak
+/hack wall on 10 9 up both
+/hack pacman set 10 10 up
+/step 30
+/info all
+
+// Pacman megy folfele es nekimegy falnak
+/hack wall on 10 9 up single
+/hack pacman set 10 10 up
+/step 30
+/info all
+
+// Pacman megy folfele es atmegy a feligatereszto falon
+/hack wall on 10 9 up single
+/hack pacman set 10 7 down
+/step 60
+/info all
+
+/hack wall on 20 9 up both
+/hack monster create dumb 20 10 up
+/hack monster 0 manual
+/step 30
+/info all
+
+/hack wall on 20 9 up single
+/hack monster 0 set 20 10 up
+/step 30
+/info all
+
+/hack wall on 20 9 up single
+/hack monster 0 set 20 7 down
+/step 60
+/info all
+
+/hack wall on 30 10 left both
+/hack wall on 30 10 up both
+/hack wall on 30 10 right both
+/hack wall on 30 10 down both
+
+/info all
+
+/hack pacman set 30 10 up
+/step 5
+/hack pacman set 30 10 down
+/step 5
+/hack pacman set 30 10 left
+/step 5
+/hack pacman set 30 10 right
+/step 5
+
+/info all
+
+/exitgame
+/exit

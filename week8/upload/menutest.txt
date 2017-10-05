@@ -1,0 +1,56 @@
+// Menurendszer es high-score tabla megjelenites/frissites tesztelese
+
+
+// Dupla teszt a highscore lekerdezesere
+/highscore
+/exithighscore
+
+/highscore
+/exithighscore
+
+
+
+// TESZT 1 (nagy highscore)
+/startgame
+/hack load level1
+/hack score 999999     // Nagy highscore beallitasa
+/exitgame Highscoretesztelo_Jenoke_aki_nem_Sandor
+
+// Highscore lekerdezese, hogy a modositasokat ellenorizzuk
+/highscore
+/exithighscore
+
+/highscore
+/exithighscore
+
+
+
+// TESZT 2 (kis eredmeny, nem highscore)
+/startgame
+/hack load level1
+/hack score 5    // Meg nagyobb highscore beallitasa
+/exitgame Jo_Egy_Bena_Vagyok_Csak_5_Pontom_Van
+
+// Highscore lekerdezese, hogy a modositasokat ellenorizzuk
+/highscore
+/exithighscore
+
+/highscore
+/exithighscore
+
+
+
+// TESZT 3 (meg nagyobb highscore)
+/startgame
+/hack load level1
+/hack score 1000000    // Meg nagyobb highscore beallitasa
+/exitgame Highscoretesztelo_Sandorka_aki_nem_Jeno
+
+// Highscore lekerdezese, hogy a modositasokat ellenorizzuk
+/highscore
+/exithighscore
+
+/highscore
+/exithighscore
+
+/exit

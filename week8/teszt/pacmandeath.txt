@@ -1,0 +1,27 @@
+// Pacman halalanak tesztelese
+
+/startgame
+/hack load level1
+/show maze
+
+/remark Eroszakos megolese a PacMan-nek
+/hack lives 5
+/hack pacman kill
+/step
+
+/remark Monsterrel valo talalkozas tesztelese (elveszik 1 elet)
+/hack monster create dumb 10 10 up
+/hack pacman set 10 10 up 0
+/step 2
+
+/remark Bombaval valo talalkozas tesztelese (elveszik 1 elet)
+/hack bomb create 10 10 10
+/hack pacman set 10 10 up 0
+/step 2
+
+/remark Ido letelesenek tesztelese (elveszik 1 elet)
+/hack time 3
+/step 5
+
+/exitgame
+/exit

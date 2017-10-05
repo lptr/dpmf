@@ -1,6 +1,6 @@
-// $Id: datafiledef.txt,v 1.4 2001/04/01 23:58:55 lptr Exp $
-// $Date: 2001/04/01 23:58:55 $
-// $Author: lptr $
+// $Id: datafiledef.txt,v 1.6 2001/04/27 15:20:35 vava Exp $
+// $Date: 2001/04/27 15:20:35 $
+// $Author: vava $
 
 /* comment */
 // one line comment
@@ -18,9 +18,9 @@ pacman <x> <y> <speed>
     pacman az x,y ponton, <speed> sebességgel.
   **/
 
-monster [clever|dumb] <x> <y> [up|right|down|left] <speed>
+monster [clever|dumb] <x> <y> <speed>
   /**
-    okos|buta szörny az x,y ponton, fel|jobbra|le|balra néz, sebessége <speed>
+    okos|buta szörny az x,y ponton, sebessége <speed>
   **/
 
 birthplace <x> <y>
@@ -37,3 +37,6 @@ probability <value>
   /**
     annak a valószínûsége, hogy egy adott körben bónusz jelenik meg.
   **/
+/**
+ pacman, monster, crystal koordinátái floatban vanak, a többi integer
+**/

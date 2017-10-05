@@ -1,0 +1,353 @@
+// Utkozesek tesztelese. 
+// Monster vs inaktiv palyaelemek, pacman vs inaktiv, monster vs monster
+
+/startgame
+/show maze
+
+/remark Lerakunk par objektumot...
+/hack bonus manual
+/hack bonus create time 10 10 60 10
+/hack bonus create score 11 10 60 5
+/hack bonus create bomb 12 10 60 1
+
+/hack crystal create 13 10
+/hack crystal create 14 10
+
+/hack bomb create 16 10 150
+
+
+/hack monster create dumb 10 8 down
+/hack monster 0 manual
+
+
+/remark Steppelunk parat, mindegyik utan kell info, hogy kovetni tudjuk a dolgok alakulasat
+/remark Eloszor egy szornyet engedunk vegig az objektumokon, aminek ugy kell atjutnia rajtuk, hogy egyiket sem veszi fel/semmisiti meg stb., a bombanal viszont meghal.
+
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+
+
+/hack bomb create 16 10 150
+
+/hack pacman set 10 8 down
+
+
+/show maze
+
+/remark Steppelunk parat, mindegyik utan kell info, hogy kovetni tudjuk a dolgok alakulasat
+/remark Most jon a pacman... neki mindegyik elemmel interaktivitasba kell kerulnie (a valtozasokat kovethetjuk az infok alakulasan), vegul a bombanal meghal.
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+
+/remark 2 monster utkoztetese, at kell haladniuk egymason mindenfele interakcio nelkul
+/hack monster create dumb 20 8 down
+/hack monster create dumb 20 9 up
+/hack monster 1 manual
+/hack monster 2 manual
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+/step
+/info all
+
+/show maze
+
+/exitgame
+/exit

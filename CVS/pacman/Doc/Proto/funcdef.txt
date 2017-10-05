@@ -1,0 +1,236 @@
+SZÜKSÉGES FÖGGVÉNYEK, ELJÁRÁSOK LISTÁJA, ESZKÖZÖLENDÕ MÓDOSÍTÁSOK:
+
+A játék eljárásai már jobbára specifikáltak, még a menü egykét elemét kell leírni.
+
+class Game:
+	Game() :
+		Jelenleg+Ötletek:
+			a konstruktornak egy paramétert kéne átadni, ami egy pályasorozat név. nevezzük gamedescriptornak :)
+			ez ugye tartalmazza a levelek listáját, továbbá grafikai meg ilyesmi adatok lehetnek benne
+			a gamedescriptor célszerûen egy könyvtárnév vagy egy filenév kéne hogy legyen. ez utóbbi esetén a file
+			  tartalmazza magában az összes a játékhoz szükséges adatot.
+			mindezek megfelelõ kezeléséhez plusz változókat kell felvenni a game osztályban, a pályák listáját
+			  például egy String[]-ben vagy LinkedListben satöbbi
+		Rövid leírás:
+			Inicializálja a játékobjektumot. A játékspecifikus adatokat egy paraméterként kapott fileból/könyvtárból
+			tölti be. Amennyiben a file nem található, vagy nem képes hozzáférni, beállít egy hiba jelzõt.
+			
+		 
+	StartGame() :
+		Jelenleg+Ötletek:
+			no, ez most annyit tud, hogy egy pályát végignyom benne akárki is, aztán szevasz, vége van. értelemszerûen
+			  bele kell helyezni egy loop-ot, és tisztázni kell, milyen visszatérési értékei lehetnek a GameLoop()-nak
+			minden alkalommal be kell tölteni a soronkövetkezõ pályát...
+		Rövid leírás:
+			Amennyiben a játékleírás betöltése sikertelen volt, és így nem töltõdött be semmi, automatikusan
+			  úgy tér vissza, mintha a játékos megszakította volna a játékot.
+			Elindítja a játékot, és végig vezérli azt. Betölt egy pályát, majd meghívja a GameLoop-ot, annak
+			  visszatérési értékétõl függõen újrajátszatja ezt a pályát, vagy léptet, vagy végetvet a játéknak.
+			!!activity diagram
+
+	GameLoop() :
+		ezen nem sokat kell majd változtatni, annyit kell tudnia, meghívja a maze.step()-et, majd ha a pacman meghalt
+		idõ letelt, gyémánt elfogyott, akkor a megfelelõ értékkel visszatér a StartGame()-hez
+	IncreaseScore() :
+		Ez igy teljesen implementált. (talán akkor kell változtatni, ha már több játékos lesz.. :)) jó, oké nemszóltam:)
+
+class Maze:
+	Maze() :
+		Jelenleg:
+			Kap egy mutatót a szülõosztályra, ez rendben, és kap egy pályaszámot, no ez nem okés, itt a
+			  megvalósítástól függõen vagy egy könyvtárban, vagy egy fileban kell majd turkálnia, ami biztos,
+			  hogy egy filenevet kell kapnia, vaaagy egy Streamet. Ez a stream a késöbbiekben már a grafikus
+			  elemek leírását is tartalmazza, a Maze-nek majd tudnia kell ezeket kezelni valamilyen szinten.
+		Rövöd leírás:
+			Pálya adatainak betöltése a Load eljárással, jelzi ha a betöltés során valami probléma merült fel.
+	Load() :
+		A betöltést ez a rész vezérli, itt kell az elöbb leírtak fõ részét implementálni. A mazeben lényegében csak egy
+		  paraméter típust kell átállítani...
+		Leírás:
+			A datafiledef.txt-ben leírt formátumú fileból végez betöltést egy parser segítségével. Amíg a file
+			  végére nem ér, értelmezi a soronkövetkezõ parancsot, amennyiben az ismeretlen parancs, figyelmen
+			  kívül hagyja. Ha a fileban található adatok nem szolgáltak elegenõ információval a pálya elõállításához,
+			  a hibát jelzi.
+			!!activity diagram
+!!!!!!!!!! új eljárás
+	isLoaded() :
+		Az eljárás segítségével lehet ellenõrizni, hogy sikeresen betöltõdött e a file, lehet játszani rajta.
+		!! akkor van csak ilyen butaságra szükség, ha a konstruktor nem throwolhat exceptiont.....
+
+	Step() :
+		Jelenleg:
+			ha letelt az idõ kilép
+			pacman act
+			ha bombát rakott le, és itt még nincs bomba, lerakjuk (pacman kell hogy checkolja van e itt már bomba)
+			monster act
+			bonus act
+			bomb act
+			crystal act
+			ütközések vizsgálata (CheckCollisions)  ha pacman lehalt kilépés
+			bónuszok lerakása
+			játék megszakításának vizsgálata
+		Leírás:
+			Az algoritmusa tételesen kifejtve:
+				léptet az idõn
+				végighívja az acteket
+					pacman
+					monster
+					bonus
+					bomb
+					crystal
+				ütközéseket vizsgálunk
+				ha pacman bombát rakott le az lerakjuk
+				bónuszok lehelyezése
+				események játékra vonatkozó kiértékelése:
+					pacman ütkzötte szörnnyel/bombával
+					letelt e az idõ
+					elfogyott e a gyémánt
+					pauset nyomott e a játékos
+				visszatérés
+
+	CheckCollisions() :
+		Vizsgálja az ütközéseket a pályán (pályaelemek ütközését), és egyben azt is, hogy a PacMan életben maradt-e.
+//		IMHO úgy kéne majd megírni a cuccot, hogy a PacMan halálának ne legyen egyenes következménye hogy meghal a játék.
+//		Sokkal normálisabb ha még lefadel a kép, vagy kiírja hogy sorry de koppantál, esetleg vár egy gombnyomásra. Ezen
+//		még nem árt agyalni
+
+	CheckCollision() :
+		Rövid leírás:
+			Ellenõrzi, hogy két pályaobjektum ütközött-e egymással.
+		Részletezés:
+			A pályán elhelyezett elemek topológiája igen egyszerû, mindegyik egy körrel jellemzett. Így ütközésrõl
+			  pontosan akkkor beszélhetünk, amikor a két kör között átfedés van. Ez abban az esetben következik be,
+			  ha a körök középpontjainak távolsága kevesebb, mint sugaraik összege. Ez a metódus tehát ezt az egyszerû
+			  módszert használja arra, hogy ütközést keressen.
+		!! vigyázni kell arra az esetre, amikor két, szomszédos mezõn elhelyezkedõ elemet vizsgálunk. Ha fal van, akkor az elemek
+			  nem metszhetik egymást!!. Az a veszélyes helyzet, amikor mind a két elem pont a mezõ szélén található. Ez úgy
+			  védhetõ, ha sosem engedjük ki fal esetén a mezõ legszélére az elemeket. (Féligáteresztõ falnál ezt nem kell
+			  vizsgálni, hiszen ekkor valamelyik elem jogosan átlóghat azon)
+
+	PutBonuses() :
+		Rövid leírás:
+			Bónusz véletlenszerû lehelyezése a pályán. vagy ennek vagy az õt hívónak a feladata adminisztrálni, hogy mikor
+			  kéne bónuszt szórni a pályára.
+		Részletezés:
+			A játék folyamán véletlenszerû idõben, elõre meg nem határozható helyeken keletkezõ bónuszok teremtése
+			  a feladata ennek a metódusnak. A Step függvény hívja meg, miután adott körben már mozogtak a pályaelemek.
+			  Hogy lehelyezünk-e bónuszt, az a bónusz megjelenés gyakoriságának a függvénye. Opcionálisan a pontszámtól függ.
+			  A bónuszok lehelyezése
+			  csak olyan pontra történhet, hogy semmiféle átfedés nem történjen egyetlen pályaelemmel, illetve a falakkal
+			  sem. Utóbbi kivédése érdekében bónusz csak mezõ közepébe helyezhetõ el. Fontos lehet itt az üres helyet keresõ
+			  algoritmus. Mindenképp el kell kerülni azt a hibalehetõséget, hogy addig próbálkozik, amíg nem talál helyet
+			  azonban valamilyen oknál fogva ez utóbbi eset nem következik be. Kézenfekvõnek látszik tehát maximálni
+			  a lehelyezésre irányuló próbálkozások számát. 
+Hogy milyen helyeken próbálkozunk, arra 2 ésszerû algoritmus
+			  adódik. Egyfelõl lehet teljesen véletlen módszerekkel, másrészt egy olyan állvéletlen módszerrel, ami
+			  lényegében n*m lépésben az n*m-es pálya összes pontját érinti, azonban véletlenszerûnek tûnõ sorrendben.
+				  !! amennyiben féligáteresztõ falakat is alkalmazunk, figyelni kell, legyen út a pacmantõl a bónuszig,
+				  !! vagyis a pacman felvehesse azt..
+			  REM
+			  Még egy lehetséges alternatívaként vetõdik fel az, hogy fix helyeket adunk meg, ahol létrejöhet a bónusz.
+		Leírás:
+			Az algoritmus a bónuszok lehelyezésérõl gondoskodik, elõször megvizsgálja, kell-e bónuszt lehelyezni, amennyiben
+			  igen, akkor véletlenszerûen választ egy mezõt, és megpróbálja ennek közepében lehelyezni azt. Megvizsgálja, hogy
+			  az adott mezõben található-e egyéb pályaelem, amennyiben nem, a lehelyezés sikeres. Hogyha mégis, akkor
+			  újrapróbálkozik még 20 alkalommal, ha továbbra is sikertelen a helyválasztás, meghiúsul a lerakás. A következõ
+			  lerakás viszont úgy fog bekövetkezni, mintha ez a mostani sikeres lett volna.
+			!! nem vizsgálja, hogy van e út pacmantõl a bónuszig... viszont jó sok számolást igényel, ha nincs... hiszen akkor
+			  az egész pályát bejárjuk.
+		Alternatív megoldás:
+			Feltételezve azt, hogy a bónusz lehelyezése ritkán fordul elõ, lehetséges egy kétfázisú lehelyezõ algoritmus írása,
+			  ez egy véletlenszerû idõben megjegyzi hol járt a pacman, majd véletlenszerûen vár, de legalább annyit, hogy a
+			  pacman már biztos elég távol legyen, továbbá, hogy senki sem található az adott mezõben, és ilyenkor következik be
+			  a bónusz lehelyezése.
+
+	IncreaseScore() :
+		Rövid leírás:
+			Pont növelése.
+		Részletezés:
+			Megnöveli a pontszámot a game.IncreaseScore() függvény segítségével.
+			REM ?? innentõl kvázi baromság?
+			Ez a metódus a jelenlegi implementációban továbbadja a nemes feladatot a Game objektumnak, hiszen a játékos
+			  pontszámát az hivatott tárolni. Ez a függvény tehát tulajdonképpen egyfajta kapu a pályaelemek, és a game
+			  objektum között. Igencsak nagy létjogosultsága van, többekközött egyfajta alakíthatóságot biztosít a
+			  programban, a pontszám számolható úgy is, hogy szint teljesítésekor íródik csak jóvá, vagy több játékos
+			  üzemmód támogatása esetén több különbözõ pontszám tárolása szükséges. Ezekben az esetekben jól látszik,
+			  a pont jóváírásának különválasztása növeli a rendszer alakíthatóságát.
+
+	IncreaseTime() :
+		Rövid leírás:
+			Idõ növelése.
+		Részletezés:
+			Megnöveli a time változó értékét, így több idõ lesz a pálya teljesítésére.
+			REM
+			A játékban az idõ elindul egy a pálya teljesítésére megadott értékrõl, majd, folyamatosan csökken, és amikor eléri a
+			  nullát, a pacman meghal. Az idõ megnövelhetõ idõbónuszok felvételével, ilyenkor hívódik meg ez az eljárás.
+
+	IncreaseBombs() :
+		Rövid leírás:
+			Bombák számának növelése.
+		Részletezés:
+			Megnöveli a pacmannél levõ bombák számát, abban az esetben ha az nem lesz így több mint a max bombák száma, 5.
+
+	GetRebornPlace() :
+		Rövid leírás:
+			Születési hely lekérdezése.
+		Részletezés:
+		?? kihívja ?? :) szörny? imho ha deactivated, akkor simán visszamászik legrövidebb úton a birthplacere. tehát õ
+	
+még szükséges algoritmusok:
+legrövidebb út keresése:
+	http://www.geocities.com/SiliconValley/Lakes/4929/astar.html
+	http://www.student.nada.kth.se/~f93-maj/pathfinder/contents.html
+	http://theory.stanford.edu/~amitp/GameProgramming/index.html
+	http://hjem.sol.no/johncl/shorpath.htm	(http://hjem.sol.no/johncl/spath/btpath.htm)
+	http://www.gamasutra.com/features/19990212/sm_01.htm <-- van egy progi is amivel tesztelni lehet az algokat :)
+
+	részemrõl az A* tetszik
+	  (Írtam a progit lefuttattam pár elrendezésre, no, ezek fotóit cartman/incoming/VaVa/path* könyvtárakban találni, a file
+	   név végén lévõ H0,H1,H2 annyit jelent hogy a cél légvonalbeli távolságát milyen súlyal számoltattam a kulcsba)
+	   (Ezekbõl párat talán lehet rakni a leadandóba... :) lássák hogy müxik az algo )
+
+	PathFinder() :
+		Útkeresésre úgydöntöttünk az A-star algoritmust alkalmazzuk.
+		Az A* a következõképpen mûködik. Szükségünk van egy NYITOTT és egy ZÁRT nevû kupacra. Elindulunk az A pontból, a cél utat találni
+		  B-be. Minden szomszédos mezõt belerakunk a NYITOTT kupacba. A kupacban tárolt minden elem hivatkozik arra az elemre, aminek révén
+		  belekerült abba. A kulcsot két érték súlyozott összegébõl állítjuk elõ, az eddig meglévõ út hosszából, illetve abból hogy milyen
+		  messze van ez a pont a céltól*. Az algoritmus végtelenül egyszerû, a NYITOTT kupacra csinál egy MINTÖRt, majd az errõl lehetséges
+		  továbblépéseket, amelyeket még egyik kupacban sem szerepelnek, belerakja a NYITOTT kupacba, õ maga pedig a LEZÁRt halmazba kerül.
+		  Amikor elértünk a végpontba, megvan az út. a pointereken visszalépkedve megkapjuk a keresett utat.
+	
+		* Ezt több módszerrel lehet megadni. vehetjük a légvonalbeli távolságot sqrt(dx^2+dy^2), vagy simán dx+dy-t. Sokat számít, hogy
+		    milyen súlyozást használunk. Ha a második komponenst 0 súllyal vesszük, akkor szimpla szélességi bejárást kapunk, ami nagyon
+		    sok idõt vesz igénybe. 1es súly esetén már jóval kisebb munkával ugyan arra az eredményre jutunk, vagyis a legrövidebb utat
+		    kapjuk. Ha 1-esnél nagyobb súlyt használunk, már kisebb anomáliák keletkezhetnek a legrövidebb úthoz képest. Hogy az eltérés
+		    mennyire súlyos, azt a labirintus topológiája határozza meg. Az általunk használt labirintusok esetén a 2-es súly, sem ad nagy
+		    mértékû eltérést. 1-es súllyal tehát egy tökéletes legrövidebb utat adó algoritmust kapunk, 2-es súlyal egy kicsit pontatlanabb,
+		    viszont gyorabb algoritmust.
+		!! activity diagram
+
+class MazeItem
+	Act() :
+		Általános:
+		Aktív elemek esetén a mozgatás feladatát látja el, passzív elemek egy részénél, ilyen pl a bomba vagy a bónuszok, azt
+		  vizsgálja, az elem életben marad e még. Tulajdonképpen az elep saját, más elemektõl nem függõ akcióit végzi el.
+		Egyik lényeges eleme a mozgatás, ennek 3 fajtája van:
+			- nem mozog
+			- AIbõl mozog
+			- játékos mozgatja
+		A jelenlegi koncepciók értelmében nem mozognak a bomba, bónuszok, kristály. A szörnyek AIbõl mozognak, míg az egyetlen
+		  játékos által vezérelt elem, a pacman.
+		Az AIbõl történõ mozgatást, speciálisan az adott objektumtípusnál részletezzük.
+
+class Monster
+	Act() :
+		Mozgás:
+			A szörnyek mozgatására általánosan érvényes, hogy minél távolabb van a játékostól, annál kevesebbszer hívja meg
+			  az útvonalkeresõ eljárást. (másodpercenkénti 20-25 léptetés van, ha minden alkalommal hívnánk az eljárást, az
+			  nagyon terhelné a rendszert, továbbá nagy százalékban felesleges is volna. A játék végsõ tesztelésének egyik
+			  célja pl. azt belõni, hogy a távolság függvényénen milyen idõközökkel hívjuk az útkeresést).
+			A buta szörnyek mozgási algoritmusa véletlenszerû, vagy kevéssé a szörny felé súlyozott lehet. Amennyiben a
+			  szörny közelébe került, akkor megfontolandó, hogy már céltudatosabban kezdjen a követésbe. Például a random
+			  irányválasztásnál annál jobban súlyozzuk a pacman felé esõ irányt, minél kisebb a távolság tõle.
+			Az okos szörny irányválasztásához az A* útvonalkeresõ algoritmust találtuk a legideálisabbnak, a heurisztikus
+			  érték 1 vagy 2-es súlyal történõ beszámításával. Hogy a választás miért így esett, az a mellékelt ábrákról
+			  szinte jól látható.
+			!! ez ellenõrzi a fallal való ütközést

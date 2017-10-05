@@ -1,0 +1,59 @@
+// Egy jatek elinditasanak (palyabetoltes es objektumok helyes letrehozasa),
+// es az abbol valo kilepesnek a tesztelese
+
+/startgame
+/hack load level1
+
+/hack load palya1.dat
+
+/show maze
+/info all
+
+/hack score 666
+/hack lives 42
+/hack time 69
+
+/hack bonus manual
+/hack bonus time 10 10 5 70
+/hack bonus time 10 20 8 40
+/hack bonus time 10 30 3 90
+/hack bonus score 20 10 4 5
+/hack bonus score 20 20 9 9
+/hack bonus score 20 30 6 14
+/hack bonus bomb 30 10 5
+/hack bonus bomb 30 20 8
+/hack bonus bomb 30 30 1
+
+/hack bonus 4 set 15 12 7 10
+
+/hack crystal create 14 32
+/hack crystal create 21 12
+
+/show maze
+/info all
+
+/hack bomb create 50 40 10
+/hack bomb create 50 30 10
+
+/hack bomb 1 activate
+
+/step
+/step
+
+/hack bomb 2 set 60 70 15
+/hack bomb 2 activate
+
+/step 5
+
+/hack bonus automatic
+
+/step 3
+
+/hack score 0
+
+/show maze
+/show info
+
+/exitgame Sandor
+
+/exit

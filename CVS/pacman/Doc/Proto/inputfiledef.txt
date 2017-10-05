@@ -1,5 +1,5 @@
-// $Id: inputfiledef.txt,v 1.7 2001/04/02 02:00:11 lptr Exp $
-// $Date: 2001/04/02 02:00:11 $
+// $Id: inputfiledef.txt,v 1.9 2001/04/27 12:50:52 lptr Exp $
+// $Date: 2001/04/27 12:50:52 $
 // $Author: lptr $
 
 /* comment */
@@ -22,17 +22,17 @@
   **/
 
 
-/startgame <dirname>
+startgame <dirname>
   /**
     elindítja a játékot, a pályákat a <>
   **/
 
-/highscore
+highscore
   /**
     kilistázza a highscore táblát, csak a fõmenüben hajtható végre
   **/
 
-/exit
+exit
   /**
     kilép a játékból
   **/
@@ -40,30 +40,25 @@
 /** highscore **/
 /***************/
 
-/exithighscore
+exithighscore
 
 /** a tényleges játék **/
 /***********************/
 
-/nextlevel
-  /**
-    innen a következõ pályára vonatkoznak a parancsok.
-  **/
-
-/step
+step
   /**
     léptet egy kört. ez után hajtódnak végre a kiadott parancsok
     (kivéve az információkérést.)
   **/
 
-/exitgame <name>
+exitgame <name>
   /**
     kilép a játékból, a játékos nevét <name>-re állítja,
     visszalép a highscore táblába
   **/
  
-/setdirection [up|right|down|left]
-/putbomb
+setdirection [up|right|down|left]
+putbomb
   /**
     pacman irányítása
   **/
@@ -71,80 +66,80 @@
 /** innen kezdve a tesztelést megkönnyítõ, parancsok következnek **/
 /******************************************************************/
 
-/remark <name>
+remark <name>
   /**
     megjegyzés. a kimeneten /* name */  formában. a szinkronizálásban segít
   **/
 
-/info [all|pacman|monster|bomb|crystal|bonus]
-  /**
-    all: all below
-    pacman: pozíció, irány, objnum
-    monster: pozíció, irány, objnum
-    bomb: pozíció, élettartam, objnum
-    bonus: pozíció, élettartam, tartalom, objnum
-    crystal: pozíció, objnum
-  **/
-
-/show [maze|info] 
+show [maze|info]
   /**
     maze: szöveges labirintus megjelenítés
-    info: score, lives, bombs, time kiírása
+	info: score, time, lives, pályaelemek adatai
   **/
 
-/hack load <filename>
+hack load <filename>
   /**
     betölt egy pályát, ha a pálya befejezõdött, kilép
   **/
 
-/hack score <score>
-/hack lives <lives>
-/hack time <time>
+hack nextlevel
+  /**
+    innen a következõ pályára vonatkoznak a parancsok, be is töltõdik.
+  **/
+
+hack score <score>
+hack lives <lives>
+hack time <time>
   /**
     általános hackelés
   **/
 
-/hack pacman kill
-/hack pacman set <x> <y> <direction> <bombs>
+hack pacman set <x> <y> <direction> <bombs>
   /**
     pacman buzerálása
   **/
 
-/hack monster create [clever|dumb] <x> <y> <direction>
-/hack monster <objnum> [kill|reborn|remove]
-/hack monster <objnum> set <x> <y> <direction>
-/hack monster <objnum> [auto|manual]
-/hack monster <objnum> <direction>
+hack monster [auto|manual]
+  /**
+    a monsterek saját intelligenciájuk szerint mozognak, vagy
+	manuálisan kell léptetni õket.
+  **/
+
+hack monster create [clever|dumb] <x> <y>
+hack monster <objnum> set <x> <y> <direction>
+hack monster <objnum> kill <time>
+hack monster <objnum> [reborn|remove]
   /**
     monster átszabása
   **/
 
-/hack bomb create <x> <y> <timetolive>
-/hack bomb <objnum> remove
-/hack bomb <objnum> set <x> <y> <timetolive>
-/hack bomb <objnum> [activate|deactivate]
+hack bomb create <x> <y> <timetolive>
+hack bomb <objnum> set <x> <y> <timetolive>
+hack bomb <objnum> [activate|deactivate]
+hack bomb <objnum> remove
   /**
     bombával kapcsolatos hack-ek
   **/
 
-/hack bonus [auto|manual]
+hack bonus [auto|manual]
   /**
     bonus elhelyezése automatikus vagy manuális
   **/
-/hack bonus create [time|score|bomb] <x> <y> <timetolive> <value>
-/hack bonus <objnum> remove 
-/hack bonus <objnum> set <x> <y> <time> <value>
+hack bonus create [time|score|bomb] <x> <y> <timetolive> <value>
+hack bonus <objnum> set <x> <y> <time> <value>
+hack bonus <objnum> remove 
   /**
     bonus izélgetése
   **/
 
-/hack crystal create <x> <y>
-/hack crystal <objnum> remove
+hack crystal create <x> <y>
+hack crystal <objnum> set <x> <y>
+hack crystal <objnum> remove
   /**
     kristály bizergálása
   **/
 
-/hack wall [on|off] <fx> <fy> [up|right|down|left] [single|both]
+hack wall [on|off] <fx> <fy> [up|right|down|left] [single|both]
   /**
     az (<fx>,<fy>) mezõ adott falát bekapcsolja/kikapcsolja.
     a single csak az adott mezõ falát állítja, a both mindkét

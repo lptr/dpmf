@@ -1,0 +1,8 @@
+// Pacman halalanak tesztelese
+
+/startgame
+/show maze
+
+
+/exitgame
+/exit

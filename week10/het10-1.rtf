@@ -1,0 +1,670 @@
+{\rtf1\ansi\deff0
+{\fonttbl{\f0\froman\fprq2\fcharset0 Times New Roman;}{\f1\froman\fprq2\fcharset0 Times New Roman;}{\f2\fnil\fprq2\fcharset2 StarBats;}{\f3\froman\fprq2\fcharset238 Times New Roman (CE);}{\f4\fmodern\fprq1\fcharset238 Courier New (CE);}{\f5\fswiss\fprq2\fcharset0 Arial;}}
+{\colortbl\red0\green0\blue0;\red255\green255\blue255;\red128\green128\blue128;}
+{\stylesheet{\s1\fs20\snext1 Standard;}
+{\s2\fs24\lang2057\sbasedon1\snext2 Normal;}
+{\s3\sa120\fs20\sbasedon1\snext3 Text body;}
+{\s4\sa120\fs20\sbasedon3\snext4 List;}
+{\s5\li1415\ri0\fi-283\sa120\fs20\sbasedon4\snext5 Numbering 5;}
+{\s6\li283\ri0\fi0\sa120\fs20\sbasedon3\snext6 Text body indent;}
+{\s7\li283\ri0\fi-283\sa120\fs20\sbasedon4\snext7 List 1;}
+{\s8\sa120\fs20\sbasedon3\snext8 Table Contents;}
+{\s9\sa120\fs20\i\b\qc\sbasedon8\snext9 Table Heading;}
+{\s10\ls1\ilvl4\outlinelevel4\sa120\keepn\f5\fs28\b\sbasedon1\snext1{\*\soutlvl4} Heading 5;}
+{\*\cs12\f2\fs18\lang1033\sbasedon22 RTF_Num 2 1;}
+{\*\cs13\f2\fs18\lang1033\sbasedon22 RTF_Num 2 2;}
+{\*\cs14\f2\fs18\lang1033\sbasedon22 RTF_Num 2 3;}
+{\*\cs15\f2\fs18\lang1033\sbasedon22 RTF_Num 2 4;}
+{\*\cs16\f2\fs18\lang1033\sbasedon22 RTF_Num 2 5;}
+{\*\cs17\f2\fs18\lang1033\sbasedon22 RTF_Num 2 6;}
+{\*\cs18\f2\fs18\lang1033\sbasedon22 RTF_Num 2 7;}
+{\*\cs19\f2\fs18\lang1033\sbasedon22 RTF_Num 2 8;}
+{\*\cs20\f2\fs18\lang1033\sbasedon22 RTF_Num 2 9;}
+{\*\cs21\lang1033\sbasedon22 Default Paragraph Font;}
+{\*\cs22\lang2057 Normal;}
+{\*\cs23\f2\fs18\lang1033\sbasedon22 RTF_Num 2 10;}
+{\*\cs24\lang1033\sbasedon22 WW-Default Paragraph Font;}
+{\*\cs25\f2\fs18\lang1033\sbasedon22 Bullet Symbols;}
+}
+{\info{\comment StarWriter}{\vern5690}}\deftab720
+{\*\pgdsctbl
+{\pgdsc0\pgdscuse195\pgwsxn11905\pghsxn16837\marglsxn1134\margrsxn1134\margtsxn1134\margbsxn1134\pgdscnxt0 Standard;}}
+\paperh16837\paperw11905\margl1134\margr1134\margt1134\margb1134\sectd\sbknone\pgwsxn11905\pghsxn16837\marglsxn1134\margrsxn1134\margtsxn1134\margbsxn1134\ftnbj\ftnstart1\ftnrstcont\ftnnar\aenddoc\aftnrstcont\aftnstart1\aftnnrlc
+\pard\plain \s1\fs20\li15\ri105\fi0\f3\fs32\qc 
+\par \pard\plain \s1\fs20\li15\ri105\fi0\f3\fs24 
+\par \pard\plain \s1\fs20\li15\ri105\fi0\f5\fs28\b\qc A tesztel\'e9sek eredm\'e9nyeinek \'f6sszefoglal\'e1sa
+\par \pard\plain \s1\fs20\li15\ri105\fi0\f3\fs24 
+\par \pard\plain \s1\fs20\li15\ri105\fi0\f5\qj{\fs24 Az el\'f5z\'f5leg beadott dokumentumokban m\'e1r tiszt\'e1ztuk, hogy a j\'e1t\'e9k tesztel\'e9s\'e9nek mik a m\'f3dszerei,  \'e9s milyen eszk\'f6z\'f6ket haszn\'e1lunk fel hozz\'e1. Az el\'f5re defini\'e1lt teszt forgat\'f3k\'f6nyvek felhaszn\'e1l\'e1s\'e1val, valamint az {\i Inputter} \'e9s {\i Outputter} modulok seg\'edts\'e9g\'e9vel (am
+ik lehet\'f5v\'e9 teszik pl. a kimenet vizualiz\'e1l\'e1s\'e1t v\'e1zlatos m\'f3don) behat\'f3an \'e9s r\'e9szletesen tesztelt\'fck a program bels\'f5 m\'fbk\'f6d\'e9s\'e9t \'e9s annak helyess\'e9g\'e9t. A tesztek teljes m\'e9rt\'e9kben kiel\'e9g\'edt\'f5ek voltak, a program a {\i Protot\'edpus r\'e9szletes tervei}{\i0  c\'edm\'fb dokumentumban le\'ed
+rt teszt forgat\'f3k\'f6nyvekre a v\'e1rt eredm\'e9nyeket produk\'e1lta, \'e9s v\'e9letlenszer\'fb tesztek sor\'e1n is helyesen m\'fbk\'f6d\'f6tt.}}
+\par \pard\plain \s1\fs20\li15\ri105\fi0\f5\fs24\qj 
+\par Mivel a bemeneti \'e9s kimeneti fileform\'e1tumok kis m\'e9rt\'e9kben megv\'e1ltoztak az el\'f5zetes tervekhez k\'e9pest, itt k\'f6z\'f6lj\'fck az \'faj vezi\'f3kat.
+\par 
+\par \pard\plain \s1\fs20\li15\ri105\fi0\f5\fs24\b\qj A p\'e1lya adatfile-ok form\'e1tuma:
+\par \pard\plain \s1\fs20\li15\ri105\fi0\f4\fs16\qj time <seconds>
+\par \pard\plain \s1\fs20\li15\ri105\fi0\f4\fs16\qj size <width> <height>
+\par fields <urdl> ...
+\par   /**
+\par     u, r, d, l: 0 vagy 1, att\'f3l f\'fcgg\'f5en, hogy van-e a mez\'f5nek
+\par     fent, jobbra, lent vagy balra fala. pl. 0101 ket p\'e1rhuzamos fal f\'fcggolegesen
+\par   **/
+\par 
+\par pacman <x> <y> <speed>
+\par   /**
+\par     pacman az x,y ponton, <speed> sebess\'e9ggel.
+\par   **/
+\par 
+\par monster [clever|dumb] <x> <y> <speed>
+\par   /**
+\par     okos|buta sz\'f6rny az x,y ponton, sebess\'e9ge <speed>
+\par   **/
+\par 
+\par birthplace <x> <y>
+\par   /**
+\par     a sz\'f6rnyek az x,y ponton sz\'fcletnek \'fajra
+\par   **/
+\par 
+\par crystal <x> <y>
+\par   /**
+\par     krist\'e1ly az x,y ponton
+\par   **/
+\par 
+\par probability <value>
+\par   /**
+\par     annak a val\'f3sz\'edn\'fbs\'e9ge, hogy egy adott k\'f6rben b\'f3nusz jelenik meg.
+\par   **/
+\par /**
+\par  pacman, monster, crystal koordin\'e1t\'e1i floatban vanak, a t\'f6bbi integer
+\par **/
+\par 
+\par \pard\plain \s1\fs20\li15\ri105\fi0\f5\fs24\b\qj A bemeneti file-ok form\'e1tuma:
+\par \pard\plain \s1\fs20\li15\ri105\fi0\f4\fs16\qj /**
+\par   a param\'e9terek megad\'e1s\'e1n\'e1l haszn\'e1lhat\'f3 a * wildcard. ilyenkor az a 
+\par   parem\'e9ter nem m\'f3dosul, vagy (pl. b\'f3nusz elhelyez\'e9s\'e9n\'e9l) a rendszer
+\par   \'e1ltal meghat\'e1rozott.
+\par **/
+\par 
+\par 
+\par /** men\'fcpontok **/
+\par /****************/
+\par 
+\par   /**
+\par     a men\'fcvez\'e9rlo parancsok \'e9rtelemszer\'fben csak a men\'fcben
+\par     \'e9rhetoek el, ha a program m\'e1s r\'e9sz\'e9ben kapunk ilyen \'fczenetet,
+\par     c\'e9lszer\'fb megjegyezni, hogy warning most nem a men\'fcben vagyunk.
+\par   **/
+\par 
+\par 
+\par startgame <dirname>
+\par   /**
+\par     elind\'edtja a j\'e1t\'e9kot, a p\'e1ly\'e1kat a <>
+\par   **/
+\par 
+\par highscore
+\par   /**
+\par     kilist\'e1zza a highscore t\'e1bl\'e1t, csak a fomen\'fcben hajthat\'f3 v\'e9gre
+\par   **/
+\par 
+\par exit
+\par   /**
+\par     kil\'e9p a j\'e1t\'e9kb\'f3l
+\par   **/
+\par 
+\par /** highscore **/
+\par /***************/
+\par 
+\par exithighscore
+\par 
+\par /** a t\'e9nyleges j\'e1t\'e9k **/
+\par /***********************/
+\par 
+\par step
+\par   /**
+\par     l\'e9ptet egy k\'f6rt. ez ut\'e1n hajt\'f3dnak v\'e9gre a kiadott parancsok
+\par     (kiv\'e9ve az inform\'e1ci\'f3k\'e9r\'e9st.)
+\par   **/
+\par 
+\par exitgame <name>
+\par   /**
+\par     kil\'e9p a j\'e1t\'e9kb\'f3l, a j\'e1t\'e9kos nev\'e9t <name>-re \'e1ll\'edtja,
+\par     visszal\'e9p a highscore t\'e1bl\'e1ba
+\par   **/
+\par  
+\par setdirection [up|right|down|left]
+\par putbomb
+\par   /**
+\par     pacman ir\'e1ny\'edt\'e1sa
+\par   **/
+\par 
+\par /** innen kezdve a tesztel\'e9st megk\'f6nny\'edto, parancsok k\'f6vetkeznek **/
+\par /******************************************************************/
+\par 
+\par remark <name>
+\par   /**
+\par     megjegyz\'e9s. a kimeneten /* name */  form\'e1ban. a szinkroniz\'e1l\'e1sban seg\'edt
+\par   **/
+\par 
+\par show [maze|info]
+\par   /**
+\par     maze: sz\'f6veges labirintus megjelen\'edt\'e9s
+\par \tab info: score, time, lives, p\'e1lyaelemek adatai
+\par   **/
+\par 
+\par hack load <filename>
+\par   /**
+\par     bet\'f6lt egy p\'e1ly\'e1t, ha a p\'e1lya befejezod\'f6tt, kil\'e9p
+\par   **/
+\par 
+\par hack nextlevel
+\par   /**
+\par     innen a k\'f6vetkezo p\'e1ly\'e1ra vonatkoznak a parancsok, be is t\'f6ltodik.
+\par   **/
+\par 
+\par hack score <score>
+\par hack lives <lives>
+\par hack time <time>
+\par   /**
+\par     \'e1ltal\'e1nos hackel\'e9s
+\par   **/
+\par 
+\par hack pacman set <x> <y> <direction> <bombs>
+\par   /**
+\par     pacman buzer\'e1l\'e1sa
+\par   **/
+\par 
+\par hack monster [auto|manual]
+\par   /**
+\par     a monsterek saj\'e1t intelligenci\'e1juk szerint mozognak, vagy
+\par \tab manu\'e1lisan kell l\'e9ptetni oket.
+\par   **/
+\par 
+\par hack monster create [clever|dumb] <x> <y>
+\par hack monster <objnum> set <x> <y> <direction>
+\par hack monster <objnum> kill <time>
+\par hack monster <objnum> [reborn|remove]
+\par   /**
+\par     monster \'e1tszab\'e1sa
+\par   **/
+\par 
+\par hack bomb create <x> <y> <timetolive>
+\par hack bomb <objnum> set <x> <y> <timetolive>
+\par hack bomb <objnum> [activate|deactivate]
+\par hack bomb <objnum> remove
+\par   /**
+\par     bomb\'e1val kapcsolatos hack-ek
+\par   **/
+\par 
+\par hack bonus [auto|manual]
+\par   /**
+\par     bonus elhelyez\'e9se automatikus vagy manu\'e1lis
+\par   **/
+\par hack bonus create [time|score|bomb] <x> <y> <timetolive> <value>
+\par hack bonus <objnum> set <x> <y> <time> <value>
+\par hack bonus <objnum> remove 
+\par   /**
+\par     bonus iz\'e9lget\'e9se
+\par   **/
+\par 
+\par hack crystal create <x> <y>
+\par hack crystal <objnum> set <x> <y>
+\par hack crystal <objnum> remove
+\par   /**
+\par     krist\'e1ly bizerg\'e1l\'e1sa
+\par   **/
+\par 
+\par hack wall [on|off] <fx> <fy> [up|right|down|left] [single|both]
+\par   /**
+\par     az (<fx>,<fy>) mezo adott fal\'e1t bekapcsolja/kikapcsolja.
+\par     a single csak az adott mezo fal\'e1t \'e1ll\'edtja, a both mindk\'e9t
+\par     oldalr\'f3l be\'e1ll\'edtja a falat.
+\par   **/
+\par 
+\par 
+\par 
+\par \pard\plain \s1\fs20\li15\ri105\fi0\f5\fs24\b\qj A kimeneti file-ok form\'e1tuma:
+\par \pard\plain \s1\fs20\li15\ri105\fi0\f4\fs16\qj showmenu
+\par   /**
+\par     megjelen\'edti a j\'e1t\'e9k f\'f5men\'fcj\'e9t.
+\par   **/
+\par 
+\par highscore <name> <score>
+\par   /**
+\par     a highscorelista elemeinek felsorol\'e1sa. - ilyenkor a highscore
+\par     list\'e1ban vagyunk...
+\par   **/
+\par 
+\par load <filename>
+\par   /**
+\par     p\'e1lya bet\'f6lt\'e9se <filename>-bol.
+\par   **/
+\par 
+\par game <score> <lives>
+\par maze <time>
+\par   /**
+\par     a game \'e9s a maze objektumok \'e1ltal t\'e1rolt inform\'e1ci\'f3k dumpol\'e1sa
+\par   **/
+\par 
+\par pacman <objnum> <x> <y> <direction> <bombs>
+\par monster <objnum> [clever|dumb] <x> <y> <direction>
+\par   /**
+\par     az akt\'edv p\'e1lyaelemek adatai
+\par     direction - <UP|RIGHT|DOWN|LEFT>
+\par   **/
+\par 
+\par bomb <objnum> <x> <y> [active|inactive] <timetolive>
+\par bonus <objnum> <x> <y> [bomb|score|time] <timetolive> <value>
+\par crystal <objnum> <x> <y>
+\par   /**
+\par     a passz\'edv p\'e1lyaelemek adatai
+\par   **/
+\par 
+\par step
+\par   /**
+\par     eddig tart egy l\'e9p\'e9s
+\par   **/
+\par 
+\par warning <message>
+\par   /**
+\par     figyelmeztet\'e9s nem v\'e9gzetes hib\'e1ra
+\par   **/
+\par 
+\par error <message>
+\par   /**
+\par     v\'e9gzetes hiba
+\par   **/
+\par 
+\par remark <message>
+\par   /**
+\par     ilyen sorok keletkeznek az inputfile "/remark <message>" parancsa hat\'e1s\'e1ra
+\par   **/
+\par  
+\par   /**
+\par     esem\'e9nyek
+\par   **/
+\par 
+\par event [startgame|exitgame|exithighscore|enterhighscore|exit|timeout]
+\par event [pacman|bomb|bonus|crystal|monster] <objnum> [died|born] <x> <y>
+\par event bomb <objnum> activate
+\par 
+\par 
+\par \pard\plain \s1\fs20\li15\ri105\fi0\f5\fs24\b\qj 
+\par N\'e9h\'e1ny teszt bemenet \'e9s kimenet:
+\par \pard\plain \s1\fs20\li15\ri105\fi0\f5\fs24\qj Az al\'e1bbiakban n\'e9h\'e1ny tipikus teszt bemenetet \'e9s az azokra adott kimenetet k\'f6z\'f6lj\'fck.
+\par 
+\par \pard\plain \s1\fs20\li15\ri105\fi0\f5\fs22\i\b\qj \'c1ltal\'e1nos j\'e1t\'e9kteszt bemenet:
+\par \pard\plain \s1\fs20\li15\ri105\fi0\f4\fs16\qj // Egy jatek elinditasanak (palyabetoltes es objektumok helyes letrehozasa),
+\par // es az abbol valo kilepesnek a tesztelese
+\par 
+\par startgame t2
+\par 
+\par show maze
+\par show info
+\par 
+\par hack score 666
+\par hack lives 42
+\par hack time 69
+\par 
+\par hack bonus manual
+\par hack bonus create time 3 3 5 7
+\par hack bonus create time 1 1 8 4
+\par hack bonus create time 2 2 3 9
+\par hack bonus create score 2 1 4 5
+\par hack bonus create score 2 3 9 9
+\par hack bonus create score 2 4 6 4
+\par hack bonus create bomb 4 1 5 2
+\par hack bonus create bomb 3 2 8 5
+\par hack bonus create bomb 3 1 1 1
+\par 
+\par hack bonus 5 set 5 7 7 10
+\par 
+\par hack crystal create 1 8
+\par hack crystal create 7 1
+\par 
+\par show info
+\par 
+\par hack bomb create 5 4 10
+\par hack bomb create 6 3 10
+\par 
+\par hack bomb 17 activate
+\par 
+\par step
+\par 
+\par hack score 0
+\par 
+\par show info
+\par 
+\par exitgame Sandor
+\par 
+\par exit
+\par 
+\par \pard\plain \s1\fs20\li15\ri105\fi0\f5\fs22\i\b\qj \'c1ltal\'e1nos j\'e1t\'e9kteszt kimenet:
+\par \pard\plain \s1\fs20\li15\ri105\fi0\f4\fs16\qj showmenu
+\par /* [ PacMan.Main_program] command executed: startgame t2 */
+\par load t2\\01-One_Clever_Monster_and_One_Dumb.lev
+\par /* [ PacMan.Game] command executed: show maze */
+\par /*
+\par +-++-++-++-++-+
+\par |             |
+\par +             +
+\par +             +
+\par |             |
+\par +  +-+        +
+\par +  +-++       +
+\par |    ||       |
+\par +    ++       +
+\par +    ++       +
+\par |    ||       |
+\par +    ++-+     +
+\par +     +-+     +
+\par |             |
+\par +-++-++-++-++-+
+\par */
+\par /* [ PacMan.Game] command executed: show info */
+\par /*
+\par game 0 3
+\par maze 12000
+\par pacman 2 0.5 4.5 stopped 0
+\par monster 0 dumb 4.5 0.5 stopped
+\par monster 1 clever 3.5 0.5 stopped
+\par crystal 3 0.5 2.5
+\par crystal 4 3.5 1.5
+\par */
+\par /* [ PacMan.Game] command executed: hack score 666 */
+\par /* [ PacMan.Game] command executed: hack lives 42 */
+\par /* [ PacMan.Game] command executed: hack time 69 */
+\par /* [ PacMan.Game] command executed: hack bonus manual */
+\par /* [ PacMan.Game] command executed: hack bonus create time 3 3 5 7 */
+\par /* [ PacMan.Game] command executed: hack bonus create time 1 1 8 4 */
+\par /* [ PacMan.Game] command executed: hack bonus create time 2 2 3 9 */
+\par /* [ PacMan.Game] command executed: hack bonus create score 2 1 4 5 */
+\par /* [ PacMan.Game] command executed: hack bonus create score 2 3 9 9 */
+\par /* [ PacMan.Game] command executed: hack bonus create score 2 4 6 4 */
+\par /* [ PacMan.Game] command executed: hack bonus create bomb 4 1 5 2 */
+\par /* [ PacMan.Game] command executed: hack bonus create bomb 3 2 8 5 */
+\par /* [ PacMan.Game] command executed: hack bonus create bomb 3 1 1 1 */
+\par /* [ PacMan.Game] command executed: hack bonus 5 set 5 7 7 10 */
+\par /* [ PacMan.Game] command executed: hack crystal create 1 8 */
+\par /* [ PacMan.Game] command executed: hack crystal create 7 1 */
+\par /* [ PacMan.Game] command executed: show info */
+\par /*
+\par game 666 42
+\par maze 69
+\par pacman 2 0.5 4.5 stopped 0
+\par monster 0 dumb 4.5 0.5 stopped
+\par monster 1 clever 3.5 0.5 stopped
+\par bonus 5 5.0 7.0 time 7 10
+\par bonus 6 1.0 1.0 time 8 4
+\par bonus 7 2.0 2.0 time 3 9
+\par bonus 8 2.0 1.0 score 4 5
+\par bonus 9 2.0 3.0 score 9 9
+\par bonus 10 2.0 4.0 score 6 4
+\par bonus 11 4.0 1.0 bomb 5 2
+\par bonus 12 3.0 2.0 bomb 8 5
+\par bonus 13 3.0 1.0 bomb 1 1
+\par crystal 3 0.5 2.5
+\par crystal 4 3.5 1.5
+\par crystal 14 1.0 8.0
+\par crystal 15 7.0 1.0
+\par */
+\par remark [setdirection] stopped at 4.5 0.5
+\par remark [setdirection] down at 3.5 0.5
+\par /* [ PacMan.Game] command executed: hack bomb create 5 4 10 */
+\par /* [ PacMan.Game] command executed: hack bomb create 6 3 10 */
+\par /* [ PacMan.Game] command executed: hack bomb 17 activate */
+\par /* [ PacMan.Game] command executed: step */
+\par event faszom
+\par event bomb 16 activated 5.0 4.0
+\par event monster 0 decides stopped
+\par event bonus 13 died 3.0 1.0
+\par game 666 42
+\par maze 68
+\par pacman 2 0.5 4.5 stopped 0
+\par monster 0 dumb 4.5 0.5 stopped
+\par monster 1 clever 3.5 0.5 stopped
+\par bonus 5 5.0 7.0 time 6 10
+\par bonus 6 1.0 1.0 time 7 4
+\par bonus 7 2.0 2.0 time 2 9
+\par bonus 8 2.0 1.0 score 3 5
+\par bonus 9 2.0 3.0 score 8 9
+\par bonus 10 2.0 4.0 score 5 4
+\par bonus 11 4.0 1.0 bomb 4 2
+\par bonus 12 3.0 2.0 bomb 7 5
+\par bomb 16 5.0 4.0 active 9
+\par bomb 17 6.0 3.0 active 9
+\par crystal 3 0.5 2.5
+\par crystal 4 3.5 1.5
+\par crystal 14 1.0 8.0
+\par crystal 15 7.0 1.0
+\par step
+\par /* [ PacMan.Game] command executed: hack score 0 */
+\par /* [ PacMan.Game] command executed: show info */
+\par /*
+\par game 0 42
+\par maze 68
+\par pacman 2 0.5 4.5 stopped 0
+\par monster 0 dumb 4.5 0.5 stopped
+\par monster 1 clever 3.5 0.5 stopped
+\par bonus 5 5.0 7.0 time 6 10
+\par bonus 6 1.0 1.0 time 7 4
+\par bonus 7 2.0 2.0 time 2 9
+\par bonus 8 2.0 1.0 score 3 5
+\par bonus 9 2.0 3.0 score 8 9
+\par bonus 10 2.0 4.0 score 5 4
+\par bonus 11 4.0 1.0 bomb 4 2
+\par bonus 12 3.0 2.0 bomb 7 5
+\par bomb 16 5.0 4.0 active 9
+\par bomb 17 6.0 3.0 active 9
+\par crystal 3 0.5 2.5
+\par crystal 4 3.5 1.5
+\par crystal 14 1.0 8.0
+\par crystal 15 7.0 1.0
+\par */
+\par /* [ PacMan.Game] command executed: exitgame Sandor */
+\par event exitgame
+\par showmenu
+\par /* [ PacMan.Main_program] command executed: exit */
+\par event exit
+\par 
+\par \pard\plain \s1\fs20\li15\ri105\fi0\f5\fs22\i\b\qj Men\'fc- \'e9s highscore teszt bemenet:
+\par \pard\plain \s1\fs20\li15\ri105\fi0\f4\fs16\qj // Menurendszer es high-score tabla megjelenites/frissites tesztelese
+\par 
+\par 
+\par // Dupla teszt a highscore lekerdezesere
+\par highscore
+\par exithighscore
+\par 
+\par highscore
+\par exithighscore
+\par 
+\par 
+\par 
+\par // TESZT 1 (nagy highscore)
+\par startgame t2
+\par hack score 999999     // Nagy highscore beallitasa
+\par exitgame Jeno
+\par 
+\par // Highscore lekerdezese, hogy a modositasokat ellenorizzuk
+\par highscore
+\par exithighscore
+\par 
+\par highscore
+\par exithighscore
+\par 
+\par 
+\par 
+\par // TESZT 2 (kis eredmeny, nem highscore)
+\par startgame t2
+\par hack score 5    // Meg nagyobb highscore beallitasa
+\par exitgame Bena
+\par 
+\par // Highscore lekerdezese, hogy a modositasokat ellenorizzuk
+\par highscore
+\par exithighscore
+\par 
+\par highscore
+\par exithighscore
+\par 
+\par 
+\par 
+\par // TESZT 3 (meg nagyobb highscore)
+\par startgame t2
+\par hack score 1000000    // Meg nagyobb highscore beallitasa
+\par exitgame Sandor
+\par 
+\par // Highscore lekerdezese, hogy a modositasokat ellenorizzuk
+\par highscore
+\par exithighscore
+\par 
+\par highscore
+\par exithighscore
+\par 
+\par exit
+\par 
+\par \pard\plain \s1\fs20\li15\ri105\fi0\f5\fs22\i\b\qj Men\'fc- \'e9s highscore teszt kimenet:
+\par \pard\plain \s1\fs20\li15\ri105\fi0\f4\fs16\qj showmenu
+\par /* [ PacMan.Main_program] command executed: highscore */
+\par highscore Sandor 1000000
+\par highscore Jeno 999999
+\par highscore Viso 1525
+\par highscore Jeno 642
+\par highscore Bela 421
+\par highscore NEWNAME 400
+\par highscore Rehak 362
+\par highscore Sandor 81
+\par highscore Boro 71
+\par highscore Entitas 65
+\par /* [ PacMan.HighScore] command executed: exithighscore */
+\par event exithighscore
+\par showmenu
+\par /* [ PacMan.Main_program] command executed: highscore */
+\par highscore Sandor 1000000
+\par highscore Jeno 999999
+\par highscore Viso 1525
+\par highscore Jeno 642
+\par highscore Bela 421
+\par highscore NEWNAME 400
+\par highscore Rehak 362
+\par highscore Sandor 81
+\par highscore Boro 71
+\par highscore Entitas 65
+\par /* [ PacMan.HighScore] command executed: exithighscore */
+\par event exithighscore
+\par showmenu
+\par /* [ PacMan.Main_program] command executed: startgame t2 */
+\par load t2\\01-One_Clever_Monster_and_One_Dumb.lev
+\par /* [ PacMan.Game] command executed: hack score 999999 */
+\par /* [ PacMan.Game] command executed: exitgame Jeno */
+\par event exitgame
+\par showmenu
+\par /* [ PacMan.Main_program] command executed: highscore */
+\par highscore Sandor 1000000
+\par highscore Jeno 999999
+\par highscore Jeno 999999
+\par highscore Viso 1525
+\par highscore Jeno 642
+\par highscore Bela 421
+\par highscore NEWNAME 400
+\par highscore Rehak 362
+\par highscore Sandor 81
+\par highscore Boro 71
+\par /* [ PacMan.HighScore] command executed: exithighscore */
+\par event exithighscore
+\par showmenu
+\par /* [ PacMan.Main_program] command executed: highscore */
+\par highscore Sandor 1000000
+\par highscore Jeno 999999
+\par highscore Jeno 999999
+\par highscore Viso 1525
+\par highscore Jeno 642
+\par highscore Bela 421
+\par highscore NEWNAME 400
+\par highscore Rehak 362
+\par highscore Sandor 81
+\par highscore Boro 71
+\par /* [ PacMan.HighScore] command executed: exithighscore */
+\par event exithighscore
+\par showmenu
+\par /* [ PacMan.Main_program] command executed: startgame t2 */
+\par load t2\\01-One_Clever_Monster_and_One_Dumb.lev
+\par /* [ PacMan.Game] command executed: hack score 5 */
+\par /* [ PacMan.Game] command executed: exitgame Bena */
+\par event exitgame
+\par showmenu
+\par /* [ PacMan.Main_program] command executed: highscore */
+\par highscore Sandor 1000000
+\par highscore Jeno 999999
+\par highscore Jeno 999999
+\par highscore Viso 1525
+\par highscore Jeno 642
+\par highscore Bela 421
+\par highscore NEWNAME 400
+\par highscore Rehak 362
+\par highscore Sandor 81
+\par highscore Boro 71
+\par /* [ PacMan.HighScore] command executed: exithighscore */
+\par event exithighscore
+\par showmenu
+\par /* [ PacMan.Main_program] command executed: highscore */
+\par highscore Sandor 1000000
+\par highscore Jeno 999999
+\par highscore Jeno 999999
+\par highscore Viso 1525
+\par highscore Jeno 642
+\par highscore Bela 421
+\par highscore NEWNAME 400
+\par highscore Rehak 362
+\par highscore Sandor 81
+\par highscore Boro 71
+\par /* [ PacMan.HighScore] command executed: exithighscore */
+\par event exithighscore
+\par showmenu
+\par /* [ PacMan.Main_program] command executed: startgame t2 */
+\par load t2\\01-One_Clever_Monster_and_One_Dumb.lev
+\par /* [ PacMan.Game] command executed: hack score 1000000 */
+\par /* [ PacMan.Game] command executed: exitgame Sandor */
+\par event exitgame
+\par showmenu
+\par /* [ PacMan.Main_program] command executed: highscore */
+\par highscore Sandor 1000000
+\par highscore Sandor 1000000
+\par highscore Jeno 999999
+\par highscore Jeno 999999
+\par highscore Viso 1525
+\par highscore Jeno 642
+\par highscore Bela 421
+\par highscore NEWNAME 400
+\par highscore Rehak 362
+\par highscore Sandor 81
+\par /* [ PacMan.HighScore] command executed: exithighscore */
+\par event exithighscore
+\par showmenu
+\par /* [ PacMan.Main_program] command executed: highscore */
+\par highscore Sandor 1000000
+\par highscore Sandor 1000000
+\par highscore Jeno 999999
+\par highscore Jeno 999999
+\par highscore Viso 1525
+\par highscore Jeno 642
+\par highscore Bela 421
+\par highscore NEWNAME 400
+\par highscore Rehak 362
+\par highscore Sandor 81
+\par /* [ PacMan.HighScore] command executed: exithighscore */
+\par event exithighscore
+\par showmenu
+\par /* [ PacMan.Main_program] command executed: exit */
+\par event exit
+\par 
+\par 
+\par \pard\plain {\listtext\pard\plain \li15\ri105\fi0\sa120\keepn\f5\fs28\b\qc }\s10\ls1\ilvl4\outlinelevel4\sa120\keepn\f5\fs28\b\li15\ri105\fi0\qc Az eddigi munka \'e9rt\'e9kel\'e9se
+\par \pard\plain \s1\fs20\li15\ri105\fi0\sa120\f5\lang1024 
+\par \pard\plain \s1\fs20\li15\ri105\fi0\sa120\f4\qj{\lang1024 A csapaton bel\'fcli munkamegoszt\'e1s ezennel m\'e1r id\'f5ben nem volt olyan egyenletes, k\'f6sz\'f6nhet\'f5 ez a k\'fcl\'f6nb\'f6z\'f5 felmer\'fcl\'f5 egyetemi, mag\'e1n\'e9leti probl\'e9m\'e1knak. Ennek ellen\'e9re \'f6sszess\'e9g\'e9ben siker\'fclt m\'e9gis megval\'f3s\'edtani az ar\'e1nylag egyenletes munkamegoszt\'e1st, a projek
+t jelleget. A fejleszt\'e9s v\'e9ge fel\'e9 kis cs\'fasz\'e1s l\'e9pett fel az \'fctemez\'e9sben, ez annak tulajdon\'edthat\'f3, hogy a feladatokra k\'edt\'fbz\'f6tt pontsz\'e1mokat vett\'fck a munka id\'f5ig\'e9nyess\'e9g\'e9nek mutat\'f3j\'e1ul, most \'edgy ut\'f3lag m\'e1r vil\'e1gos, hogy ez \'edgy n}e{\lang1024 m volt teljesen j\'f3 d\'f6nt\'e9s. A
+ proto elk\'e9sz\'edt\'e9s\'e9t \'e9s lead\'e1s\'e1t tekintve, az implement\'e1l\'e1s feladata, illetve nagy \'e1ltal\'e1noss\'e1gban a proto k\'e9sz\'edt\'e9se egy el\'e9g komlpexnek mondhat\'f3 feladat. B\'e1r a v\'e9gs? \'e9rt\'e9kel\'e9s 30-40-30 ar\'e1nyban osztja a pontokat, vagyis a proto} {\lang1024 ar\'e1nyaiban \'e9rt\'e9kesebb felada
+t, m\'e9gis \'fagy gondoljuk ar\'e1nyaiban \'edgy is irre\'e1lis a grafikus verzi\'f3 k\'e9sz\'edt\'e9s\'e9\'e9rt \'e9s a protot\'edpus implement\'e1l\'e1s\'e9rt kit\'fbz\'f6tt pontsz\'e1m. A feladat egyben el\'e9g komplex, a k\'fcl\'f6nb\'f6z\'f5 munkaf\'e1zisok, k\'fcl\'f6nf\'e9le ismereteket ig\'e9nyelnek, m\'edg} {\lang1024 a szkeleton illetve a proto 
+els? fele legink\'e1bb a prog.tech. ismereteket k\'f6veteli meg, addig a proto lek\'f3dol\'e1sa egy az egyben programoz\'e1si feladat, a grafikus v\'e1ltozat k\'e9sz\'edt\'e9se pedig minim\'e1lis k\'f3dol\'e1st \'e9s prog.tech.et ig\'e9nyl\'f5, legink\'e1bb a design \'e9s sz\'e9p\'e9}r{\lang1024 z\'e9k ter\'e9n j\'e1ratos embereknek
+ fekv\'f5 ter\'fclet. R\'f6viden szumm\'e1zva teh\'e1t, amennyiben j\'f3l \'e9rtelmezt\'fck a feladatot, a protot\'edpus\'e9rt j\'e1r\'f3 35 pont, a munka neh\'e9zs\'e9g\'e9t tekintve szerint\'fcnk nincs egyens\'falyban a grafikus verzi\'f3\'e9rt j\'e1r\'f3 40 illetve 60 ponttal.}
+\par \pard\plain \s1\fs20\li15\ri105\fi0\sa120\f4\lang1024\qj A k\'e9sedelemt\'f5l \'e9s a felmer\'fcl\'f5 apr\'f3bb probl\'e9m\'e1kt\'f3l eltekintve teh\'e1t, aztmondhatjuk, minden csapattag egyform\'e1n vette ki a r\'e9sz\'e9t a project eddigi folyamat\'e1b\'f3l. \'cdgy midenki 25%-os r\'e9szesed\'e9st kap az \'f6sszegy\'fbjt\'f6tt pontokb\'f3l.
+\par \pard\plain \s1\fs20\li15\ri105\fi0\sa120\f4\fs20\qj{\f5{\lang1024 Csak \'edgy tov\'e1bb, }{\b DPMF}{\lang1024 ! }}
+\par \pard\plain \s1\fs20\li15\ri105\fi0\sa120\f5\fs20\lang1024\qj 
+\par }

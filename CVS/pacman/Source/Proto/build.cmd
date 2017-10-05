@@ -1,0 +1,23 @@
+@rem $Id: build.cmd,v 1.8 2001/04/27 12:51:48 lptr Exp $
+@rem $Date: 2001/04/27 12:51:48 $
+@rem $Author: lptr $
+
+@echo off
+echo cleanup...
+call cleanup.cmd > nul
+
+echo compiling...
+echo  pacman...
+call makepacman.cmd
+
+echo  inputter...
+call makeinp.cmd
+
+echo  outputter...
+call makeout.cmd
+
+echo  editor...
+call makeedit.cmd
+
+echo documenting...
+call docit.cmd

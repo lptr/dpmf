@@ -1,0 +1,50 @@
+// Szornyek mozgatasanak tesztelese
+
+/startgame
+/hack load level1
+
+/hack pacman set 10 10 0 none
+/info monster
+
+// Szornyek krealasa
+/hack monster create dumb 20 20 left       // 0.
+/hack monster create dumb 35 40 up         // 1.
+/hack monster create clever 62 17 right    // 2.
+/hack monster create clever 52 52 down     // 3.
+
+/show maze
+/show info
+
+/step 15
+
+// Par szornyet atirunk...
+/hack monster 0 set 71 24
+/hack monster 2 set 41 26
+/hack monster 1 up
+/hack monster 3 kill
+
+/show maze
+/show info
+
+/step 5
+/hack monster 3 reborn
+
+// Sok step, hogy a monsterek mozoghassanak es/vagy utkozhessenek a PacmMan-nel
+/step 30
+
+// Vizsgalat a PacMan mozgasa kozben:
+/setdirection left
+/step 5
+/setdirection up
+/step 9
+/setdirection right
+
+/show maze
+/show info
+
+//A szornyek eltunnek-e, ha uj palyara lepunk?
+/nextlevel
+
+/show maze
+/show info
+

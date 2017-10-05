@@ -1,0 +1,1312 @@
+HelloWorld!
+Hiba volt a highscore tabla olvasasa kozben! 
+showmenu 
+load t2\01-One_Clever_Monster_and_One_Dumb.lev 
+load t2\02-Two_Dumb_Monsters.lev 
+remark [setdirection] down at 4.5 0.5 
+remark [setdirection] down at 3.5 0.5 
+event monster 5 decides down 
+event monster 6 decides down 
+game 0 3 
+maze 11999 
+pacman 7 0.5 4.5 stopped 0 
+monster 5 dumb 4.5 0.6 down 
+monster 6 dumb 3.5 0.7 down 
+step 
+remark [setdirection] right at 0.5 4.5 
+game 0 3 
+maze 11998 
+pacman 7 0.6 4.5 right 0 
+monster 5 dumb 4.5 0.7 down 
+monster 6 dumb 3.5 0.9 down 
+step 
+remark [setdirection] right at 0.6 4.5 
+game 0 3 
+maze 11997 
+pacman 7 0.7 4.5 right 0 
+monster 5 dumb 4.5 0.8 down 
+monster 6 dumb 3.5 1.1 down 
+step 
+remark [setdirection] right at 0.7 4.5 
+game 0 3 
+maze 11996 
+pacman 7 0.8 4.5 right 0 
+monster 5 dumb 4.5 0.9 down 
+monster 6 dumb 3.5 1.3 down 
+bonus 8 3.5 3.5 bomb 14 2 
+step 
+remark [setdirection] right at 0.8 4.5 
+game 0 3 
+maze 11995 
+pacman 7 0.9 4.5 right 0 
+monster 5 dumb 4.5 1.0 down 
+monster 6 dumb 3.5 1.5 down 
+bonus 8 3.5 3.5 bomb 13 2 
+step 
+remark [setdirection] right at 0.9 4.5 
+game 0 3 
+maze 11994 
+pacman 7 1.0 4.5 right 0 
+monster 5 dumb 4.5 1.1 down 
+monster 6 dumb 3.5 1.7 down 
+bonus 8 3.5 3.5 bomb 12 2 
+step 
+remark [setdirection] right at 1.0 4.5 
+remark [setdirection] down at 3.5 1.7 
+event monster 6 decides down 
+game 0 3 
+maze 11993 
+pacman 7 1.1 4.5 right 0 
+monster 5 dumb 4.5 1.2 down 
+monster 6 dumb 3.5 1.9 down 
+bonus 8 3.5 3.5 bomb 11 2 
+step 
+remark [setdirection] right at 1.1 4.5 
+game 0 3 
+maze 11992 
+pacman 7 1.2 4.5 right 0 
+monster 5 dumb 4.5 1.3 down 
+monster 6 dumb 3.5 2.1 down 
+bonus 8 3.5 3.5 bomb 10 2 
+step 
+remark [setdirection] left at 1.2 4.5 
+remark [setdirection] right at 4.5 1.3 
+event monster 5 decides right 
+game 0 3 
+maze 11991 
+pacman 7 1.1 4.5 left 0 
+monster 5 dumb 4.5 1.4 down 
+monster 6 dumb 3.5 2.3 down 
+bonus 8 3.5 3.5 bomb 9 2 
+step 
+remark [setdirection] left at 1.1 4.5 
+game 0 3 
+maze 11990 
+pacman 7 1.0 4.5 left 0 
+monster 5 dumb 4.5 1.5 down 
+monster 6 dumb 3.5 2.5 down 
+bonus 8 3.5 3.5 bomb 8 2 
+step 
+remark [setdirection] left at 1.0 4.5 
+game 0 3 
+maze 11989 
+pacman 7 0.9 4.5 left 0 
+monster 5 dumb 4.5 1.6 down 
+monster 6 dumb 3.5 2.7 down 
+bonus 8 3.5 3.5 bomb 7 2 
+step 
+remark [setdirection] up at 0.9 4.5 
+game 0 3 
+maze 11988 
+pacman 7 0.8 4.5 left 0 
+monster 5 dumb 4.5 1.7 down 
+monster 6 dumb 3.5 2.9 down 
+bonus 8 3.5 3.5 bomb 6 2 
+step 
+remark [setdirection] up at 0.8 4.5 
+remark [setdirection] left at 4.5 1.7 
+event monster 5 decides left 
+game 0 3 
+maze 11987 
+pacman 7 0.7 4.5 left 0 
+monster 5 dumb 4.5 1.8 down 
+monster 6 dumb 3.5 3.1 down 
+bonus 8 3.5 3.5 bomb 5 2 
+step 
+remark [setdirection] left at 0.7 4.5 
+game 0 3 
+maze 11986 
+pacman 7 0.6 4.5 left 0 
+monster 5 dumb 4.5 1.9 down 
+monster 6 dumb 3.5 3.3 down 
+bonus 8 3.5 3.5 bomb 4 2 
+step 
+remark [setdirection] up at 0.6 4.5 
+remark [setdirection] left at 3.5 3.3 
+event monster 6 decides left 
+game 0 3 
+maze 11985 
+pacman 7 0.5 4.5 stopped 0 
+monster 5 dumb 4.5 2.0 down 
+monster 6 dumb 3.5 3.5 left 
+bonus 8 3.5 3.5 bomb 3 2 
+step 
+remark [setdirection] up at 0.5 4.5 
+game 0 3 
+maze 11984 
+pacman 7 0.5 4.4 up 0 
+monster 5 dumb 4.5 2.1 down 
+monster 6 dumb 3.3 3.5 left 
+bonus 8 3.5 3.5 bomb 2 2 
+step 
+remark [setdirection] up at 0.5 4.4 
+game 0 3 
+maze 11983 
+pacman 7 0.5 4.3 up 0 
+monster 5 dumb 4.5 2.2 down 
+monster 6 dumb 3.1 3.5 left 
+bonus 8 3.5 3.5 bomb 1 2 
+step 
+remark [setdirection] up at 0.5 4.3 
+event bonus 8 died 3.5 3.5 
+game 0 3 
+maze 11982 
+pacman 7 0.5 4.2 up 0 
+monster 5 dumb 4.5 2.3 down 
+monster 6 dumb 2.9 3.5 left 
+step 
+remark [setdirection] up at 0.5 4.2 
+remark [setdirection] left at 4.5 2.3 
+event monster 5 decides left 
+game 0 3 
+maze 11981 
+pacman 7 0.5 4.1 up 0 
+monster 5 dumb 4.5 2.4 down 
+monster 6 dumb 2.7 3.5 left 
+step 
+remark [setdirection] up at 0.5 4.1 
+game 0 3 
+maze 11980 
+pacman 7 0.5 4.0 up 0 
+monster 5 dumb 4.5 2.5 left 
+monster 6 dumb 2.5 3.5 left 
+step 
+remark [setdirection] up at 0.5 4.0 
+game 0 3 
+maze 11979 
+pacman 7 0.5 3.9 up 0 
+monster 5 dumb 4.4 2.5 left 
+monster 6 dumb 2.5 3.5 stopped 
+step 
+remark [setdirection] up at 0.5 3.9 
+remark [setdirection] left at 2.5 3.5 
+event monster 6 decides left 
+game 0 3 
+maze 11978 
+pacman 7 0.5 3.8 up 0 
+monster 5 dumb 4.3 2.5 left 
+monster 6 dumb 2.5 3.5 stopped 
+step 
+remark [setdirection] up at 0.5 3.8 
+remark [setdirection] left at 2.5 3.5 
+event monster 6 decides left 
+game 0 3 
+maze 11977 
+pacman 7 0.5 3.7 up 0 
+monster 5 dumb 4.2 2.5 left 
+monster 6 dumb 2.5 3.5 stopped 
+bonus 9 0.5 0.5 bomb 11 1 
+step 
+remark [setdirection] up at 0.5 3.7 
+remark [setdirection] left at 2.5 3.5 
+event monster 6 decides left 
+game 0 3 
+maze 11976 
+pacman 7 0.5 3.6 up 0 
+monster 5 dumb 4.1 2.5 left 
+monster 6 dumb 2.5 3.5 stopped 
+bonus 9 0.5 0.5 bomb 10 1 
+step 
+remark [setdirection] up at 0.5 3.6 
+remark [setdirection] left at 2.5 3.5 
+event monster 6 decides left 
+game 0 3 
+maze 11975 
+pacman 7 0.5 3.5 up 0 
+monster 5 dumb 4.0 2.5 left 
+monster 6 dumb 2.5 3.5 stopped 
+bonus 9 0.5 0.5 bomb 9 1 
+step 
+remark [setdirection] up at 0.5 3.5 
+remark [setdirection] down at 4.0 2.5 
+remark [setdirection] left at 2.5 3.5 
+event monster 5 decides down 
+event monster 6 decides left 
+game 0 3 
+maze 11974 
+pacman 7 0.5 3.4 up 0 
+monster 5 dumb 3.9 2.5 left 
+monster 6 dumb 2.5 3.5 stopped 
+bonus 9 0.5 0.5 bomb 8 1 
+step 
+remark [setdirection] up at 0.5 3.4 
+remark [setdirection] left at 2.5 3.5 
+event monster 6 decides left 
+game 0 3 
+maze 11973 
+pacman 7 0.5 3.3 up 0 
+monster 5 dumb 3.8 2.5 left 
+monster 6 dumb 2.5 3.5 stopped 
+bonus 9 0.5 0.5 bomb 7 1 
+step 
+remark [setdirection] up at 0.5 3.3 
+remark [setdirection] left at 2.5 3.5 
+event monster 6 decides left 
+game 0 3 
+maze 11972 
+pacman 7 0.5 3.2 up 0 
+monster 5 dumb 3.7 2.5 left 
+monster 6 dumb 2.5 3.5 stopped 
+bonus 9 0.5 0.5 bomb 6 1 
+bonus 10 3.5 2.5 bomb 16 2 
+step 
+remark [setdirection] up at 0.5 3.2 
+remark [setdirection] left at 2.5 3.5 
+event monster 6 decides left 
+game 0 3 
+maze 11971 
+pacman 7 0.5 3.1 up 0 
+monster 5 dumb 3.6 2.5 left 
+monster 6 dumb 2.5 3.5 stopped 
+bonus 9 0.5 0.5 bomb 5 1 
+bonus 10 3.5 2.5 bomb 15 2 
+step 
+remark [setdirection] up at 0.5 3.1 
+remark [setdirection] left at 2.5 3.5 
+event monster 6 decides left 
+game 0 3 
+maze 11970 
+pacman 7 0.5 3.0 up 0 
+monster 5 dumb 3.5 2.5 left 
+monster 6 dumb 2.5 3.5 stopped 
+bonus 9 0.5 0.5 bomb 4 1 
+bonus 10 3.5 2.5 bomb 14 2 
+step 
+remark [setdirection] up at 0.5 3.0 
+remark [setdirection] up at 3.5 2.5 
+remark [setdirection] left at 2.5 3.5 
+event monster 5 decides up 
+event monster 6 decides left 
+game 0 3 
+maze 11969 
+pacman 7 0.5 2.9 up 0 
+monster 5 dumb 3.5 2.4 up 
+monster 6 dumb 2.5 3.5 stopped 
+bonus 9 0.5 0.5 bomb 3 1 
+bonus 10 3.5 2.5 bomb 13 2 
+step 
+remark [setdirection] up at 0.5 2.9 
+remark [setdirection] left at 2.5 3.5 
+event monster 6 decides left 
+game 0 3 
+maze 11968 
+pacman 7 0.5 2.8 up 0 
+monster 5 dumb 3.5 2.3 up 
+monster 6 dumb 2.5 3.5 stopped 
+bonus 9 0.5 0.5 bomb 2 1 
+bonus 10 3.5 2.5 bomb 12 2 
+step 
+remark [setdirection] up at 0.5 2.8 
+remark [setdirection] left at 2.5 3.5 
+event monster 6 decides left 
+game 0 3 
+maze 11967 
+pacman 7 0.5 2.7 up 0 
+monster 5 dumb 3.5 2.2 up 
+monster 6 dumb 2.5 3.5 stopped 
+bonus 9 0.5 0.5 bomb 1 1 
+bonus 10 3.5 2.5 bomb 11 2 
+step 
+remark [setdirection] up at 0.5 2.7 
+remark [setdirection] right at 2.5 3.5 
+event monster 6 decides right 
+event bonus 9 died 0.5 0.5 
+game 0 3 
+maze 11966 
+pacman 7 0.5 2.6 up 0 
+monster 5 dumb 3.5 2.1 up 
+monster 6 dumb 2.7 3.5 right 
+bonus 10 3.5 2.5 bomb 11 2 
+bonus 11 3.5 1.5 score 15 80 
+step 
+remark [setdirection] up at 0.5 2.6 
+game 0 3 
+maze 11965 
+pacman 7 0.5 2.5 up 0 
+monster 5 dumb 3.5 2.0 up 
+monster 6 dumb 2.9 3.5 right 
+bonus 10 3.5 2.5 bomb 10 2 
+bonus 11 3.5 1.5 score 14 80 
+step 
+remark [setdirection] up at 0.5 2.5 
+remark [setdirection] up at 3.5 2.0 
+event monster 5 decides up 
+game 0 3 
+maze 11964 
+pacman 7 0.5 2.4 up 0 
+monster 5 dumb 3.5 1.9 up 
+monster 6 dumb 3.1 3.5 right 
+bonus 10 3.5 2.5 bomb 9 2 
+bonus 11 3.5 1.5 score 13 80 
+bonus 12 2.5 4.5 time 19 74 
+step 
+remark [setdirection] up at 0.5 2.4 
+game 0 3 
+maze 11963 
+pacman 7 0.5 2.3 up 0 
+monster 5 dumb 3.5 1.8 up 
+monster 6 dumb 3.3 3.5 right 
+bonus 10 3.5 2.5 bomb 8 2 
+bonus 11 3.5 1.5 score 12 80 
+bonus 12 2.5 4.5 time 18 74 
+step 
+remark [setdirection] up at 0.5 2.3 
+remark [setdirection] left at 3.3 3.5 
+event monster 6 decides left 
+game 0 3 
+maze 11962 
+pacman 7 0.5 2.2 up 0 
+monster 5 dumb 3.5 1.7 up 
+monster 6 dumb 3.1 3.5 left 
+bonus 10 3.5 2.5 bomb 7 2 
+bonus 11 3.5 1.5 score 11 80 
+bonus 12 2.5 4.5 time 17 74 
+step 
+remark [setdirection] up at 0.5 2.2 
+game 0 3 
+maze 11961 
+pacman 7 0.5 2.1 up 0 
+monster 5 dumb 3.5 1.6 up 
+monster 6 dumb 2.9 3.5 left 
+bonus 10 3.5 2.5 bomb 6 2 
+bonus 11 3.5 1.5 score 10 80 
+bonus 12 2.5 4.5 time 16 74 
+step 
+remark [setdirection] up at 0.5 2.1 
+remark [setdirection] left at 3.5 1.6 
+event monster 5 decides left 
+game 0 3 
+maze 11960 
+pacman 7 0.5 2.0 up 0 
+monster 5 dumb 3.5 1.5 up 
+monster 6 dumb 2.7 3.5 left 
+bonus 10 3.5 2.5 bomb 5 2 
+bonus 11 3.5 1.5 score 9 80 
+bonus 12 2.5 4.5 time 15 74 
+step 
+remark [setdirection] up at 0.5 2.0 
+game 0 3 
+maze 11959 
+pacman 7 0.5 1.9 up 0 
+monster 5 dumb 3.4 1.5 left 
+monster 6 dumb 2.5 3.5 left 
+bonus 10 3.5 2.5 bomb 4 2 
+bonus 11 3.5 1.5 score 8 80 
+bonus 12 2.5 4.5 time 14 74 
+step 
+remark [setdirection] up at 0.5 1.9 
+game 0 3 
+maze 11958 
+pacman 7 0.5 1.8 up 0 
+monster 5 dumb 3.3 1.5 left 
+monster 6 dumb 2.5 3.5 stopped 
+bonus 10 3.5 2.5 bomb 3 2 
+bonus 11 3.5 1.5 score 7 80 
+bonus 12 2.5 4.5 time 13 74 
+step 
+remark [setdirection] up at 0.5 1.8 
+remark [setdirection] left at 2.5 3.5 
+event monster 6 decides left 
+game 0 3 
+maze 11957 
+pacman 7 0.5 1.7 up 0 
+monster 5 dumb 3.2 1.5 left 
+monster 6 dumb 2.5 3.5 stopped 
+bonus 10 3.5 2.5 bomb 2 2 
+bonus 11 3.5 1.5 score 6 80 
+bonus 12 2.5 4.5 time 12 74 
+step 
+remark [setdirection] up at 0.5 1.7 
+remark [setdirection] down at 2.5 3.5 
+event monster 6 decides down 
+game 0 3 
+maze 11956 
+pacman 7 0.5 1.6 up 0 
+monster 5 dumb 3.1 1.5 left 
+monster 6 dumb 2.5 3.5 stopped 
+bonus 10 3.5 2.5 bomb 1 2 
+bonus 11 3.5 1.5 score 5 80 
+bonus 12 2.5 4.5 time 11 74 
+bonus 13 0.5 4.5 time 16 42 
+step 
+remark [setdirection] up at 0.5 1.6 
+remark [setdirection] up at 2.5 3.5 
+event monster 6 decides up 
+event bonus 10 died 3.5 2.5 
+game 0 3 
+maze 11955 
+pacman 7 0.5 1.5 up 0 
+monster 5 dumb 3.0 1.5 left 
+monster 6 dumb 2.5 3.3 up 
+bonus 11 3.5 1.5 score 5 80 
+bonus 12 2.5 4.5 time 10 74 
+bonus 13 0.5 4.5 time 15 42 
+step 
+remark [setdirection] up at 0.5 1.5 
+remark [setdirection] left at 3.0 1.5 
+event monster 5 decides left 
+game 0 3 
+maze 11954 
+pacman 7 0.5 1.4 up 0 
+monster 5 dumb 2.9 1.5 left 
+monster 6 dumb 2.5 3.1 up 
+bonus 11 3.5 1.5 score 4 80 
+bonus 12 2.5 4.5 time 9 74 
+bonus 13 0.5 4.5 time 14 42 
+bonus 14 1.5 1.5 score 13 70 
+step 
+remark [setdirection] down at 0.5 1.4 
+game 0 3 
+maze 11953 
+pacman 7 0.5 1.5 down 0 
+monster 5 dumb 2.8 1.5 left 
+monster 6 dumb 2.5 2.9 up 
+bonus 11 3.5 1.5 score 3 80 
+bonus 12 2.5 4.5 time 8 74 
+bonus 13 0.5 4.5 time 13 42 
+bonus 14 1.5 1.5 score 12 70 
+step 
+remark [setdirection] down at 0.5 1.5 
+game 0 3 
+maze 11952 
+pacman 7 0.5 1.6 down 0 
+monster 5 dumb 2.7 1.5 left 
+monster 6 dumb 2.5 2.7 up 
+bonus 11 3.5 1.5 score 2 80 
+bonus 12 2.5 4.5 time 7 74 
+bonus 13 0.5 4.5 time 12 42 
+bonus 14 1.5 1.5 score 11 70 
+step 
+remark [setdirection] down at 0.5 1.6 
+game 0 3 
+maze 11951 
+pacman 7 0.5 1.7 down 0 
+monster 5 dumb 2.6 1.5 left 
+monster 6 dumb 2.5 2.5 up 
+bonus 11 3.5 1.5 score 1 80 
+bonus 12 2.5 4.5 time 6 74 
+bonus 13 0.5 4.5 time 11 42 
+bonus 14 1.5 1.5 score 10 70 
+step 
+remark [setdirection] down at 0.5 1.7 
+remark [setdirection] left at 2.5 2.5 
+event monster 6 decides left 
+event bonus 11 died 3.5 1.5 
+game 0 3 
+maze 11950 
+pacman 7 0.5 1.8 down 0 
+monster 5 dumb 2.5 1.5 left 
+monster 6 dumb 2.5 2.3 up 
+bonus 12 2.5 4.5 time 6 74 
+bonus 13 0.5 4.5 time 10 42 
+bonus 14 1.5 1.5 score 9 70 
+bonus 15 4.5 0.5 bomb 16 2 
+step 
+remark [setdirection] down at 0.5 1.8 
+game 0 3 
+maze 11949 
+pacman 7 0.5 1.9 down 0 
+monster 5 dumb 2.4 1.5 left 
+monster 6 dumb 2.5 2.1 up 
+bonus 12 2.5 4.5 time 5 74 
+bonus 13 0.5 4.5 time 9 42 
+bonus 14 1.5 1.5 score 8 70 
+bonus 15 4.5 0.5 bomb 15 2 
+step 
+remark [setdirection] down at 0.5 1.9 
+game 0 3 
+maze 11948 
+pacman 7 0.5 2.0 down 0 
+monster 5 dumb 2.3 1.5 left 
+monster 6 dumb 2.5 1.9 up 
+bonus 12 2.5 4.5 time 4 74 
+bonus 13 0.5 4.5 time 8 42 
+bonus 14 1.5 1.5 score 7 70 
+bonus 15 4.5 0.5 bomb 14 2 
+step 
+remark [setdirection] down at 0.5 2.0 
+remark [setdirection] left at 2.3 1.5 
+event monster 5 decides left 
+game 0 3 
+maze 11947 
+pacman 7 0.5 2.1 down 0 
+monster 5 dumb 2.2 1.5 left 
+monster 6 dumb 2.5 1.7 up 
+bonus 12 2.5 4.5 time 3 74 
+bonus 13 0.5 4.5 time 7 42 
+bonus 14 1.5 1.5 score 6 70 
+bonus 15 4.5 0.5 bomb 13 2 
+step 
+remark [setdirection] down at 0.5 2.1 
+game 0 3 
+maze 11946 
+pacman 7 0.5 2.2 down 0 
+monster 5 dumb 2.1 1.5 left 
+monster 6 dumb 2.5 1.5 up 
+bonus 12 2.5 4.5 time 2 74 
+bonus 13 0.5 4.5 time 6 42 
+bonus 14 1.5 1.5 score 5 70 
+bonus 15 4.5 0.5 bomb 12 2 
+step 
+remark [setdirection] down at 0.5 2.2 
+game 0 3 
+maze 11945 
+pacman 7 0.5 2.3 down 0 
+monster 5 dumb 2.0 1.5 left 
+monster 6 dumb 2.3 1.5 left 
+bonus 12 2.5 4.5 time 1 74 
+bonus 13 0.5 4.5 time 5 42 
+bonus 14 1.5 1.5 score 4 70 
+bonus 15 4.5 0.5 bomb 11 2 
+step 
+remark [setdirection] down at 0.5 2.3 
+remark [setdirection] left at 2.3 1.5 
+event monster 6 decides left 
+event bonus 12 died 2.5 4.5 
+game 0 3 
+maze 11944 
+pacman 7 0.5 2.4 down 0 
+monster 5 dumb 1.9 1.5 left 
+monster 6 dumb 2.1 1.5 left 
+bonus 13 0.5 4.5 time 5 42 
+bonus 14 1.5 1.5 score 3 70 
+bonus 15 4.5 0.5 bomb 10 2 
+step 
+remark [setdirection] down at 0.5 2.4 
+game 0 3 
+maze 11943 
+pacman 7 0.5 2.5 down 0 
+monster 5 dumb 1.8 1.5 left 
+monster 6 dumb 1.9 1.5 left 
+bonus 13 0.5 4.5 time 4 42 
+bonus 14 1.5 1.5 score 2 70 
+bonus 15 4.5 0.5 bomb 9 2 
+step 
+remark [setdirection] down at 0.5 2.5 
+game 0 3 
+maze 11942 
+pacman 7 0.5 2.6 down 0 
+monster 5 dumb 1.7 1.5 left 
+monster 6 dumb 1.7 1.5 left 
+bonus 13 0.5 4.5 time 3 42 
+bonus 14 1.5 1.5 score 1 70 
+bonus 15 4.5 0.5 bomb 8 2 
+step 
+remark [setdirection] down at 0.5 2.6 
+remark [setdirection] down at 1.7 1.5 
+event monster 5 decides down 
+event bonus 14 died 1.5 1.5 
+game 0 3 
+maze 11941 
+pacman 7 0.5 2.7 down 0 
+monster 5 dumb 1.6 1.5 left 
+monster 6 dumb 1.5 1.5 left 
+bonus 13 0.5 4.5 time 2 42 
+bonus 15 4.5 0.5 bomb 8 2 
+step 
+remark [setdirection] down at 0.5 2.7 
+game 0 3 
+maze 11940 
+pacman 7 0.5 2.8 down 0 
+monster 5 dumb 1.5 1.5 left 
+monster 6 dumb 1.3 1.5 left 
+bonus 13 0.5 4.5 time 1 42 
+bonus 15 4.5 0.5 bomb 7 2 
+step 
+remark [setdirection] down at 0.5 2.8 
+event bonus 13 died 0.5 4.5 
+game 0 3 
+maze 11939 
+pacman 7 0.5 2.9 down 0 
+monster 5 dumb 1.4 1.5 left 
+monster 6 dumb 1.1 1.5 left 
+bonus 15 4.5 0.5 bomb 7 2 
+step 
+remark [setdirection] down at 0.5 2.9 
+game 0 3 
+maze 11938 
+pacman 7 0.5 3.0 down 0 
+monster 5 dumb 1.3 1.5 left 
+monster 6 dumb 0.9 1.5 left 
+bonus 15 4.5 0.5 bomb 6 2 
+step 
+remark [setdirection] down at 0.5 3.0 
+game 0 3 
+maze 11937 
+pacman 7 0.5 3.1 down 0 
+monster 5 dumb 1.2 1.5 left 
+monster 6 dumb 0.7 1.5 left 
+bonus 15 4.5 0.5 bomb 5 2 
+step 
+remark [setdirection] down at 0.5 3.1 
+remark [setdirection] down at 0.7 1.5 
+event monster 6 decides down 
+game 0 3 
+maze 11936 
+pacman 7 0.5 3.2 down 0 
+monster 5 dumb 1.1 1.5 left 
+monster 6 dumb 0.5 1.5 left 
+bonus 15 4.5 0.5 bomb 4 2 
+step 
+remark [setdirection] down at 0.5 3.2 
+game 0 3 
+maze 11935 
+pacman 7 0.5 3.3 down 0 
+monster 5 dumb 1.0 1.5 left 
+monster 6 dumb 0.5 1.7 down 
+bonus 15 4.5 0.5 bomb 3 2 
+step 
+remark [setdirection] down at 0.5 3.3 
+game 0 3 
+maze 11934 
+pacman 7 0.5 3.4 down 0 
+monster 5 dumb 0.9 1.5 left 
+monster 6 dumb 0.5 1.9 down 
+bonus 15 4.5 0.5 bomb 2 2 
+step 
+remark [setdirection] down at 0.5 3.4 
+remark [setdirection] down at 0.9 1.5 
+event monster 5 decides down 
+game 0 3 
+maze 11933 
+pacman 7 0.5 3.5 down 0 
+monster 5 dumb 0.8 1.5 left 
+monster 6 dumb 0.5 2.1 down 
+bonus 15 4.5 0.5 bomb 1 2 
+step 
+remark [setdirection] down at 0.5 3.5 
+event bonus 15 died 4.5 0.5 
+game 0 3 
+maze 11932 
+pacman 7 0.5 3.6 down 0 
+monster 5 dumb 0.7 1.5 left 
+monster 6 dumb 0.5 2.3 down 
+bonus 16 3.5 1.5 bomb 11 1 
+step 
+remark [setdirection] down at 0.5 3.6 
+game 0 3 
+maze 11931 
+pacman 7 0.5 3.7 down 0 
+monster 5 dumb 0.6 1.5 left 
+monster 6 dumb 0.5 2.5 down 
+bonus 16 3.5 1.5 bomb 10 1 
+step 
+remark [setdirection] down at 0.5 3.7 
+game 0 3 
+maze 11930 
+pacman 7 0.5 3.8 down 0 
+monster 5 dumb 0.5 1.5 left 
+monster 6 dumb 0.5 2.7 down 
+bonus 16 3.5 1.5 bomb 9 1 
+step 
+remark [setdirection] down at 0.5 3.8 
+remark [setdirection] down at 0.5 2.7 
+event monster 6 decides down 
+game 0 3 
+maze 11929 
+pacman 7 0.5 3.9 down 0 
+monster 5 dumb 0.5 1.6 down 
+monster 6 dumb 0.5 2.9 down 
+bonus 16 3.5 1.5 bomb 8 1 
+bonus 17 3.5 4.5 bomb 15 1 
+step 
+remark [setdirection] down at 0.5 3.9 
+game 0 3 
+maze 11928 
+pacman 7 0.5 4.0 down 0 
+monster 5 dumb 0.5 1.7 down 
+monster 6 dumb 0.5 3.1 down 
+bonus 16 3.5 1.5 bomb 7 1 
+bonus 17 3.5 4.5 bomb 14 1 
+step 
+remark [setdirection] down at 0.5 4.0 
+game 0 3 
+maze 11927 
+pacman 7 0.5 4.1 down 0 
+monster 5 dumb 0.5 1.8 down 
+monster 6 dumb 0.5 3.3 down 
+bonus 16 3.5 1.5 bomb 6 1 
+bonus 17 3.5 4.5 bomb 13 1 
+bonus 18 0.5 1.5 time 13 49 
+step 
+remark [setdirection] down at 0.5 4.1 
+game 0 3 
+maze 11926 
+pacman 7 0.5 4.2 down 0 
+monster 5 dumb 0.5 1.9 down 
+monster 6 dumb 0.5 3.5 down 
+bonus 16 3.5 1.5 bomb 5 1 
+bonus 17 3.5 4.5 bomb 12 1 
+bonus 18 0.5 1.5 time 12 49 
+step 
+remark [setdirection] down at 0.5 4.2 
+game 0 3 
+maze 11925 
+pacman 7 0.5 4.3 down 0 
+monster 5 dumb 0.5 2.0 down 
+monster 6 dumb 0.5 3.7 down 
+bonus 16 3.5 1.5 bomb 4 1 
+bonus 17 3.5 4.5 bomb 11 1 
+bonus 18 0.5 1.5 time 11 49 
+step 
+remark [setdirection] down at 0.5 4.3 
+remark [setdirection] right at 0.5 2.0 
+event monster 5 decides right 
+event pacman 7 died 0.5 4.4 
+event monster 5 born 4.5 0.5 
+event monster 6 born 4.5 0.5 
+game 0 2 
+maze 11924 
+pacman 19 0.5 4.5 stopped 0 
+monster 5 dumb 4.5 0.5 down 
+monster 6 dumb 4.5 0.5 down 
+step 
+remark [setdirection] down at 0.5 4.5 
+remark [setdirection] down at 4.5 0.5 
+remark [setdirection] left at 4.5 0.6 
+event monster 5 decides down 
+event monster 6 decides left 
+game 0 2 
+maze 11923 
+pacman 19 0.5 4.5 stopped 0 
+monster 5 dumb 4.5 0.8 down 
+monster 6 dumb 4.5 0.8 down 
+step 
+remark [setdirection] down at 0.5 4.5 
+game 0 2 
+maze 11922 
+pacman 19 0.5 4.5 stopped 0 
+monster 5 dumb 4.5 1.1 down 
+monster 6 dumb 4.5 1.1 down 
+step 
+remark [setdirection] down at 0.5 4.5 
+game 0 2 
+maze 11921 
+pacman 19 0.5 4.5 stopped 0 
+monster 5 dumb 4.5 1.4 down 
+monster 6 dumb 4.5 1.4 down 
+step 
+remark [setdirection] down at 0.5 4.5 
+game 0 2 
+maze 11920 
+pacman 19 0.5 4.5 stopped 0 
+monster 5 dumb 4.3 1.5 down 
+monster 6 dumb 4.3 1.5 left 
+step 
+remark [setdirection] down at 0.5 4.5 
+remark [setdirection] left at 4.5 1.5 
+event monster 6 decides left 
+game 0 2 
+maze 11919 
+pacman 19 0.5 4.5 stopped 0 
+monster 5 dumb 4.3 1.5 stopped 
+monster 6 dumb 4.3 1.5 left 
+step 
+remark [setdirection] down at 0.5 4.5 
+remark [setdirection] up at 4.3 1.5 
+event monster 5 decides up 
+game 0 2 
+maze 11918 
+pacman 19 0.5 4.5 stopped 0 
+monster 5 dumb 4.1 1.5 stopped 
+monster 6 dumb 4.1 1.5 left 
+step 
+remark [setdirection] down at 0.5 4.5 
+remark [setdirection] left at 4.1 1.5 
+event monster 5 decides left 
+game 0 2 
+maze 11917 
+pacman 19 0.5 4.5 stopped 0 
+monster 5 dumb 3.8 1.5 left 
+monster 6 dumb 3.8 1.5 left 
+step 
+remark [setdirection] down at 0.5 4.5 
+game 0 2 
+maze 11916 
+pacman 19 0.5 4.5 stopped 0 
+monster 5 dumb 3.5 1.5 left 
+monster 6 dumb 3.5 1.5 left 
+step 
+remark [setdirection] down at 0.5 4.5 
+game 0 2 
+maze 11915 
+pacman 19 0.5 4.5 stopped 0 
+monster 5 dumb 3.2 1.5 left 
+monster 6 dumb 3.2 1.5 left 
+bonus 20 1.5 0.5 score 19 50 
+step 
+remark [setdirection] down at 0.5 4.5 
+game 0 2 
+maze 11914 
+pacman 19 0.5 4.5 stopped 0 
+monster 5 dumb 2.9 1.5 left 
+monster 6 dumb 2.9 1.5 left 
+bonus 20 1.5 0.5 score 18 50 
+step 
+remark [setdirection] down at 0.5 4.5 
+game 0 2 
+maze 11913 
+pacman 19 0.5 4.5 stopped 0 
+monster 5 dumb 2.6 1.5 left 
+monster 6 dumb 2.6 1.5 left 
+bonus 20 1.5 0.5 score 17 50 
+step 
+remark [setdirection] down at 0.5 4.5 
+game 0 2 
+maze 11912 
+pacman 19 0.5 4.5 stopped 0 
+monster 5 dumb 2.3 1.5 left 
+monster 6 dumb 2.3 1.5 left 
+bonus 20 1.5 0.5 score 16 50 
+bonus 21 1.5 1.5 time 18 45 
+step 
+remark [setdirection] down at 0.5 4.5 
+remark [setdirection] down at 2.3 1.5 
+event monster 5 decides down 
+game 0 2 
+maze 11911 
+pacman 19 0.5 4.5 stopped 0 
+monster 5 dumb 2.0 1.5 left 
+monster 6 dumb 2.0 1.5 left 
+bonus 20 1.5 0.5 score 15 50 
+bonus 21 1.5 1.5 time 17 45 
+step 
+remark [setdirection] down at 0.5 4.5 
+remark [setdirection] down at 1.9 1.5 
+event monster 6 decides down 
+game 0 2 
+maze 11910 
+pacman 19 0.5 4.5 stopped 0 
+monster 5 dumb 1.7 1.5 left 
+monster 6 dumb 1.7 1.5 left 
+bonus 20 1.5 0.5 score 14 50 
+bonus 21 1.5 1.5 time 16 45 
+step 
+remark [setdirection] down at 0.5 4.5 
+game 0 2 
+maze 11909 
+pacman 19 0.5 4.5 stopped 0 
+monster 5 dumb 1.4 1.5 left 
+monster 6 dumb 1.4 1.5 left 
+bonus 20 1.5 0.5 score 13 50 
+bonus 21 1.5 1.5 time 15 45 
+step 
+remark [setdirection] right at 0.5 4.5 
+game 0 2 
+maze 11908 
+pacman 19 0.6 4.5 right 0 
+monster 5 dumb 1.1 1.5 left 
+monster 6 dumb 1.1 1.5 left 
+bonus 20 1.5 0.5 score 12 50 
+bonus 21 1.5 1.5 time 14 45 
+step 
+remark [setdirection] right at 0.6 4.5 
+game 0 2 
+maze 11907 
+pacman 19 0.7 4.5 right 0 
+monster 5 dumb 0.8 1.5 left 
+monster 6 dumb 0.8 1.5 left 
+bonus 20 1.5 0.5 score 11 50 
+bonus 21 1.5 1.5 time 13 45 
+step 
+remark [setdirection] right at 0.7 4.5 
+game 0 2 
+maze 11906 
+pacman 19 0.8 4.5 right 0 
+monster 5 dumb 0.5 1.5 left 
+monster 6 dumb 0.5 1.5 down 
+bonus 20 1.5 0.5 score 10 50 
+bonus 21 1.5 1.5 time 12 45 
+step 
+remark [setdirection] right at 0.8 4.5 
+game 0 2 
+maze 11905 
+pacman 19 0.9 4.5 right 0 
+monster 5 dumb 0.5 1.8 down 
+monster 6 dumb 0.5 1.8 down 
+bonus 20 1.5 0.5 score 9 50 
+bonus 21 1.5 1.5 time 11 45 
+step 
+remark [setdirection] right at 0.9 4.5 
+remark [setdirection] stopped at 0.5 1.9 
+event monster 6 decides stopped 
+game 0 2 
+maze 11904 
+pacman 19 1.0 4.5 right 0 
+monster 5 dumb 0.5 1.9 down 
+monster 6 dumb 0.5 1.9 stopped 
+bonus 20 1.5 0.5 score 8 50 
+bonus 21 1.5 1.5 time 10 45 
+step 
+remark [setdirection] right at 1.0 4.5 
+remark [setdirection] left at 0.5 1.9 
+remark [setdirection] up at 0.5 2.0 
+event monster 5 decides left 
+event monster 6 decides up 
+game 0 2 
+maze 11903 
+pacman 19 1.1 4.5 right 0 
+monster 5 dumb 0.5 1.8 down 
+monster 6 dumb 0.5 1.8 up 
+bonus 20 1.5 0.5 score 7 50 
+bonus 21 1.5 1.5 time 9 45 
+step 
+remark [setdirection] right at 1.1 4.5 
+game 0 2 
+maze 11902 
+pacman 19 1.2 4.5 right 0 
+monster 5 dumb 0.5 1.7 down 
+monster 6 dumb 0.5 1.7 up 
+bonus 20 1.5 0.5 score 6 50 
+bonus 21 1.5 1.5 time 8 45 
+step 
+remark [setdirection] right at 1.2 4.5 
+game 0 2 
+maze 11901 
+pacman 19 1.3 4.5 right 0 
+monster 5 dumb 0.5 1.6 down 
+monster 6 dumb 0.5 1.6 up 
+bonus 20 1.5 0.5 score 5 50 
+bonus 21 1.5 1.5 time 7 45 
+step 
+remark [setdirection] right at 1.3 4.5 
+remark [setdirection] down at 0.5 1.6 
+event monster 5 decides down 
+game 0 2 
+maze 11900 
+pacman 19 1.4 4.5 right 0 
+monster 5 dumb 0.5 1.5 down 
+monster 6 dumb 0.5 1.5 up 
+bonus 20 1.5 0.5 score 4 50 
+bonus 21 1.5 1.5 time 6 45 
+step 
+remark [setdirection] right at 1.4 4.5 
+remark [setdirection] down at 0.5 1.6 
+event monster 6 decides down 
+game 0 2 
+maze 11899 
+pacman 19 1.5 4.5 right 0 
+monster 5 dumb 0.5 1.8 down 
+monster 6 dumb 0.5 1.8 down 
+bonus 20 1.5 0.5 score 3 50 
+bonus 21 1.5 1.5 time 5 45 
+step 
+remark [setdirection] right at 1.5 4.5 
+game 0 2 
+maze 11898 
+pacman 19 1.6 4.5 right 0 
+monster 5 dumb 0.5 2.1 down 
+monster 6 dumb 0.5 2.1 down 
+bonus 20 1.5 0.5 score 2 50 
+bonus 21 1.5 1.5 time 4 45 
+step 
+remark [setdirection] right at 1.6 4.5 
+game 0 2 
+maze 11897 
+pacman 19 1.7 4.5 right 0 
+monster 5 dumb 0.5 2.4 down 
+monster 6 dumb 0.5 2.4 down 
+bonus 20 1.5 0.5 score 1 50 
+bonus 21 1.5 1.5 time 3 45 
+step 
+remark [setdirection] right at 1.7 4.5 
+event bonus 20 died 1.5 0.5 
+game 0 2 
+maze 11896 
+pacman 19 1.8 4.5 right 0 
+monster 5 dumb 0.5 2.7 down 
+monster 6 dumb 0.5 2.7 down 
+bonus 21 1.5 1.5 time 3 45 
+step 
+remark [setdirection] right at 1.8 4.5 
+game 0 2 
+maze 11895 
+pacman 19 1.9 4.5 right 0 
+monster 5 dumb 0.5 3.0 down 
+monster 6 dumb 0.5 3.0 down 
+bonus 21 1.5 1.5 time 2 45 
+step 
+remark [setdirection] right at 1.9 4.5 
+game 0 2 
+maze 11894 
+pacman 19 2.0 4.5 right 0 
+monster 5 dumb 0.5 3.3 down 
+monster 6 dumb 0.5 3.3 down 
+bonus 21 1.5 1.5 time 1 45 
+step 
+remark [setdirection] right at 2.0 4.5 
+event bonus 21 died 1.5 1.5 
+game 0 2 
+maze 11893 
+pacman 19 2.1 4.5 right 0 
+monster 5 dumb 0.5 3.6 down 
+monster 6 dumb 0.5 3.6 down 
+step 
+remark [setdirection] right at 2.1 4.5 
+game 0 2 
+maze 11892 
+pacman 19 2.2 4.5 right 0 
+monster 5 dumb 0.5 3.9 down 
+monster 6 dumb 0.5 3.9 down 
+step 
+remark [setdirection] right at 2.2 4.5 
+remark [setdirection] up at 0.5 3.9 
+remark [setdirection] right at 0.5 3.8 
+event monster 5 decides up 
+event monster 6 decides right 
+game 0 2 
+maze 11891 
+pacman 19 2.3 4.5 right 0 
+monster 5 dumb 0.5 4.0 up 
+monster 6 dumb 0.5 4.0 down 
+step 
+remark [setdirection] right at 2.3 4.5 
+game 0 2 
+maze 11890 
+pacman 19 2.4 4.5 right 0 
+monster 5 dumb 0.5 4.1 up 
+monster 6 dumb 0.5 4.1 down 
+step 
+remark [setdirection] right at 2.4 4.5 
+game 0 2 
+maze 11889 
+pacman 19 2.5 4.5 right 0 
+monster 5 dumb 0.5 4.2 up 
+monster 6 dumb 0.5 4.2 down 
+step 
+remark [setdirection] right at 2.5 4.5 
+game 0 2 
+maze 11888 
+pacman 19 2.6 4.5 right 0 
+monster 5 dumb 0.5 4.3 up 
+monster 6 dumb 0.5 4.3 down 
+bonus 22 2.5 2.5 bomb 12 2 
+step 
+remark [setdirection] right at 2.6 4.5 
+game 0 2 
+maze 11887 
+pacman 19 2.7 4.5 right 0 
+monster 5 dumb 0.5 4.4 up 
+monster 6 dumb 0.5 4.4 down 
+bonus 22 2.5 2.5 bomb 11 2 
+step 
+remark [setdirection] right at 2.7 4.5 
+remark [setdirection] stopped at 0.5 4.4 
+event monster 5 decides stopped 
+game 0 2 
+maze 11886 
+pacman 19 2.8 4.5 right 0 
+monster 5 dumb 0.6 4.5 stopped 
+monster 6 dumb 0.6 4.5 right 
+bonus 22 2.5 2.5 bomb 10 2 
+step 
+remark [setdirection] right at 2.8 4.5 
+remark [setdirection] right at 0.6 4.5 
+event monster 5 decides right 
+game 0 2 
+maze 11885 
+pacman 19 2.9 4.5 right 0 
+monster 5 dumb 0.9 4.5 right 
+monster 6 dumb 0.9 4.5 right 
+bonus 22 2.5 2.5 bomb 9 2 
+step 
+remark [setdirection] right at 2.9 4.5 
+game 0 2 
+maze 11884 
+pacman 19 3.0 4.5 right 0 
+monster 5 dumb 1.2 4.5 right 
+monster 6 dumb 1.2 4.5 right 
+bonus 22 2.5 2.5 bomb 8 2 
+bonus 23 0.5 0.5 score 10 70 
+step 
+remark [setdirection] right at 3.0 4.5 
+game 0 2 
+maze 11883 
+pacman 19 3.1 4.5 right 0 
+monster 5 dumb 1.5 4.5 right 
+monster 6 dumb 1.5 4.5 right 
+bonus 22 2.5 2.5 bomb 7 2 
+bonus 23 0.5 0.5 score 9 70 
+step 
+remark [setdirection] right at 3.1 4.5 
+remark [setdirection] up at 1.6 4.5 
+event monster 6 decides up 
+game 0 2 
+maze 11882 
+pacman 19 3.2 4.5 right 0 
+monster 5 dumb 1.8 4.5 right 
+monster 6 dumb 1.8 4.5 right 
+bonus 22 2.5 2.5 bomb 6 2 
+bonus 23 0.5 0.5 score 8 70 
+step 
+remark [setdirection] right at 3.2 4.5 
+game 0 2 
+maze 11881 
+pacman 19 3.3 4.5 right 0 
+monster 5 dumb 2.1 4.5 right 
+monster 6 dumb 2.1 4.5 right 
+bonus 22 2.5 2.5 bomb 5 2 
+bonus 23 0.5 0.5 score 7 70 
+bonus 24 1.5 2.5 time 14 61 
+step 
+remark [setdirection] right at 3.3 4.5 
+game 0 2 
+maze 11880 
+pacman 19 3.4 4.5 right 0 
+monster 5 dumb 2.4 4.5 right 
+monster 6 dumb 2.4 4.5 right 
+bonus 22 2.5 2.5 bomb 4 2 
+bonus 23 0.5 0.5 score 6 70 
+bonus 24 1.5 2.5 time 13 61 
+step 
+remark [setdirection] right at 3.4 4.5 
+game 0 2 
+maze 11879 
+pacman 19 3.5 4.5 right 0 
+monster 5 dumb 2.7 4.5 right 
+monster 6 dumb 2.7 4.5 right 
+bonus 22 2.5 2.5 bomb 3 2 
+bonus 23 0.5 0.5 score 5 70 
+bonus 24 1.5 2.5 time 12 61 
+step 
+remark [setdirection] right at 3.5 4.5 
+remark [setdirection] right at 2.8 4.5 
+event monster 6 decides right 
+game 0 2 
+maze 11878 
+pacman 19 3.6 4.5 right 0 
+monster 5 dumb 3.0 4.5 right 
+monster 6 dumb 3.0 4.5 right 
+bonus 22 2.5 2.5 bomb 2 2 
+bonus 23 0.5 0.5 score 4 70 
+bonus 24 1.5 2.5 time 11 61 
+bonus 25 4.5 1.5 time 12 61 
+step 
+remark [setdirection] right at 3.6 4.5 
+remark [setdirection] right at 3.0 4.5 
+event monster 5 decides right 
+event pacman 19 died 3.7 4.5 
+event monster 5 born 3.3 4.5 
+event monster 6 born 3.3 4.5 
+game 0 1 
+maze 11877 
+pacman 26 0.5 4.5 stopped 0 
+monster 5 dumb 3.3 4.5 right 
+monster 6 dumb 3.3 4.5 right 
+step 
+remark [setdirection] right at 0.5 4.5 
+remark [setdirection] left at 3.3 4.5 
+remark [setdirection] left at 3.2 4.5 
+event monster 5 decides left 
+event monster 6 decides left 
+game 0 1 
+maze 11876 
+pacman 26 0.6 4.5 right 0 
+monster 5 dumb 3.0 4.5 left 
+monster 6 dumb 3.0 4.5 left 
+step 
+remark [setdirection] right at 0.6 4.5 
+game 0 1 
+maze 11875 
+pacman 26 0.7 4.5 right 0 
+monster 5 dumb 2.7 4.5 left 
+monster 6 dumb 2.7 4.5 left 
+step 
+remark [setdirection] right at 0.7 4.5 
+game 0 1 
+maze 11874 
+pacman 26 0.8 4.5 right 0 
+monster 5 dumb 2.4 4.5 left 
+monster 6 dumb 2.4 4.5 left 
+bonus 27 4.5 1.5 bomb 10 1 
+step 
+remark [setdirection] right at 0.8 4.5 
+game 0 1 
+maze 11873 
+pacman 26 0.9 4.5 right 0 
+monster 5 dumb 2.1 4.5 left 
+monster 6 dumb 2.1 4.5 left 
+bonus 27 4.5 1.5 bomb 9 1 
+step 
+remark [setdirection] right at 0.9 4.5 
+game 0 1 
+maze 11872 
+pacman 26 1.0 4.5 right 0 
+monster 5 dumb 1.8 4.5 left 
+monster 6 dumb 1.8 4.5 left 
+bonus 27 4.5 1.5 bomb 8 1 
+step 
+remark [setdirection] right at 1.0 4.5 
+event pacman 26 died 1.1 4.5 
+game 0 0 
+maze 11871 
+pacman 26 1.1 4.5 right 0 
+monster 5 dumb 1.5 4.5 left 
+monster 6 dumb 1.5 4.5 left 
+bonus 27 4.5 1.5 bomb 7 1 
+step 
+event exitgame 
+showmenu 
+warning parse error at 261: setdirection right 
+showmenu 
+warning parse error at 262: step 
+showmenu 
+warning parse error at 263: setdirection right 
+showmenu 
+warning parse error at 264: step 
+showmenu 
+warning parse error at 265: setdirection right 
+showmenu 
+warning parse error at 266: step 
+showmenu 
+warning parse error at 267: setdirection right 
+showmenu 
+warning parse error at 268: step 
+showmenu 
+warning parse error at 269: setdirection right 
+showmenu 
+warning parse error at 270: step 
+showmenu 
+warning parse error at 271: setdirection right 
+showmenu 
+warning parse error at 272: step 
+showmenu 
+warning parse error at 273: setdirection up 
+showmenu 
+warning parse error at 274: step 
+showmenu 
+warning parse error at 275: setdirection up 
+showmenu 
+warning parse error at 276: step 
+showmenu 
+warning parse error at 277: setdirection up 
+showmenu 
+warning parse error at 278: step 
+showmenu 
+warning parse error at 279: setdirection up 
+showmenu 
+warning parse error at 280: step 
+showmenu 
+warning parse error at 281: setdirection up 
+showmenu 
+warning parse error at 282: step 
+showmenu 
+warning parse error at 283: setdirection up 
+showmenu 
+warning parse error at 284: step 
+showmenu 
+warning parse error at 285: setdirection up 
+showmenu 
+warning parse error at 286: step 
+showmenu 
+warning parse error at 287: setdirection left 
+showmenu 
+warning parse error at 288: step 
+showmenu 
+warning parse error at 289: setdirection left 
+showmenu 
+warning parse error at 290: step 
+showmenu 
+warning parse error at 291: Bye 
+showmenu 
+Bye

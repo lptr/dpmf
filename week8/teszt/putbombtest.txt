@@ -1,0 +1,60 @@
+// Bomba lerakasanak tesztelese
+
+/startgame
+/hack load level1
+/show maze
+
+/remark Bomba lerakasa
+/hack pacman set 10 10 up 3
+/step
+/info bomb
+
+/remark Most rakjuk le...
+/putbomb
+/showmap
+/step
+/info pacman
+/info bomb
+
+/remark Meg egyet probalunk ugyanoda, de nem fog menni...
+/putbomb
+/showmap
+/step
+/info pacman
+/info bomb
+
+/remark Lepkedunk, hogy az aktivalodast teszteljuk
+/step 
+/info bomb
+/step 
+/info bomb
+/step 
+/info bomb
+/step 
+/info bomb
+/step 
+/info bomb
+/step 
+/info bomb
+/step 
+/info bomb
+/step 
+/info bomb
+/step 
+/info bomb
+/step 
+/info bomb
+
+/remark 0-ra allitjuk a bombak szamat es megprobalunk lerakni egyet
+/hack pacman set 10 20 up 0
+/putbomb
+/info bomb
+/step
+/showmap
+
+/step 100
+
+/info all
+
+/exitgame
+/exit

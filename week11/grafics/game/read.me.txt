@@ -1,0 +1,13 @@
+No, szóval valami ilyesmi hagyományos kinézetet kéne szerintem nyomatni...
+de semmi kedvem megrajzolni most így egy pályát...
+a képernyõ alján balra az életek jobbra a bombák
+fent a pontszám és az idõ
+talán így lehetne elhelyezni
+plusz még kirakandó valahova hogy melyik pályán vagyunk, melyik game-ben vagy világban
+középen meg a hagyományos kinézetû pálya
+
+bomba, bónuszok
+ezek a grafikák kellenének még
+meg a pacman,clever,dumbmonster
+
+
