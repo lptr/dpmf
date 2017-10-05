@@ -1,0 +1,40 @@
+
+DownFall
+--------
+
+Egy játéktér, számozott korongok (4*5)
+
+Játéktér:
+5 db, különbözõ méretû kerék.
+Sorrendnek megfelelõ számú bevágás, növekvõ méret.
+Közös tengely a két oldalon, de eltérõ bevágások...
+
+A korongok a játék tetejérõl indulnak, s az aljára kell elérniük.
+
+Indulás:
+Az összes korong a felsõ gyûjtõhelyen van, a kerekek a kezdõpozícióban.
+Felváltva forgatnak.
+Egy kerék bármeddig forgatható, bármely irányban.
+Egy épp elforgatott kerék nem forgatható mégegyszer, KIVÉVE: ha az utolsó
+korong az 5. kerékben van.
+Ha véletlenül mégis újra elforgatódik, akkor a játékos kimarad egy körbõl.
+
+Nyer: aki elsõnek eljuttatja mind a 10 korongját, helyes sorrendben a célba.
+      az ellenfél rossz sorrendet hozott ki...
+
+
+Szótár:
+pálya:	5 pár kerék van rajta, szabadon elforoghatnak, felül kettõ, alul
+	egy tátolóhely.
+
+kerék:	kerületén bevágások vannak, amiben egy korong fér el. Fix helyen
+	vannak, tengely körül foroghatnak csak el.
+	( 5 * játékosok száma van ...)
+
+korong:	számozott, csak a "nehézségi erõ" hat rá. Szbad utat talal, egybõl
+	leesik.
+	( 10 * játékosok száma... )
+
+"kulcs":a kerekek elforgatására szolgál csak. (parancsközlõ a játék felé...)
+	
+

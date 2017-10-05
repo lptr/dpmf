@@ -1,0 +1,16 @@
+Tue  09-01-1992
+
+If you haven't read WHAT'S.NEW lately, please do so. There have been many
+additions, including new variables and new command-line options. If you've
+just overwritten the EXE without reading the docs, SHAMpage will work fine,
+but you may be missing out on some of its best features!
+
+
+Mon  07-13-1992
+
+NOTO BENE!
+
+If you're upgrading from a version of SHAmpage prior to v3.05, the format of
+SHAMPAGE.DAT has changed! If you want to use your old data file, you MUST
+convert it with the maintain utility! See the docs for more information.
+

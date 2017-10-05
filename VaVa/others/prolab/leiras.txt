@@ -1,0 +1,179 @@
+
+-:  Az A: kezdetu sorok csak az adminokra vonatkoznak!
+-:  Nelkuluk valo megtekintes: grep -v "^-: " lairas.txt | less
+-:  A [DOX] jelzes: a leirasban meg lehet nezni, nem forditottam le...
+-:  Ez a leiras nem nelkulozheti a leiras elolvasasat!
+
+A .bash_profile	-hoz kell hozzafuzni (persze usernevvel):
+---------------------------
+CVSROOT=:pserver:kisza@unicorn.sch.bme.hu:/wC/prolab/cvsroot
+CVSUMASK=007
+export CVSROOT CVSUMASK
+---------------------------
+
+-: CVS szerver inditasa: 
+-: $cvs init
+
+ezutan:
+cvs login
+cvs logout
+parancsok mukodnek. Igy egy tavoli gepen is lehet dolgozni, nem kell
+a unicornon.  Ajelszo a login jelszo...
+
+Munkamasolat kerese:
+$ cvs checkout tc
+A tc-rol ad egy masolatot...
+egy tc konyvtarat csinal, oda masolja... A benne levo CVS-t jobb nem bantani!
+
+$ cvs commit backend.c
+Kozli a file-t.
+Elindit egy editort, amiben le kell irni, hogy mit csinaltal...
+Alapbol 'vi'. Ha nem megfelelo:
+.bash_profile
+---------------------------
+CVSEDITOR=mcedit
+export CVSEDITOR
+---------------------------
+A mc editorat inditja, kezelese megegyezik az nceditevel...
+Ha lusta vagy editalni:
+$ cvs commit -m "Added an optimization pass" backend.c
+Az uzenettel felrakja a forrast...
+Az uj szerkeztes megkezdese elott le kell torolni a masolatot.
+Elegans modja (a konyvtar elol!):
+$ cvs release -d tc
+Ami a tc dirt felszabaditja. Ekkor jelez, ha van olyan file, ami ujabb,
+mint ami a CVSben talalhato.
+
+A ket valtozat kozotti kulonbseg megnezese:
+$ cd tc
+$ cvs diff driver.c
+Az a hagyomanyos diff-et futtatja le...
+
+-: Uj project kezdese:
+-: Nem igen ajanlott a konyvtarak es file-ok mozgatasa, ezert elotte at kell
+-: gondolni a file-szerkezetet!
+-: Eloszor megcsinalom a konyvtarszerkezetet:
+-: $ mkdir tc
+-: $ mkdir tc/man
+-: $ mkdir tc/testing
+-: Utana:
+-: $ cd tc
+-: $ cvs import -m "Created directory structure" yoyodyne/DIR yoyo start
+-: A teljes konyvtarszerkezetet felrakja. Leiras:
+-:        import [-options] repository vendortag releasetag...
+-: Ahol:
+-: 	repository	A konyvtar CVS alatt
+-: 	vendortag	vendor
+-: 	releasetag	release
+-: 
+-: A konyvtarszerkezetekrol:
+-: Akinek irasjoga van ra a CVS-ben, annak a valosagban is kell lennie!
+-: Legjobb egy csoportot csinalni, s annak a tulajdonaba rakni.
+-: 
+-: Ezutan celszeru egy modult definialni, igy nem kell a teljes konyvtarat
+-: beirni.
+-: $ cvs checkout CVSROOT/modules
+-: $ cd CVSROOT
+-: Ezutan modositjuk a modules file-t.
+-: Pl: 
+-: tc   yoyodyne/tc
+-: Ezutan veglegesithetnenk is:
+-: $ cvs commit -m "Added the tc module." modules
+-: $ cd ..
+-: $ cvs release -d CVSROOT
+
+Revision number:
+Magatol lepteti, ha valtozas tortent. Azonosra hozas:
+$ cvs commit -r 3.0
+, ami 3.0 -ra allitja. 
+Nevvel is el lehet latni az egyes valtozatokat:
+$ cvs tag rel-0-4 backend.c
+Mit is csinaltunk most? Megnezhetjuk:
+$ cvs status -v backend.c
+A tag utan megadott file-okra vonatkozik. Pl: "."-ra a konyvtar mindegyik
+file-jara beallitja.
+Egy adott TAG-u allapot lekerdezese:
+$ cvs checkout -r rel-1-0 tc
+Az aktualis verziotol fuggetlenul a regit adja...
+
+A CVS kepes arra, hogy az adott verziorol "mentest" keszitsen. Ezutan tovabb 
+lehet folytatni a fejlesztest. Pl. egy verzio kibocsaltasa utan erdemes meg-
+csinalni. Ezutan bejon egy jelzes, hogy rossz valamiert, de mi mar reg nem ott 
+tartunk. Ezutan le lehet kerni a regi verziot, kijavitani, es azt elrakni,
+mikozben nem zavarom meg a fejlesztest. Alverzioszamot nyit neki. Barmely
+verziot ossze tudjuk vonni a kesobbiekben... [DOX]
+
+File-ok update-je:
+$cvs update mit
+Az adott file-t vagy konyvtarat, rekurzivan. Mit nelkul az adott konyvtar.
+
+File hozzaadasa, torlese, atnevezese:
+Hozzaadas:
+Le kell tolteni a forrast.
+Letrehozni benne e file-t, majd:
+$cvs add FILENAME
+Ha a file binaris informaciot tartalmaz, akkor -kb parameter is kell.
+Igy jeleztuk, hogy szeretnenk a nyomkoveteset.
+$cvs commit FILENAME
+Feltolti, ezutan vallik lathatova a tobbiek fele.
+Az add nem rekurziv, es ismeri az -m parametert.
+Torles:
+Meg kell gyozodni, hogy nincs kulonbseg a a CVS-el.
+A helyi masolatbol eltavolitom a file-t. (rm)
+$cvs remove FILENAME
+$cvs commit FILENAME
+A file veglegesen torlodott...
+Konyvtar torlese igy nem lehetseges. Eloszor a file-okat kell kitorolni,
+majd 
+$cvs update -P
+-vel torli az ures konyvtarakat.
+File atnevezes:
+$ mv OLD NEW
+$ cvs remove OLD
+$ cvs add NEW
+$ cvs commit -m "Renamed OLD to NEW" OLD NEW 
+Az uj sorszamozasa elolrol kezdodik!
+Konyvtar atnevezese: [DOX]
+
+Valodi munka:
+-------------
+Binarisok: alapjaban text-fileok tarolasara hasznaljak. Minden parancshoz
+	van -kb, amivel jelezhetjuk, hogy nem text. [DOX]
+
+Tobb fejleszto:
+Nem lenne szerencses, ha tobben ugyanazt a filet modositanak. Lock-ot kell
+alkalmazni. Ezt sajna a CVS csak jelezni tudja.
+$cvs admin -l 
+Megadja, mely file-okat jegyezte elo valaki modositasra.
+A file-statuszokat a leiras tartalmazza. [DOX]
+Lekerdezes:
+$cvs status FILE
+Masik mod:
+$ cvs -n -q update
+Igy egy proba-updatet csinal, es kijelzi a statuszokat.
+Az update parancsra a helyi masolatot osszeegyezteti a CVSel.
+A kulonbsegeket jelzi a helyi file-ban, ha nem feloldhato. [DOX]
+
+A fileokat le lehet vedeni a kozvetlen iras ellen (watch), ekkor ki kell
+jelenteni, hogy en modositom ( edit majd unedit ). [DOX]
+
+Keywords
+========
+A CVS kepes a file-okban talalhato keywordoket az aktualis ertekkel 
+kiertekelni. A fileban: $KEYWORD$, es minden valtozasnal felulirja.
+(Nem kell magadnak irni pl. a verzioszamokat... )
+$Author$	A login-nev.
+$Date$		A datum (UTC).
+$Header$	Alap header, ami tartalmazza:
+		eleresi ut, verzioszam, datum, szerzo, allapot.
+$Id$		Elozo, csak nem a full path, hanem csak a nev van benne.
+$Name$		A file neve.
+$Locker$	A lockolo neve. (Alapbol nem lockol!)
+$Log$		A 'commit' alatti bejegyzest elhelyezi a file-ban is.
+		A regi bejegyzeseket nem modositja.
+$RCSfile$	File nev, path nelkul.
+$Revision$	A verziohoz rendelt szam.
+$Source$	A teljes filenev.
+$State$		Az allapot. 'cvs admin -s', [DOX]
+ 
+

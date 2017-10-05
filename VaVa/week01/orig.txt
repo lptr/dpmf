@@ -1,0 +1,20 @@
+Pacman (Kisgömböc)
+A kisgömböc egy labirintusban él. Tevékenységét a játékos irányítja. A labirintusban a játék egy fordulójának indulásakor 10 véletlen helyen gyémánt keletkezik A  forduló véget ér, ha a kisgömböc minden gyémántot összeszedett. Egy gyémántért a gömböc 20 pontot kap. 
+A gömböc életét a labirintusban megjeleno egyéb dolgok is befolyásolják. 
+
+A labirintus egy megadott sarkában véletlenszeruen születo szörnyek célja a gömböc elfogyasztása. A szörnyek csak a gömböcre hatnak. Szörnybol kétfajta van. A buta szörny csak véletlenszeruen kóvályog, abban bízva, hogy egyszer majd csak belebotlik a kisgömböcbe. Az okos azonban a legrövidebb úton próbálja meg becserkészni a kisgömböcöt. Ha a gömböc és a szörny találkozik, az a gömböc életébe kerül. Az egyidoben élo szörnyek száma korlátozott, és a szörnyek sebessége kisebb, mint a gömböcé. 
+
+A kisgömböcnek minden forduló kezdetén három élete van. A labirintusban azonban  véletlenszeruen felbukkanó, néha csak korlátozott ideig meglevo ajándékok, például élet-elixirek és bombák is vannak. Ha a kisgömböc találkozik egy élet-elixirrel, akkor az elixir eltunik és a kisgömböc élete eggyel megno, feltéve, ha az életek száma kisebb 5-nél. Ha a kisgömböcnek már öt élete van, akkor az elixirnek nincs hatása. 
+
+Bombákból is legfeljebb öt lehet nála, ezen felül nem tud többet magához venni. Ekkor a bomba érintetlenül a labirintusban marad. Kisgömböc a nála levo bombákat egyenként a játékos utasítására kibiztosíthatja és leteheti maga mellé. Ekkor a bombák öt másodpercig ketyegnek, majd eltunnek. Ha akár a kisgömböc, akár egy szörny a ketyego bombához hozzáér, akkor az elpusztul. 
+
+A labirintusban van még egy fajta tranziens ajándék, a bónusz. Ezek felvételekor a kisgömböc pontszáma no az adott bónusz értékével. Bónuszból tetszolegesen sok felveheto. 
+
+A szörnyek az ajándékokat nem tudják felvenni, azok érintetlenek maradnak. 
+
+A labirintus falain senki sem tud átlépni. 
+
+Ha a gömböc felszedte az összes gyémántot, akkor a pontjainak megmaradása mellett, új forduló kezdodik (level). Az újabb fordulóban az elemek gyorsabban mozognak és a tudatosan mozgó szörnyek gyakorisága no. 
+
+A játék akkor ér véget, ha a kisgömböcnek valamennyi élete elfogyott. Az eredmény a gömböc által begyujtött pontok száma. Kezelni kell tudni a legmagasabb pontszámokat (high score table). 
+  

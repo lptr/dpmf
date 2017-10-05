@@ -1,0 +1,62 @@
+Projekt Terv
+
+Csapattag neve
+Feladatköre
+Nick
+Rehák Tamás
+csapatkapitány
+tRehák
+Hermecz Vajk
+kód
+VaVa
+Pintér Lóránt
+design
+lptr, Lóci
+Visontay Péter
+hümm :)
+Viso, Sentinel
+
+
+1. Életciklus modell:
+A legelso feladat a program tervezés, ez magába foglalja a dinamikus és objektummodelleke, ha ez elkészült, elkezdheto a szkeleton implementálása. Ez egy egyértelmu lépés, ha a modellek helyesek voltak komplikáció nem merülhet föl. A következo munkafázis s prototípus készítése, ebben az állapotában a programnak biztosítania kell a könnyu tesztelhetoséget, így a programozásbeli, és funkcionalításbeli logikai hibák könnyen kiszurhetok. Könnyu tesztelhetoség alatt azt értjük, hogy kimenetet és bemenetet egyaránt lehet fileból/ba generálni, így ennek kiértékelése is roppant egyszeruvé válik. Miután ez a változat tökeletesedett, belekezdhetünk a grafikus megvalósításba, itt szintén szükséges a tesztelés, a kiértékelés, az igényes grafika sokat dob egy játék élvezhetoségén. Ennek elkészülte egyben a program elso teljes értéku verzióját is jelenti. A kötelezo feladat eddig tart. Ezt a verziót adjuk le, a dokumentációval és forráskóddal együtt.
+
+2. Szervezési struktúra:
+A csapat összesen 4 emberbol áll, mivel a feladatot tekintve a tudásunk egyenlonek mondható, senkinek sincsenek kiemelkedo képességei a szükséges területeken, ezért a centralizált modellt alkalmazzuk, tehát minden munkában mindenki részt vesz. Ez legtöbbször úgy néz ki, egy konzultáció keretében megbeszéljük az adott részfeladatokból ki melyiket tartja szimpatikusnak, melyikkel akar foglalkozni. Tehát reálisan szétosztjuk az elvégzendo feladatokat, majd ezt követoen, egy második konzultáció keretein belül, miután mindenki átolvasta a mások munkáját, röviden megvitatjuk, mit hol kellene még tökéletesíteni, tisztázni. Ezt követoen eloáll egy már letisztultabb formája a feladatok kidolgozásának, ami már publikálható. A feladatok szétosztását tekintve specifikálás, a dokumentumok készítése terén tehát egyenloen oszlik meg a tehetsége a csapattagoknak. Ezen felül Lócinak a designban van különleges jártassága, tReháknak az internet alapú technológiákban, VaVának a kódolásban, míg Visónak <kéretik valamit ideagyalni>.
+Hogy a fejlesztés zökkenomentesen, kényelmesen, és hatékonyan folyhasson, több korszeru eszközt is alkalmazunk:
+levelezési lista: Zárt levelezési lista, tagjai a csapat jelenlegi négy tagja, bármiféle a projekttel kapcsolatos fontos információt ide írunk fel. A levelezési lista karbantartásáért tRehák a felelos
+FTP: a fejlesztés közben keletkezett anyagot, vagy az ahhoz kapcsolódó programokat, adatokat egy szintét csak a csapat tagjai számára hozzáférheto FTP serveren tartjuk, a levelezési listára nem küldünk fel attechmenteket, azok a fileok is ide kerülnek. Az FTP-t Viso kezeli.
+Homepage: a honlap jelenleg még csak készülofélben van, itt található meg a napló, így a fejlesztés eseményeit nagyon könnyen rögzíteni lehet, bármerre is járjon az ember. A honlap fo funkciója a fejlesztés idejében, hogy a csapattagok munkáját könnyítse, összefogja a projektel kapcsolatos egyéb elemeket (levlista, FTP). Továbbá, hogy hírt adjon a készülo programról, a projekten folyó munkákról (természetesen mindemellett azt is szemelött tartva, hogy konkrét információk tól korai szerepeltetése sértené a TVSZt)
+SMSsend: Mivel a csapat tagjainak 75% rendelkezik mobiltelefonnal, és ez, ellentétben a számítógép közelségét igénylo email-el, mindíg kéznél van, a legfontosabb üzenetek kézbesítésére a mobil alapú SMS-t használjuk
+
+4. Fejlesztési ütemterv:
+A fejlesztésnek a program szempontjából 3 fo állomása van:
+Szkeleton: a szkeleton megfelelo elkészülésének feltétele, hogy mint az objektum, mind a dinamikus modell megfeleloen el legyen találva, tehát ha ezt az állomást sikeresen eléri a fejlesztés az annyit jelent, az alapokat sikeresen lefektettük.
+Prototípus: ez a verzió már szinte teljes, a grafikai elemek hiányoznak csupán. Ilyen módon tökéletes arra hogy a rutinok, függvények, objektumok szemantikai helyességét vizsgáljuk.
+Grafikus változat: A program teljes verziója. Lényegében a prototípus grafikával felruházva, illetve kismértékben továbbfejlesztve
+Eloreláthatólag a hasonló típusú játékokat, egyéb pacman megvalósításokat vizsgálva, annak fényében hogy Java használata esetén a jóminoségu grafikus interface elore implementált, a program várható mérete úgy 2 és 3 ezer sor között adódik.
+
+márc. 12.
+Analízis modell kidolgozása
+márc. 19. 
+Szkeleton tervezése
+márc. 26. 
+Szkeleton beadása
+ápr. 2. 
+Prototípus koncepciója
+ápr. 9.
+Részletes tervek
+ápr. 17. 
+Prototípus készítése, tesztelése
+ápr. 23.
+Prototípus beadása
+ápr. 28.
+Grafikus felület specifikációja
+máj. 7.
+Grafikus változat készítése
+máj. 14.
+Grafikus változat beadása
+máj. 18.
+Értékelés
+
+Szükséges dokumentációk:
+A fejelsztés során keletkezo dokumentáció a program müködési elvét jeleníti meg, annak továbbfejlesztése esetén nagy elonyt jelent. Emellett azonban a játszhatóság, a könnyu használhatóság érdekében a leendo felhasználók számára is szükséges dokumentációk készítése, éspedig, installálási útmutató, felhasználói leírás. Ezen dokumentumok egy a rendszer fejlesztési dokumentációját ismero szakember számára semmi újat nem mondanak, viszont az átlagfelhasználótól nem várhatjuk el, hogy UseCaseek és StateChartok suru rengetegében gondtalanul eligazodjon, a program Neki készül, így azt úgy is kell tálalni ahogy azt o elvárja, hogy minél inkább örömöt okozzon számára a használata, bosszúságok helyett.

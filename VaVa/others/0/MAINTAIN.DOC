@@ -1,0 +1,34 @@
+
+MAINTAIN is a utility to convert older versions of the SHAMpage data file and
+maintain your new SHAMPAGE.DAT once it has been updated, keeping it in the
+correct format. It will read your SHAMpage data file, sort it, renumber your
+key words (so you know when you approach the limit of 100 words) and write a
+new one. Duplicate key words and replies are easier to spot when they are
+sorted. It will leave your old data file intact with the extension OLD.
+
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³  CAUTION! When you modify the data file, please remember that each KEY   ³
+ ³  WORD, including NOMATCH, is limited to a maximum of ten (10) replies.   ³
+ ³  Also, be absolutely certain you match the format of the example file.   ³
+ ³  Any variation will result in unpredictable and undesirable results. I   ³
+ ³  strongly recommend you run MAINTAIN every time you edit your data file. ³
+ ³  It will check your data file for grievous errors and, while it will     ³
+ ³  catch some obvious errors in the file, it is not intended to replace    ³
+ ³  your own care in editing!                                               ³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+The syntax is: MAINTAIN [FileName] (defaults to SHAMPAGE.DAT).
+
+If you are updating SHAMpage from a version older than v3.05 and wish to use
+your old SHAMPAGE.DAT file you MUST convert it to the latest format with this
+utility!
+
+                  ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+Sun  08-02-1992
+
+  Revised MAINTAIN.EXE. It now auto-detects if it's working on an old format
+  data file or one which has already been converted. One less decision for
+  all you harried SysOps! More kinds of errors are now detected and last, but
+  not least, it is so much prettier! <grin>.
+

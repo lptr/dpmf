@@ -1,0 +1,379 @@
+
+ This program compliments of:
+                                                                 
+   Ñ¸           Ñ¸       ¸         Ñ¸Ñ¸Õ¸          ÖÁ·           ÖÁ·
+   ³³           ³³      ³         ³³³³³         / º º           º º \
+   ³³ Ñ¸ Õ¸ ¸ Õ Æµ Ñ¸ ¸ Õµ ÕÑ Ñ¸   ÆµÆµÔ¸       ÚÄÂºÂºÂÄÂÄÂÄÂÄÂÄÂºÂºÂÄ¿
+   ³³ ³  Õµ ³³³ ³³ ³  ³ ³³ ³³ Æ¾   ³³³³ ³      ßßßßºßºßßßßßßßßßßßºßºßßßß
+   Ï¾ Ï  ÔÏ ÔÏ¾ Ï¾ Ï  Ô ÔÏ Ôµ Ô¾   Ï¾Ï¾Ô¾          Ğ Ğ           Ğ Ğ
+                            ³                         FIDO 1:369/2
+     Fort Lauderdale, FL   Ô¾                      EchoNet 50:5305/2
+   (305) 523-1717 *HST/DS*
+
+
+                                SHAMpage v3.61e
+                            (C) 1992 by Rich Waugh
+
+Do you ALWAYS answer the page bell, even at 3am? If so, you must be a new
+SysOp - SHAMpage is not for you. If, on the other hand, you do occasionally
+disable the page function, you might enjoy this fun little door. It allows
+the caller to have a nice (or not-so-nice... it's totally up to you) chat
+with the SysOp - even when the SysOp is not around!
+
+SHAMpage is similar to other "A.I." programs with which you may already be
+familiar, such as ELIZA or CHERI. But there is a bit more to SHAMpage than
+those programs. SHAMpage contains a routine to randomly vary the speed at
+which each letter is "typed", automatic "typo & correction" routine to make
+the program more believable, and SysOp-defined variables, as well as many
+sophisticated built-in communication I/O routines. All the delays are
+calculated, so the typing rate initially will vary on different machines,
+depending on the speed of the CPU, but they were written in a manner which
+allows you to configure the program to type at realistic speeds on virtually
+any machine (see line 8 of the sample configuration file below).
+
+While "chatting", SHAMpage checks the caller's entry, each time he hits the
+[ENTER] key, for up to 100 "key" words (and up to five synonyms per key word)
+which you have previously defined. If the caller's entry contains a string
+matching any one of those words, an appropriate response (or even the
+contents of an entire text file) is returned. Otherwise a random response -
+again, your choice, is sent. All responses go through a typing routine which
+varies the speed at which each letter is typed and even makes (and sub-
+sequently corrects) an occasional "typo". The key words and related replies
+are contained in plain-vanilla ASCii data files which you are free to modify
+to suit your needs. The enclosed samples are well commented and should be
+self-explanatory. Do not be offended by the key words or replies, some of
+which are rather rude - please notice that the really nasty replies are sent
+only in response to a really nasty key word the caller has entered of his own
+volition.
+
+
+The following variables are available in your key word replies:
+
+*ALIAS*            - identifies a synonym for a key word.
+
+*FILE* [FileName]  - this tells SHAMpage to type the contents of the
+                     file [FileName].
+
+*FROM*             - replaced by caller's city.
+
+*KEYWORD*          - replaced by the word SHAMpage matched. This variable
+                     comes in several flavors. If it is all upper case, like
+                     the example on the left, the variable itself will be
+                     typed in all CAPS. *keyword* will be replaced by the
+                     variable in all lower case letters, and *Keyword* Will
+                     Have The First Letter Only Capitalized. Please see
+                     What's.New for further details.
+
+*LF*               - wherever this occurs the line will be split, a line-feed
+                     sent, and the rest of the response typed on the
+                     following line.
+
+*PASSWORD*         - replaced by caller's password.
+
+*PHONE*            - replaced by caller's phone number.
+
+*SECURITY*         - replaced by security level.
+
+*SPEED*            - replaced by the current connect rate.
+
+*TIME*             - replaced by the current time (in 12-hour format).
+
+*TIMEENTERED*      - replaced by time the caller entered SHAMpage.
+
+*TIMEOFDAY*        - replaced by "morning", "afternoon" or "evening"
+                     depending on the actual time of day. The capitalization
+                     conventions of *KEYWORD* apply.
+
+*USER*             - this will be replaced by the caller's first name.
+
+          ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+          ³ ADDITIONAL VARIABLES AVAILABLE ONLY IF USING DOOR.SYS ³
+          ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+The variables above work whether you are using DORINFOx.DEF or DOOR.SYS as
+your drop file. The following variables work ONLY if you use DOOR.SYS:
+
+*AGE*              - Caller's age.
+
+*BIRTHDATE*        - Caller's date of birth (00/00/00).
+
+*DOWNLOADS*        - Caller's total downloads from your board.
+
+*LASTCALLED*       - Date the caller last called.
+
+*TIMESON*          - Number of times the caller has called your board.
+
+*UPLOADS*          - Caller's total uploads to your board.
+
+
+All variables are enclosed in asterisks (*) and are always UPPER CASE (except
+*KEYWORD* and *TIMEOFDAY*, as noted above).
+
+SHAMpage was originally conceived as a fun, humorous door and the included
+data files (the ones I use) reflect that - it works great with 13 year-old's
+at two in the morning! However, since I released SHAMpage to the public, many
+SysOps have told me, to my surprise, that it is the perfect program to answer
+callers' questions in a quite serious and/or informative manner whenever the
+SysOp really isn't available (a use which, I must admit, never even crossed
+my mind when I began writing the code). If that is your intention also,
+simply edit SHAMpage.Dat. Hobby-oriented SysOps with a sense of humor as sick
+as mine can use the enclosed SHAMpage.Dat with few changes; if you intend to
+run SHAMpage on a business-type BBS, it will need a LOT of editing! How you
+use SHAMpage is up to you.
+
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³  CAUTION! When you modify the data file, please remember that each KEY   ³
+ ³  WORD, including NOMATCH, is limited to a maximum of ten (10) replies.   ³
+ ³  Also, be absolutely certain you match the format of the example file.   ³
+ ³  Any variation will result in unpredictable and undesirable results. I   ³
+ ³  strongly recommend you run the included MAINTAIN utility every time     ³
+ ³  you edit your data file. MAINTAIN will check your data file for         ³
+ ³  grievous errors and, while it will catch some obvious errors in the     ³
+ ³  file, it is NOT intended as a replacement for your own care in editing! ³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+SHAMpage runs on any BBS capable of generating a standard DorinfoX.Def or
+Door.Sys drop file. It is, in fact, currently running on Ezycom, Maximus,
+PCBoard, QuickBBS, Remote Access, Searchlight, Spitfire, Virtual BBS, and
+WildCat! boards that I am aware of. Features include DOS shelling, various
+timer functions (caller's time left, input-timer whenever remote input is
+expected, SysOp hot-keys to increase or decrease caller's time), carrier
+detection, FOSSIL support, non-standard IRQ support, CTS checking and more.
+You can check the caller's stats while the door is in operation. SHAMpage
+writes a log just in case you really WEREN'T around when you had that little
+chat with a caller <grin> as well as a separate file which logs errors,
+should they occur.
+
+Perhaps most importantly, SHAMpage does include a page bell to notify you
+when you're being paged and you actually CAN pick up the page and chat with
+the caller while he is in the door. One of the benefits you will discover is
+that SHAMpage allows you to "screen" pages in much the same manner as people
+who own telephone answering machines often decide whether or not to pick up
+the phone only after hearing not only who is on the other end but also what
+he wants. Information about the caller appears at the bottom of the local
+screen: name, location, connect rate and (if available) age. If you choose
+not to chat with the caller, let SHAMpage do it! If you do want to chat, you
+can take live control at any time, transparently to the caller, by hitting
+[F8]. When you're finished, press [F8] again and SHAMpage will resume the
+chat or press [F10] to return the caller to the BBS. (A list and short
+description of all the F-Key and other SysOp hot-keys is available at any
+time by via the [F1] Help key.) The local screen (only) indicates whenever
+the chat is live. The caller is not charged for time while in live chat, so
+you will not be rudely interrupted in the middle of a live conversation by
+SHAMpage logging him off!
+
+When the caller exits the door by typing G, Q, X, EXIT, BYE, QUIT or two
+consecutive empty lines (SHAMpage also terminates whenever it runs out of
+responses to any particular key word, including NOMATCH, as well as when the
+caller's time limit expires), he receives an, up to four line, exit message
+which explains the SysOp was unavailable and he was actually chatting with
+the computer (or whatever you choose to say). If he exits by dropping carrier
+- some people have NO sense of humor - he might not get that message <grin>,
+but the door notes the dropped carrier in the log and exits gracefully
+anyway.
+
+                    ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+Here's what's required to implement SHAMpage on your board:
+
+Make a separate directory where you will run SHAMpage. Unzip all the files in
+the archive into this directory. Next, you must modify SHAMpage.Cfg to
+reflect the correct information for your board (see below). You will also
+want to edit SHAMpage.Dat (and Midnite.Dat, if you plan to use it) to replace
+occurrences of my name with yours and personalize some of the opening lines,
+key words and/or responses, etc.
+
+     ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+     ³ IMPORTANT: Read What's.New to see various other configuration    ³
+     ³ and command-line options not documented here. This documentation ³
+     ³ DOES NOT include all the current features of SHAMpage.           ³
+     ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+EXAMPLE SHAMpage.Cfg
+
+DrawBridge BBS                 <ÄÄ The name of your BBS.
+RICH                           <ÄÄ SysOp's first name.
+WAUGH                          <ÄÄ SysOp's last name.
+C:\Wc30\Wcwork\Node1\Door.Sys  <ÄÄ Path to & name of Door.Sys (DorinfoX.Def).
+Split                          <ÄÄ Split-screen chat mode (or Full).
+SHAMpage.Dat  <ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿  NOTE: Since remote cursor position is
+SHAMpage.Log  <ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿ ³  generated by ANSI code, if the caller has
+1  <ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿ ³ ³  his graphics setting turned off, SHAMpage
+1  <ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿ ³ ³ ³  will default to full-screen chat, not
+23:00  <Ä Time to turn    ³ ³ ³ ³  split-screen. This is not a bug. It is
+08:00  <¿   Page Bell OFF ³ ³ ³ ³  intended to run this way.
+        ³                 ³ ³ ³ ÀÄ Name of the Key Word Data File.
+        À Time to turn    ³ ³ ÀÄÄÄ Name of the Log File to write.
+            Page Bell ON  ³ ÀÄÄÄÄÄ Delay factor - increase this number
+                          ³        to slow down the typing speed, decrease
+    NOTE:                 ³        it to speed up the typing. For example,
+    The last two lines    ³        making this factor .5 will increase the
+    must be entered in    ³        typing speed 100%, making it 2 will slow
+    military-style 24:00  ³        it down 100%. Experiment with different
+    format.               ³        values until you get a realistic typing
+                          ³        speed for your machine. For your
+                          ³        information, SHAMpage was written and
+                          ³        tested on a 386/25DX machine and types
+                          ³        just about right with this factor set at
+                          ³        one (1). (Remember, it's SUPPOSED to
+                          ³        emulate a real person typing - at realistic
+                          ³        human speeds.)
+                          ÀÄÄÄÄÄÄÄ An integer specifying the type of
+                                   handshake you wish to use between the CPU
+                                   and modem. Valid numbers are:
+                                             0 = NO handshake
+                                             1 = XON/XOFF
+                                             2 = CTS/RTS
+                                             3 = XON/XOFF and CTS/RTS
+                                   If you don't know what to put here, make
+                                   it 0 or 1. CTS/RTS is for high-speed
+                                   modems.
+
+                    ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+Optional command-line switches:
+
+      ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+      ³ Please note that the configuration file name always comes first on ³
+      ³ the command line, followed by any other parameters, which must be  ³
+      ³ separated by a space.                                              ³
+      ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+ALLOW=  - Override SHAMpage's filter for the following high ASCii characters.
+          High ASCii is normally filtered out because it is usually generated
+          by line noise. However, if your national alphabet uses some of those
+          characters, you can tell SHAMpage to allow them. Here's an example
+          command line for a Swedish BBS:
+                            SHAMpage SHAMpage.Cfg ALLOW=†„”™
+
+FOSSIL  - Enable FOSSIL support. If you do not use a FOSSIL driver (such as
+          X00 or BNU) do not use this switch. See What's.New for more
+          information.
+
+FULL    - Force SHAMpage into full-screen mode regardless of the user's
+          graphics settings.
+
+IRQ=x   - Change the default IRQ to "x". See What's.New.
+
+LOCAL   - Run SHAMpage in local mode, from the command line.
+
+SPLIT   - Force SHAMpage into split-screen mode.
+
+TIME=x  - Limits the caller to x% of his time-left in the door.
+
+                    ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+SHAMpage is run with the following syntax: SHAMpage SHAMpage.Cfg
+
+EXAMPLE MainX.Bat (or DoorX.Bat):
+
+@Echo Off
+Echo       * Paged sysop (SHAMpage) >> C:\Wc30\Activity.001
+Cd \Doors\SHAMpage
+SHAMpage SHAMpage.Cfg Fossil Time=80
+
+For a quick demonstration, SHAMpage can be run from the command line by
+typing: SHAMpage SHAMpage.Cfg Local
+
+                    ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+This documentation is not intended to be a tutorial on door setup. If you've
+never set up a door before, please refer to your BBS documentation.
+
+WILDCAT! SYSOPS: The example batch file will work only if you have WildCat!
+set to SHELL to doors (refer to your in the WildCat! manual - it's on page
+221 in mine).
+
+  ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+  ³                  OPTIONAL hints for WildCat! SysOps                     ³
+  ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+  ³ To make the caller believe he is really chatting with the SysOp, run    ³
+  ³ MAKEWILD. From the Main Menu Definition page, change the "Page the      ³
+  ³ SysOp" key to some letter other than P and assign it an access level of ³
+  ³ 1001 or higher, so nobody has access to it. Next, assign DOS Hook 1 or  ³
+  ³ DOS Hook 2 to key P. Then set up SHAMpage in MAINx.BAT. If you REALLY   ³
+  ³ want to fool the caller, run MKWCTEXT and change the "Preparing system  ³
+  ³ to run a door" prompt to "" (nothing).                                  ³
+  ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+
+                         FILES INCLUDED WITH SHAMpage
+
+    READ.ME!      - IMPORTANT!!! Update information!!!
+    SHAMPAGE.CFG  - Example configuration file.
+    SHAMPAGE.DAT  - ASCii data file containing KEY WORDS and responses.
+    MIDNITE.DAT   - Alternative Data file for night-time use.
+    SHAMPAGE.DOC  - The file you're reading now.
+    SHAMPAGE.EXE  - The door itself.
+    SHAMPAGE.LOG  - A typical excerpt from my SHAMpage.Log.
+    MAINTAIN.DOC  - Instructions for the SHAMpage.Dat maintenance utility.
+    MAINTAIN.EXE  - SHAMpage.Dat maintenance utility.
+    MAIN1.BAT     - Example batch file to invoke SHAMpage.
+    SENDIT.ASC    - Example *FILE*.
+    WHAT'S.NEW    - Documentation of changes from release to release.
+    DESC.SDI      - Short program description.
+    FILE_ID.DIZ   - Longer program description.
+
+                    ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+SHAMpage is distributed as NoBitchWare. I'm not charging anything for it, so
+you are NOT entitled to bitch about it.
+
+I, for one, am sick and tired of people who solicit money for the dumb little
+doors/utilities we all find so indispensable, so this one's a freebie. It is
+fully functional and contains no time bombs. I will attempt to keep the
+latest version always available for FREQ with the magic name SHAMpage.
+Significant updates are also hatched out into DDSDOORS, TDS and the WDNet
+(WCDOOR) as well as uploaded to the Cathouse.
+
+If you find SHAMpage handy, give the DrawBridge a call and thank me. Better
+yet, send me your own customized SHAMpage.Dat file. I would appreciate
+anyone's "serious" data file. If it's good enough, I'll include it in future
+releases, with full credit to the author.
+
+If you hate SHAMpage or don't think you got your money's worth, call the
+DrawBridge and page me... we'll discuss it. <grin>
+
+                                  Rich Waugh
+
+                    ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+            FREE WildCat! 3.x doors/utilities from the DrawBridge
+
+
+BobCheck - Automatically send each new caller a personal "Welcome" message
+           after they pass BobCat verification. Requires BobCat and Postmstr.
+
+CheckSec - Restrict access to any door or DOS hook based on the caller's AGE
+           or security level.
+
+ChngMenu - Force callers to a new default WildCat! menu upon return from a
+           door.
+
+CodeSet  - Reset users in Master Decoder door when they reach the end of the
+           data file.
+
+MailChek - Check if last caller left any messages. (Don't bother with
+           WildMail SCAN if not.)
+
+MailDoor - Run more than one mail door from the WildCat! Mail Hook.
+
+Notify   - Run prior to or after a door to send the caller a special message.
+
+PieSet   - Reset Piesplat door players automatically when somebody wins the
+           game.
+
+Prmptswp - Randomly swap WCTEXT prompt files.
+
+QwkQuote - OLX compatible reply quote maker.
+
+TickFix  - Change the file name extension in *.TIC's from LZH or ARJ to ZIP.
+           For those who convert LZH & ARJ files to ZIP before tossing.
+
+Santa    - Cute Christmas door!
+
+SHAMpage - Answer ALL SysOp pages - whether you're around or not.
+
+ScrbNtfy - Notify players it is their move in one or more Scrabble door games
+           via a personal message addressed to them. Requires Postmstr.
+

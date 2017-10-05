@@ -1,0 +1,45 @@
+http://www.pixelcreations.net/chomp.htm
+
+PACMAN:
+ A játék egy labirintusban folyik, a játékos feladata a 10 véletlenszeruen elszórt gyémánt
+összegyujtése. Ebben a feladatában elore meghatározott számu szörny gátolja. Ha a szörnyek
+elkapják, a játékos meghal. A szörnyek mozgásuk alapján kétfélék lehetnek, vagy véletlen-
+szeruen mozognak vagy intelligensen, folyamatosan a játékos felé. A labirintusban elixirek
+keletkeznek és tünnek el. Egy elixir adhat életet, bombát, vagy bónuszt. Mind életbol, mind
+pedig bombából egyszerre 5 lehet a játékosnál. A bombát aktiválva, az 5 másodpercen keresztül
+mindenkit elpusztit aki hozzáér. Az igy megölt szörnyek rövid ido után újra keletkeznek.
+A 10 gyémánt összegyujtésével a játékos a pályát teljesitette, a következo szintre jut,
+szintlépéssel az inteligensen mozgó szörnyek száma fokozatosan növekszik. 
+
+labirintus: útveszto
+szörny: egy ellenséges lény aki a játékost feladatának végrehajtásában próbálja gátolni.
+elixir: lehet bomba vagy plusz életet ad a játékosnak
+gyémánt: ezeket kell összegyujteni ahhoz hogy szintet lépjen
+bomba: olyan idoszakos pályaelem ami a játékos életeinek számát egyel csökkenti, a szörnyeket rövid idore kivonja a forgalomból
+élet: próbálkozási lehetoségek száma 
+szint: jelzi a játék nehézségi fokát, ahogy a szint száma növekszik, a játék egyre nehezebbé és nehezebbé válik
+
+még nem tök kész background story a suta gamernek:
+
+ Réges régen a sötét középkorban egy gonosz mágus ?LZ? egy napon a titkos muhelyében
+kisérletezett, fel akarta támasztani az osgonoszt, minden fájdalmak és szenvedés
+szülojét. Egy véletlen hiba folytán azonban egy pici sárga ártatlan, gyámoltalan kis
+lényt teremtett. Hogy nehogy megszégyenüljön szektatársai elött, számuzte a tehetetlen
+kis pacát egy 100 szintes útveszto legmélyére. Hogy ki ne szabadulhasson, korábbi 
+kisérletezéseinek sarjait, elpusztithatatlan szörnyeit küldte a lény orzésére. A 
+labirintus minden szintjét gonosz rúnákkal levédte, ám még mielött a munkát befejezhette
+volna, a jóságos Merlin végetvetett életének. A rúnák igy feloldhatóak maradtak, ehhez
+mindössze 10 gyémántdarabot kell összegyujteni. Olykor olykor Merlin varázslatai áthatolnak
+az útvesztot védo mágikus pajzson, s elixirekhez juttathatja a kis sárga bestiát. Az
+elixirek segitenek neki a szörnyek elleni harcban, életelixirekkel növelheti életeinek számát
+(egyszerre maximum 5 lehet), és csapdaelixirek birtokában apró kis mágikus csapdákat
+helyezhet el, ezek 5 másodpercig hatásosak, és megbénitják/elpusztitják a hozzájuk éro lényeket.
+
+
+VaVa saját okosságai:
+tudom Viso a doksi a lényeg, ellenben a doksiban a prog teljes felépitését le kell irni, meg RatRoseba megcsinálni,
+az meg már szinte generálja is a prog struktúráját, igy szvsz ha megfeleloen `dokumentálunk`, vagyis megfelelo
+struktúrát használunk, akkor egy olyan vázt kaphatunk amire egy Dynablastert ugyanolyan meló ráhúzni mint PacManként
+beadni. Általánosságban, minden négyzetrács alapú játékmezon zajló realtime játék könnyedén megvalósitható volna,
+legyen az labirintus game, pacman, dynablaster, sokoban vagy akármi... és messze nem kerül több melóba
+

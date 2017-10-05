@@ -1,0 +1,126 @@
+
+Követelményspecifikáció
+=======================
+
+Termék általános leírása
+------------------------
+A termék a DownFall játék számítópépes megvalósítása.
+A játékleírás megtalálható: http://unicorn.sch.bme.hu/~kisza/prolab/
+
+Egy játéktér, számozott korongok (4*5)
+
+Játéktér:
+5 db, különbözõ méretû kerék.
+Sorrendnek megfelelõ számú bevágás, növekvõ méret.
+Közös tengely a két oldalon, de eltérõ bevágások...
+
+A korongok a játék tetejérõl indulnak, s az aljára kell elérniük.
+
+Indulás:
+Az összes korong a felsõ gyûjtõhelyen van, a kerekek a kezdõpozícióban.
+Felváltva forgatnak.
+Egy kerék bármeddig forgatható, bármely irányban.
+Egy épp elforgatott kerék nem forgatható mégegyszer, KIVÉVE: ha az utolsó
+korong az 5. kerékben van.
+Ha véletlenül mégis újra elforgatódik, akkor a játékos kimarad egy körbõl.
+
+Nyer: aki elsõnek eljuttatja mind a 10 korongját, helyes sorrendben a célba.
+      az ellenfél rossz sorrendet hozott ki...
+
+
+
+Fejlesztési, mûködési, karbantartási környezet
+-----------------------------------------------
+
+Rendszer és környezete: Linux, GTK1.0, XFree86
+Fejlesztés:	vi szövegszerkeztõ
+		gcc(2.7.2.1), g++ fordító
+		gdb(4.16), ddd(3.0) debuggerek
+		glade	GTK CASE
+		CVS	Concurrent Versions System
+Mûködési:	GTK 1.0, 
+		hálózat a többjátékos üzemmódhoz,
+		Xwindow
+Karbantartás:	CVS
+
+Külsõ interfacek, adatfolyamok
+------------------------------
+Közvetlenül használja 
+	a magasszintû hálózati folyamot, 
+	az Xwindow evetjeit és eszközkezelõit
+	GTK lib extended evetjeit 
+
+Felhasználói felület:
+		Xwindow, GTK
+		[SCREENDUMP-ok]
+
+Fontosabb parancsok:
+	- hálózati specifikáció
+	- ablakos felület
+		egérrel vezérelhetõ
+		karakterkonstansok megadása billentyûzeten át
+	  fontosabb elemek:
+		menük
+		státuszbar
+		tooltip-ek
+	- fõbb beállítási lehetõségek:
+		játékosinformációk
+		szerverparaméterek
+
+Fontsabb adatbázisok:
+	játékosinformációk
+	szerverinformációk
+
+Funkcionális követelmények
+--------------------------
+	A menük minden helyzetben megfelelõen mûködjenek
+	az ablakok helyesen következzenek egymás után
+	a beállításokat az ablakkezelõ helyesen adja tovább
+	hálózatkezelés megbízható legyen
+	objektumkommunikáció hibamentessége
+	helyesen értékelje ki a helyheteket
+
+Teljesítménykövetelmények
+-------------------------
+	640x480 minimális felbontás
+	a hálózat a beállított TIMEOUTon belül reagáljon
+
+Kivételes állapotok és kezelésük
+--------------------------------
+	a programban keletkezett hibákat ismerje fel, jelezze a felhasznéló felé
+	a külsõ szignálok kezelését a rendszer végzi
+
+Prototípus részei és implemeentációs prioritásuk
+------------------------------------------------
+Részei:	Objektumok (pálya, kerék, korong)
+	Hálózatkezelõ
+	Ablakkezelõ
+Prioritás:	Objektumok elkészítése a legfotosabb, a többi ...
+	(Az én titkom - kisza :) )
+
+Várható modosítások, továbbfejlesztés
+-------------------------------------
+	Több (>2) játékos üzemmód
+	Multiplatformos kliens
+
+Átvételi feltételek
+-------------------
+Teszteljárások
+Dokumentációs elõírások
+[A tárgy kiírásábol COPY HERE]
+
+Tervezési irányelvek
+--------------------
+Egységes program elkészítése, egységes dokumentációval, forráskóddal
+
+Biztonság, biztonság, biztonság!
+
+Információk forrása
+-------------------
+	GNU Documentatio Project
+	Közvetlenül felhasznált:
+		http://unicorn.sch.bme.hu/~kisza/prolab
+
+Fügelék, szótár
+---------------
+[include]

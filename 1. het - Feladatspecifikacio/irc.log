@@ -1,0 +1,1085 @@
+
+
+          ######
+    ##### #####  ######## #### #### ######### ##########
+     #### ####   ######## #### #### ######### ##########
+      #######    ####     ######### #### ####    ####
+      #######    ####     ######### #########    ####
+     #### ####   ######## #### #### #### ####    ####
+    ##### #####  ######## #### #### #### ####    ####
+   ######
+
+
+   xc! 1.4.3 on Linux 2.2.16 [i586/90MHz] GTK 1.2.7
+
+
+   Launched: Thu Feb 22 00:34:42 2001
+
+
+   Features: Imlib Perl Python Plugin NLS 
+
+
+--- Looking up irc.extra.hu..
+--- Connecting to irc.extra.hu (212.75.128.67) port 6667..
+--- Connected. Now logging in..
+--- Welcome to the Internet Relay Network trehak!tom@planet.sch.bme.hu
+--- Your host is extra.irc.hu, running version 2.10.3p1+Cr27e5+Fl4f2+topic3+qpi3
+--- This server was created Thu Nov 9 2000 at 14:43:12 CET
+--- extra.irc.hu 2.10.3p1+Cr27e5+Fl4f2+topic3+qpi3 aoOirw abeiIklmnoOpqrstv
+--- There are 1942 users and 0 services on 4 servers
+--- 1 :operators online
+--- 1 :unknown connections
+--- 1596 :channels formed
+--- I have 790 users, 0 services and 1 servers
+--- MOTD Skipped.
+--- trehak sets mode +i trehak
+--> trehak (tom@planet.sch.bme.hu) has joined #dpmf
+<trehak> re
+<durm> hali.
+--- Notify: Andras is online (extra.irc.hu).
+--- Notify: gorgo is online (extra.irc.hu).
+<VaVa> hi
+<trehak> viso?
+<VaVa> no, egy bot? :)
+<durm> talaltam uj jelentest dpmfnek: dick pussy mother fucker.
+<durm> teccik?
+<trehak> eh
+<trehak> viso?
+<durm> vava: jaaaaaaaaaaahj
+<trehak> minek bot?
+<durm> viso nincs itt. se otthon még. most ment haza
+<trehak> felejtsd el
+<trehak> aha
+<trehak> mind
+<trehak> 1
+<trehak> na
+<VaVa> kell bot!! :
+<trehak> mivan?
+<VaVa> :)
+<trehak> nemkell
+<VaVa> mer mér ne...
+<trehak> mert nem
+<durm> láttad már vava féle doksit?
+<trehak> miert gyultunk ma ossze?
+<trehak> nem
+<durm> all: aggyatok pdf writert!
+<VaVa> rehak ellenkezik mert már érzi neki kéne megcsinálnia...
+<durm> dcc me
+<trehak> mit ddc-zek?
+<trehak> kicsoda?
+<VaVa> adom
+<durm> vava: koszi
+<trehak> nem csinalok botot, mert hujeseg
+<VaVa> pill
+<durm> tr: semmit.
+<VaVa> töröm a fejem hol lehet
+<durm> tr: oke.
+<VaVa> adobe honlap? :))))))))))))))))))))))))))
+<trehak> nalam nem fog bot futni
+<trehak> na
+<durm> vava: van akrobatom. az nem jo?
+<VaVa> ehhe>:)
+<VaVa> elvileg akkor fentvan
+<trehak> mivan mar azzal a doksivaL?
+<trehak> oke, drum altalmegyek megnezni, jo?
+<VaVa> nyomtass és ott a deviceok közt ott kell lennie pdfwriternek
+<durm> nazzed meg!
+<durm> aham.
+<trehak> rogton ottvagyok :)
+<VaVa> nomivan?
+<durm> te, ez a pdfwriter qrva jo...
+<VaVa> :)
+<durm> vava, h all a doksi? holnap + tudjuk mutatni _csongornak_?
+<VaVa> rehák bealudt félúton? :)
+<VaVa> megy a file, mentsd
+<durm> te, pdfben?
+<durm> itt ül mellettem. mármint <tr>
+<durm> háttértörténetet beleírod? ++designolod pdfbe?
+<VaVa> háttértörténetet még pluszba leirjuk az ugye nem köll.. meg meg kéne kérdezni hogy mennyire szigorúan kell ragaszkodni az eredeti szabályokhoz, meg azokhoz amit most leirunk...
+<VaVa> a szótár meg ilyenek még nem teljes...
+<VaVa> pdfbe rakni annyi hogy docba copypaste, ott reformat...
+<durm> okaly.
+<VaVa> most egyenlõre azon szenvedek hogy a firstpage headerje más legyen, meghogy legyenek doksin belül is kis változások headör tájt...
+<durm> te, kinek a száma a fényre csúnyuló lányok? - kurva jól hangzik...
+<VaVa> ?
+<VaVa> mi az?
+<durm> vava: meglesz ez holnapra?
+<durm> vava: nyomtatással elvergõcc?
+<VaVa> hmm. azzal neméppen. ellenben ha pdfben visszük akkor lévén HSZK O terem, csak meglehet nézni...
+<durm> vava: csak ki le7 nyomtatni...
+<VaVa> durm: miért irodle a nevem 1000szer? kihez beszélhetnél még?? :)
+<VaVa> nekem még sajna nincs nyomtatóm, úgyhogy részemrõl ennyi...
+<VaVa> a napló részhez meg scannelni kéne szignókat :)) úgy a jó
+<VaVa> persze ha scannelés nehezen jön össze akkor forget
+<durm> ./kickban trehak
+<VaVa> még ott osztja az észt mi?
+<durm> le7 még upgradelni késõbbiekben a formátumot... kissé. szóval nem minden változatot máshogy, de azé nem kell pixel pontosan ugyanúgy...
+<durm> jaja
+<VaVa> ez igy van...
+<VaVa> nézzétek meg azt a pacman2.txt-t korrigáljátok, addig megpróbálom helyrerakni a design
+<VaVa> és van külsõ háló.
+<VaVa> vagyis sentinel icqn..
+<trehak> aha
+<trehak> nalam n/a
+<trehak> marhogy viso
+<trehak> na, hol az a pacman2.txt?
+<trehak> konkretan
+<trehak> loci?
+<trehak> haho
+--- Ping reply from durm : 0.4 second(s)
+>durm< CTCP USERINFO
+<durm> re
+<durm> re
+<durm> re
+<durm> 
+<trehak> na, hol az a pacman2.txt?
+<trehak> konkretan
+<trehak> viso ftp-jen?
+<durm> vava: feltoltom a viso ftpjere a pacman2-t, jo?
+<VaVa> locinak dcctem
+<VaVa> oke
+<durm> trehak: mar ott van
+<trehak> ami az incoming/vava konyvtarban van, az is current?
+<durm> most tettem fel
+<trehak> oke
+<durm> kellene loggolni
+<trehak> az az url minek az elejere
+<VaVa> vazz, egy picike same as previous gomb volt a megoldás :))
+<trehak> mit loggolni?
+<durm> magunkat. micsinalunk.
+<durm> marmint vava
+<VaVa> azt úgy beleraktam biztos szép ami ott van...
+<trehak> aha
+<trehak> de a finalba nemkene
+<VaVa> a finalba szerintem nem tudsz irni csak viso...
+<trehak> a pontszamot a doksiba nem kene most beleirni
+<trehak> a finalt nem ugy gondoltam
+<durm> van kulso halo'
+<durm> !
+<trehak> ellenben: szoval, vava akkor kibovited a leirast?
+<trehak> tudom
+<VaVa> jéé
+<trehak> ellenben: szoval, vava akkor kibovited a leirast?
+<trehak> merhogy kb. 1 oldal kene legyen
+<trehak> a szotar igy is fincsi nagy :)
+<trehak> az mar szinte ok
+<trehak> az mar szinte oke
+<durm> pill
+<VaVa> ellenben szóval irtam kb sokmindent. most designolok. kb leirtam a végébe hogy mi xar, plz dagasszátok 
+<VaVa> thx
+* durm is away
+<trehak> aham
+<trehak> miert vagy away?
+<durm> mert elment vizelni
+<trehak> ize, de a kerettortenetet kene kb. belevinni a leirasba, aztan jo lenne
+<durm> de mingya jon
+<trehak> az a lenyeg, hogy elerje a kb. 1 oldalt
+<trehak> 1.5-os sorkoz, meg 12-es font persze
+<trehak> ja, szoval ragaszkodni kene az 1.5-os sorkozhoz
+<trehak> nemtudom, hogy most mi van a sablonban ugyanis
+<trehak> na, VaVa ?
+* durm re
+<trehak> na, baszki. haladjunk :)
+<durm> pill nezek szotart..
+<durm> aztan hozzzaszolok.
+<durm> valaki meg invitolja meg visot, ha erdemesnek gondolja...
+<trehak> hat, vava invetoljad, mert nalam n/a
+<trehak> vava? alszol?
+<VaVa> vagyok
+<VaVa> dolgozgatok
+<VaVa> mindjárt megvan a header meg footer.
+<VaVa> aztán már csak a main doksi részben kell ideális font facet választani
+<durm> van pár helyesírási hiba... pl. életbõl és nem életbol
+<VaVa> ezt nem hivnám helyesirási hibának...
+<durm> ja, le7, h csak nem jött át az õ...
+<VaVa> még a végén a külsõ olvasó azthinné hogy nemtudom hogy õvel irják...
+<trehak> aha
+<durm> a típus hosszú í
+<trehak> na, legyen 1.5-s sorkoz
+<VaVa> van ahol ekezet nelkül irtam, sorry. meg van ahol nem ment át...
+<trehak> aha, word majd javit ugyis:)
+<VaVa> az i viszont majdnem mindig rövid nálam, mert nincs kedven ALT161et nyomkodni...
+<durm> ja, csak nem azzal írja.
+<VaVa> naneeeee utálom ezeket az autolófaszokat...
+<durm> ehem. csak lznek ne így aggyuk be.
+<VaVa> wordel irom...
+<VaVa> kell a word file valakinek?
+<VaVa> sõt
+<VaVa> RTF
+<trehak> nem
+<durm> ja, tedd majd fel.
+<trehak> oke
+<durm> mondjuk akár most.
+<trehak> na, legyen 1.5-s sorkoz
+<trehak> na, legyen 1.5-s sorkoz
+<trehak> na, legyen 1.5-s sorkoz
+<trehak> na, legyen 1.5-s sorkoz
+<trehak>  :)
+<VaVa> :)
+<VaVa> LOL
+<trehak> mert az jo, meg jol nez ki, meg alt. elvarjak, es konnyebben olvashato
+<durm> vava: használjál helyesírás ellenõrzõt.. mer' az jót tesz. vagy lektorálom.. :P
+<durm> ok, legyen 1.5 sorköz.
+<durm> meg verdana/arial de méginkább helvetica 12pt
+<durm> helvetica? unicode/hun van valakinek ttf-ben?
+<trehak> de, valoszinu, nekem van :)
+* durm thinks it's a _rather_ important problem ;)
+<durm> trehak: /dcc send vava helvetica.ttf
+<trehak> oke
+<trehak> szerinted linux alatt mennyi ttf fontom van?
+<trehak> olvass a sorok kozott :)
+<VaVa> hát akár lehetne is
+<trehak> baszki, itt szopom a faszt egy perl script-el :(
+<durm> vava: na, végre megvan amit átküldtél. szopok icq-val...
+<VaVa> viszont a fontok nincsenek meg, jól sejtem? :)
+<durm> tr: nade.
+<durm> vava: írt egy perl scriptet, ami megkeresi a ttf-eket. de nem megy neki.. :)
+<trehak> ehe, rajottem, nem ertek hozza :)
+<trehak> ehe
+<durm> tr: segiccsek?
+<VaVa> rehák: a jobbak perlszkript helyett nõvel csinálják...
+<durm> vavA: a jobbak a nõkhöz nem értenek, vagy mi? :P
+<durm> node. szóval hszk-ban ki tudjuk holnap nyomtatni.
+<VaVa> no csinálok visónál egy sablon könyvtárat
+<VaVa> oda rakom a fontot meg a mostani verziót
+<durm> ez fasza, esetleg vava, ha kész van, feltolhatná cartmanra. oszt majd holnap leszedjük ottan. esetleg azért behozhatná elõbb, és akkor 1607-ben kinyomtathatnánk...
+<trehak> akar a koleszban is ki tudjuk nyomtatni, az elektro ugyis butasag :)
+<trehak> vagy akar kszk / lasernyomi
+<VaVa> HSZK fullosra tele van soktûs hiperszuper mátrixnyomtatókal
+<durm> tr: koszi...
+<trehak> akar a koleszban is ki tudjuk nyomtatni, az elektro ugyis butasag :)
+<durm> vava: van laser is. bõven.
+<trehak> vagy akar kszk / lasernyomi
+<trehak> latod vava, van igenyesebb megoldas is:)
+<trehak> node
+<VaVa> ja, itthon van egy StarNX1000esem :)
+<trehak> akkor, vava finalizalod a doksit avagy nem? ez itt a kerdes ? :) nem kell fullfinal, csak hogy konzulensnek valami kvazi igenyeset tudjunk mutatni
+<VaVa> ejjdelassan megy viso ftpj
+<VaVa> e
+<trehak> oke
+<trehak> ij
+<VaVa> 204 byte/sec az jó??
+<VaVa> :)
+<VaVa> :(((
+<VaVa> ááááá
+<VaVa> megirok egy CDt mire 10k-t feltölt...
+<trehak> jaja :)
+<trehak> esetelg mi is fel tudjuk am tolteni....
+<trehak> ha icq-n gyprsabban bejon
+<VaVa> esetleg a fontok megvannak?
+<VaVa> na, igen, ezt fogjuk próbálni...
+<trehak> oke
+<durm> vava: küggyé fontot is./tedd fel ftp-re. az .rtf nem igazán élvezhetõ nélüle
+* durm re
+<trehak> re
+<VaVa> jaaa, ezt mán elmondtam vala, most próbálom átszenvedni rehakhoz, de nemnagyon reagáll a sendre
+<durm> akkor kuldd ide.
+<durm> dcc
+<VaVa> Boritó, Akármi és Napló ezek a fejezetek vannak igaz?
+<VaVa> hE?
+<VaVa> away vagy?
+<VaVa> mindegy, egyiknek meg icukán másik dcc...
+<VaVa> incoming/vava/sablon/fonts
+<VaVa> innnye hogy hasit
+<trehak> aha
+<durm> vaze, akkor minek kuldod dcc? na all1.
+<VaVa> ??
+<VaVa> DCCn megy
+<VaVa> ICQn nem megy...
+<VaVa> FTPn sem megy..
+<VaVa> DCC KIRÁLY
+<trehak>  VaVa: na, baszki meg mindig nem tudjuk, hogy akkor holnapra meggeneralod-e az elso adag doksit a konzira
+<trehak> :)))
+<VaVa> :)))
+<VaVa> pacman2 kvázi kész nem?
+<VaVa> rtfbe bele kell copypastelni, ozt ennyi...
+<VaVa> aztán lehet dizájnolni
+<VaVa> vagyis én elötte dizájnolnék
+<durm> vava: azé még fûznék hozzá...
+<trehak> ize, mint emlitettem, az leiras nem biztos, hogy van 1 oldal...
+<VaVa> viszont pm2.txt még nem totál korrekt. a halál fogalma az nem egészen tisztázott.. specifikálja valaki a halált akkor?
+<trehak> ize, mint emlitettem, az leiras nem biztos, hogy van 1 oldal...
+<VaVa> ellenben a leiras 4k körüli...
+<trehak> a szotar igy is eleg naty, azzal nem lesz gaz
+<VaVa> amúgy meg ha mindent leir akkor jó
+<trehak> milyen leiras? amit kuldtel, az szumma nincs annyi
+<trehak> vagy van?
+<VaVa> hát nem
+<trehak> a pacman2.txt csak 3290bye
+<VaVa> szóval a leirás meg a szótár az átfedi egymást jól?
+<trehak> szoval a leiras reszbe kene valamennyit irni
+<VaVa> akkor a szótár nem más mint amit JSD elején kell rejszolni....
+<trehak> jah :)
+<VaVa> lesz ami lesz most burnolok egy CDt
+<trehak> ize, a szotar szerintem tulspecifikalt :)
+<trehak> ilyen, hogy aktiv/passziv palyaelem, meg hozzaer... tul durva :)
+<VaVa> szerintem is.
+<VaVa> :))
+<VaVa> az már az objektumstruktúrát is elõrevetiti... :)
+<VaVa> amúgy lehetne normálisabb nevet is adni nekik és akkor nem lenne annyira agressziv...
+<durm> átnézem picit.
+<VaVa> igy olyan formális jellege van... mint ahogy elõadáson rejszol a sok prof...
+<durm> meddig lesztek fent?
+<VaVa> én 1 órát még biztos, még be van tervezve 1cdr meg 1grab
+<trehak> hat, en meg sokaig :( termnyelvekre alkotnom kell, meg a munkaval is haladni kene...
+<trehak> loci, te?
+<durm> egy másfél órát még talán.
+<VaVa> termnyelvek? whazzthat?
+<trehak> termeszetes nyelvek szamitogepes feldolgozasa
+<trehak> :)
+<trehak> 5 kredit
+<durm> vava: van ilyen, korrektúra a wordben. nem kellene használni?
+<trehak> durm: kerdeztem mar? kitetted http-re, amit kellett?
+<VaVa> lóci volna egy csúnya kérésem : ambeauty CDjén van a gyökérben egy sub, vagy egy zipfile a subtitles könyvtárban ami ezt tartalmazza, no az a file kéne :)
+<VaVa> vagyis az összes sub. az egész subtitles könyvtár :)
+<VaVa> korrektúra? mármint mire?
+<VaVa> próbáld ki. :)
+<durm> tr: kérdezted, ki.
+<trehak> oke
+<durm> vava: prószáld ki. én most úgy javítgatok benne.
+<durm> ***************************
+<durm> ***************************
+<durm> fontos kérdés:ú
+<durm> legyen bónusz? mármint plusz pontot adó elixír? (ja, az is hosszú í!!!)
+<durm> idõlimit?
+<durm> szerintem ezek mind jók volnának...
+<trehak> es ez most bele kene, hogy keruljon szerinted
+<trehak> ?
+<VaVa> a bónusz az benne van az LZ féle kiirásban is..
+<VaVa> idõlimit az okés, viszont azt még majd bele kell irni, most már inkább hagyjuk...
+<VaVa> viszont felmerül egy fontos kérdés kollegák
+<VaVa> hogy hivják a gonosz varázslót?
+<VaVa> :)
+<VaVa> LZ mégsem lehet
+<trehak> jaja :)
+<durm> vava: ricewind? :) discworld rulz.
+<trehak> valami eccerut kellene, de legalabb legyen 60 karakter a neve :)
+<durm> legyen krampusz.
+<durm> esetleg trehák, azt olyan nehéz kimondani.
+<durm> bocs,
+<trehak> :)
+<VaVa> WahWah
+<durm> birbax?
+<durm> strocmayer?
+<VaVa> májer
+<VaVa> :)
+<VaVa> dumb: hol vannak a subjaim?
+<VaVa> :)
+<trehak> legyen algoritmusz
+<durm> tr: rulz!!!!!!
+<VaVa> :)
+<VaVa> friedl algoritmusz
+<durm> algoritmusz, a posze varászló
+<trehak> jaja
+<VaVa> meg paszman
+<trehak> inkabb algoritmusz, a posze varaszlo
+<VaVa> persze
+<VaVa> de igy komolytalanná válik az én remekbe szabott backgroundstorym
+<trehak> szmeagolnak kell a dragaszaga, cuna, rossz hobbitok elveszik szmeagol dragaszagat
+<VaVa> :)
+<trehak> :)
+<VaVa> szmeagol?
+<trehak> jah :)
+<trehak> gyuruk ura :)
+<durm> nekem az algoritmusz friedl nelkul isz teteszik..-û
+<trehak> ah, az mar tul durva
+<trehak> az algoritmusz eleg lenne szvsz
+<durm> még egy kérdés: merre teszi le  a bombát? maga mögé?
+<VaVa> persze friedl az odahazárdolt
+<VaVa> DURM!!!!!! SUBTITLE PLZ!!
+<trehak> ahol epp allt
+<VaVa> hm, úgy volna optimális. de akkor specifikálni kéne mi az hogy mögötte. igaz ez a haladási irányal ellentétes...
+<trehak> es aztan elmegy onnan
+<trehak> valamerre
+<VaVa> jah
+<VaVa> Merlin amellett hogy jóságos, felveheti az ügyeskezû állandó jelzõt?
+<trehak> akar
+<durm> megvan: a bombat az arcaval ellentetes oldalra szarja oda. ahol all, oda nem teheti le, mer' akkor egybol hozzaerne!
+<durm> nem dina blaster
+<trehak> ha o hozzaer, akkor is robban?
+<VaVa> nem robban, ellenben igen meghal
+<trehak> es ha a bal also sarokban all, jobbra nez, es azt mondja, bomba lerak?
+<trehak> akkor hova teszi?
+<VaVa> durm lóci könyörgöm nyomd át a subtitlet. nem tudom felirni a második részt ha nincs meg hozzá a sub
+<durm> vava: pill.
+<-- durm has quit (Excess Flood)
+--> durm (lptr@bea.sch.bme.hu) has joined #dpmf
+<durm> re. kibaszot..
+<durm> t
+<VaVa> :)
+<VaVa> no, tehát
+<durm> na, dcc megy?
+<VaVa> thx
+<trehak> es ha a bal also sarokban all, jobbra nez, es azt mondja, bomba lerak?
+<trehak> akkor hova teszi?
+<durm> jaja, ez egy erdekes kerdes trehak.
+<trehak> :)
+<VaVa> egyszerûen elejét vehetjük. lerakás akkor van befejezve ha elhagyta a mezõt...
+<VaVa> ellenben télleg szép felvetés volt rehák
+<durm> akkor mi legyen? két eset lehet. 1) csak akkor tud letenni, ha van mögötte hely, 2) elesiteni kell a bombat
+<durm> élesíteni
+<durm> szóval akkor élesedik, ha lelépett róla.
+<durm> 2: mezõkre osztott lesz-e a játék/szabadon mozoghat?
+<durm> én az elsõt javasolnám...
+<VaVa> én abban gondolkodtam hogy mezõk
+<VaVa> a szótáram is ismeri.. :))
+<VaVa> sõt a mezõ objektum leszármazottait is feljegyeztem :)) fal és út 
+<trehak> szerintem ugy kene, hogy oda teszi, ahol all, es ha lelepett, akkor visibility=true, eles=true
+<durm> mezõ ok, nem?
+<VaVa> visibility az már graphics...
+<VaVa> az eles true az true
+<durm> jaja, az egyelõre mind1
+<VaVa> igen
+<VaVa> mezõ király :)
+<durm> mezõ rulz
+<VaVa> (ha ezt most hallaná)
+<durm> mezõ? :P
+<VaVa> ismered mezõt?
+<VaVa> mármint a nagy mezõt, Mezõt.. ?
+<trehak> :)
+<trehak> most anyazna, hogy hogy mered a nevet leirni irc-en :)
+<VaVa> :)))
+<trehak> na, leallt a konstruktiv munka
+<trehak> en meg ehes vagyok
+<trehak> es mar 2 ora van :(
+<trehak> eh, lassu egy picit a procim :(
+<VaVa> durm: mi lett volna ha nem a lengyel subtitleket küldöd el???
+<trehak> :)))
+<VaVa> ittvan az ember?
+<trehak> nemtom
+<VaVa> vazz
+<trehak> :)
+<trehak> mindenesetre nekem ennem kell :)
+<VaVa> nekem meg lassan mennem
+<durm> pill
+<durm> vava!!!
+<VaVa> okesz
+<durm> melyik kell? küldtem vagy 10-et.
+<VaVa> javasolnám ICQt... :)
+<VaVa> 2 ért ide, pont két lengyel
+<trehak> VaVa: hova sietsz?
+<trehak> :)
+<durm> most már megy.
+<trehak> na, akkor meg mindig nem tudjuk, mi lesz holnap estere
+<trehak> vava, finalizalsz akkor?
+<VaVa> subtitles könyvtárat meg a homepage könyvtárat meg a index.htmlt icqn?
+<trehak> marhogy nem full final, hanem csak a koznira
+<trehak> marhogy nem full final, hanem csak a konzira
+<trehak> vava, finalizalsz akkor?
+<trehak> marhogy nem full final, hanem csak a konzira
+<trehak> :)
+<VaVa> van valami most 
+<durm> jo.
+<VaVa> ehhe ICQn most irt nekem egy Pamela
+<VaVa> Aphrodite nicknével
+<VaVa> áááá 94 éves
+<VaVa> 911 a telcsiszáma
+<trehak> aha
+<trehak> fincsi
+<trehak> vava, kivel mesz konzira? :)
+<durm> vava: megy!
+<durm> na, egyezzünk meg!
+<durm> 1. kérdés: mezõkre van osztva. ez ok.
+<VaVa> trehak ICQn megy a sablonweek1.pdf
+<durm> 2. kérdés: bombát élesíteni kell azzzal, h elmozdul róla. ha visszamegy, halál.
+<VaVa> igen
+<durm> az elixírek mért meghatározatlan idõre jelennek meg?
+<VaVa> mert eltûnhetnek egy idõ után...
+<durm> legeyn már valami spec - majd. de ne írjuk oda, h meghatározatlan!
+<VaVa> tranziens jelleggel az ennyit jelent nem?
+<VaVa> okey, holnapi még amúgy sem végleges...
+<trehak> jah, csak jo, ha jo az elso benyomas
+<trehak> :)
+<durm> 3. kérdés: bónusz-elixír? plusz idõ elixír?
+<durm> tr: you never get a second chance to make a first impression... :P
+<trehak> jaja
+<VaVa> no, a headerrel volt egy kis gondom
+<VaVa> ott be kéne állitani valahogy hogy a doksi fõ részére (!cover) minden lapon más lehessen
+<VaVa> és hogy milyen info kerüljön a headerekbe az is egy kérdés... :)
+<durm> mármint melyik headerbe?
+<trehak> most ti a doc sablonrol beszeltek?
+<durm> tr: ébren vayg?
+<trehak> jaja
+<VaVa> mimásról?
+<trehak> csak kozben perl-t hackolok
+<VaVa> :)
+<durm> tR: milyen óránk lesz holnap?
+<VaVa> oprendszerek, elektro, közg
+<VaVa> töki
+<durm> kozg :)
+<VaVa> legjobb, repeta
+<durm> na, figyeljetek! van egy-két alapvetõ kérdésem:
+<VaVa> tedd
+<trehak> egen?
+<VaVa> kezdem a CD burninget, ha nemfelelek, frizbizek...
+<durm> ha meghal a játékos, akkor ugye mindenki visszamegy a kiindulasi pozícióba?
+<trehak> pl. ehes vagy?
+<trehak> persze
+<durm> ha viszont a szörny hal meg, akkor visszalebeg a szeme a feltamadasi pontra, vagy egyszerûen egy idõ múlva feltûnik ott?
+<VaVa> eredeti pacmanben visszlebeg a feltámadási pontra...
+<VaVa> ezt pl megkonzultálhatjuk
+<VaVa> holnap...
+<durm> vava: és a specbe ez belefér? meg akarjuk csinálni?
+<VaVa> szóval a kérdés hogy mennyire veszik szigorúan
+<durm> vava: holnapra le kellene adni valamit, nem?
+<durm> meg akarjuk csinálni?
+<VaVa> hétfõig kell leadni
+<VaVa> holnap megtudjuk askolni...
+<VaVa> ?
+<durm> ok.
+<VaVa> 667 megát irni egy 700as CDre, o mily mekkora bûn ez uram :)
+<trehak> jah :)
+<VaVa> viszont igy multisessionban még ráfér majd a magyar felirat fileja :)
+<VaVa> áááá zuhan a percentage :((
+<VaVa> nagyon
+<VaVa> frizbiiiiiiiiiiii friz biiiiiiiiii friz biiiiiiiii
+<VaVa> és nincs másik 700megásom
+<VaVa> suxx
+<VaVa> kattog a vinya :)
+<durm> vava: ne idegeskedj, inkabb koncentralj!!!
+<VaVa> :))
+<VaVa> mire?
+<durm> ram :)
+<VaVa> rádvagyok kattanva, tessék
+<trehak> :)
+<trehak> jol csinaljatok
+<durm> na. masik kerdes:  a hozzáér dolog nincs rendesen definiálva.
+<VaVa> rehák te erigy vissza perl
+<VaVa> most CDR megy, úgyhogy max IRCezek...
+<VaVa> mit irtam hozzáérre?
+<trehak> ah, a kisdobos segit, ahol tud :)
+<VaVa> nem az hogy fele indul el?
+<durm> mer'hogy az objectek a mezõk közt is mozognak, és ütközhetnek úgy is.
+<durm> nemtom, tiszta-e
+<VaVa> igy még nem
+<durm> mondjuk az jobb lenne, h azonos mezõre kerülnek. nem?
+<VaVa> az gáz ha te hót ellentétes irányba indulsz mint ahogy üldöznek...
+<VaVa> teljesen igaz
+<trehak> jah, szoval ez a gaz a mezonkenti mozgatassal
+<VaVa> ez király, egyszerû és triviális és ráadásul megvalósitható ezzel a modellel akármi is...
+<VaVa> ??
+<VaVa> mezõnként mozgatod, viszont azt animálsz közé amit akarsz...
+<durm> ehem. mondjuk kellene egy olyan, h a bomba pl. csak mezo kozepen lehet, de attol fuggetlenul pixel-távolságot nézünk a szörny-játékos között.
+<VaVa> és kellõ sebesség mellett nem is zavar hogy csak diszkrét pontokban lehet mozogni :)
+<durm> ja, két szörny átfedheti egymást? (ha igen, akkor az útkeresés, meg minden sokkal egyszer
+<durm> ûbb
+<VaVa> ?
+<durm> vava: de zavar. szerintem.
+<VaVa> az eredeti pacman nem mezõ alapú?
+<trehak> szoval ezzel a mezonkent van, de pixelre vizsgaljuk dologgal vigyazni kell, mert objektumokkal nehez lesz megvalositani
+<VaVa> dynablaster nem mezõ alapú?
+<durm> vava: nem mindegyik. de van olyan is.
+<durm> tr: pixelenként kellene mindent letenni, de a bomba pl. csak mezõ közepére kerülhetne.
+<VaVa> vegyük észre hogy a grafikus megjelenitésrõl nem túl nyerû a visszacsatolás az enginehez
+<durm> mondjuk hogy  a pac csak mezõ közepén állhat meg.
+<durm> vaav: ez modellezési kérdés
+<durm> tr: ez így már tetszik?
+<trehak> hat, nem tudom
+<durm> így szokott lenni a többi pacmanban is. irányt változtatni bármikor lehet. prószálj ki egy pacmant.
+<trehak> szoval az utkozesvizsgalat gazos lesz szvsz
+<VaVa> a modellezés nem engedi meg, legalábbis a grafikus vázat a már logikailag mûködõ vázra kell ráhúzni...
+<VaVa> szvsz túlbonyolitjátok
+<durm> szerintem nem. if (pac.x-szorny.x < n) then ütközés
+<VaVa> dynázzatok csöppet :)
+<durm> vava: mesélj!
+<durm> vava: mondanám, h dinaban midenki egy sebességgel mozog. sokat egyszerûsít...
+<trehak> durm: ez nem jo, mert nincs, ami vizsgalna igy...
+<trehak> itt meg nem mindenki, mert a szorny lassabb, nem?
+<durm> tr: jaja
+<durm> tr: vizsgálat: majd csinálunk egy thread-et...
+<durm> (ez le7ett volna csapatnév is..)
+<durm> MCsET
+<durm> mecset.
+<durm> ok, visszatértem a témához..
+<trehak> durm: nem jo, mert a thread hogy nyomul vegig minden objektum private (pozicio) mezoin?
+<durm> tr: mondjuk lesz hozzá joga/public getX/getY metódusok. ez így jó.
+<trehak> nem igazan felel meg a rendes oop modellnek
+<durm> tr: az, h az objektek kommunikálnak? már mér is ne?
+<VaVa> no, akkor figyeljetek ide:
+<durm> emléxel a vektoros példára?
+<durm> vava: figyelünk...
+<durm> valaki loggolja ezt az irc sessiont?
+<trehak> az oke, de ha getx meg gety-on kiszolgalsz minden adatot, akkor elvesz az oop elonye
+<durm> jo volna lognak...
+<trehak> jaja
+<trehak> loggolok
+<durm> tr: te loggolsZ?
+<durm> ok
+<trehak> ja
+<trehak> ja
+<trehak> ja
+<trehak> ja
+<trehak> ja
+<durm> vava: mesélj
+<durm> ./msg tr vigyazz, benne lesz.. :)
+<durm> vava?
+<trehak> es?
+<durm> vavacska?
+<trehak> majd kiszurom
+<VaVa> mezõ alapú, egy aktiv-pályaelem :)) azon a mezõt tartózkodik ami felé az animáció szerint éppen igyekszik. ha két elem azonos mezõt tartózkodik, akkor valaki meg lett zabálva
+<trehak> ..
+<durm> vava: ez nem jó.
+<VaVa> miért is?
+<durm> mingyá mondom.
+<durm> csak végiggondolom.
+<durm> figyeljetek!
+<durm> két eset: jön a szörny. az egyik esetben a user áll egy helyben, a másikban menekül. a mezõ 20 pixel széles.
+<durm> a user és a szörny közt 18 pixel a távolság.
+<trehak> ..
+<durm> h áll a user, akokr a szörnnyel akkor ütközik, amikor az már félig belelóg a mezõbe.
+<durm> ergó átfedik egymást.
+<trehak> de ilyet, hogy felig belelog meg ilyesmi, oop modellben hogy definialsz?
+<VaVa> kell egy animáció mikor a szörny megeszi pacmant... ?
+<durm> ha menekül, akkor egy darabig mennek egymás után, aztán mikor az üldözõ átlépi a mezõ határát, akkor van szívás, pedig láccólag nem történt semmi.
+<VaVa> VAZZZZZZZ
+<VaVa> SZOPJATOK LE!!!!!!!!
+<VaVa> GECI PÖCS
+<durm> faszé nem lhet végighallgatni.
+<durm> mivan?
+<VaVa> BUFFER UNDERRUN
+<VaVa> anyád
+<VaVa> 80%nál
+<durm> oké, vava, leszopunk.
+<trehak> :)
+<durm> (benne lesz a logban, mondanám...)
+<trehak> siman....
+<trehak> ezt enm szurom ki :)
+<durm> na, foglalkoznátok a kérdéssel?
+<durm> na, foglalkoznátok a kérdéssel?
+<durm> na, foglalkoznátok a kérdéssel?
+<durm> na, foglalkoznátok a kérdéssel?
+<trehak> lasd elozo hozzaszolasom
+<trehak> szerintem ez az oop modellben gazos
+<VaVa> elsõ önhibából beküvetkezett frizbim... ezt loggold ám jól
+<durm> tr: azt gondolom úgy kezelnénk le, h lenne egy distance from mezõközéppontja.
+<durm> de nem támogatom az ötletet az elõzõek miatt.
+<durm> tr, vava: érthetõ volt az okfejtésem?
+<durm> :PPP
+<trehak> aha, ertheto, de akkor is fenntartom, hogy nem jo modell :)
+<VaVa> a rendszer erõsen determinisztikus, szóval diszkrét idõpontokban beleszólhat a játékos meg a szörny ai-je, hogy két ilyen idõpont között mi történik, az elõre kiszámitható, igy elõre el lehet dönteni milyen animáció  kell
+<trehak> mert most hogy nezzuk meg, hogy ki kivel utkozik?
+<trehak> konkretan pl. uzenetek szintjen
+<durm> ez most kérdés, tr?
+<durm> na, ha végighallgattok, elmondom, szerintem h lenne egy megoldás..
+<trehak> mindig vegigbroadcastolsz mindenkinek? vagy egy kozponti thread figyeli? vagy hogy gondoltad?
+<durm> ja, közben készültem a szótár kiegészítéssel.
+<trehak> drum, mondjad joool
+<trehak> drum, mondjad joool
+<trehak> drum, mondjad joool
+<trehak> drum, mondjad joool
+<trehak> drum, mondjad joool
+<VaVa> el se hiszem hogy felvagyok bszva emiatt a gecó CDburn miatt, nem való nekem ez az iró....
+<trehak> add nekem :P
+<durm> feltettem cartmanra \incoming\loci\1.doc
+<durm> nézzétek meg!
+<durm> közben kifejtek.
+<durm> tr: van rtf is, ha igényled.
+<trehak> mit tettel fel? szotar?
+<durm> vava pacman2.txt-je docban.
+<trehak> durm: nekem mind1, mert mindenkepp staroffice kene inditanom balurol :(
+<durm> oke.
+<durm> szóval.
+<durm> szerintem ugye van egy pálya object. ez fogná össze az egészet
+<durm> neki lenne néhány thread-ból származtatott objectje: a szörnyek és a játékos.
+<durm> õ maga is thread lenne, az elixíreket nem kellene külön entitásnak kezelni, egyszerûen lenne valami collection, amibe beleraknánk az éppen látható cuccokat. melléjük írnánk, h meddig legyenek még láthatóak.
+<VaVa> durm: ezek a sok kék áthuzott gecók ezek miért is? 
+<durm> a pálya thread szépen számolna, csökkentené az egyes elixírek megjelenési idejét. ha nulla, eltünteti.
+<VaVa> az elixir eltünik magától, az rá tartozik mondanám
+<durm> vava: van olyan, h korrektúra eszköztár. meg eszközök/korrektúra. és ott van olyan, h változtatások elfogadása/elutasítása.
+<VaVa> áááá
+<durm> vava: ha minden külön thread lesz, akkor egyrészt szar a dolog, mer' sok erõforrás. másrészt nem lesz szinkronban és ezért szopni fogunk.
+<trehak> durm: nem baj szerintem, ha szar lesz idoben, a lenyeg a helyes modell
+<durm> úgyhogy lehetne esetleg a pálya egy ütemezõ, ami mondjuk ezredmásodpercenként számol, és adott idõközönként meghívja az szörnyek/játékos mozgatását.
+<durm> és persze közben folyamatosan figyeli az ütközéseket.
+<trehak> durm: es ez az utemezo nyalazna at az osszes poziciot/csinalna az utkozesvizsgalatot, kuldene uzenetet, ha kell az utkozesrol az objecteknek?
+<VaVa> jaja, a pályához tartozik az univerzális óra :) és az idõzit mindent... 
+<durm> ez viszonylag jó volna, mert nem lenne gáz a szinkronnal. szerintetek mennyire lehet két thread-et szinkronban tartani?
+<trehak> durm: szerintem ha definialunk logikai orakat, akkor siman :PPPP
+<durm> vava: szerintem is.
+<durm> tr: f***** a logikai oradba.. :P
+<trehak> :)))
+<trehak> logging rulez :)
+<VaVa> faszom az egész digitbe, semmit nem tanultam még...
+<VaVa> ehhe
+<durm> tr: szerintem kell lennie egy központi objectnek, nem? (vektoros példa?)
+<VaVa> ne hánytorgasd már azt a loggingot, szeretnék boldogan meghalni
+<durm> tr: most eszembe jutott valami.
+<VaVa> persze hogy kell, a világ abban van a pálya meg az óra pl..
+<VaVa> durm: ajjajj :)
+<trehak> durm: mondjad
+<durm> volt uml-bõl egy ilyen, h lehet, h egy attribútum/valami nem az A és nem a B objecthez tartozik, hanem a köztük lévõ asszociációhoz.
+<trehak> VaVa: meg en sem tanultam digitet
+<durm> na ez most az.
+<VaVa> mármint mi az?
+<trehak> durm: hmmm... csak valami intelligensen kene megvalositani
+<VaVa> ppl, ezt a korrektúrát én hogy tudom használni? :)
+<trehak> ossze kene irni a ketelyeinket, es megvitatni holnap csongorral
+<durm> tr: ellenben nem kell sok vizsgálat: elvileg csak a játékos tud ütközni.
+<durm> úgyhogy tartozhatna pl. a játékos objecthez is...
+<durm> nos?
+<trehak> durm: ellenben minden szornnel / durvabb esetben, megvalositastol fuggoen minden palyaelemmel
+<durm> ja, összeírás rulz.
+<trehak> durm: felejtsd el, rossz lesz a modell
+<durm> tr: az mennyi is? tiz db vizsgálat max? (4 szörny + 6 pályaelem...)
+<trehak> utkozes a jetek resze, nem csak a jatekoshoz tartozik...
+<durm> miért lenne rossz model? elvégre a userre hat, nem?
+<trehak> 6 palyaelem???? es a falat hogy kezeled? siman azt is igy kell
+<VaVa> durm: trhknak igaza van, ütközni más is tudhat(na)
+<durm> vava: szerinted?
+<durm> vava: de nincs rá hatással!
+<durm> ja de. bomba.
+<durm> bocsi.
+<VaVa> a szótárban használt definiciók értelmében a pályaelem az pályaelem...
+<VaVa> a fel meg nem az
+<trehak> de a fallal is utkozik, azert nem tud tovabbmenni
+<trehak> es ez igy akkor ide tartozik
+<durm> vava: úgy tudod használni, h beleírsz, és akkor kapsz egy színt. asszem.
+<durm> vava: mûxik?
+<durm> tr: a fal az az egyes objectekhez tartozik.
+<VaVa> szines ezt mint az istennyila. van egy pacman2.txt meg ez a gecó mit csináljak hogy kapjak pacman3.txt-t?
+<VaVa> :)
+<VaVa> durm: mi tartozik hova? ezt hogy érted?
+<durm> vava: mondjad neki: valtoztatások elfogadása.
+<VaVa> hol is?
+<VaVa> lóci egy összemixelt gecót tudnál adni?
+<trehak> durm: mi tartozik hova?
+<durm> vava: eszközök/változások követése/módosítások elfogadása vagy elvetése
+<VaVa> jujj durm sorry, most ennyi az inkognitódnak...
+<trehak> nem lesz igy jo a mozgazs...
+<durm> trehak: folytassuk.
+<trehak> oke
+<trehak> szoval : fal/mozgas???
+<VaVa> mondjuk ha fal fele akarsz mozogni akkor figyelmenkivül hagyja....
+<durm> szerintem a fallal való ütközés vizsgálata mindenképp az adott object dolga.
+<VaVa> ha mezõkben gondolkodsz, akkor semmi gáz ezzel
+<durm> és akkor lehetne úgy csinálni, h mindent, amivel az adott "aktív pályaelem" ütközhet, maga vizsgálja.
+<durm> mármint, h ütközik-e.
+<VaVa> az object dolga ja, méghozzá lekérdezi az õt éppen tartalmazó mezõtõl hogy adott szomszédtól kérdezze meg kicsoda
+<trehak> durm: es honnan tudja, hogy mikor, ki utkozik neki, ha nem tud a tobbi objectrol? vagy o is broadcastol? vagy a mozgo objectek broadcastoljak, hol vannak?
+<durm> tr: too much traffic.
+<durm> esetleg a mezõ tudhatná, h ki lakik benne.
+<durm> meg h ki a szomszédja.
+<VaVa> esetleg tudnia kell jól
+<durm> vava: na, látod már a szöveget?
+<durm> most van 2001.02.22. 3:03AM
+<trehak> nem jo, hogy tudnia kell, ki a szomszedja
+<durm> timestamp rulz.
+<trehak> aha, fincsi
+<durm> tr: miert?
+<durm> a mezõ nem entitás? (mit szól ehhez a mezõ...)
+<VaVa> durm: jaaa hogy ez ilyen . ááá király
+<durm> vava: korrektúra rúlz?
+<VaVa> hmm rehák te hányas lettél PTbõl?
+<trehak> de, de szerintem nem elvarhato, hogy tudja, ki a szomszedja...
+<durm> emberek: a mezõ entitás, vagy nem?
+<trehak> 3-a, de annal magasabb szinten vagyok :
+<trehak> durm: hat, igen, ezt ell kell donteni
+<durm> tr: félistennõin?
+<VaVa> merthogy volt egy pont ilyen labirintusos feladat...
+<durm> no, emberek: konstruktívan!
+<trehak> eloszor is, meg kene hatarozni az entitasokat, mert akkor lenne min vitatkozni :)
+<durm> tr: oké.
+<VaVa> szerinted a szótár mi?
+<durm> ugye a szörnyek, a pálya és a user entitás. ezen nincs mit vitázni.
+<durm> vava: abból nem mind.
+<trehak> user = kicsi ize, ami rohangal, ugye?
+<durm> user = pac.
+<durm> ja.
+<trehak> VaVa: hat az total nem ugyanaz
+<durm> Use(R), az más..
+<trehak> csak azert kerdeztem, mert lehet mas is. szoval tobb mindent hozza lehet vonni az interface reszbol is... denemKene
+<durm> no, mi entitás még? mit jelent az, ha a mezõt entitásnak vesszük (ergó objektum).
+<durm> ha a mezõ is entity, akkor lesz qrva sok entitynk, meg baszott nagy gráf (azé akkora nem).
+<trehak> a palya entitas???
+<trehak> a palya entitas???
+<durm> pálya simán, nem?
+<trehak> hat. hmmm. es akkor a benne levo object-ek?
+<VaVa> ez igaz, vagy a pálya vagy a mezõ...
+<durm> ha a mezõ az, akkor nem feltétlenül kell annak lennie, ellenben akkor megkapjuk, h túl szétosztott...
+<VaVa> a pályaelemek mind entity
+<durm> vava: jaja.
+<trehak> VaVa: de mi a palyaelem def?
+<durm> vava: az elixírnek feltétlen annak kell lennie?
+<VaVa> lásd szótár
+<durm> tr: elixír, bélák, user.
+<trehak> cska a fal/nemfal vagy + elixir? az elixir szerintem tulajdonsaga egy mezonek
+<durm> üldözõbéla, userbéle, levelibéla
+<VaVa> elixir akár mozoghatna is... :)
+<durm> fal nem.
+<trehak> jaja, menj a fenebe vava
+<durm> vava: akár..
+<trehak> ecceruseg.... ecceruen kene tartani az alapprojectet
+<trehak> kesobb, ha mar leadtuk, ugy szettolhatjuk a szep modellt, ahogy akarjuk :)
+<durm> szerintem a pálya simán le7ne entitás, oszt legyen egy tömb, oszt kész.
+<durm> semmi elõnye nincs, ha mezõkre bontjuk. mármint mezõ-entitásokra.
+<durm> attól még ugyanúgy le7 az elixír egy mezõ tulajdonsága.
+<VaVa> durm: ha mezõ entitás az a totál OOP rejszolós szép megoldás. ugyanakkor szerintem be is halna a gép 400 vagy akárhány objekttõl... szóval emiatt kéne a pálya. kérdés hogy mit szólnak
+<trehak> tehat akkor a palya egy entitas/ egy nagy tomb, es a tomb ertekei definialjak, hogy ott mi van?
+<durm> kérdés: ha definiálok egy mezõ nevû objektumot, amibõl felépül a tömb, attól a mezõ még nem entitás, ugye?
+<trehak> 400 objecttol nem hal be a gep
+<trehak> durm: haaat :)
+<trehak> tehat akkor a palya egy entitas/ egy nagy tomb, es a tomb ertekei definialjak, hogy ott mi van?
+<durm> tr: szerintem igen.
+<VaVa> trhk: a te géped sem? :)
+<durm> de a tömb elemei rekordok - pascalos terminológia szerint. ami ugye javaban már csak class. ergó object. ergó...
+<trehak> es akkor hogy van a finom atmenet? eccer csak hirtelen atkerul a tomb masik elemebe? mikor pl. a fele athaladt? vagy hogy?
+<VaVa> a tömb értékeivel azért óvatosan, szerintem minden pályaelem külön obj legyen...
+<durm> tr: nem
+<trehak> tehat akkor a palya egy entitas/ egy nagy tomb, es a tomb ertekei definialjak, hogy ott mi van?
+<trehak> hat, akkor???
+<trehak> es akkor hogy van a finom atmenet? eccer csak hirtelen atkerul a tomb masik elemebe? mikor pl. a fele athaladt? vagy hogy?
+<durm> na, vissza a lovakkal, hé!
+<trehak> ize, erre gondoltam
+<trehak> ize, erre gondoltam
+<durm> pill.
+<durm> na, az aktív elemek nem kötõdnek a mezõhöz. vagy igen? csak a passzívak (elixír, bomba).
+<trehak> hmm
+<trehak> tudni kene, merre jarnak, mert kulonben a kirajzolas gazos lesz
+<durm> az aktívat egy x,y koordinátával jellemezzük. azt, h melyik mezõben van, megkaphatjuk az (x mod 20), (y mod 20) képlettel.
+<durm> (20 széles mezõ...)
+<trehak> oke
+<durm> tr: pedig nekem pont most nem lett oké.
+<durm> jobb volna a passzívakat is objectként kezelni... ill. most megakadtam..
+<trehak> es a rajzolas hogy lesz? honnan szedi az infot? mert a palyatol nem szedheti, az csak div 20 tudja (nem mod)
+<durm> randán néz ki, h az aktív/passzív dolgokkal való ütközést kétféle képpen kezeljük...
+<durm> tr: rajzolás a pálya feladata. 1) kirajzolja magát, 2) lekérdezi a pe-ket, és kirakja õket.
+<durm> ill. nem.
+<durm> meghívja a pe-k paintmyself(Graphics g) metódusát.
+<durm> nos?
+<VaVa> ja
+<trehak> eh
+<trehak> kokany
+<durm> entitások: pálya, pe-k.
+<durm> tr: mert?
+<trehak> nem latom ezt az aktiv/passziv dolgot
+<trehak> ez hol van benne?
+<trehak> egyutt kell utkoztetni oket
+<durm> tr: mit akarsz a kirajzolásban látni?
+<durm> ütközéskor pedig levizsgálja a pályaelemek koordinátáit. lekérdezi õket párosával, oszt megméri.
+<durm> MÁSIK MEGOLDÁS!!!
+<trehak> nem, az elobb meg aktiv/passziv dolgokkal problemaztal. a kirajzolas az oke
+<durm> létrehozunk egy linket azok a pe-k között, amiknél van jelentõsége az ütközésnek. ez a link látja mindkét objectet, ergó tudja figyelni az ütközéseket.
+<durm> nos?
+<trehak> durm: durva nagyon... nagyon sok lik lesz
+<VaVa> hmm. linket a mezõre. és a szomszédos mezõkön lévõkkel kell vizsgálódni
+<durm> ha lerax egy bombát, az élõlények kapnak egy linket rá.
+<trehak> VaVa: de az megint nem jo...
+<trehak> durm: es a fal???
+<durm> rt: és a fal...
+<durm> thinking.
+<durm> de eddig teccik?
+<durm> vava?
+<VaVa> no a link a mezõre úyg gondoltam, hogy a pe-k egy listában lesznek, a listától kérdezed le hogy kik a veled szomszédos elemek..
+<trehak> durm: ha a falhoz is linket raksz, akkor az nagyon sok lesz
+<durm> tr: az nem..
+<trehak> VaVa: ez nem jo
+<trehak> amugy mi a pe?
+<durm> pályaelem, vaze
+<VaVa> fal nem pe, mi nem jó?
+<trehak> durm: hat ezaz... nem kene ketfele utkozes... illetve olyan kene, hogy a visszahatasuk mas...
+<durm> van ugye egy tömbünk - pálya.
+<trehak> tehat a fal azt uzenei, hogy stop, a szorny, hogy kill
+<durm> szeritnem a pe-k és a pe-fal ütközés az más.
+<durm> márcsak azért is, mert a fal _nem_ entitás.
+<durm> a pe meg az.
+<durm> szóval van egy tömb, mezõkbõl áll, 2d-s. ez a pálya.
+<durm> minden mezõ tudja, h melyik oldala fal.
+<trehak> hmm. a mezo nem eccere fal es kesz?
+<trehak> nem blokkokbol epitkezunk?
+<durm> tr: láttál már pacmant? nem.
+<durm> ok, akkor most tisztáztunk egy serious bugot...
+<trehak> oke
+<trehak> ha nem blokkok, akkor meg nagyobb szopas.
+<durm> tehát a falak vonalak a mezõk között. a fal a mezõ attribútuma.
+<trehak> ha nem blokkok, akkor meg nagyobb szopas.
+<durm> ez szarul hangzik, me a mezõ nem entitás.
+<durm> trÉ szerintem nem, gondold végig.
+<trehak> mert igy arra is figyelni kell, merrol jon neki a mezonek, etc
+<VaVa> semipermeábilis fal, baj az?
+<durm> tr: miért is?
+<durm> vavaze
+<VaVa> amúgy pacmane válogatja hogy a fal vékony é
+<VaVa> az eredeti asszem vizszintesen igen de függõlegesen nem vagy ilyesmi
+<durm> vava: én eddig vékony falban gondolkodtam. az jobban néz ki.
+<VaVa> öszintén, mit szoktatok látni, mit csinál a figura amikor egy mezõben állsz, és fal fele indulnál?
+<trehak> megy ? :)
+<durm> vava: semmit, ugyebár...
+<VaVa> akkor mit kell itt szenvedni?
+<VaVa> :)
+<trehak> szoval, nem trivialis meg a fal def se :)
+<durm> tr: de, legyen már.
+<durm> vékony fal? van valaki ellene?
+<VaVa> a fal az nem az, ellenben ha lapos a fal az magában hordozz a vastag fal megvalósitásának lehetõségeit...
+<VaVa> igy a szótár rossz mondjuk...
+<trehak> nem baj, ha vekony, csak akkor tobb mindenre kell figyelni
+<durm> vava: jaja, be lehet vele keretezni valamit.
+<VaVa> miért kéne több mindenre figyelni?
+<durm> tr: szerintem nem.
+<trehak> en eddig ilyen dynablaster jellegu falr gondoltam, minden kocka valami :)
+<durm> tr: én meg ilyen wizard of war jellegûre.
+<VaVa> én is, de a vékony sem gáz.
+<durm> esetleg pacmanra.
+<durm> :)
+<durm> na, legyen már vékony...
+<VaVa> durm: mostmár teljesen meggyõztél, wizard of war RULET
+<trehak> durm: de, pl. hogy honnan jon, meddig mehet el... igy nem lehet rendesen tombben tarolni, mi hol jar, mert a mezonek csak egy reszere jutsz el, a teljes mezore nem ,ermt ott van a fal, az is elfoglal x pixely
+<durm> figyu! ha vékony: annyit kell megnézni, h vagy egy mezõben, és amerre ki akarsz menni, arra van-e fal.
+<trehak> de a megrajzolasnal, mozgasnal is gazos
+<trehak> de lehet tolem vekony fal. pont.
+<VaVa> figy, a grafikát a legvégén kell rárakni... maradjunk is ennyiben...
+<durm> tr: nincs igazad.
+<durm> tr: figyu!
+<trehak> ?
+<durm> nem tudom, milyennek képzeled, de szetinem simán lehet olyan, h ha van fal balra, akkor a mezõ közepénél balrább nem enged.
+<durm> ez akkro is így lenne, ha vastag volna a fal.
+<durm> kirajzolásnál meg nem gáz nagyon. kicsit.
+<durm> de ha igényesen akarjuk megcsinálni, akkor a vastag lett volna gázosabb. ezt majd kifejtem bõvebben, ha érdekel,de most hagyjuk...
+<trehak> a user mekkora? mint egy mezo vagy kiseeb?
+<VaVa> mindenki mezõ méretû
+<trehak> durm: ez a kozepetol balra nem enged, ez oke
+<trehak> VaVa: de itt a gaz a rajzolasnal
+<VaVa> hogy pontosan mekkora az már grafika kérdése
+<VaVa> már miért?
+<VaVa> jó, hogyha a figura egy pötty a mezõ közepében akkor gáz van
+<trehak> VaVa: akkor nem fog rendesen felferni a mezore, mert a fallal mar nem erintkezhet, es akkor a fordulok eredekesek lesznek
+<VaVa> akkor bántja a szemet hogy nem mehetsz közelebb a falhoz...
+<VaVa> de ha jó a rajz akkor semmi gáz nincs ezzel, amúgy meg imho a legtöbb game ezt igy nyomja. de mostmár fogok egy cseppet dynazni... megnézem :)
+<durm> tr: mezõ 20 pixel, user 16 pixel, fal vastagság: 4 pixel. he?
+<VaVa> pacman imho igymegy
+<trehak> durm fal 2 pixel, he? ugye, ha belegondolunk :)
+<VaVa> ne verjétek már pixelekre
+<durm> fal négy pixel, mert két mezõ találkozásánál jobbrol is 2 pixel, balról is 2 pixel
+<durm> vava: csak az érthetõség miatt..
+<VaVa> jók vagytok
+<VaVa> érti mindenki?
+<VaVa> igen
+<durm> én értem.
+<durm> asszem.
+<durm> tr?
+<VaVa> na tr?
+<trehak> persze
+<durm> akkor minden ok?
+<VaVa> ááh
+<VaVa> simán
+<durm> összegezném.
+<trehak> de most akkor ki van a fallal utkozessel? a mezo nezi meg, hogy akkor most a bal oldalam fal, es kuldok reportot a usernek?
+<durm> entitás a pálya, ami mezõkbõl áll.
+<durm> a pe-k entitások.
+<durm> egymással való ütközésüket a köztük létesített link ellenõrzi, amit a pálya thread hív meg, meglehetõs rendszerességgel.
+<trehak> beledumalhatok?
+<trehak> :)
+<VaVa> ez a köztük lévõ link nemtetszik
+<trehak> nem lesz sok link??????
+<trehak> mert akkor a fal utkozes is linkkel megy??
+<durm> tr: van ugye a négy szörny, az be van linkelve a userhez.
+<durm> ez 4 link. a user az elixírekhez, az +1..3.
+<durm> a user + a szörnyek az esetleges bombá(k)hoz, az plusz 5..15 db link. az nem sok.
+<trehak> durm: ez ok, a falrol beszeljunk, mert a mozgas a lenyeg
+<durm> mondjuk ha maximáljuk az egyszerre letehetõ bombák számát egyre, akkor csak ot.
+<durm> tr: a fal _nem_ entitás, nem linkelhetõ. a fal egy bit (4 db) egy-egy mezõben.
+<VaVa> jaja falbit
+<durm> modjuk a ape-t (aktív pályaelem...) be kellene linkelni abba a mezõbe is, amibe tart éppen.
+<VaVa> a gyémántokat meg már ki is egyszerûsitettétek, igy már nincs mit felvenni, tehát automatikusan továbbjutunk a következõ szintre, igy nem lesz idõ ütközésre, tehát minden megoldva
+<trehak> tehat a fal a palya resze, a tombben taroljuk. ami mozog, az mindig a palyat faggatja, hogy mi van klorulotte, es vagy ott, ahova indul, ugye???
+<VaVa> :)
+<durm> [tiszta kvadra, egyszerre toljatok a sorokat...]
+<VaVa> ehhe
+<durm> tr: csak fal szempontjaból.
+<trehak> durm: miert? a szorny honnan tudja, mi hol van?
+<durm> ha megjelenik egy új elixír, akkor a pálya linkeli be. de onnantól az ütközés figyelése a link dolga.
+<trehak> a palya indenki szepmpontjabol ugyanaz
+<VaVa> ütközésvizsgálatra pontosan akkor van szükség amikor egy elem mezõt változtatott. senkit se zavarjon meg, a mozgás animációja az más tészta
+<durm> vava: ezt már egyszer megbeszéltük, h nem jó megoldás..
+<trehak> VaVa: ez tenyleg hujeseg
+<trehak> mert lehet utkozni ugy, hogy kulon mezo, de mar felig atlogtok
+<trehak> egyikl az egyikbol, a masik a masikbol
+<VaVa> pont errõl beszéltem, az animáció kérlek ne zavarjon. már meg.
+<VaVa> no most álmos vagyok
+<VaVa> holnap érvelek jól :)
+<durm> ok.
+<durm> én nem megyek konzira.
+<trehak> VaVa: de ez nem anim, hanem utkozeskezeles meg
+<durm> ja, még egy fontos dolog. de ez egyszerû.
+<durm> figeljetek!
+<trehak> ?
+<durm> az útvonalkeresés kinek a dolga?
+<trehak> milyen utvonal? szorny?
+<durm> szerintem a linktõl kéri a szörny és a link a pályától, megadva a két koordinátát.
+<durm> jaja. üldözési útvonal.
+<trehak> eh, nem tul bonyolult ez igy?
+<trehak> bar, ez egy ilyen modell :)
+<durm> meg kellene nézni pl. h a biliárdban h oldották + az ütközés vizsgálatot.
+<durm> bevállalja valaki?
+<VaVa> billiárd imho kicsit más tészta...
+<durm> vava: golyók - entitás. ütközés hasonló..
+<durm> ennyit megér.
+<trehak> nem, az mas teszta
+<trehak> ott szabad mozgas van, nem mezok
+<VaVa> rehak te jössz konzi?
+<trehak> haaat, lehet
+<trehak> igazabol nemtudom
+<VaVa> ehhh
+<durm> azé majd meséljetek róla-
+<VaVa> végül megyek egyedül jól :)
+<VaVa> no, ennek a doksinak most mi is a cime
+<durm> projectspec?
+<trehak> akarmi
+<trehak> viso nem megy?
+<VaVa> checking
+<VaVa> Követelmények leírása
+<durm> tr: leszel vasárnap?
+<trehak> vasarnap jovok, kb. 5-kot vagy 9-kor
+<trehak> inakbb 5kor
+<durm> 5kor, jó?
+<trehak> szoval este muszaj lesz gyurni majd
+<trehak> vszinu
+<durm> én már szombat éjjel feljövök.û
+<trehak> fincsi
+<durm> jaja, szombat éjjel, fincsi :)
+<durm> várklub rúlz.
+<durm> vava: kezdesz valamit a doksi update-emmel?
+<trehak> baszki, 3/4 4
+<trehak> reggel meg tesi :(
+<durm> jaja.
+<trehak> ellenben haladok a termnyelves cuccal is :)
+<durm> tr: multitask.
+<VaVa> tr: abból mit is kell csinálnod?
+<durm> ehem, multitax..
+<trehak> generalni szoveget karaktercsaoportokbol adott valoszinuseg szerint
+<trehak> a szoftver mar kesz van, csak webre akarom tenni, nem kozvetlenul beadni
+<VaVa> I'm out'a here. See you tomorrow!
+<VaVa> ez mit is jelent?
+<trehak> loci, hasznalhatom a dreamweaver-odet?
+<trehak> :)
+<durm> he? minek?
+<trehak> kene egy form, es a rohadt composer nem tudja :)
+<durm> nem megy fejbõl?
+<trehak> es nem akarom csak egymas ala behanyni a cuccokat
+<trehak> de megy, na, mind1
+<durm> jó, de akkor megmondod, h mi ez a szar, amit eszek...
+<trehak> majd megoldom
+<trehak> :)
+<trehak> :))))
+<trehak> megnezzem?
+<durm> jer, ha mondom, rontom bontom.
+<durm> elvitted a sör-bor-bontom.
+<trehak> ok
+<durm> mishi-mash
+<VaVa> incoming/vava/week2-pre/akármi  ezek a cuccok. a pdf-et plz kinyomni
+<VaVa> és esetleg ha még valaki él, akkor generálni akárhova is de legfõképpen ICQmra egy listát hogy most mi a cink mi a kérdés
+<VaVa> egyszer mezõ VS pálya entitás ezt mi eldöntöttük kérdés õ elfogadja e?
+<VaVa> van még ütközés
+<durm> rehák megette a héjas törökmogyorót. héjastúl.
+<VaVa> ha más van akkor azt majd write me on ICQ, én most csendben meghalok, megint nemtudtam aludni 6 órát
+<VaVa> áhh
+<VaVa> rehák a szakbarbár, perlben hackelni tud, de mogyórot enni, no az a skill hiányzik
+<VaVa> VaVa meg szintet lép, vizszintet....
+<VaVa> per away
+<VaVa> bye
+<VaVa> mehetek fõnök?
+<durm> ja, kódot tör, diót nem..
+<durm> ehem.
+<durm> joccakát 4 all...
+<VaVa> jóéjszakát minden entitásnak
+<-- VaVa (VaVa@vava.bakats.tvnet.hu) has left #DPMF
+<-- durm has quit ()

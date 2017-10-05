@@ -1,0 +1,330 @@
+
+                                                                 
+ This program compliments of:                      ÖÁ·           ÖÁ·
+                                                 / º º           º º \
+   Ñ¸           Ñ¸       ¸         Ñ¸Ñ¸Õ¸       ÚÄÂºÂºÂÄÂÄÂÄÂÄÂÄÂºÂºÂÄ¿
+   ³³           ³³      ³         ³³³³³       ßßßßºßºßßßßßßßßßßßºßºßßßß
+   ³³ Ñ¸ Õ¸ ¸ Õ Æµ Ñ¸ ¸ Õµ ÕÑ Ñ¸   ÆµÆµÔ¸          Ğ Ğ           Ğ Ğ
+   ³³ ³  Õµ ³³³ ³³ ³  ³ ³³ ³³ Æ¾   ³³³³ ³             FIDO 1:369/2
+   Ï¾ Ï  ÔÏ ÔÏ¾ Ï¾ Ï  Ô ÔÏ Ôµ Ô¾   Ï¾Ï¾Ô¾          EchoNet 50:5305/2
+         Rich Waugh         ³                       OurNet 65:613/2
+     Fort Lauderdale, FL   Ô¾                        WDNet 3090.00
+   (305) 523-1717 *HST/DS*
+                                  --  and --
+
+  ²²²²²³   °°³°°°°°°²   ³ ²°°°°²
+°°°°°°°³°°° ÜÛÜ    ²°°°°³°°²
+²      ³  ÜÜÜÜÜÜÜ    ÄÄ ÃÄÄÄÄÄ
+ÄÄÄÄÄ  ³ÜÛÛÛÛÛÛÛÛÛÜÄÄ Ä ÃÄÄÄÍÍ        Ş±ÛßÛ Û Ş±ÛßßÛ Ş±Ûßßß Ş±Û
+ ÄÄÄ   úúúúúúúúúúúúú ÄÄ ÃÄÄÄÄÄ        Ş±Û Û Û Ş±Û  Û Ş±ÛÜÜÜ Ş±Û
+ÄÄÄÄ  Şè è è è è è èÄ  ÄÅÄÄÍÍÍ        Ş±Û ÛÜÛ Ş±ÛÜÜÛ Ş±ÛÜÜÜ Ş±ÛÜÜÛ
+  ÄÄÄ  úúúúúúúúúúúúú ÄÄ ÃÄÄÄÄÄ
+ÄÄ     ³ßÛÛÛÛÛÛÛÛÛß ÄÄ .³ ÄÄÄÄ
+ÄÄÄÄÄ  ³  ßÛÛÛÛÛßÄÄÄÄ  ÜÛÜ  .ú                                 ~
+  ÄÄÄÄ ³ÄÄ  ßÛß  ÄÄ   ÜÜÜÜÜ^^^                               ~ ³ ~
+ÄÄÄÄ  ÜÛÜ    ÄÄÄÄÄ ÜÛÛÛÛÛÛÛÛÛÜ    Ü     Ü            ÜÜÜÜ  ~ ³ ~
+ÄÄ  ÜÜÜÜÜÜÜ  ÄÄÄÄ úúúúúúúúúúúúú  ÚÏÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍËÍÏÍÍÍÍÏÍÍ¸ ³
+Ä ÜÛÛÛÛÛÛÛÛÛÜ ÄÄ Şèèèèèèèèèèèèèİ ³    FREEWARE     º©ªÉÍÍÍÍËÍÏÍÏ»
+ ÛÛÛÛÛÛÛÛÛÛÛÛÛ  Ä úúúúúúúúúúúúú  ³  HALL OF FAME   º  º   º   º
+ŞŸŸŸŸŸŸŸŸŸŸŸŸŸİÄÄÄ ßÛÛÛÛÛÛÛÛÛß   ³    SERVICES     ºÄÄÈÍÍÏÍÊÍÍÏÍÊÄÄÄÒÄ§Ä¿
+ ÛÛÛÛÛÛÛÛÛÛÛÛÛ  ÄÄÄ  ßÛÛÛÛÛß     ³ 804-293-4710  º      .ÄÄÄÄÄÄÄ·Üß°°°ßÜ¿
+  ßÛÛÛÛÛÛÛÛÛß ÄÄÄ ÄÄÄ   ø ÄÄ Ä   ³ ÖÄÄÄÄÄşÄÄÄÄÄ·   ¶ FHOF ³ÖÄÄÄÄÄ¿ÇÅÄ½½½ÄÅ´
+ÄÄÄÄßÛÛÛÛÛß          ÄÄÄÄÄ   .øúßßÄ½(®¯))^(®¯))ÓÄÄÄĞÔÍÍÍÍÍÏĞ(®¯))Áßßßßßßßßß
+ÄÄÄÄ  ßÛß  ÄÄÄÄÄ                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+                                  SANTA v1.0
+                            (C) 1992 by Rich Waugh
+                       (Santa's dialogue by Rey Barry)
+
+
+                              Seasons Greetings!
+
+ ÚÄÄ¿   This packet contains an artificial intelligence Santa Claus door
+ WHAT   which will run both locally and in inter-active mode on a BBS. Rey
+ ³IS³   Barry from the the Freeware Hall Of Fame (PCBoard) in Charlottesville,
+ THIS   Virginia wrote the AI data and Rich Waugh of DrawBridge BBS (WildCat!)
+ ³  ³   in Fort Lauderdale, Florida incorporated it into a DOOR program that
+ ³  ³   will work on WildCat!, PCBoard and most other BBS platforms.
+ ³  ³
+ ³  ³   Rich is the author of SHAMpage, a user-configurable inter-active door
+ ³  ³   available as "NoBitchWare" on many Bulletin Boards. (The HOF uses
+ ³  ³   SHAMpage as an on-line AI 'co-sysop.') The Santa Door is what you
+ ³  ³   would guess: a program your callers and their kids can use to talk to
+ ³  ³   Santa Claus. In fact, every kid in town can talk to Santa Claus...
+ ÀÄÄÙ   on -your- BBS. Below we suggest ways to build your BBS with this.
+
+ ÚÄÄÄ¿  If callers leave the topic of gifts and start talking about reindeer,
+ NORTH  Ms Claus and the elves, Santa's up to it. And if your caller wants to
+ ³POLE  have some fun without the kids and comes in to hit on old Santa, the
+ ³ AI³  program can handle that too. There are secret words that bring a
+ ³   ³  reward and even a graphic to be discovered. But callers won't want to
+ ³   ³  ask Santa the Meaning of Life twice. He tells a shaggy dog story. A
+ ³   ³  few choice conversations during beta tests are included here in the
+ ÀÄÄÄÙ  file Santa.Log.
+
+ ÚÄÄÄ¿  Rey asked Rich if he would let HOF distribute SHAMpage with the Santa
+ ³You³  data file and Rich went a giant step further. He wrote a whole new
+ ³can³  program, using Rey's data. The resultant Santa is a polite,
+ trust  well-spoken gent as Rey wrote him and that's how your callers will
+ Santa  find him. He's no prude, no fool, but he isn't into discussing
+ ³   ³  anatomy or bodily functions, and doesn't use any off-color language
+ ³   ³  you don't use first. Those words aren't in his response code except
+ ³   ³  as keywords, meaning he can give them back only if the caller uses
+ ³   ³  them. Unlike SHAMpage, the SysOp is not able to "take over" the
+ ³   ³  conversation. That way Santa is a Door your regular callers and new
+ ³   ³  callers can freely use with their kids with no fear of being
+ ³   ³  offended, yet callers can also have fun using this when the kids
+ ÀÄÄÄÙ  aren't around.
+
+ÚÄÄÄÄÄ¿  Rich's docs explain how to install the program. Like his SHAMpage,
+INSTALL  installation poses no problem to anyone who has ever set up a BBS.
+³     ³  Very straight-forward. As always, pay attention to the pathing. It
+ÀÄÄÄÄÄÙ  has to be 100% correct.
+
+ ÚÄÄÄÄ¿  Test it to make sure it works, then think a minute how Santa can be
+ PROFIT  used to generate traffic and attract new callers. That's another
+ ³FROM³  reason why we're is circulating this file. We're trying to help the
+ ³SANTA  BBS community prosper and grow.
+ ÀÄÄÄÄÙ
+ ÚÄÄÄÄ¿  Add an item to the logon NEWS telling callers how they can talk
+ HERE'S  with Santa Claus. The Santa Door can create excellent public
+ ³HOW ³  relations if you're interested in getting some publicity for your BBS
+ ³    ³  or enhancing the image of the BBS community. Radio and TV news
+ ³    ³  directors would like to hear about it. They hunger for human interest
+ ³    ³  stories before Christmas and never have enough. One news angle:  even
+ ³    ³  kids confined to bed for colds or something more permanent can still
+ ÀÄÂÄÄÙ  talk to Santa, thanks to your BBS.
+   +
+ ÚÄÁÄ¿   Posting a colorful notice on the old fashioned cork bulletin
+ ³   ³   boards at the library and the supermarkets brings in traffic.
+ ÀÄÄÄÙ   SANTA is simple enough for a first-time caller.
+
+ÚÄÄÄÄ¿   The HOF does everything we can to circulate good, tested Freeware to
+³WHO ³   any BBS that wants it, and we operate a free BBS offering unlimited
+³ARE ³   downloads in the first or any call. Rich Waugh, SysOp of DrawBridge
+³THESE   BBS, has written many "NoBitchWare" (freeware) doors & utilities for
+³GUYS?   SysOps. We both stay pretty busy at 14400 baud and we sure meet some
+ÀÄÄÄÄÙ   terrific people.
+
+ ÚÄÄÄ¿   The Santa Door is something a little different for us. We did it
+ SANTA   because like most folks, we love kids and we love what Christmas does
+ ³   ³   for kids. Few of your callers or ours can share their modeming with
+ ³   ³   young children the rest of the year, but now they can do it at
+ ÀÄÄÄÙ   Christmas with the Santa Door!
+
+ ÚÄÄÄ¿   Like everything else from Freeware Hall of Fame and DrawBridge this
+ FREE?   is a free service to SysOps. SANTA is distributed as our Christmas
+ ³   ³   present to the SysOp community. It is fully functional and contains
+ ³   ³   no time bombs. Rich will attempt to keep the latest version always
+ ³   ³   available for FREQ at 1:369/2, 50:5305/2 and 65:613/2 with the magic
+ ³   ³   name SANTA and Rey will distribute it through the Freeware Hall of
+ ³   ³   Fame. It can be found for download on either of our boards and
+ ³   ³   many others.
+ ³   ³
+ ³   ³   If you find SANTA handy, give one, or both, of us a call and thank
+ ³   ³   us. If you hate SANTA or don't think you got your money's worth,
+ ³   ³   BAH! HUMBUG! to you! Call and page us... we'll discuss it.
+ ÀÄÄÄÙ   (Remember... Rich also wrote SHAMpage! <grin>)
+
+
+                  ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+                  Happy Holidays from DrawBridge and the HF
+                  ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ**
+                                                        ***
+                                                       *****
+                                                      ******
+                                                     *******
+                                                          
+
+                            Rich Waugh & Rey Barry
+
+
+                    ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+                             THE TECHNICAL STUFF
+
+SANTA runs on any BBS capable of generating a standard DorinfoX.Def or
+Door.Sys drop file. In fact, Rich runs a WildCat! board, while Rey runs
+PCBoard. Features of SANTA include DOS shelling, various timer functions
+(caller's time left, input-timer whenever remote input is expected, SysOp
+hot-keys to increase or decrease caller's time), carrier detection, FOSSIL
+support, non-standard IRQ support, CTS checking and more. You can check the
+caller's stats while the door is in operation. SANTA writes a log in case you
+weren't around when Santa had that little chat with a caller as well as a
+separate file which logs errors, perish the thought.
+
+                    ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+Here's what's required to implement SANTA on your board:
+
+Make a separate directory where you will run SANTA. Unzip all the files in
+the archive into this directory. Next, you must modify Santa.Cfg to reflect
+the correct information for your board (see below).
+
+EXAMPLE Santa.Cfg
+
+DrawBridge BBS                 <ÄÄ The name of your BBS.
+C:\Wc30\Wcwork\Node1\Door.Sys  <ÄÄ Path to & name of Door.Sys (DorinfoX.Def).
+1  <ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ Delay factor - increase this number
+1  <ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿        to slow down the typing speed, decrease
+                          ³        it to speed up the typing. For example,
+                          ³        making this factor .5 will increase the
+                          ³        typing speed 100%, making it 2 will slow
+                          ³        it down 100%. Experiment with different
+                          ³        values until you get a realistic typing
+                          ³        speed for your machine. For your
+                          ³        information, SANTA was written and
+                          ³        tested on a 386/25DX machine and types
+                          ³        just about right with this factor set at
+                          ³        one (1). (Remember, it's SUPPOSED to
+                          ³        emulate a jolly old elf typing - at
+                          ³        realistic human-like speeds.)
+                          ³
+                          ÀÄÄÄÄÄÄÄ An integer specifying the type of
+                                   handshake you wish to use between the CPU
+                                   and modem. Valid numbers are:
+                                             0 = NO handshake
+                                             1 = XON/XOFF
+                                             2 = CTS/RTS
+                                             3 = XON/XOFF and CTS/RTS
+                                   If you don't know what to put here, make
+                                   it 0 or 1. CTS/RTS is for high-speed
+                                   modems.
+
+                    ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+Optional command-line switches:
+
+FOSSIL  - Enable FOSSIL support. If you do not use a FOSSIL driver (such as
+          X00 or BNU) do not use this switch.
+
+FULL    - Force SANTA into full-screen mode regardless of the user's
+          graphics settings.  Rey prefers this because it properly displays
+          a Santa graphic and the longer Santa responses, but Split Screen
+          is the more 'professional' looking display.  Suit yourself.
+
+IRQ=x   - Change the default IRQ to "x".
+
+LOCAL   - Run SANTA in local mode, from the command line.
+
+SPLIT   - Force SANTA into split-screen mode.
+
+TIME=x  - Limits the caller to x% of his time-left in the door.
+
+                    ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+SANTA is run with the following syntax: SANTA  (pretty tough, huh?)
+
+EXAMPLE DoorX.Bat:
+
+@Echo Off
+Echo       * Paged Santa >> C:\Wc30\Activity.001
+Cd \Doors\Santa
+SANTA Fossil Time=80
+
+For a quick demonstration, SANTA can be run from the command line by
+typing: SANTA Local
+
+                    ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+This documentation is not intended to be a tutorial on door setup. If you've
+never set up a door before, please refer to your BBS documentation.
+
+WILDCAT! SYSOPS: The example batch file will work only if you have WildCat!
+set to SHELL to doors (refer to your in the WildCat! manual - it's on page
+221 in Rich's).
+
+PCBOARD SYSOPS: Toggle USER.SYS N and DOOR.SYS Y   There are no heavy mem
+requirements so if you don't have to shell out for other Doors you shouldn't
+for this one.  You (not the caller) may see a status line reporting that every
+caller is 92 years old.  Rey thinks he knows why and expects that on January
+1st they will all have a birthday. <g>
+
+                         FILES INCLUDED WITH Santa
+
+    SANTA.CFG     - Example configuration file.
+    SANTA.DAT     - Data file used by SANTA (fails if edited!)
+    SANTA.DOC     - The file you're reading now.
+    SANTA.EXE     - The door itself.
+    SANTA.LOG     - A typical excerpt from my Santa.Log.
+    DOOR1.BAT     - Example batch file to invoke SANTA.
+    DESC.SDI      - Short program description.
+    FILE_ID.DIZ   - Longer program description.
+
+                    ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+                     AND NOW A FEW WORDS FROM OUR SPONSOR
+                    ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+            FREE WildCat! 3.x doors/utilities from the DrawBridge
+
+
+BobCheck - Automatically send each new caller a personal "Welcome" message
+           after they pass BobCat verification. Requires BobCat and Postmstr.
+
+CheckSec - Restrict access to any door or DOS hook based on the caller's AGE
+           or security level.
+
+ChngMenu - Force callers to a new default WildCat! menu upon return from a
+           door.
+
+CodeSet  - Reset users in Master Decoder door when they reach the end of the
+           data file.
+
+MailChek - Check if last caller left any messages. (Don't bother with
+           WildMail SCAN if not.)
+
+MailDoor - Run more than one mail door from the WildCat! Mail Hook.
+
+Notify   - Run prior to or after a door to send the caller a special message.
+
+PieSet   - Reset Piesplat door players automatically when somebody wins the
+           game.
+
+QwkQuote - OLX compatible reply quote maker.
+
+TickFix  - Change the file name extension in *.TIC's from LZH or ARJ to ZIP.
+           For those who convert LZH & ARJ files to ZIP before tossing.
+
+Santa    - Cute Christmas door!
+
+SHAMpage - Answer ALL SysOp pages - whether you're around or not.
+
+ScrbNtfy - Notify players it is their move in one or more Scrabble door games
+           via a personal message addressed to them. Requires Postmstr.
+
+                    ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+                          The Freeware Hall of Fame
+
+
+The HOF does everything we can to circulate good, tested Freeware to any BBS
+that wants it, and we operate a free BBS offering unlimited downloads in the
+first or any call.
+
+The FHOF exists to give away files to sysops and callers. We provide sysops
+with a package of 136 selected Freeware programs you can add to your BBS
+download directory structure. The file descriptions come formatted for
+PCBoard, RemoteAccess, QuickBBS, SuperBBS and Majic. When that 4.5 meg packet
+is being downloaded from us the clock is off. Sysops have unlimited time to
+get it, whether at 14400 baud or 1200.
+
+Currently we count approximately 70 Bulletin Boards in North America and
+Europe that make this DIR available to callers but they're just the ones we
+know of, sysops who picked it up from us. We have no way of keeping up with
+secondary transfers from one BBS to another.
+
+We also publish and frequently update a sorted Guide to tested Freeware which
+is found on Bulletin Boards all over the world. That file is called HOFmmyy.
+The most recent is HOF1192, 39-pages when printed. The Guide is sorted 3 ways:
+by author, program name, and type.
+
+The third function of the Hall of Fame is to encourage, promote, design and
+test Freeware (Santa is an example), working with programmers to produce more
+Free programs. We alpha and beta test them and when the programs are ready we
+distribute them to a baseline network of bulletin boards. From there callers
+spread them all over the world.
+
+Rey Barry, the Freeware Hall of Fame
+804-293-4710     rbarry@turing.org
+1561 Dairy Road
+Charlottesville, VA  22903

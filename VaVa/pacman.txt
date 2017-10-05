@@ -1,0 +1,38 @@
+PACMAN:
+ - hagyományos pacman : a játékos egy a játékra igencsak jellemzo figurát irányit, 4 ellenfele van, a 
+   játék addig tart amig a játékos össze nem gyujti figurájával a játékmezon elszórt pontokat, vagy amig
+   az ellenfelek egyike meg nem eszi. A pályát található egy-két speciális pont is, melyek megevése meghatározott
+   idore megforditja a játékban résztvevo figurák szerepét, a játékos képessé válik az ellenfeleket megenni. az
+   ellenfelek a fészekben születnek újjá.
+
+
+ Szem elött tartva, hogy ez a játék egy klasszikus, a megvalósitandó program mindenképpen kell, hogy implementálja
+a hagyományos pacman játékot. Ez azonban édes kevés a sikerhez, hiszen nagyszeru pacman klónok már eddig is jószámban
+születtek (nomeg foleg majd most hogy a fél info99 rágerjed a témára), tehát a játékot a mai kor elvárásaihoz is kell
+igazitani, ez többekközött a multiplayer lehetoség, és az arcade jellegu játékmenet (pörgos, lendületes, impressziv).
+ A fentieket mérlegelve tehát egy olyan általánosabb modellt kell megkonstruálni ami magába foglalja a hagyományos játékmód
+megvalósitásának lehetoségeit, de ezen felül jóval több pluszt is szolgáltat. Most tehát akkor vizsgáljuk is meg, miféle
+plusz lehetoségeket lehet integrálni a játékba, amik az élvezhetoséget nagyban növelik, s ezzel a célközönség tábora
+várhatóan a legnagyobb lesz.
+
+Ötletek:
+  - fegyverek
+  - speciális pályaelemek
+  - multiplayer (CTF, FPS, mindenki mindenki ellen/dynablaster/)
+  - cserélheto animáció,hangok
+  - labirintus /maze/
+
+
+LINKEK:
+JAVA-s pacman - http://java4fun.com/demo/english.html
+Shockwaves pacman - http://www.games451.de/
+Javascriptes pacman - http://www.emeline.com/pacman/pacman.htm
+hümm, talán van valami használható szöveg - http://www.geocities.com/SoHo/Lofts/8112/pac.htm
+sok pacman, sok halott link. van egykét history - http://www.classicgaming.com/pac-man/home.html
+2 évell ezelötti proglabor feladat HPje - http://www.extra.hu/DownFall
+Pacman project teljes doksival (németül..) - http://www.geocities.com/SiliconValley/Horizon/1350/pacman/
+JAVA-s pacman - http://kresch.com/online_games/pacman/index.html
+
+http://www.namco.com/console/titles/pac-man_world.html
+http://www.namco.com/console/titles/ms._pac-man_maze_madness.html
+http://www.xs4all.nl/~ellman/ae-a/wacko/screenshots.html#PACMEN

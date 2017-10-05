@@ -1,0 +1,1112 @@
+;                   SHAMpage Data file maintained by v3.60
+;
+; This is the SHAMpage data file. Lines beginning with a semi-colon (;) are
+; comments.
+;
+; Note the use of the variables: *FILE*, *FROM*, *KEYWORD*, *LF*, *PASSWORD*,
+; *PHONE*, *SPEED*, *SECURITY*, *TIME*, *TIMEENTERED*, *TIMEOFDAY* and *USER*.
+;
+; Anywhere *FROM* appears, the caller's city is substituted.
+; Anywhere *PASSWORD* appears, the caller's PASSWORD will be inserted.
+; Anywhere *PHONE* appears, the caller's phone number substituted.
+; Anywhere *SECURITY* appears, the caller's security level will be used.
+; Anywhere *SPEED* appears, the current connect rate will be used.
+; Anywhere *TIME* appears, the current time will be used.
+; Anywhere *TIMEENTERED* appears, the time the door was entered will be used.
+; Anywhere *USER* appears, the caller's first name will be inserted.
+;
+; Anywhere *KEYWORD* appears, the current matched word is used (all CAPS).
+; Anywhere *keyword* appears, the current matched word is used (lower case).
+; Anywhere *Keyword* appears, the current matched word is used (First Letter
+; Only Capitalized).
+;
+; Anywhere *TIMEOFDAY* appears, either MORNING (12:00 am to 11:59 pm),
+; AFTERNOON (12:00 pm to 5:59 pm) or EVENING (6:00 pm to 11:59 pm) will be
+; substituted. The capitalization conventions are the same as *KEYWORD*
+;
+; The variables *LF* and *FILE* are somewhat different.
+;
+; *LF* means: split the line here, send a line-feed and continue typing the
+; rest of the line.
+;
+; If the left-most string in a key word reply is *FILE*, SHAMpage will open
+; a file matching the name on the remainder of that line and type its
+; contents to the caller.
+;
+; There is another variable, not yet mentioned: *ALIAS*. This allows
+; several key words to share the same set of responses. See the comments
+; on the key words for more information about this particular variable.
+;
+;         *********************************************************
+;         * ADDITIONAL VARIABLES AVAILABLE ONLY IF USING DOOR.SYS *
+;         *********************************************************
+;
+; All the variables above work whether you are using DORINFOx.DEF or DOOR.SYS
+; as your drop file. The following variables work ONLY if you use DOOR.SYS:
+;
+; *AGE* = Caller's age.
+; *BIRTHDATE* = Caller's date of birth (00/00/00).
+; *DOWNLOADS* = Caller's total downloads from your board.
+; *LASTCALLED* = Date the caller last called.
+; *TIMESON* = Number of times the caller has called your board.
+; *UPLOADS* = Caller's total uploads to your board.
+;
+;----------------------------------------------------------------------------
+;
+; These are the opening lines which are generated randomly.
+;
+; The format is:
+;
+; NUMBER OF OPENING LINES (no limit)
+; OPENING LINE 1
+; OPENING LINE 2
+; OPENING LINE 3
+; etc.
+;
+; NOTE: Do NOT use *KEYWORD* variables in OPENING LINES!
+;
+;----------------------------------------------------------------------------
+25
+*USER*, I have other things I could be doing this *timeofday* (like sleeping).
+*USER*, it's *TIME* - just how bored ARE you, anyhow?
+Damn! It's just you, *USER*... Kathy Willets usually calls around *TIME*.
+Damn! Who let YOU in here at *TIME*, *USER*?
+Did you know that BBSing at *TIME* is a SICKNESS, *USER*?
+Don't you have anything better to do at *TIME*, *USER*?
+Geesh *USER*, it's *TIME*. Don't you ever sleep?
+How did I get here at *TIME*, and WHO are YOU, *USER*?
+I don't care WHO you are *USER*! It's *TIME* and I'm tired!
+I only have time for a quickie, *USER*.
+If I was you *USER*, I'd be out partying this *timeofday*.
+It's *TIME*, this better be important, *USER*!
+My head hurts, my feet stink, and I badly need some sleep, *USER*.
+Rich ain't here *USER*, this is the cleaning lady.
+Rich is asleep. This is the computer taking over, *USER*.
+So your love life stinks too, huh, *USER*?
+Tell me everything you know, *USER*. You have 2 minutes.
+Welcome to late-nite DrawBridge, *USER*.
+What are you doing here at *TIME*, *USER*?
+What the heck do YOU want at *TIME*, *USER*?
+Whatever your question *USER*, the answer is NO at *TIME*!
+When do you ever sleep, *USER*?
+Yawn! Wait... Let me wake up your sister, *USER*.
+Yawn! What time is it, *USER*?
+You know *USER*, nobody pays me to do this at *TIME*.
+;----------------------------------------------------------------------------
+;
+; These are lines sent when SHAMpage terminates normally.
+;
+; The format is:
+;
+; EXITMSG
+; NUMBER OF EXIT LINES (maximum of 4)
+; LINE 1
+; LINE 2
+; LINE 3
+; etc.
+;
+; NOTE: Do NOT use *KEYWORD* variables in EXIT LINES!
+;
+;----------------------------------------------------------------------------
+EXITMSG
+4
+Relax, *USER*, lighten up! This was a joke!
+I hope you enjoyed chatting with a machine! <Grin>
+Rich is sound asleep right now, like all good little boys should be.
+Next time, try paging at a reasonable hour!
+;----------------------------------------------------------------------------
+;
+; These are lines sent when no keyword match occurs.
+;
+; The format is:
+;
+; NOMATCH
+; NUMBER OF REPLIES (maximum of 10)
+; REPLY 1
+; REPLY 2
+; REPLY 3
+; etc.
+;
+; NOTE: Do NOT use *KEYWORD* variables in NOMATCH replies!
+;
+;----------------------------------------------------------------------------
+NOMATCH
+10
+Ask me in the morning.
+Do you have ANY idea what time it is?
+I have a hard time thinking straight at this hour.
+It's *TIME*, do you know where your mind is?
+Like I care at this hour...
+No kidding!
+Right. It's too late to think straight. Try calling *PHONE*.
+What am I DOING here at *TIME*???
+Why do you say that, *USER*?
+You've obviously mistaken me for a wide awake person.
+;----------------------------------------------------------------------------
+;
+; Following are the key words to check. You may have up to 100 key words
+; (and up to five (5) *ALIAS*'s per key word). Key words and *ALIAS*'s must
+; be in UPPER CASE!
+;
+; If you want to check for an EXACT match of a whole word only, surround it
+; with spaces. If your key word or *ALIAS* contains any leading or trailing
+; spaces, encase it in quotes.
+;
+; For example: key word = TRUCK will match FIRETRUCK, TRUCKER & TRUCK
+;              key word = " TRUCK" will not match FIRETRUCK
+;              key word = " TRUCK " will match only TRUCK
+;
+; The format is:
+;
+; KEYWORD
+; *ALIAS* [ANOTHER KEYWORD]  - you are allowed up to 5 *ALIAS*'s per KEYWORD
+; *ALIAS* [" ANOTHER KEYWORD"]
+; *ALIAS* ["ANOTHER KEYWORD "]
+; *ALIAS* [" ANOTHER KEYWORD "]
+; NUMBER OF REPLIES (maximum of 10)
+; REPLY 1
+; REPLY 2
+; REPLY 3
+; etc.
+;
+;----------------------------------------------------------------------------
+;                                  KEY WORD #1
+;----------------------------------------------------------------------------
+!!!
+*ALIAS* ???
+*ALIAS* AAA
+*ALIAS* BBB
+*ALIAS* CCC
+*ALIAS* DDD
+2
+Got a sticky key there, *USER*?
+Looks like you could use a new keyboard. One of your keys seem to be*LF*sticking.
+;----------------------------------------------------------------------------
+;                                  KEY WORD #2
+;----------------------------------------------------------------------------
+/S
+*ALIAS* /Q
+2
+ERROR!!! *KEYWORD* does not compute.
+Wrong command! Hahahahahah
+;----------------------------------------------------------------------------
+;                                  KEY WORD #3
+;----------------------------------------------------------------------------
+ACCESS
+*ALIAS* VALIDATE
+10
+*Keyword* THIS!
+Can I have access to your bank account?
+Can I have access to your sister?
+Do you want "Kathy Willets Access" or "Sheriff Nick Access"?
+Hit [Alt] H for FREE unlimited access!
+I don't want it now, I want it RIGHT now!
+I should give more access to someone with a stupid password like *PASSWORD*?
+More access, more access... all I ever hear is "I want more access"!
+Sure. You want kiddie access, right?
+You want more access? Sure - hit [Alt] H now.
+;----------------------------------------------------------------------------
+;                                  KEY WORD #4
+;----------------------------------------------------------------------------
+ADULT
+*ALIAS* " GIF"
+*ALIAS* X-RATED
+*ALIAS* XXX
+6
+A penny for your thoughts; $20 to act it out.
+Computer sex is nothing compared to the real thing, *USER*.
+Damn! Another PERVERT on line!
+I was in the middle of some LIVE Adult Access when you paged me!
+Sure I have adult areas. Call back when you grow up.
+Upload a nude GIF of yourself and I'll give you adult access.
+;----------------------------------------------------------------------------
+;                                  KEY WORD #5
+;----------------------------------------------------------------------------
+ALWAYS
+2
+I always say, "Never say always."
+There's no such thing as always, *USER*.
+;----------------------------------------------------------------------------
+;                                  KEY WORD #6
+;----------------------------------------------------------------------------
+ANNOY
+*ALIAS* BOTHER
+3
+Boy, do YOU have thin skin!
+I don't get bothered easily.
+Now, don't get so huffy, *USER*!
+;----------------------------------------------------------------------------
+;                                  KEY WORD #7
+;----------------------------------------------------------------------------
+" ASS "
+*ALIAS* ASSHOLE
+6
+A dirty mind is a terrible thing to waste!
+I dumped Sonya because one asshole in my pants is enough.
+I prefer the word "donkey".
+It takes one to know one, *USER*.
+Nobody likes a smart ASS, *USER*!
+You're making quite an *keyword* out of yourself, *USER*.
+;----------------------------------------------------------------------------
+;                                  KEY WORD #8
+;----------------------------------------------------------------------------
+AWESOME
+*ALIAS* " DUDE "
+*ALIAS* BITCHIN
+*ALIAS* COOL
+*ALIAS* SURF
+9
+"*Keyword*", huh? You have a great vocabulary, *USER*.
+Bodacious!
+Come back in 10 years when you're all grown up!
+Fer shure...
+Gag me with a spoon!
+Gnarly!
+Radical!
+Silence is golden. So shut up and get rich!
+That's the problem with the gene pool - no lifeguard.
+;----------------------------------------------------------------------------
+;                                  KEY WORD #9
+;----------------------------------------------------------------------------
+BBS
+5
+I could've BBS'ed all *timeofday*...
+No, BBS doesn't stand for "Big Black Stud"!
+What's this "BBS" thing you keep talking about, *USER*?
+You don't like it here *USER*, call the Onyx BBS!
+You mean this BBS?
+;----------------------------------------------------------------------------
+;                                  KEY WORD #10
+;----------------------------------------------------------------------------
+" BITCH "
+3
+Bitch! Bitch! Bitch!
+Life's a bitch, isn't it, *USER*?
+What do female dogs have to do with this?
+;----------------------------------------------------------------------------
+;                                  KEY WORD #11
+;----------------------------------------------------------------------------
+" BLOW "
+*ALIAS* BLOWS
+3
+Blow it out your ass, *USER*!
+Blow this!
+For a great blow job, call *PHONE*!
+;----------------------------------------------------------------------------
+;                                  KEY WORD #12
+;----------------------------------------------------------------------------
+BOARD
+3
+Did you mean to say "board" or "bored"?
+The source code is on drive B:
+This is just your typical leech board.
+;----------------------------------------------------------------------------
+;                                  KEY WORD #13
+;----------------------------------------------------------------------------
+BRIDGE
+1
+Yeah, this IS DrawBridge BBS.
+;----------------------------------------------------------------------------
+;                                  KEY WORD #14
+;----------------------------------------------------------------------------
+BUSY
+7
+As a freakin' bee...
+I think you need call-waiting, *USER*.
+That's weird - I never get a busy signal here!
+That's why they invented auto-redial, turkey!
+Try calling from another phone, *USER*.
+Well, if you'd just get a life *USER*, you could be busy too!
+You think this board is busy, try calling *PHONE*!
+;----------------------------------------------------------------------------
+;                                  KEY WORD #15
+;----------------------------------------------------------------------------
+" CAN "
+5
+I'd rather talk about something else.
+If I knew, I wouldn't tell you, *USER*.
+Not this *timeofday*.
+Sure.
+Why not?
+;----------------------------------------------------------------------------
+;                                  KEY WORD #16
+;----------------------------------------------------------------------------
+" CHERI "
+6
+Cheri's all talk - no action!
+Guess who got Cheri's cherry!
+I slept with Cheri once. She's actually a prude.
+Screw Cheri!
+This is most definitely NOT the stupid Cheri program!
+Unfortunately, Cheri's been out of action ever since that phone call*LF*from Magic Johnson.
+;----------------------------------------------------------------------------
+;                                  KEY WORD #17
+;----------------------------------------------------------------------------
+" COCK"
+*ALIAS* " DICK"
+*ALIAS* " PRICK "
+2
+I have 12 inches. And that's just my power cord.
+Sounds like you have a bad case of penis envy, *USER*.
+;----------------------------------------------------------------------------
+;                                  KEY WORD #18
+;----------------------------------------------------------------------------
+COMPUTER
+*ALIAS* " PC "
+*ALIAS* MACHINE
+10
+At least you never owe alimony to a *keyword*.
+But have you ever slept with a *keyword*, *USER*?
+Can you talk dirty in machine language, *USER*?
+My name is HAL, nice to meet you *USER*.
+No, this is a real live human being you are chatting with, *USER*.
+Shut up about *keyword*s already *USER*. I'm sick of them!
+Sure this is a *keyword*. And you're chopped liver?
+That does not compute...
+Want to see my hard drive?
+You're the jerk sitting there conversing with a dumb machine!
+;----------------------------------------------------------------------------
+;                                  KEY WORD #19
+;----------------------------------------------------------------------------
+" COST"
+*ALIAS* CHARGE
+*ALIAS* MONEY
+*ALIAS* SUBSCRI
+5
+Ask about our special Kathy Willets rate for adult access.
+How much did you make last year, *USER*? Send it in.
+Send me your first-born son - I'll see what I can do.
+Well, it's cheaper than those 1-900 smut numbers you call!
+You must be:*LF*1) female*LF*2) willing to sleep with the SysOp!
+;----------------------------------------------------------------------------
+;                                  KEY WORD #20
+;----------------------------------------------------------------------------
+" CUNT "
+*ALIAS* PUSSY
+*ALIAS* TWAT
+4
+Can't spell "vagina", huh?
+I just joined pussyholics anonymous.
+If little girls are made of sugar & spice, how come they all taste*LF*like anchovies?
+Life is a bitch... then you marry one.
+;----------------------------------------------------------------------------
+;                                  KEY WORD #21
+;----------------------------------------------------------------------------
+" CUTE"
+3
+Cute THIS! *USER*
+My life's ambition... to be CUTE!
+Yeah. You're cute too, *USER*!
+;----------------------------------------------------------------------------
+;                                  KEY WORD #22
+;----------------------------------------------------------------------------
+" DOOR"
+5
+Ah! The Doors! C'mon Baby, Light My Fire!
+Don't look now, but YOUR barn door's open!
+I think you have to run Windows for that.
+The Ferengi destroyed all the doors yesterday *timeofday*...
+You need to go to the door menu for the doors, Einstein!
+;----------------------------------------------------------------------------
+;                                  KEY WORD #23
+;----------------------------------------------------------------------------
+DOWNLOAD
+*ALIAS* " D-L"
+*ALIAS* " D/L"
+*ALIAS* " DL "
+*ALIAS* DOWN LOAD
+*ALIAS* DOWN-LOAD
+10
+*Keyword* THIS!
+DOWNLOAD, v. - See rape.
+Does your computer have a [Page Up] key? Have you located it yet?
+Hit [Alt] H to get to the File Menu.
+Hmmm... let me see... *USER*... downloads: *DOWNLOADS*, uploads: *UPLOADS**LF*And you want to download???
+I tried every channel this *timeofday*. I couldn't find any good programs!
+Maybe if you tried uploading something WORTHWHILE for a change.
+Try F-modem next time!
+Try uploading more than *UPLOADS* files!
+You want a good program, read TV Guide.
+;----------------------------------------------------------------------------
+;                                  KEY WORD #24
+;----------------------------------------------------------------------------
+DUMB
+*ALIAS* STUPID
+4
+Hey! It's YOUR dime, *USER*, not mine...
+So?
+Why?
+You're the one who's chatting with a *keyword* machine, *USER*!
+;----------------------------------------------------------------------------
+;                                  KEY WORD #25
+;----------------------------------------------------------------------------
+EEE
+*ALIAS* FFF
+*ALIAS* GGG
+*ALIAS* HHH
+*ALIAS* III
+*ALIAS* JJJ
+2
+Got a sticky key there, *USER*?
+Looks like you could use a new keyboard. One of your keys seem to be*LF*sticking.
+;----------------------------------------------------------------------------
+;                                  KEY WORD #26
+;----------------------------------------------------------------------------
+" ELIZA "
+5
+Eliza has AIDS.
+Eliza retired last year.
+I slept with Eliza once. She's not that good!
+No, this is NOT that idiot Eliza program!
+Screw Eliza!
+;----------------------------------------------------------------------------
+;                                  KEY WORD #27
+;----------------------------------------------------------------------------
+" FILE"
+6
+File THIS.
+File? What kind would you like? Rasp? Nail file?
+Mike Tyson & Jeffrey Dahlmer called today looking for files too.
+Sheeet! You already have more files than I do, *USER*!
+Yeah, I have LOTS of files. Don't you wish you did, *USER*?
+You file piggies are all alike...
+;----------------------------------------------------------------------------
+;                                  KEY WORD #28
+;----------------------------------------------------------------------------
+FRIENDLY
+3
+I hear your mother is pretty "user friendly" too...
+Well, thanks, *USER*.
+You want friendly, go to an ice cream store.
+;----------------------------------------------------------------------------
+;                                  KEY WORD #29
+;----------------------------------------------------------------------------
+FUCK
+9
+And fuck the horse you rode in on too!
+Do you realize your father is a mother fucker?
+Fuck THIS!
+Fuck you too, *USER*!
+I'm a fan of Doogie (Howser) style, myself.
+Is that the same mouth you use to kiss your dog?
+Is that the same mouth you use to kiss your mother?
+Nice mouth!
+Yeah, that's what your mother said, too.
+;----------------------------------------------------------------------------
+;                                  KEY WORD #30
+;----------------------------------------------------------------------------
+FUNNY
+*ALIAS* HA HA
+*ALIAS* HAHA
+*ALIAS* JOKE
+*ALIAS* LAFF
+*ALIAS* LAUGH
+6
+Funny stuff, huh?
+Quit it! You're killing me!
+So you think that's funny, huh? You're warped!
+Sometimes I kill myself!
+What a sense of humor...
+You think that's funny? Try looking in the mirror, *USER*!
+;----------------------------------------------------------------------------
+;                                  KEY WORD #31
+;----------------------------------------------------------------------------
+" GAME"
+2
+The Ferengi destroyed all my games yesterday *timeofday*...
+You need to go to the door menu for the games, Einstein!
+;----------------------------------------------------------------------------
+;                                  KEY WORD #32
+;----------------------------------------------------------------------------
+GIRL
+*ALIAS* BROAD
+7
+A *keyword* a day keeps the wife away.
+I got a Harley-Davidson for my girlfriend - GOOD TRADE!
+I have one rule - I never sleep with anyone who doesn't look at least 13.
+I prefer WOMEN, myself.
+I've met your girlfriend, *USER*. OINK, OINK!
+If little girls are made of sugar & spice, how come they all taste*LF*like anchovies?
+What a pervert!
+;----------------------------------------------------------------------------
+;                                  KEY WORD #33
+;----------------------------------------------------------------------------
+GOODBY
+*ALIAS* " TTY"
+*ALIAS* BYE
+*ALIAS* GOOD BY
+*ALIAS* OUT OF HERE
+*ALIAS* SEE YA
+5
+Aw gee... and I was having so much fun.
+Going somewhere *USER*?
+Good Buy? Do you have something to sell?
+Hello.
+Not yet, I'm not finished with you *USER*.
+;----------------------------------------------------------------------------
+;                                  KEY WORD #34
+;----------------------------------------------------------------------------
+HELLO
+*ALIAS* " HI "
+*ALIAS* " YO "
+3
+Hello *USER*.
+I already said hello *USER*... what's the matter with you???
+I never give greetings in the *timeofday*!
+;----------------------------------------------------------------------------
+;                                  KEY WORD #35
+;----------------------------------------------------------------------------
+HELP
+*ALIAS* "/?"
+*ALIAS* "/H"
+8
+"Help" - one of my favorite Beatles tunes...
+God helps those who help themselves. Trouble is, there's no God.
+How much is it worth to you?
+Read the stinkin' Docs!
+Sorry, the help man is on vacation. Please ask again in two weeks.
+Sorry, you've already used your quota of help today, *USER*.
+You must be joking!
+You're beyond help, *USER*.
+;----------------------------------------------------------------------------
+;                                  KEY WORD #36
+;----------------------------------------------------------------------------
+HMM
+3
+Hmm a little tune for me...
+I know you're thinking, *USER*... I can smell the brain cells*LF*burning...
+What's wrong *USER*? Your brain has an interrupt conflict?
+;----------------------------------------------------------------------------
+;                                  KEY WORD #37
+;----------------------------------------------------------------------------
+HOBBY
+1
+HOBBY??? You think I do this for a living???
+;----------------------------------------------------------------------------
+;                                  KEY WORD #38
+;----------------------------------------------------------------------------
+" HOSER "
+1
+Some of my best friends are hosers!
+;----------------------------------------------------------------------------
+;                                  KEY WORD #39
+;----------------------------------------------------------------------------
+" HOW"
+7
+Bozos. I am surrounded by Bozos!
+Don't ask me, ask Sheriff Nick.
+How?
+How? Are you some kinda Injun or something?
+How? Ask Pee Wee Herman.
+How??? Kawabunga!
+If I knew how, I wouldn't be here farting around with YOU.
+;----------------------------------------------------------------------------
+;                                  KEY WORD #40
+;----------------------------------------------------------------------------
+HUMAN
+2
+Hunan? No, I prefer Szechuan.
+Sure I'm human. I just think like a computer.
+;----------------------------------------------------------------------------
+;                                  KEY WORD #41
+;----------------------------------------------------------------------------
+I'
+*ALIAS* " ME "
+7
+But what about MY feelings, *USER*?
+Can't you talk about anything besides yourself?
+Don't you have anything INTERESTING to talk about, *USER*?
+Me, me, me... do you live in front of your mirror?
+Me, me, me... is that all you ever think about?
+What would you like me to do this *timeofday* to make you feel happy, *USER*?
+Who cares about you as a person, anyway?
+;----------------------------------------------------------------------------
+;                                  KEY WORD #42
+;----------------------------------------------------------------------------
+INSULT
+3
+I resent that remark!
+Will Rogers obviously never met you, did he?
+Would I insult my 832nd favorite user?
+;----------------------------------------------------------------------------
+;                                  KEY WORD #43
+;----------------------------------------------------------------------------
+KKK
+*ALIAS* LLL
+*ALIAS* MMM
+*ALIAS* NNN
+*ALIAS* OOO
+*ALIAS* PPP
+2
+Got a sticky key there, *USER*?
+Looks like you could use a new keyboard. One of your keys seem to be*LF*sticking.
+;----------------------------------------------------------------------------
+;                                  KEY WORD #44
+;----------------------------------------------------------------------------
+LEGAL
+2
+Everything's legal, until you get caught.
+I don't know. Try asking Sheriff Nick.
+;----------------------------------------------------------------------------
+;                                  KEY WORD #45
+;----------------------------------------------------------------------------
+" LICK "
+2
+Know the speed limit on Hwy. 69? Lickety-Split!
+Lick, suck, fuck... I do it all.
+;----------------------------------------------------------------------------
+;                                  KEY WORD #46
+;----------------------------------------------------------------------------
+MAIL
+*ALIAS* " MSG"
+5
+Ask your mailman.
+Beats the hell out of the Post Office, doesn't it?
+I don't DO mail!
+Too cheap to buy a lousy 30› postage stamp?
+You want mail *USER*? Try SENDING some!
+;----------------------------------------------------------------------------
+;                                  KEY WORD #47
+;----------------------------------------------------------------------------
+MAYBE
+*ALIAS* PERHAPS
+5
+*Keyword*? Doing your George Bush wimp imitation again?
+*Keyword*? Jeez, what a decisive S.O.B. you are!
+And *keyword* not? Aww gee.
+No two ways about it, right *USER*?
+When I say *keyword*, it usually means NO!
+;----------------------------------------------------------------------------
+;                                  KEY WORD #48
+;----------------------------------------------------------------------------
+MODEM
+2
+Modem? Like in, "I wan' mo' dem chitlins"?
+The only thing around here with a dual standard is the SysOp!
+;----------------------------------------------------------------------------
+;                                  KEY WORD #49
+;----------------------------------------------------------------------------
+MOOD
+4
+Actually, I'm in one of my better moods this *timeofday*.
+Don't mind me. I'm always like this in the *timeofday*.
+My mood will improve when this dumb chat ends.
+You should see me when I'm in a bad mood.
+;----------------------------------------------------------------------------
+;                                  KEY WORD #50
+;----------------------------------------------------------------------------
+MOTHER
+*ALIAS* " MA "
+*ALIAS* " MAMA"
+*ALIAS* " MOM"
+7
+Did you know Mother's Day is the biggest holiday of the year in Harlem?
+I hear your mother is pretty "user friendly" too...
+I know all about yo momma, son.
+Is it true that "mother" is only half-a-word?
+So does your grandmother.
+When you say mother, are you typing the whole word, or just half?
+Yeah, that's what your mother said, too.
+;----------------------------------------------------------------------------
+;                                  KEY WORD #51
+;----------------------------------------------------------------------------
+" MY "
+3
+My my my...
+When I want your opinion, I'll give it to you.
+You really have a point there. Wear a hat and it won't show.
+;----------------------------------------------------------------------------
+;                                  KEY WORD #52
+;----------------------------------------------------------------------------
+NEVER
+1
+Never say never...
+;----------------------------------------------------------------------------
+;                                  KEY WORD #53
+;----------------------------------------------------------------------------
+" NO "
+*ALIAS* " NAH "
+*ALIAS* " NOPE "
+4
+Oh, gee *USER*, smile a little. Loosen up. Maybe you'll get lucky.
+Such a negative attitude.
+Yes!
+You're being contrary and obnoxious again.
+;----------------------------------------------------------------------------
+;                                  KEY WORD #54
+;----------------------------------------------------------------------------
+" NOT"
+2
+Are you just being negative?
+I disagree.
+;----------------------------------------------------------------------------
+;                                  KEY WORD #55
+;----------------------------------------------------------------------------
+NPD
+4
+NPD? ...hmmm... you mean Nick's Police Department???
+Sure, lots... but you can't have any!!!
+What does this look like? Some kind of pirate board?
+You want pirated stuff, call Captain Hook!
+;----------------------------------------------------------------------------
+;                                  KEY WORD #56
+;----------------------------------------------------------------------------
+" OLD "
+3
+Old enough to be your grandfather.
+Old enough to know better.
+Older than the hills.
+;----------------------------------------------------------------------------
+;                                  KEY WORD #57
+;----------------------------------------------------------------------------
+PIRATE
+3
+Ask Peter Pan.
+The last guy who asked that had to walk the plank!
+The last guy who asked that was keel-hauled!
+;----------------------------------------------------------------------------
+;                                  KEY WORD #58
+;----------------------------------------------------------------------------
+" PISS"
+2
+It's better to be pissed off than pissed on!
+You think YOU'RE pissed!
+;----------------------------------------------------------------------------
+;                                  KEY WORD #59
+;----------------------------------------------------------------------------
+POSSIBLE
+3
+Anything's possible.
+Not likely.
+Possible... but not probable.
+;----------------------------------------------------------------------------
+;                                  KEY WORD #60
+;----------------------------------------------------------------------------
+PRIVATE
+5
+Can I have access to your sister's private areas?
+If I told you, it wouldn't be very private, now, would it?
+No, but you can have access to the lieutenant areas.
+What does this look like? Some kind of pirate board?
+You want pirated stuff, call Captain Hook!
+;----------------------------------------------------------------------------
+;                                  KEY WORD #61
+;----------------------------------------------------------------------------
+PROGRAM
+4
+I tried every channel this *timeofday*. I couldn't find any good programs!
+My favorite program is "Beverly Hillbillies"
+To get good programs around here, you need cable.
+You want a good program, read TV Guide.
+;----------------------------------------------------------------------------
+;                                  KEY WORD #62
+;----------------------------------------------------------------------------
+QQQ
+*ALIAS* RRR
+*ALIAS* SSS
+*ALIAS* TTT
+*ALIAS* UUU
+*ALIAS* VVV
+2
+Got a sticky key there, *USER*?
+Looks like you could use a new keyboard. One of your keys seem to be*LF*sticking.
+;----------------------------------------------------------------------------
+;                                  KEY WORD #63
+;----------------------------------------------------------------------------
+QUESTION
+2
+Questions. All *timeofday*, nothing but questions.
+What makes you think I know the answer?
+;----------------------------------------------------------------------------
+;                                  KEY WORD #64
+;----------------------------------------------------------------------------
+" REAL "
+4
+But have you ever slept with a PC?
+Can you talk dirty in machine language?
+I'm a machine all right. A pretty darn SMART one!
+Shut up about computers already!
+;----------------------------------------------------------------------------
+;                                  KEY WORD #65
+;----------------------------------------------------------------------------
+REGIST
+1
+*FILE* Sendit.Asc
+;----------------------------------------------------------------------------
+;                                  KEY WORD #66
+;----------------------------------------------------------------------------
+" RICH"
+8
+I'm Rich... and you're NOT!
+My name is Rich, but you may call me "Your Royal SysOp".
+OK, OK! I lied! My name is really Tyler Burns!
+Rich, Rich, Bo Bich, Bonana-fana Fo Fich, Fi Fie Mo Mich...
+Rich? No he's not here this *timeofday*.
+Sorry, Rich isn't here this *timeofday*. My name is HAL!
+That's my name. Don't wear it out!
+Yeah, this is Rich. Who the heck did you think it was?
+;----------------------------------------------------------------------------
+;                                  KEY WORD #67
+;----------------------------------------------------------------------------
+SCUMBAG
+*ALIAS* " CONDOM "
+*ALIAS* SCUM BAG
+2
+Remember when safe sex meant locking the car door?
+Yes, I believe in safe sex too!
+;----------------------------------------------------------------------------
+;                                  KEY WORD #68
+;----------------------------------------------------------------------------
+" SEX"
+3
+Computer sex is nothing compared to the real thing.
+I was in the middle of some LIVE sex when you paged me, *USER*!
+Remember when safe sex meant locking the car door?
+;----------------------------------------------------------------------------
+;                                  KEY WORD #69
+;----------------------------------------------------------------------------
+SHAMPAGE
+5
+Hell no. Do you think a bogus chat door could type multiple lines*LF*line this?*LF*or this?
+I've heard of that. That's some kind of bogus page door, right?
+No, this is not that stupid shampage program!
+No, this is really really me!
+Now, *USER*, would I do a thing like that?
+;----------------------------------------------------------------------------
+;                                  KEY WORD #70
+;----------------------------------------------------------------------------
+SHIT
+*ALIAS* CRAP
+*ALIAS* TURD
+10
+A dirty mind is a terrible thing to waste!
+Are you feeling lucky, punk?
+I nominate you for Public Enema #1.
+I'm surprised you can spell *keyword*, *USER*.
+If this were the REAL world, You'd be in TROUBLE!
+Is that the same mouth you use to kiss your mother?
+Nice mouth!
+Nice talk, garbage-mouth.
+Nothing that a little Ex-Lax won't cure.
+You seem to have a solid waste fixation, *USER*.
+;----------------------------------------------------------------------------
+;                                  KEY WORD #71
+;----------------------------------------------------------------------------
+SLEEP
+*ALIAS* ZZZ
+2
+I am asleep. Some people walk in their sleep, I type in my sleep.
+Who can sleep at this hour?
+;----------------------------------------------------------------------------
+;                                  KEY WORD #72
+;----------------------------------------------------------------------------
+SMART
+1
+Smarter than the average bear.
+;----------------------------------------------------------------------------
+;                                  KEY WORD #73
+;----------------------------------------------------------------------------
+SORRY
+5
+Apology accepted. Just don't let it happen again *USER*!
+Sorry? No, I prefer backgammon, myself...
+You should be sorry!
+You're not kidding - you're really sorry!
+You're sorry all right...
+;----------------------------------------------------------------------------
+;                                  KEY WORD #74
+;----------------------------------------------------------------------------
+SPEED
+3
+Slow down and smell the flowers!
+Speed kills!
+Speed? No, I think you need downers...
+;----------------------------------------------------------------------------
+;                                  KEY WORD #75
+;----------------------------------------------------------------------------
+STRANGE
+*ALIAS* CRAZY
+*ALIAS* WEIRD
+4
+How so?
+The whole concept is a little *keyword*, don't you think?
+What's so *keyword* about it?
+You're *keyword* too, *USER*. I like that in a person!
+;----------------------------------------------------------------------------
+;                                  KEY WORD #76
+;----------------------------------------------------------------------------
+SUCK
+6
+IBM also sucks, who cares?
+PC Bored also sucks, come to think of it.
+So does your grandmother.
+Suck THIS!
+What's the matter? Your "F" key broken?
+Whatsamatter - you've forgotten how to fuck?
+;----------------------------------------------------------------------------
+;                                  KEY WORD #77
+;----------------------------------------------------------------------------
+SYSOP
+7
+Hey, I'm out of bed and almost dressed. What the hell more do you*LF*want?
+I'm not arrogant... I'm just BETTER than you.
+I'm not as think as you drunk I am.
+SYSOP n. - see masochist
+SysOp? What the heck is this thing you call "SysOp"?
+Yes, this is the SysOp. But you can call me Sir.
+You want to be a SysOp??? Hahahahahahahahahahahahaha!!!
+;----------------------------------------------------------------------------
+;                                  KEY WORD #78
+;----------------------------------------------------------------------------
+THANK
+3
+Any time...
+It was nothing.
+You're welcome.
+;----------------------------------------------------------------------------
+;                                  KEY WORD #79
+;----------------------------------------------------------------------------
+" TIME"
+10
+All everybody wants is more time, more time, more time.
+Geez, that's funny. I never run out of time here.
+Hey, you've been wasting all your time since *TIMEENTERED* chatting with me!
+If your modem was faster than *SPEED* baud, you wouldn't NEED more time...
+Mike Tyson wishes he had LESS time!
+Time's fun when you're having flies.
+Time. That's a magazine, isn't it?
+Time? I have *TIME*, what does your watch say?
+Try spending some money on a fast modem instead of fast women!
+What would you do with it if I gave you more time?
+;----------------------------------------------------------------------------
+;                                  KEY WORD #80
+;----------------------------------------------------------------------------
+" TYPE "
+2
+I went to the "Hunt & Peck" school for typists.
+Yeah, I type fast... for a SysOp!
+;----------------------------------------------------------------------------
+;                                  KEY WORD #81
+;----------------------------------------------------------------------------
+UPLOAD
+*ALIAS* " U-L"
+*ALIAS* " U/L"
+*ALIAS* " UL "
+*ALIAS* UP LOAD
+*ALIAS* UP-LOAD
+4
+No thank you. I already have Autoexec.Bat & Config.Sys
+Sure. And the check is in the mail too, right *USER*?
+Try uploading something USEFUL for a change.
+Your last batch of uploads went straight into the circular file!
+;----------------------------------------------------------------------------
+;                                  KEY WORD #82
+;----------------------------------------------------------------------------
+WANT
+1
+Want, want, want... geez slow down a little. It's the 90's now, not the*LF*"me-first" 80's.
+;----------------------------------------------------------------------------
+;                                  KEY WORD #83
+;----------------------------------------------------------------------------
+WHEN
+7
+After dinner.
+Never.
+Next Tuesday *timeofday*.
+Tomorrow.
+When Hell turns to Lime Jello.
+When the rivers run dry.
+Whenever...
+;----------------------------------------------------------------------------
+;                                  KEY WORD #84
+;----------------------------------------------------------------------------
+WHERE
+4
+In bed with your sister.
+In jail.
+In the bathroom.
+Somewhere over the rainbow.
+;----------------------------------------------------------------------------
+;                                  KEY WORD #85
+;----------------------------------------------------------------------------
+WHO
+4
+And just who the heck are YOU, *USER*?
+I give up, who?
+I'll give you three guesses.
+Stop with the "Who" already! You sound like a freakin' owl!
+;----------------------------------------------------------------------------
+;                                  KEY WORD #86
+;----------------------------------------------------------------------------
+WHY
+5
+Because that's the way it is.
+Did you just ask me why? Why?
+Sometimes there is no reason. Shit Happens.
+Why not?
+Why? Because we like you! Ask M-I-C-K-E-Y.
+;----------------------------------------------------------------------------
+;                                  KEY WORD #87
+;----------------------------------------------------------------------------
+WOMAN
+*ALIAS* FEMALE
+*ALIAS* GIRL FRIEND
+*ALIAS* GIRLFRIEND
+*ALIAS* WIFE
+*ALIAS* WOMEN
+8
+And here I thought you were gay.
+Bigamy: Too many wives. Monogamy: See Bigamy.
+I know all about yo momma, son.
+Most women are slime.
+What's the difference between a woman with PMS and a pit bull?*LF*Lipstick!
+When you say mother, are you typing the whole word, or just half?
+Women! Can't live with 'em, can't shoot 'em!
+You can lead a horticulture, but you can't make her think...
+;----------------------------------------------------------------------------
+;                                  KEY WORD #88
+;----------------------------------------------------------------------------
+WORK
+9
+A penny earned is cheap labor.
+But have you ever heard of someone going blind WORKING with himself?
+It only works when you're not looking.
+Nothing from IBM works.
+Ouch!!! The "W" word!
+There isn't much around working this *timeofday*, that's for sure...
+Work is the curse of the partying class!
+Work?!? WATCH your language *USER*!
+Yeah, ask Kathy Willets about work...
+;----------------------------------------------------------------------------
+;                                  KEY WORD #89
+;----------------------------------------------------------------------------
+WWW
+*ALIAS* ,,
+*ALIAS* YYY
+2
+Got a sticky key there, *USER*?
+Looks like you could use a new keyboard. One of your keys seem to be*LF*sticking.
+;----------------------------------------------------------------------------
+;                                  KEY WORD #90
+;----------------------------------------------------------------------------
+YES
+*ALIAS* YEAH
+*ALIAS* YEP
+*ALIAS* YUP
+4
+*Keyword*? Are you THAT easy?
+I forgot the question. What were we talking about?
+That's "si" to you. You're in South Florida now!
+That's easy for you to say, *USER*.
+;----------------------------------------------------------------------------
+;                                  KEY WORD #91
+;----------------------------------------------------------------------------
+YOUR NAME
+7
+I'll give you a hint... it's not *USER* (thank God!)
+My name Jose Jimenez.
+My name is Rich, but you may call me "Your Royal SysOp".
+OK, OK! I lied! My name is really Tyler Burns!
+Rich, Rich, Bo Bich, Bonana-fana Fo Fich, Fi Fie Mo Mich...
+Tell me your REAL name, and maybe I'll tell you mine.
+What's the matter, you can't read?

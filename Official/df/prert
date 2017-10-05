@@ -1,0 +1,276 @@
+
+
+	Projectértékelés
+
+
+	A project a Számítógép labor IV. keretében jött létre, egy
+mintapélda megoldására. A feladat keretében egy komoly programozói feladat
+megoldásához használatos eszközöket kellett beépíteni a megoldás
+folyamatába. 
+	A feladat a DownFall nevû játék megvalósítása volt. A játék leírása
+és a tárgykiírás megtalálható a függelékben.
+	A feladat közben teljes dokumentációt kellett készíteni, ide értve
+az elõzetes terveket, a közbeni dokumentációkat, majd a lezáró
+értékeléseket. A program tervezési fázisait is részletesen kellett
+dokumentálni.
+	A feladat jellege miatt azonban a dokumentácók elõnyei nem
+jelentkeztek. A kidolgozandó feladat összetettsége, bonyolultsága elmaradt
+attól a szinttõl, ami szükségessé tette volna ezt a dokumentálást. Ez itt
+inkább felesleges plusszként látszott, mint a projectet segítõ tényezõként.
+A dokumentálás mellett az objektum-orientált programozásról is rossz képet
+fest a program. Ahhoz, hogy értelme legyen az ilyen szintû objektumoknak,
+nagyobb, lényegi részekre bonthatónak kellett volna lenni a feladatnak.
+Most azonban minden kis részletre külön objektum került bevezetésre, mely
+csökkentette a program átláthatóságát, nyomon követhetõségét, javítását.
+Emellett fölösleges erõforrásokat igényel a futtatási környezettõl,
+valamint a fordítást is körülményessé teszi.
+	Mindezek ellenére a feladat teljes kidolgozása nagy segítséget
+nyújt egy komolyabb project kidolgozásában, azonban a hevenyészett
+kidolgozás nem teszi átláthatóvá a dokumentációk elõnyét, s a kinkeserves
+kidolgozás miatt a továbbiakban eltekintenek tõle. Ez mindenképp káros lesz
+további munkáik során.
+
+A feladat kidolgozásáról: 
+	Az elõzetes tervektõl el kellett térnünk, s át kellett
+csoportosítanunk az emberi erõforrásainkat. Nem volt elegendõ az egy
+személyes dokumentálás, mindannyiunknak be kellett állnunk a sorba, s az
+adatfelvitelhez külsõ segítséget is igénybe kellett vennünk. Így a program
+kidolgozására kevés idõnk maradt, s az átadáskor épphogy mûködõ állapotot
+sikerült elérnünk vele.
+	Szerencsénkre az indulás elõtt célirányosan végeztük el a
+megvalósíthatósági teszteket, így a programozás idõigényét sikerült
+jelentõsen csökkentenünk. A felhasznált CASE és automatikus scripteknek
+köszönhetõen teljes egészében eleget tesz a programunk a GNU (a választott
+licensz) elvárásainak, s a közben elkészült 14 ezer soros forrás nagy
+részét sikerült pontosan kontrollálnunk, s átlátni a veghezvitt
+változásokat a jól használható CASE eszköz miatt. Körülbelül 3000 sorra
+sikerült csökkenteni a "vakon" történõ programozást, ami csökkentette a
+hibalehetõséget és egyszerûsítette a tesztelés folyamatát.
+
+A kidolgozás folyamata:
+
+Személyenkénti fõbb munkák:
+
+Rob	(Fekete Róbert)
+    Mikor Leírás Személyek 
+ 1999.03.04. 17:23 Project terv formaba ontese ROB kisza 
+ 1999.03.11.   Kovetelmenyspecifikacio, Felhasznaloi kezikonyv beirasa ROB kisza Fusion 
+ 1999.04.8.   Elozetes dokumentacio RoB 
+ 1999.05.19.  Végleges dokumentáció RoB
+
+
+kisza	(Kis-Szabó András)
+    Mikor Leírás Személyek 
+ 1999.02.17. 18:36 Egységes naplózó script megírása kisza 
+ 1999.02.17. 18:40 WWW lap elkészítése kisza 
+ 1999.02.19. 00:20 CVS szerver elinditasa, alapkonyvtarakkal kisza 
+ 1999.02.19. 10:21 Dokumentacio elhelyezese a weben (GTK, GTK--, CVS), attanulmanyozasa ROB kisza Fusion Gizmo 
+ 1999.02.21. 20:21 Játékleírás és magyarázat megadása kisza 
+ 1999.03.15.   TCP-s halozat, timeottal, akarhany klienssel kisza 
+ 1999.03.15.   RPM keszitese kisza 
+ 1999.04.8.   Elozetes dokumentacio lefuzetese kisza 
+ 1999.04.14.   Widget es network befejezve kisza 
+ 1999.05.2.   Elozetes dokumentaciok felbovitese kisza 
+ 1999.05.06.   Skeleton kijavitasa, vegleges kod osszerakasa, portolas Solarisra kisza 
+
+
+Fusion	(Mészáros Barnabás)
+    Mikor Leírás Személyek
+ 1999.03.04. 17:24 Eloadas megtartasa Fusion 
+ 1999.03.10.   Felhasznaloi leiras elkeszitese Fusion 
+ 1999.03.20.   Tesztkonyv eleje Fusion 
+ 1999.05.19.   Tesztkönyv Fusion
+
+Gizmo	(Nyircsák Zoltán)
+    Mikor Leírás Személyek 
+ 1999.02.22. 21:29 UserInterface tervezes elkezdese kisza Gizmo 
+ 1999.03.04. 17:23 Project terv elokeszitese kisza Fusion Gizmo 
+ 1999.03.10.   Objektum modell elokeszitese Fusion Gizmo 
+ 1999.03.24.   Objektum modell elkeszitese Gizmo 
+ 1999.04.14.   Objektum modell (dinamikus, funkcionalis) elkeszitese Gizmo 
+ 1999.04.14.   Objektum kod reszletes atadasa Gizmo 
+ 1999.05.18.   Végleges objektum modell Gizmó
+
+A munkánk folyamata:
+1. hét
+
+Elozetes tanulmanyok a feladat elkezdese elott:
+a Linux mennyire alkalmas a feladat megoldasara?
+Elkeszitett tesztek:
+        halozati modul                  (kisza)
+        teljes ablakkezelo rendszer     (kisza)
+
+A jatek tanulmanyozasa, kozos elkepzelesek megbeszelese.
+
+Weblap es levelezesi lista (kisza)
+
+
+2. hét
+
+Egy ertelmezes adasa a jatekrol (altalanos leiras)
+
+Eloadas megtartasa a Felhasznaloi kezikonyvrol (Fusion)
+
+Kovetelmenyspecifikacio elso valtozata  (Gizmo)
+
+Projectterv
+
+3. hét
+
+Screenshotok    (kisza)
+Felhasznaloi kezikonyv elokeszitese (Fusion)
+
+Objektum modellezes (Gizmo, Fusion segiti)
+
+4. hét
+
+A kezelofelulet osszedolgozasanak elkezdese ( C kod )  - kisza
+
+Az objektumok megalkotasa, kulonbozo modellekkel - Gizmo
+
+5. hét
+
+
+Objektumok beszerkeztese - Rob kezdte, konnyebb haladas miatt Gizmo befejezi, modositja
+
+
+6. hét
+
+Objektum dokumentalas - Gizmo
+
+7. hét
+8. hét
+
+9. hét
+
+Objektumok osszeillesztese. - Gizmo, kisza 
+                Elsore megy :)
+
+10. hét
+11. hét
+
+12. hét
+
+Elozetes dokumentaciok duplara novelese
+
+Skeletonban a rosszul kezelt pointerek kijavitasa, igy mar mukodik
+
+Veglegesites
+
+Animacio beleirasa
+
+Portolas Solarisra
+
+- kisza -
+
+13. hét
+Végleges dokumentálás elkezdése
+
+14. hét
+Végleges dokumentálás
+
+
+A részvétel értékelése:
+
+feladat 
+                    Fusion 
+                                 Gizmo 
+                                             Kisza 
+                                                         Rob 
+    Porgramkod 
+
+                                  20 
+                                              80 
+
+   Project ertekeles 
+
+
+                                              100 
+
+  Prototip. ertekeles 
+
+                                  10 
+                                              90 
+
+  Obj. mod. vegleges 
+
+                                  100 
+
+
+    Felhasznaloi 
+                      100 
+
+
+
+      Tesztk. 
+
+
+                                              100 
+
+ Elozetes veglegesitett 
+                      10 
+                                  10 
+                                              50 
+                                                          30 
+     Obj.mod. 
+
+                                  90 
+                                               2 
+                                                          8 
+      Alt.le. 
+
+                                  50 
+                                              50 
+
+     Proj.Terv. 
+
+                                  75 
+                                              20 
+                                                          5 
+      Kovspec 
+                      90 
+
+
+                                                          10 
+     Felhaszn. 
+                      85 
+
+
+                                                          15 
+       Teszt 
+                      95 
+
+
+                                                          5 
+
+Az elkészült dokumentumok:
+Rendszerdefiníció, projekt terv
+Követelmény specifikáció
+OMT analízis és tervdokumentáció
+Teszt terv
+Felhasználói kézikönyv és help
+Tesztekönyv
+Programozói leírás
+Prototípus értékelés
+Poject értékelés
+
+Átadásra kerül:
+Dokumentált, belôtt, tesztelt program
+
+
+A program mint program sikeresen elkészült. Sajnos egyéb egyetemi 
+elfoglaltságaink jelentõsen hétréltattak minket.
+reméljük, hogy a HSZK mûködõképes lesz az átadáskor. Közben sajnos akadtak
+közben problémák a HSZK-val. Szerencsére volt közülük vicces is, mint mikor
+megkérdezték, van-e accountunk a unicorn-ra. Ezen különösen jót derültünk.
+
+A dokumentálás közben meglepett minket, hogy milyen alaposan értékelik, ami
+szerintünk kicsit tulzó. személy szerint sokallom az elkészült dokumentáció
+mennyiségét.
+
+
+
+			Kis-Szabó András
+
+			project vezetõ
+

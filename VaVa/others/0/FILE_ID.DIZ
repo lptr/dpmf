@@ -1,0 +1,10 @@
+SHAMpage: Auto-answer SysOp page door. FREE!
+A.I. program will answer page bell and chat
+with caller even when SysOp is not there!
+Uses standard DOOR.SYS or DORINFOx.DEF file.
+IRQ 1-15, COM 1-4 up to 115,200 baud, FOSSIL
+support, XON/XOFF and CTS/RTS. Drop to DOS,
+various timer functions (user's time left,
+input timer, SysOp hot keys to change user's
+time, etc.), carrier detection, CTS checking
+and more.

@@ -1,0 +1,44 @@
+http://www.pixelcreations.net/chomp.htm
+
+PACMAN:
+ A játék egy labirintusban folyik, a játékos feladata a 10 véletlenszeruen elszórt gyémánt
+összegyujtése. Ebben a feladatában szörnyek gátolják. Ha a szörnyek elkapják, hozzáérnek, a
+játékos életet veszit, ha életei elfogynak meghal. A szörnyek mozgásuk alapján kétfélék lehetnek, vagy véletlenszeruen mozognak
+vagy intelligensen, folyamatosan a játékos felé. A labirintusban elixirek és bónuszok keletkeznek
+és tünnek el. Egy elixir adhat életet vagy bombát. Mind életbol, mind pedig bombából egyszerre maximum 5
+lehet a játékosnál, a játék elején 3 élete van, a nála lévo bombák száma minden szint elején, illetve szörnnyel való
+érintkezés után 0. A bombát aktiválva, azt maga mellé helyezve,
+az 5 másodpercen keresztül mindenkit elpusztit aki hozzáér, beleértve magát a játékost is.
+Az igy megölt szörnyek rövid ido után újra keletkeznek. Az összes gyémánt összegyujtésével a játékos
+a pályát teljesitette, a következo szintre jut, szintlépéssel az inteligensen mozgó szörnyek
+száma fokozatosan növekszik. 
+
+
+labirintus: mezokbol épül fel. vízszintes és függoleges falakbol álló, kétdimenziós útveszto, maga a játéktér.
+pálya: itt, labirintus szinonimája
+
+mezo: lehet út vagy fal tipusú. a pályaelemek csak út tipusú mezon fordulhatnak elo, illetve aktiv pályaelem esetén, csak út tipusú mezore mozoghatnak át. 
+pályaelem: a szörnyek, a játékos, elixirek, gyémántok és bónuszok gyujtoneve.
+idoszakos pályaelem: bónusz, elixirek, bomba. játék közben jelennek meg a pályán, korlátozott, de nem meghatározott idore.
+aktiv pályaelem: szörnyek, játékos. a játék alatt mozgást végzo pályaelemek csoportja.
+szörny: egy ellenséges lény, aki a játékost megpróbálja elpusztítani,  azáltal, hogy hozzáér. Két típusa van, a lassabb, okosabb és a buta, gyors. a pálya meghatározott sarkában keletkezhetnek. számuk maximálva van. csak a játékosra van hatással, illetva a bomba hat rá.
+elixir: lehet bomba-elixir vagy élet-elixir
+bomba: ütközés esetén elpusztitja az aktiv pályaelemet, igy játékos életeinek számát egyel csökkenti, a szörnyet megöli.
+élet-elixir: ha felveszi, plusz életet ad a játékosnak amennyiben életeinek száma kevesebb mint 5
+bomba-elixir: egy bombát kap a játékos ha felveszi, nem veheti fel, ha a nála lévo bombák száma 5
+gyémánt: ezeket kell összegyujteni ahhoz hogy a következo szintre lépjen
+élet: próbálkozási lehetoségek száma. eggyel csökken, ha a játékos szörnnyel vagy bombával ütközik.
+
+szint: egy szinthez tartozik egy labirintus, és egy - a szint számával együtt növekvo - nehézségi fok. Ahogy a szint száma növekszik, a játék egyre nehezebbé és nehezebbé válik.
+
+pontszám: a játék célja minél több pont összeszedése. pontszám származhat az adott pálya teljesítése után fennmaradt idobol, az összeszedett gyémántokból, elixírekbol, kinyírt szörnyekbol, bónuszokból.
+
+hozzáér: vele szomszédos mezorol felé indul el.
+ütközés: itt, hozzáér szinonimája.
+felvenni: gyémánt, elixir, bónusz esetén a hozzáérés következménye lehet. A felvételük általában pontot ér. a pályaelem amit felvettek, eltunik. felvenni csak a játékos tud.
+
+
+tisztázni kell a meghal/megöl/elpusztul satöbbi igék pontos jelentését...
+
+hogy mi hány pontot is ér valójában, az még tanácskozás tárgyát képezi
+
